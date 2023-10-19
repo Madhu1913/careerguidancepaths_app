@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sizer/sizer.dart';
 
 class doctorSubCategories extends StatefulWidget {
   const doctorSubCategories({super.key});
@@ -10,12 +11,12 @@ class doctorSubCategories extends StatefulWidget {
 }
 
 class _doctorSubCategoriesState extends State<doctorSubCategories> {
-  List _subcategories = [];
+  List _docsubcategories = [];
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('assets/data.json');
     final data = jsonDecode(response);
     setState(() {
-      _subcategories = data["subDoc"];
+      _docsubcategories = data["subDoc"];
     });
   }
 
@@ -31,12 +32,61 @@ class _doctorSubCategoriesState extends State<doctorSubCategories> {
     return Hero(
       tag: 001,
       child: Scaffold(
-        appBar: AppBar(),
-        body: Center(
-            child: Text(
-          _subcategories[0]["name"],
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
-        )),
+        appBar: AppBar(
+          title: Text(
+            'Doctor',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 24, color: Colors.red),
+          ),
+        ),
+        body: GridView.builder(
+            itemCount: _docsubcategories.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.7,
+              mainAxisSpacing: 10,
+              //crossAxisSpacing: 10,
+               ),
+            itemBuilder: (context, i) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    // height: 40.h,
+                    // width: 45.w,
+                    color: Colors.amber,
+                    child: Center(
+                      child: Column(
+                        children: [
+                          SizedBox(height: 22.h,
+                            child: Card(
+                              child: Image.network(
+                                _docsubcategories[i]["url"],
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 11.5.h,
+                            width: 45.w,
+                            child: Card(
+                              child: Center(
+                                child: Text(
+                                  _docsubcategories[i]["name"],
+                                  style: TextStyle(
+                                      fontSize: 14.sp, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            }),
       ),
     );
   }
