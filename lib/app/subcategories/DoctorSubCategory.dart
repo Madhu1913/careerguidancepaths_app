@@ -1,7 +1,7 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 class doctorSubCategories extends StatefulWidget {
   const doctorSubCategories({super.key});
 
@@ -25,11 +25,19 @@ class _doctorSubCategoriesState extends State<doctorSubCategories> {
     super.initState();
     readJson();
   }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(child: Text(_subcategories[0]["name"],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40),)),
+    return Hero(
+      tag: 001,
+      child: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+            child: Text(
+          _subcategories[0]["name"],
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+        )),
+      ),
     );
   }
 }

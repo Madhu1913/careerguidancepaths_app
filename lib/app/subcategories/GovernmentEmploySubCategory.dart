@@ -9,6 +9,6 @@ class governmentEmploySubCategories extends StatefulWidget {
 class _governmentEmploySubCategoriesState extends State<governmentEmploySubCategories> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('Government'),),);
+    return Hero(tag: 006,child: Scaffold(appBar: AppBar(title: Text('Government'),),));
   }
 }

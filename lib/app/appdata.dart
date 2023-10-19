@@ -1,20 +1,15 @@
 import 'dart:convert';
-
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
+import 'account/accountPage.dart';
 import 'package:careerguidancepaths_app/app/subcategories/DoctorSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/EngineerSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/GovernmentEmploySubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/PoliceSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/SoftwareEngineerSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/TeacherSubCategory.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-// import 'package:oct/app/subcategory.dart';
-import 'package:sizer/sizer.dart';
-
-import 'account/accountPage.dart';
-
 class Appdata extends StatefulWidget {
   const Appdata({super.key});
 
@@ -49,6 +44,7 @@ class _AppdataState extends State<Appdata> {
       softwareEngineerSubCategories(),
       governmentEmploySubCategories()
     ];
+    List tags=[001,002,003,004,005,006];
     return Scaffold(
       appBar: AppBar(
         title: Padding(
@@ -91,72 +87,75 @@ class _AppdataState extends State<Appdata> {
                           MaterialPageRoute(
                               builder: (context) => classes[i]));
                     },
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                            borderRadius: BorderRadius.circular(40),
+                    child: Hero(
+                      tag: tags[i],
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                              borderRadius: BorderRadius.circular(40),
+                              child: Container(
+                                height: 70.h,
+                                width: 96.w,
+                                color: Theme.of(context).primaryColorDark,
+                              )),
+                          Positioned(
+                            left: 15.sp,
+                            top: 10.sp,
                             child: Container(
-                              height: 70.h,
-                              width: 96.w,
-                              color: Theme.of(context).primaryColorDark,
-                            )),
-                        Positioned(
-                          left: 15.sp,
-                          top: 10.sp,
-                          child: Container(
-                            color: Colors.white,
-                            child: Text(
-                              _categories[i]["name"],
-                              style: GoogleFonts.zenDots(
-                                  fontSize: 16.sp, fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              child: Text(
+                                _categories[i]["name"],
+                                style: GoogleFonts.zenDots(
+                                    fontSize: 16.sp, fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          left: 1.w,
-                          top: 40.sp,
-                          child: SizedBox(
-                            height: 40.h,
-                            width: 94.w,
-                            child: Card(
-                              shape: RoundedRectangleBorder(
+                          Positioned(
+                            left: 1.w,
+                            top: 40.sp,
+                            child: SizedBox(
+                              height: 40.h,
+                              width: 94.w,
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topRight: Radius.circular(30),
+                                        topLeft: Radius.circular(30))),
+                                child: ClipRRect(
                                   borderRadius: BorderRadius.only(
                                       topRight: Radius.circular(30),
-                                      topLeft: Radius.circular(30))),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(30),
-                                    topLeft: Radius.circular(30)),
-                                child: Image.network(
-                                  _categories[i]["url"],
-                                  fit: BoxFit.cover,
+                                      topLeft: Radius.circular(30)),
+                                  child: Image.network(
+                                    _categories[i]["url"],
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                            left: 1.w,
-                            top: 47.h,
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(30),
-                                    bottomRight: Radius.circular(30)),
-                                child: Container(
-                                  height: 22.h,
-                                  width: 94.w,
-                                  color: Colors.white,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      _categories[i]["desc"],
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w900),
+                          Positioned(
+                              left: 1.w,
+                              top: 47.h,
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(30),
+                                      bottomRight: Radius.circular(30)),
+                                  child: Container(
+                                    height: 22.h,
+                                    width: 94.w,
+                                    color: Colors.white,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        _categories[i]["desc"],
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w900),
+                                      ),
                                     ),
-                                  ),
-                                )))
-                      ],
+                                  )))
+                        ],
+                      ),
                     ),
                   ),
                 ),
