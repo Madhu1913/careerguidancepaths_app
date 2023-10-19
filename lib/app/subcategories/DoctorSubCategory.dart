@@ -48,6 +48,12 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
       setState(() {});
     });
   }
+ @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    controller?.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
