@@ -11,7 +11,8 @@ import 'package:careerguidancepaths_app/app/subcategories/PoliceSubCategory.dart
 import 'package:careerguidancepaths_app/app/subcategories/SoftwareEngineerSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/TeacherSubCategory.dart';
 class Appdata extends StatefulWidget {
-  const Appdata({super.key});
+  const Appdata({
+    super.key,});
 
   @override
   State<Appdata> createState() => _AppdataState();
@@ -62,7 +63,7 @@ class _AppdataState extends State<Appdata> {
             padding: EdgeInsets.only(right: 6.sp, top: 4.sp),
             child: IconButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>AccountPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>AccountPage(name: '',age:'' ,occupationOfPerson: '',)));
               },
               splashColor: Theme.of(context).primaryColorDark,
               icon: Icon(
