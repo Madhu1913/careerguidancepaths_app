@@ -139,7 +139,9 @@
     }
   ],
   "subPolice": [
-
+    {
+      "name": "Police Officer"
+    }
   ]
 
 }
