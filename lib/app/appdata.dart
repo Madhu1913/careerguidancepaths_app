@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,6 +27,9 @@ class _AppdataState extends State<Appdata> {
     setState(() {
       _categories = data["categories"];
     });
+  }
+  void  signOut(){
+    FirebaseAuth.instance.signOut();
   }
 
   @override
@@ -72,7 +76,14 @@ class _AppdataState extends State<Appdata> {
               ),
               tooltip: 'Profile',
             ),
-          )
+          ),
+          IconButton(
+              onPressed:signOut,
+              icon: Icon(
+                Icons.logout,
+                size: 30,
+                color: Colors.black,
+              ))
         ],
       ),
       body: ListView.builder(

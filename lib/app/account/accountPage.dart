@@ -21,10 +21,8 @@ class AccountPage extends StatefulWidget {
 
 class _AccountPageState extends State<AccountPage> {
   File? _selectedImage;
-  void Function()? signOut(){
-    setState(() {
+  void  signOut(){
       FirebaseAuth.instance.signOut();
-    });
   }
 
   @override
