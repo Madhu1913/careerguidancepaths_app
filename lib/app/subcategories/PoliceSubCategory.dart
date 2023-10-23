@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 class policeSubCategories extends StatefulWidget {
-  const policeSubCategories({super.key});
+  final List polSub;
+  const policeSubCategories({super.key,required this.polSub});
 
   @override
   State<policeSubCategories> createState() => _policeSubCategoriesState();

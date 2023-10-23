@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 class governmentEmploySubCategories extends StatefulWidget {
-  const governmentEmploySubCategories({super.key});
+  final List govEmpSub;
+  const governmentEmploySubCategories({super.key,required this.govEmpSub});
 
   @override
   State<governmentEmploySubCategories> createState() => _governmentEmploySubCategoriesState();

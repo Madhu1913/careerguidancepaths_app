@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 class softwareEngineerSubCategories extends StatefulWidget {
-  const softwareEngineerSubCategories({super.key});
+  final List sofEngSub;
+  const softwareEngineerSubCategories({super.key,required this.sofEngSub});
 
   @override
   State<softwareEngineerSubCategories> createState() => _softwareEngineerSubCategoriesState();

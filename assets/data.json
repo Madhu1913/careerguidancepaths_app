@@ -138,10 +138,14 @@
       "url": "https://img.freepik.com/free-vector/doctor-examining-patient-clinic-illustrated_23-2148856559.jpg"
     }
   ],
-  "subPolice": [
+  "subPol": [
     {
       "name": "Police Officer"
     }
-  ]
+  ],
+  "subEng": [],
+  "subTec": [],
+  "subSofEng": [],
+  "subGovEmp": []
 
 }

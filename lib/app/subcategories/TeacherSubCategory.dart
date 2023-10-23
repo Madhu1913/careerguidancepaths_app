@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 class teacherSubCategory extends StatefulWidget {
-  const teacherSubCategory({super.key});
+  final List tecSub;
+  const teacherSubCategory({super.key,required this.tecSub});
 
   @override
   State<teacherSubCategory> createState() => _teacherSubCategoryState();

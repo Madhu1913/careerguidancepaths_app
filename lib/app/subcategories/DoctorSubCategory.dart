@@ -1,10 +1,12 @@
-import 'dart:convert';
+// import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 
 class doctorSubCategories extends StatefulWidget {
-  const doctorSubCategories({super.key});
+  final List docSub;
+  const doctorSubCategories({super.key,required this.docSub});
+
 
   @override
   State<doctorSubCategories> createState() => _doctorSubCategoriesState();
@@ -12,25 +14,26 @@ class doctorSubCategories extends StatefulWidget {
 
 class _doctorSubCategoriesState extends State<doctorSubCategories>
     with SingleTickerProviderStateMixin {
-  List _docsubcategories = [];
-  Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/data.json');
-    final data = jsonDecode(response);
-    setState(() {
-      _docsubcategories = data["subDoc"];
-    });
-  }
+  // List _docsubcategories = [];
+  // Future<void> readJson() async {
+  //   final String response = await rootBundle.loadString('assets/data.json');
+  //   final data = jsonDecode(response);
+  //   setState(() {
+  //     _docsubcategories = data["subDoc"];
+  //   });
+  // }
 
   AnimationController? controller;
   Animation? gridAnimation;
   Animation? fabAnimation;
   Animation? rotationAnimation;
+  //List _docsubcategories=docSub;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    readJson();
+   // readJson();
     controller = AnimationController(
         vsync: this, duration: Duration(milliseconds: 1350));
     gridAnimation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
@@ -68,11 +71,12 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
           ),
         ),
         body: Transform.scale(
+          //opacity: gridAnimation?.value,
           scale: fabAnimation?.value,
-          // angle: rotationAnimation?.value, <-- use this one when grid view is wrapped with Transform.rotate
+           //angle: rotationAnimation?.value,// <-- use this one when grid view is wrapped with Transform.rotate
           //Wrap the Gridview builder with opacity widget and give opacity as gridAnimation.vale for another type of animation
           child: GridView.builder(
-              itemCount: _docsubcategories.length,
+              itemCount: widget.docSub.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 0.7,
@@ -95,7 +99,7 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
                               height: 22.h,
                               child: Card(
                                 child: Image.network(
-                                  _docsubcategories[i]["url"],
+                                  widget.docSub[i]["url"],
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -106,7 +110,7 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
                               child: Card(
                                 child: Center(
                                   child: Text(
-                                    _docsubcategories[i]["name"],
+                                    widget.docSub[i]["name"],
                                     style: TextStyle(
                                         fontSize: 14.sp,
                                         fontWeight: FontWeight.bold),
