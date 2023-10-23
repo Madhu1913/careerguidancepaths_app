@@ -188,7 +188,7 @@ class _categoriesState extends State<categories> {
         context: context,
         builder: (builder) {
           return SizedBox(
-            height: 40.h,
+            height: 41.h,
             child: Card(
               elevation: 10.sp,
               shadowColor: Colors.pink,
