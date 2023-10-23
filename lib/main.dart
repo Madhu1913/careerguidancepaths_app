@@ -1,4 +1,5 @@
 // import 'package:careerguidancepaths_app/app/appdata.dart';
+import 'package:careerguidancepaths_app/app/Categories.dart';
 import 'package:careerguidancepaths_app/auth/auth_Page.dart';
 // import 'package:careerguidancepaths_app/auth/login.dart';
 import 'package:firebase_core/firebase_core.dart';

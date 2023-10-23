@@ -13,7 +13,7 @@
     },
     {
       "name": "Police",
-      "url": "https://img.freepik.com/free-vector/law-legal-justice-graphic_24877-52550.jpg",
+      "url": "https://img.freepik.com/premium-vector/law-order-concept-with-flat-icons-policeman-badge-handcuffs-gun-radio-vector-illustration_108855-5272.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais",
       "desc": "Police officers are an integral part of our social system. They are responsible for maintaining law and order in society, protecting everyone, and solving problems like burglary, snatching, theft, and misconduct ."
     },
     {
@@ -143,9 +143,25 @@
       "name": "Police Officer"
     }
   ],
-  "subEng": [],
-  "subTec": [],
-  "subSofEng": [],
-  "subGovEmp": []
+  "subEng": [
+    {
+
+    }
+  ],
+  "subTec": [
+    {
+
+    }
+  ],
+  "subSofEng": [
+    {
+
+    }
+  ],
+  "subGovEmp": [
+    {
+
+    }
+  ]
 
 }
