@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: _user.text, password: _pass.text);
-      Navigator.pop(context);
+      if(context.mounted) Navigator.pop(context);
       _user.clear();
       _pass.clear();
     } on FirebaseAuthException catch (er) {

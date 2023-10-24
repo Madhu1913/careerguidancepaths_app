@@ -44,7 +44,7 @@ class _SignUpState extends State<SignUp> {
       if (pass.text == cnfpass.text) {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: mail.text, password: pass.text);
-        Navigator.pop(context);
+        if(context.mounted)Navigator.pop(context);
         mail.clear();
         pass.clear();
 
