@@ -1,9 +1,10 @@
+import 'package:careerguidancepaths_app/auth/forgot_password_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
-  final  Function()? onTap;
-  const LoginScreen({super.key,required this.onTap});
+  final Function()? onTap;
+  const LoginScreen({super.key, required this.onTap});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -27,7 +28,9 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: _user.text, password: _pass.text);
-      if(context.mounted) Navigator.pop(context);
+      if (context.mounted) {
+        Navigator.pop(context);
+      }
       _user.clear();
       _pass.clear();
     } on FirebaseAuthException catch (er) {
@@ -45,7 +48,10 @@ class _LoginScreenState extends State<LoginScreen> {
             title: Center(
                 child: Text(
               msg,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,color: Colors.white),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.white),
             )),
           );
         });
@@ -111,7 +117,33 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Icon(icn))),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ForgotPasswordPage()));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 8.0),
+                        child: Text(
+                          'Forgot Password? ',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Colors.red,
+                              fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -141,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 10,
                     ),
                     InkWell(
-                        onTap:widget.onTap,
+                        onTap: widget.onTap,
                         child: Text(
                           'Register',
                           style: TextStyle(

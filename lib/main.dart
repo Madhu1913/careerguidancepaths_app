@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 
 import 'package:sizer/sizer.dart';
 
+import 'auth/login.dart';
+
 // import 'auth/signup.dart';
 
 void main() async {
