@@ -21,107 +21,89 @@ class AccountPage extends StatefulWidget {
 
 class _AccountPageState extends State<AccountPage> {
   File? _selectedImage;
-  void  signOut(){
-      FirebaseAuth.instance.signOut();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        actions: [
-          IconButton(
-              onPressed:signOut,
-              icon: Icon(
-                Icons.logout,
-                size: 30,
-                color: Colors.black,
-              ))
-        ],
-        title: Text(
-          '@UserName',
-          style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black),
-        ),
-      ),
+      appBar: AppBar(backgroundColor: Colors.white,),
       body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 10, left: 5, bottom: 30),
-            child: Row(
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.0),
+              child: Row(
+                children: [
+                  Text(
+                    '@UserName',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10, left: 5, bottom: 30),
+              child: Row(
+                children: [
+                  profilePic(),
+                  Column(
+                    children: [
+                      Text(
+                        'Name: ${widget.name}',
+                        style:
+                            const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Age: ${widget.age}',
+                        style:
+                            const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                profilePic(),
-                Column(
-                  children: [
-                    Text(
-                      'Name: ${widget.name}',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      'Age: ${widget.age}',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                Text(
+                  '${widget.occupationOfPerson}',
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  'Favourites',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(
-                '${widget.occupationOfPerson}',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Favourites',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                child: Text(
-                  'Add Path',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  child: const Text(
+                    'Add Path',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-              Container(
-                child: Text(
-                  'Your Paths',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                Container(
+                  child: const Text(
+                    'Your Paths',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 80,
-          ),
-          Container(
-              decoration: BoxDecoration(
-                  color: Colors.pinkAccent.shade100, shape: BoxShape.circle),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>addPathPage()));
-                },
-                icon: Icon(
-                  Icons.add,
-                  size: 80,
-                  color: Colors.black,
-                ),
-              ))
-        ],
+              ],
+            ),
+            const SizedBox(
+              height: 80,
+            ),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const addPathPage()));
+            }, icon: const Icon(Icons.add_circle,size: 80,color: Colors.red,))
+          ],
       ),
     );
   }

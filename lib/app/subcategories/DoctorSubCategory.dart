@@ -1,6 +1,7 @@
 // import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class doctorSubCategories extends StatefulWidget {
@@ -64,10 +65,11 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
       tag: 001,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
+          backgroundColor: Colors.red,
+          title:  Text(
             'Doctor',
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 24, color: Colors.red),
+            style: GoogleFonts.varela(
+                fontWeight: FontWeight.bold, fontSize: 20.sp, color: Colors.white),
           ),
         ),
         body: Transform.scale(
@@ -85,9 +87,9 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
               ),
               itemBuilder: (context, i) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  padding:  EdgeInsets.symmetric(horizontal: 5.sp),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(5.sp),
                     child: Container(
                       // height: 40.h,
                       // width: 45.w,

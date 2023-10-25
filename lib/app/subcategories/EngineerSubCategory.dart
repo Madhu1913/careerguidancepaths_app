@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 class engineerSubCategories extends StatefulWidget {
   final List engSub;
@@ -50,10 +51,11 @@ class _engineerSubCategoriesState extends State<engineerSubCategories> with Sing
       tag: 002,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
+          backgroundColor: Colors.red,
+          title: Text(
             'Engineer',
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 24, color: Colors.red),
+            style: GoogleFonts.varela(
+                fontWeight: FontWeight.bold, fontSize: 19.sp, color: Colors.white),
           ),
         ),
         body: Transform.scale(
@@ -71,9 +73,9 @@ class _engineerSubCategoriesState extends State<engineerSubCategories> with Sing
               ),
               itemBuilder: (context, i) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  padding: EdgeInsets.symmetric(horizontal: 5.sp),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(5.sp),
                     child: Container(
                       // height: 40.h,
                       // width: 45.w,

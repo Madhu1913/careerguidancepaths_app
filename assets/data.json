@@ -588,7 +588,24 @@
   ],
   "subTec": [
     {
-
+      "name" : "Lower Standard Teacher",
+      "url" : "https://img.freepik.com/premium-vector/vector-illustration-showing-teacher-teaching-board-students-listening-attentively_642458-296.jpg?w=740"
+    },
+    {
+      "name" : "Higher Standard Teacher ",
+      "url" : "https://img.freepik.com/free-vector/busniessman-cartoon_1308-35562.jpg?w=740&t=st=1697619577~exp=1697620177~hmac=dce39a81a6ffaeb0d69ee16a732ff79f302aaabf9db1e0cb22239b425c718737"
+    },
+    {
+      "name" : "Intermedaite Level Teacher",
+      "url" : "https://img.freepik.com/free-vector/hand-drawn-teacher-s-day-background-spanish_23-2149368586.jpg?w=740&t=st=1697619806~exp=1697620406~hmac=f8045a67bea3b4cf9d9727e9ed0d3a7ee2dc425c023cf5baf5419b69854c3f45"
+    },
+    {
+      "name" : "Assistant Proffesor",
+      "url" : "https://img.freepik.com/free-vector/online-class-illustration_52683-42415.jpg?w=740&t=st=1697619848~exp=1697620448~hmac=e5d32b46e30d85cd3a0631747b5556773d9362090c5f76c6fc015cd3ec400348"
+    },
+    {
+      "name" : "Proffesor",
+      "url" : "https://img.freepik.com/premium-vector/teacher-pointing-blackboard-front-class-flat-vector-illustration_110249-118.jpg?w=740"
     }
   ],
   "subSofEng": [
@@ -601,5 +618,6 @@
 
     }
   ]
+
 
 }

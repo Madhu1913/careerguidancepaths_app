@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 class governmentEmploySubCategories extends StatefulWidget {
   final List govEmpSub;
@@ -51,10 +52,11 @@ class _governmentEmploySubCategoriesState extends State<governmentEmploySubCateg
       tag: 006,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
+          backgroundColor: Colors.red,
+          title:  Text(
             'Government Employee',
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 24, color: Colors.red),
+            style: GoogleFonts.varela(
+                fontWeight: FontWeight.bold, fontSize: 19.sp, color: Colors.white),
           ),
         ),
         body: Transform.scale(
@@ -72,9 +74,9 @@ class _governmentEmploySubCategoriesState extends State<governmentEmploySubCateg
               ),
               itemBuilder: (context, i) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  padding:  EdgeInsets.symmetric(horizontal: 5.sp),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(5.sp),
                     child: Container(
                       // height: 40.h,
                       // width: 45.w,

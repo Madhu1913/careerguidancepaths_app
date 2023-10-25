@@ -43,6 +43,9 @@ dependencies:
   firebase_auth: ^4.10.1
   image_picker: ^1.0.4
   lottie: ^2.6.0
+  curved_labeled_navigation_bar: ^2.0.2
+  percent_indicator: ^4.2.3
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
