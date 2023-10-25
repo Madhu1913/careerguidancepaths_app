@@ -26,7 +26,7 @@ class _AppdataState extends State<Appdata> {
         actions: [
           IconButton(
               onPressed: signOut,
-              icon: Icon(
+              icon: const Icon(
                 Icons.logout,
                 size: 30,
                 color: Colors.black,
@@ -38,7 +38,7 @@ class _AppdataState extends State<Appdata> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => AccountPage(
+                          builder: (context) => const AccountPage(
                             name: '',
                             age: '',
                             occupationOfPerson: '',
@@ -58,9 +58,9 @@ class _AppdataState extends State<Appdata> {
           child: ElevatedButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => categories()));
+              context, MaterialPageRoute(builder: (context) => const categories()));
         },
-        child: Text('Categories'),
+        child: const Text('Categories'),
       )),
     );
   }

@@ -35,16 +35,16 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
     super.initState();
    // readJson();
     controller = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 1350));
+        vsync: this, duration: const Duration(milliseconds: 1350));
     gridAnimation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
         parent: controller!,
-        curve: Interval(0.40, 0.75, curve: Curves.easeOut)));
+        curve: const Interval(0.40, 0.75, curve: Curves.easeOut)));
     fabAnimation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
         parent: controller!,
-        curve: Interval(0.75, 1.0, curve: Curves.easeOut)));
+        curve: const Interval(0.75, 1.0, curve: Curves.easeOut)));
     rotationAnimation = Tween(begin: 0.0, end: 6.2755).animate(controller!);
     rotationAnimation = Tween(begin: 0.0, end: 6.2755).animate(CurvedAnimation(
-        parent: controller!, curve: Interval(0.2, 1, curve: Curves.easeOut)));
+        parent: controller!, curve: const Interval(0.2, 1, curve: Curves.easeOut)));
 
     controller?.forward();
     controller?.addListener(() {
@@ -64,7 +64,7 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
       tag: 001,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Doctor',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 24, color: Colors.red),
@@ -77,7 +77,7 @@ class _doctorSubCategoriesState extends State<doctorSubCategories>
           //Wrap the Gridview builder with opacity widget and give opacity as gridAnimation.vale for another type of animation
           child: GridView.builder(
               itemCount: widget.docSub.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 0.7,
                 mainAxisSpacing: 10,

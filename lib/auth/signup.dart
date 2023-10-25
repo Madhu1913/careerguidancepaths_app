@@ -35,7 +35,7 @@ class _SignUpState extends State<SignUp> {
     showDialog(
       context: context,
       builder: (context) {
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
         );
       },
@@ -68,7 +68,7 @@ class _SignUpState extends State<SignUp> {
             title: Center(
                 child: Text(
               msg,
-              style: TextStyle(
+              style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                   color: Colors.white),
@@ -88,7 +88,7 @@ class _SignUpState extends State<SignUp> {
             padding: const EdgeInsets.all(10),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 Text(
@@ -96,7 +96,7 @@ class _SignUpState extends State<SignUp> {
                   style: GoogleFonts.alkatra(
                       fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 TextFormField(
@@ -108,7 +108,7 @@ class _SignUpState extends State<SignUp> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextFormField(
@@ -121,14 +121,14 @@ class _SignUpState extends State<SignUp> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      child: Text(
+                      child: const Text(
                         'Age :',
                         style: TextStyle(
                             fontWeight: FontWeight.w500, fontSize: 30),
@@ -149,14 +149,14 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      child: Text(
+                      child: const Text(
                         'Gender :',
                         style: TextStyle(
                             fontWeight: FontWeight.w500, fontSize: 30),
@@ -167,29 +167,29 @@ class _SignUpState extends State<SignUp> {
                       child: DropdownButton(
                         onChanged: dropdowncallback,
                         value: _dropdownvalue,
-                        items: [
+                        items: const [
                           DropdownMenuItem(
+                            value: 'Male',
                             child: Text(
                               'Male',
                               style: TextStyle(
                                   fontWeight: FontWeight.w300, fontSize: 30),
                             ),
-                            value: 'Male',
                           ),
                           DropdownMenuItem(
+                            value: 'Female',
                             child: Text(
                               'Female',
                               style: TextStyle(
                                   fontWeight: FontWeight.w300, fontSize: 30),
                             ),
-                            value: 'Female',
                           ),
                         ],
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextFormField(
@@ -201,7 +201,7 @@ class _SignUpState extends State<SignUp> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextFormField(
@@ -227,7 +227,7 @@ class _SignUpState extends State<SignUp> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextFormField(
@@ -260,7 +260,7 @@ class _SignUpState extends State<SignUp> {
                         isEnabled = val;
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       'I agree to Terms & Conditions',
                       style: TextStyle(fontWeight: FontWeight.w700),
                     )),
@@ -275,22 +275,22 @@ class _SignUpState extends State<SignUp> {
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).cardColor),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Already have an account?',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     InkWell(
                         onTap: widget.onTap,
-                        child: Text(
+                        child: const Text(
                           'Login',
                           style: TextStyle(
                               color: Colors.blue,

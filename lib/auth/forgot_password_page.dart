@@ -14,13 +14,12 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: _user.text.trim());
       _user.clear();
       showDialog(context: context, builder: (context){
-        return AlertDialog(
+        return const AlertDialog(
           content: Text('Password reset link sent!Check your Email',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 18),),
         );
       },
       );
     }on FirebaseAuthException catch (e){
-      print(e);
       showDialog(context: context, builder: (context){
         return AlertDialog(
           content: Text(e.message.toString()),
@@ -35,8 +34,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       appBar: AppBar(),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: Text('Enter your Email for a Password Reset Link',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
           ),
 
@@ -48,12 +47,12 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  prefixIcon: Icon(Icons.mail),
+                  prefixIcon: const Icon(Icons.mail),
                   labelText: 'Email',
                   hintText: 'Email'),
             ),
           ),
-          ElevatedButton(onPressed:PasswordReset, child: Text('Reset Password'),)
+          ElevatedButton(onPressed:PasswordReset, child: const Text('Reset Password'),)
         ],
       ),
     );

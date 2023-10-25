@@ -106,7 +106,7 @@ class _categoriesState extends State<categories> {
                                 shadowColor: Colors.purple,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30),
-                                    side: BorderSide(
+                                    side: const BorderSide(
                                         color: Colors.black, width: 2)),
                               ),
                             ),
@@ -118,7 +118,7 @@ class _categoriesState extends State<categories> {
                                 width: 95.w,
                                 child: Card(
                                   shape: RoundedRectangleBorder(
-                                      side: BorderSide(
+                                      side: const BorderSide(
                                           color: Colors.black, width: 2),
                                       borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
@@ -165,7 +165,7 @@ class _categoriesState extends State<categories> {
                                     onPressed: () {
                                       _showModalSheet(i = i);
                                     },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.info_outline,
                                       color: Colors.black,
                                       size: 30,
@@ -193,7 +193,7 @@ class _categoriesState extends State<categories> {
               elevation: 10.sp,
               shadowColor: Colors.pink,
               shape: RoundedRectangleBorder(
-                  side: BorderSide(color: Colors.black, width: 2),
+                  side: const BorderSide(color: Colors.black, width: 2),
                   borderRadius: BorderRadius.circular(30)),
               child: Padding(
                 padding: EdgeInsets.all(10.sp),

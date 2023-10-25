@@ -1,6 +1,7 @@
 import 'package:careerguidancepaths_app/auth/forgot_password_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginScreen extends StatefulWidget {
   final Function()? onTap;
@@ -19,8 +20,9 @@ class _LoginScreenState extends State<LoginScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
+          //Lottie.network('https://lottie.host/2922f269-6c32-4e15-aded-468146deeae9/uUGWXLGjAU.json'),
         );
       },
     );
@@ -48,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
             title: Center(
                 child: Text(
               msg,
-              style: TextStyle(
+              style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                   color: Colors.white),
@@ -69,15 +71,15 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.all(10.0),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 200,
                 ),
-                Center(
+                const Center(
                     child: Text(
                   'Login',
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 )),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 TextFormField(
@@ -86,11 +88,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20)),
-                      prefixIcon: Icon(Icons.mail),
+                      prefixIcon: const Icon(Icons.mail),
                       labelText: 'Email',
                       hintText: 'Email'),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
@@ -102,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           borderRadius: BorderRadius.circular(20)),
                       labelText: "Password",
                       hintText: 'Password',
-                      prefixIcon: Icon(Icons.password),
+                      prefixIcon: const Icon(Icons.password),
                       suffixIcon: InkWell(
                           onTap: () {
                             isSeen = !isSeen;
@@ -116,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                           child: Icon(icn))),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -127,10 +129,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ForgotPasswordPage()));
+                                builder: (context) => const ForgotPasswordPage()));
                       },
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.only(bottom: 8.0),
                         child: Text(
                           'Forgot Password? ',
                           style: TextStyle(
@@ -142,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 ElevatedButton(
@@ -162,19 +164,19 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).cardColor),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Not a Registered user?'),
-                    SizedBox(
+                    const Text('Not a Registered user?'),
+                    const SizedBox(
                       width: 10,
                     ),
                     InkWell(
                         onTap: widget.onTap,
-                        child: Text(
+                        child: const Text(
                           'Register',
                           style: TextStyle(
                               color: Colors.blue,
