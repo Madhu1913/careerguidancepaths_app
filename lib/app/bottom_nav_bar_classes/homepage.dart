@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 import 'Drawer.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -17,12 +18,16 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         toolbarHeight: 8.h,
         backgroundColor: Colors.red,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.sp)),
-        title: Text('Career Catalyst',style: GoogleFonts.varela(fontSize: 24.sp,color: Colors.white),),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.sp)),
+        title: Text(
+          'Career Catalyst',
+          style: GoogleFonts.varela(fontSize: 24.sp, color: Colors.white),
+        ),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon:  Icon(
+              icon: Icon(
                 Icons.menu,
                 color: Colors.white,
                 size: 26.sp,
@@ -36,6 +41,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       drawer: const MyDrawer(),
+      body: Center(
+        child: Text(
+          'Have to be Designed',
+          style: GoogleFonts.varela(fontSize: 30, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }

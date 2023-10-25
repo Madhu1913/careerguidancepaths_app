@@ -1,7 +1,9 @@
 import 'package:careerguidancepaths_app/auth/forgot_password_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:sizer/sizer.dart';
 
 class LoginScreen extends StatefulWidget {
   final Function()? onTap;
@@ -50,9 +52,9 @@ class _LoginScreenState extends State<LoginScreen> {
             title: Center(
                 child: Text(
               msg,
-              style: const TextStyle(
+              style:  TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 13.sp,
                   color: Colors.white),
             )),
           );
@@ -68,32 +70,32 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Form(
           key: _key,
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding:  EdgeInsets.all(5.sp),
             child: Column(
               children: [
-                const SizedBox(
-                  height: 200,
+              SizedBox(
+                  height: 195.sp,
                 ),
-                const Center(
+                Center(
                     child: Text(
                   'Login',
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 35.sp, fontWeight: FontWeight.bold),
                 )),
-                const SizedBox(
-                  height: 30,
+                 SizedBox(
+                  height: 25.sp,
                 ),
                 TextFormField(
                   controller: _user,
                   validator: (val) => val!.isEmpty ? 'Enter Email' : null,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)),
+                          borderRadius: BorderRadius.circular(15.sp)),
                       prefixIcon: const Icon(Icons.mail),
                       labelText: 'Email',
                       hintText: 'Email'),
                 ),
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: 15.sp,
                 ),
                 TextFormField(
                   controller: _pass,
@@ -101,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscureText: isSeen,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)),
+                          borderRadius: BorderRadius.circular(15.sp)),
                       labelText: "Password",
                       hintText: 'Password',
                       prefixIcon: const Icon(Icons.password),
@@ -118,8 +120,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                           child: Icon(icn))),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 5.sp,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -131,38 +133,32 @@ class _LoginScreenState extends State<LoginScreen> {
                             MaterialPageRoute(
                                 builder: (context) => const ForgotPasswordPage()));
                       },
-                      child: const Padding(
-                        padding: EdgeInsets.only(bottom: 8.0),
+                      child:  Padding(
+                        padding: EdgeInsets.only(bottom: 4.sp),
                         child: Text(
                           'Forgot Password? ',
                           style: TextStyle(
                               fontWeight: FontWeight.w600,
                               color: Colors.red,
-                              fontSize: 16),
+                              fontSize: 11.sp),
                         ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 5.sp,
                 ),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Theme.of(context).primaryColor),
-                    onPressed: Login
-                    //     (){
-                    //   Login();
-                    //   _user.clear();
-                    //   _pass.clear();
-                    // }
-                    ,
+                        backgroundColor: Colors.red),
+                    onPressed: Login,
                     child: Text(
                       'Login',
-                      style: TextStyle(
-                          fontSize: 20,
+                      style: GoogleFonts.varela(
+                          fontSize: 15.sp,
                           fontWeight: FontWeight.bold,
-                          color: Theme.of(context).cardColor),
+                          color: Colors.white),
                     )),
                 const SizedBox(
                   height: 20,
@@ -171,17 +167,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text('Not a Registered user?'),
-                    const SizedBox(
-                      width: 10,
+                     SizedBox(
+                      width: 5.sp,
                     ),
                     InkWell(
                         onTap: widget.onTap,
-                        child: const Text(
+                        child:  Text(
                           'Register',
                           style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                              fontSize: 13.sp),
                         )),
                   ],
                 )

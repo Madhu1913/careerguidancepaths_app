@@ -33,7 +33,6 @@ class _AppdataState extends State<Appdata> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       bottomNavigationBar: CurvedNavigationBar(
           onTap: (idx) {
             setState(() {

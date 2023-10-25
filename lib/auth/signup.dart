@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 
 class SignUp extends StatefulWidget {
   final Function()? onTap;
@@ -68,9 +69,9 @@ class _SignUpState extends State<SignUp> {
             title: Center(
                 child: Text(
               msg,
-              style: const TextStyle(
+              style:  TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 13.sp,
                   color: Colors.white),
             )),
           );
@@ -85,19 +86,19 @@ class _SignUpState extends State<SignUp> {
         child: Form(
           key: key,
           child: Padding(
-            padding: const EdgeInsets.all(10),
+            padding:  EdgeInsets.all(5.sp),
             child: Column(
               children: [
-                const SizedBox(
-                  height: 80,
+                SizedBox(
+                  height: 75.sp,
                 ),
                 Text(
                   'Sign Up',
                   style: GoogleFonts.alkatra(
-                      fontSize: 30, fontWeight: FontWeight.bold),
+                      fontSize: 25.sp, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(
-                  height: 15,
+                SizedBox(
+                  height: 10.sp,
                 ),
                 TextFormField(
                   controller: name,
@@ -105,11 +106,11 @@ class _SignUpState extends State<SignUp> {
                   decoration: InputDecoration(
                     labelText: 'User Name',
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(15.sp)),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 5.sp,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.phone,
@@ -118,24 +119,24 @@ class _SignUpState extends State<SignUp> {
                   decoration: InputDecoration(
                     labelText: 'mobile number',
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(15.sp)),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 5.sp,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      child: const Text(
+                      child:  Text(
                         'Age :',
                         style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 30),
+                            fontWeight: FontWeight.w500, fontSize: 25.sp),
                       ),
                     ),
                     SizedBox(
-                      width: 180,
+                      width: 175.sp,
                       child: TextFormField(
                         controller: age,
                         // validator: (val) =>
@@ -143,23 +144,23 @@ class _SignUpState extends State<SignUp> {
                         decoration: InputDecoration(
                           labelText: 'Age',
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20)),
+                              borderRadius: BorderRadius.circular(15.sp)),
                         ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 5.sp,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      child: const Text(
+                      child: Text(
                         'Gender :',
                         style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 30),
+                            fontWeight: FontWeight.w500, fontSize: 25.sp),
                       ),
                     ),
                     SizedBox(
@@ -167,13 +168,13 @@ class _SignUpState extends State<SignUp> {
                       child: DropdownButton(
                         onChanged: dropdowncallback,
                         value: _dropdownvalue,
-                        items: const [
+                        items: [
                           DropdownMenuItem(
                             value: 'Male',
                             child: Text(
                               'Male',
                               style: TextStyle(
-                                  fontWeight: FontWeight.w300, fontSize: 30),
+                                  fontWeight: FontWeight.w300, fontSize: 25.sp),
                             ),
                           ),
                           DropdownMenuItem(
@@ -181,7 +182,7 @@ class _SignUpState extends State<SignUp> {
                             child: Text(
                               'Female',
                               style: TextStyle(
-                                  fontWeight: FontWeight.w300, fontSize: 30),
+                                  fontWeight: FontWeight.w300, fontSize: 25.sp),
                             ),
                           ),
                         ],
@@ -189,8 +190,8 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 10,
+               SizedBox(
+                  height: 5.sp,
                 ),
                 TextFormField(
                   controller: mail,
@@ -198,11 +199,11 @@ class _SignUpState extends State<SignUp> {
                   decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(15.sp)),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 5.sp,
                 ),
                 TextFormField(
                   controller: pass,
@@ -224,11 +225,11 @@ class _SignUpState extends State<SignUp> {
                         },
                         child: Icon(icn1)),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(15.sp)),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 5.sp,
                 ),
                 TextFormField(
                   controller: cnfpass,
@@ -250,7 +251,7 @@ class _SignUpState extends State<SignUp> {
                         },
                         child: Icon(icn2)),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(15.sp)),
                   ),
                 ),
                 CheckboxMenuButton(
@@ -266,17 +267,17 @@ class _SignUpState extends State<SignUp> {
                     )),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Theme.of(context).primaryColor),
+                        backgroundColor:Colors.red),
                     onPressed: signup,
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 15.sp,
                           fontWeight: FontWeight.bold,
-                          color: Theme.of(context).cardColor),
+                          color: Colors.white),
                     )),
-                const SizedBox(
-                  height: 10,
+               SizedBox(
+                  height: 5.sp,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -285,17 +286,17 @@ class _SignUpState extends State<SignUp> {
                       'Already have an account?',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
-                    const SizedBox(
-                      width: 20,
+                  SizedBox(
+                      width: 15.sp,
                     ),
                     InkWell(
                         onTap: widget.onTap,
-                        child: const Text(
+                        child: Text(
                           'Login',
                           style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                              fontSize: 13.sp),
                         )),
                   ],
                 )
