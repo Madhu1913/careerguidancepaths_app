@@ -30,7 +30,83 @@
       "name": "Government Employ",
       "url": "https://img.freepik.com/premium-photo/illustration-team-managers-overseeing-project_894855-4630.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais",
       "desc": "In general, a government employee is an individual who works for a government agency or department. They are responsible for carrying out various tasks and duties that are essential to the functioning of the government."
+    },
+    {
+      "name" : "Lawyer",
+      "url" : "https://img.freepik.com/free-vector/boy-graduation-concept-illustration_114360-12063.jpg?w=740&t=st=1697620056~exp=1697620656~hmac=abc8677569ee4d9ee8c8a35ab9b73e05a63c7d27f33979473ea776b77358433e",
+      "desc" : "A lawyer, also known as an attorney or counselor, is a professional who is trained in and licensed to practice law. Lawyers are essential for the legal system in many countries and play a crucial role in representing and advising clients on various legal matters."
+    },
+    {
+      "name" : "Judge",
+      "url" : "https://img.freepik.com/free-vector/judge-concept-illustration_114360-1710.jpg?w=740&t=st=1697620099~exp=1697620699~hmac=2ddb8d5091afb736f32ef23c9b2abba82cfe811664b6db6ab4e1e86662604de0",
+      "desc" : "A judge is a public official responsible for presiding over legal proceedings in a court of law. Judges play a fundamental role in the judicial system, as they are tasked with interpreting and applying the law, ensuring fair and impartial trials, and making decisions based on the evidence and arguments presented by parties involved in a case."
+    },
+    {
+      "name" : "Pilot",
+      "url" : "https://st4.depositphotos.com/36552966/38058/v/1600/depositphotos_380581260-stock-illustration-confident-young-man-standing-front.jpg",
+      "desc" : "A pilot is a highly trained and certified individual responsible for operating and navigating aircraft, including airplanes, helicopters, and other types of flying machines. Pilots play a crucial role in aviation, ensuring the safety of passengers and cargo during flight."
+    },
+    {
+      "name" : "Loco Pilot",
+      "url" : "",
+      "desc" : "A loco pilot, also known as a train driver or engine driver, is a skilled professional responsible for operating locomotives (train engines) on railways. Loco pilots are key personnel in the safe and efficient operation of train services and Loco pilots are an integral part of the railway industry, ensuring the safe and reliable transportation of goods and passengers."
+    },
+    {
+      "name" : "Bank Employee",
+      "url" : "https://img.freepik.com/free-vector/people-inside-bank-office-design-concept_1284-10366.jpg?w=740&t=st=1697683150~exp=1697683750~hmac=0dfc0c9c0719f736601e066158980d38105e6fb1fe5b23adfdac4ffc6679f823",
+      "desc" : "Bank employees work in financial institutions, such as banks, credit unions, and other financial service providers. They play crucial roles in facilitating a wide range of banking services and financial transactions for customers and clients and he banking industry provides diverse career opportunities and requires a commitment to customer service."
+    },
+    {
+      "name" : "Air Hosters",
+      "url" : "https://img.freepik.com/premium-vector/modern-liner-travel-cruise-ship-traveling-around-world-sea-transport-reliable-vehicle-cartoon-style-vector-illustration_169479-3191.jpg?w=740",
+      "desc" : "Air hostesses, commonly known today as flight attendants, are trained professionals who work on commercial airlines to ensure the safety, comfort, and well-being of passengers during flights and Flight attendants play a vital role in ensuring passenger safety and comfort during air travel."
+    },
+    {
+      "name" : "IAS",
+      "url" : "https://img.freepik.com/free-vector/elegant-business-people-office-scene_24877-57732.jpg?w=740&t=st=1697684123~exp=1697684723~hmac=11eda4244cffe7b2b73116cb3836c5f70b51b9636612a43da3e45b1ac0cd764a",
+      "desc" : " IAS is one of the premier civil services in India. It is a competitive examination-based recruitment system that selects candidates for administrative positions in the Indian government. IAS officers are responsible for implementing government policies, managing public administration, and serving as top-level bureaucrats in various government departments."
+    },
+    {
+      "name" : "IPS",
+      "url" : "https://img.freepik.com/premium-vector/indian-police-officer-vector-illustration_661323-68.jpg?w=740",
+      "desc" : "IPS stands for the Indian Police Service. It is one of the three All India Services, the other two being the Indian Administrative Service (IAS) and the Indian Forest Service (IFoS). IPS officers are responsible for law enforcement and public safety at the state and national levels in India."
+    },
+    {
+      "name" : "CHEF",
+      "url" : "https://img.freepik.com/free-vector/smiling-chef-with-tray_23-2147628977.jpg?w=740&t=st=1697684688~exp=1697685288~hmac=83f0d4e1254ec0917265d55ff02e397e8dfef9f60393a0967bdf994641bb6418",
+      "desc" : "A chef is a culinary professional who specializes in preparing and creating food, often in restaurants, hotels, catering services, or other food establishments. Chefs are responsible for crafting diverse and delicious dishes, and they play a crucial role in the culinary world."
+    },
+    {
+      "name" : "Sports Coach",
+      "url" : "https://img.freepik.com/premium-vector/basketball-class-flat-color-vector-illustration_151150-8040.jpg?w=740",
+      "desc" : "A sports coach is a professional who works with athletes and sports teams to help them develop their skills, improve their performance, and achieve their goals in a particular sport. Coaches play a crucial role in guiding, motivating, and mentoring athletes, both at the amateur and professional levels."
+    },
+    {
+      "name" : "Astrounaut",
+      "url" : "https://img.freepik.com/premium-vector/cartoon-astronaut-clipart-vector-design_911078-1958.jpg?w=360",
+      "desc" : "Astronauts are highly trained individuals who travel to space to conduct scientific research, operate spacecraft, and perform various tasks in the unique and challenging environment of outer space."
+    },
+    {
+      "name" : "Archeologist",
+      "url" : "https://img.freepik.com/premium-vector/terrible-smell-armpit-concept-vector-illustration-white-background-man-has-bad-smell-sweaty_753212-1884.jpg?w=740",
+      "desc" : "Archaeologists are professionals who study and analyze human history and prehistory by examining and excavating archaeological sites, artifacts, and remains. Their work involves uncovering, documenting, and interpreting the material culture and environmental context of past civilizations and societies."
+    },
+    {
+      "name" : "Fashion Designer",
+      "url" : "https://img.freepik.com/free-vector/fashion-designer-concept-hand-drawn_23-2148807352.jpg?w=740&t=st=1697685429~exp=1697686029~hmac=dedab6b48faaab2795b514cb24290d748cf7a089fe8c495ce008b1f778e5c366",
+      "desc" : "A fashion designer is a creative professional who conceptualizes, designs, and creates clothing and accessories, often with an emphasis on aesthetics, style, and function. Fashion designers are responsible for developing clothing collections, selecting materials, and staying current with fashion trends."
+    },
+    {
+      "name" : "Event Manager",
+      "url" : "https://img.freepik.com/premium-vector/event-planner-template-hand-drawn-cartoon-illustration-with-planning-schedule-calendar-concept_2175-7774.jpg?w=740",
+      "desc" : "Event managers are professionals who plan, organize, and execute a wide range of events, including conferences, weddings, corporate meetings, trade shows, and social gatherings. Their primary responsibility is to ensure that events run smoothly and successfully."
+    },
+    {
+      "name" : "Librarian",
+      "url" : "https://img.freepik.com/free-vector/kids-check-out-books-from-library_1308-26245.jpg?w=740&t=st=1697685918~exp=1697686518~hmac=4ab231fa87664917d33fd424ab465e77aea0338b4e76184c3afad66ce1603839",
+      "desc" : "Librarians are professionals who work in libraries, information centers, and other educational or research institutions. They play a crucial role in organizing, managing, and providing access to information and resources"
     }
+
   ],
   "subDoc": [
     {

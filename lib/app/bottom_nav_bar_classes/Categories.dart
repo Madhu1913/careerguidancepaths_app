@@ -1,4 +1,19 @@
 import 'dart:convert';
+import 'package:careerguidancepaths_app/app/subcategories/AirHostress.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Archeologist.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Astrounaut.dart';
+import 'package:careerguidancepaths_app/app/subcategories/BankEmployee.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Chef.dart';
+import 'package:careerguidancepaths_app/app/subcategories/EventManager.dart';
+import 'package:careerguidancepaths_app/app/subcategories/FashionDesigner.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Ias.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Ips.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Judge.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Lawyer.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Librarian.dart';
+import 'package:careerguidancepaths_app/app/subcategories/LocoPilot.dart';
+import 'package:careerguidancepaths_app/app/subcategories/Pilot.dart';
+import 'package:careerguidancepaths_app/app/subcategories/SportsCoach.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,122 +81,163 @@ class _categoriesState extends State<categories> {
       ),
       governmentEmploySubCategories(
         govEmpSub: _govEmpSub,
-      )
+      ),
+      lawyer(),
+      judge(),
+      pilot(),
+      locoPilot(),
+      bankEmployee(),
+      airHosters(),
+      ias(),
+      ips(),
+      chef(),
+      sportsCoach(),
+      astrounaut(),
+      archeologist(),
+      fashionDesigner(),
+      eventManager(),
+      librarian()
     ];
-    List tags = [001, 002, 003, 004, 005, 006];
-    return  Scaffold(
+    List tags = [
+      001,
+      002,
+      003,
+      004,
+      005,
+      006,
+      007,
+      008,
+      009,
+      010,
+      011,
+      012,
+      013,
+      014,
+      015,
+      016,
+      017,
+      018,
+      019,
+      020,
+      021
+    ];
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
-        'Categories',
-        style: GoogleFonts.varela(
-            fontSize: 26.sp,
-            fontWeight: FontWeight.bold,
-            color: Colors.red),
-      ),),
+          'Categories',
+          style: GoogleFonts.varela(
+              fontSize: 26.sp, fontWeight: FontWeight.bold, color: Colors.red),
+        ),
+      ),
       body: Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                  itemCount: _categories.length,
-                  itemBuilder: (context, i) {
-                    return Column(
-                      children: [
-                        Center(
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => classes[i]));
-                            },
-                            child: Hero(
-                                tag: tags[i],
-                                child: Stack(
-                                  children: [
-                                    SizedBox(
-                                      height: 40.h,
-                                      width: 96.w,
-                                      child: Card(
-                                        color: Colors.white,
-                                        elevation: 20.sp,
-                                        shadowColor: Colors.purple,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(30),
-                                            side: const BorderSide(
-                                                color: Colors.black, width: 2)),
-                                      ),
+        children: [
+          Expanded(
+            child: ListView.builder(
+                itemCount: _categories.length,
+                itemBuilder: (context, i) {
+                  return Column(
+                    children: [
+                      Center(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => classes[i]));
+                          },
+                          child: Hero(
+                              tag: tags[i],
+                              child: Stack(
+                                children: [
+                                  SizedBox(
+                                    height: 40.h,
+                                    width: 96.w,
+                                    child: Card(
+                                      color: Colors.white,
+                                      elevation: 20.sp,
+                                      shadowColor: Colors.purple,
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          side: const BorderSide(
+                                              color: Colors.black, width: 2)),
                                     ),
-                                    Positioned(
-                                      left: 1.5.sp,
-                                      top: 6.h,
-                                      child: SizedBox(
-                                        height: 34.h,
-                                        width: 95.w,
-                                        child: Card(
-                                          shape: RoundedRectangleBorder(
-                                              side: const BorderSide(
-                                                  color: Colors.black, width: 2),
-                                              borderRadius: BorderRadius.circular(20)),
-                                          child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(20),
-                                            child: Image.network(
-                                              _categories[i]["url"],
-                                              fit: BoxFit.fill,
-                                            ),
+                                  ),
+                                  Positioned(
+                                    left: 1.5.sp,
+                                    top: 6.h,
+                                    child: SizedBox(
+                                      height: 34.h,
+                                      width: 95.w,
+                                      child: Card(
+                                        shape: RoundedRectangleBorder(
+                                            side: const BorderSide(
+                                                color: Colors.black, width: 2),
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.network(
+                                            _categories[i]["url"],
+                                            fit: BoxFit.fill,
                                           ),
                                         ),
                                       ),
                                     ),
-                                    // Positioned(
-                                    //   left: 20.sp,
-                                    //   top: 6.sp,
-                                    //   child: Text(
-                                    //     _categories[i]["name"],
-                                    //     style: TextStyle(
-                                    //         letterSpacing: 4,
-                                    //         foreground: Paint()
-                                    //           ..style = PaintingStyle.stroke
-                                    //           ..strokeWidth = 4
-                                    //           ..color = Colors.red,
-                                    //         fontWeight: FontWeight.bold,
-                                    //         fontSize: 20.sp),
-                                    //   ),
-                                    // ),
-                                    Positioned(
-                                      left: 20.sp,
-                                      top: 6.sp,
-                                      child: Text(
-                                        _categories[i]["name"],
-                                        style: GoogleFonts.varela(
-                                            // letterSpacing: 3,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w900,
-                                            fontSize: 20.sp),
-                                      ),
+                                  ),
+                                  // Positioned(
+                                  //   left: 20.sp,
+                                  //   top: 6.sp,
+                                  //   child: Text(
+                                  //     _categories[i]["name"],
+                                  //     style: TextStyle(
+                                  //         letterSpacing: 4,
+                                  //         foreground: Paint()
+                                  //           ..style = PaintingStyle.stroke
+                                  //           ..strokeWidth = 4
+                                  //           ..color = Colors.red,
+                                  //         fontWeight: FontWeight.bold,
+                                  //         fontSize: 20.sp),
+                                  //   ),
+                                  // ),
+                                  Positioned(
+                                    left: 20.sp,
+                                    top: 6.sp,
+                                    child: Text(
+                                      _categories[i]["name"],
+                                      style: GoogleFonts.varela(
+                                          // letterSpacing: 3,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 20.sp),
                                     ),
-                                    Positioned(
-                                        left: 80.w,
-                                        top: 3.sp,
-                                        child: IconButton(
-                                            onPressed: () {
-                                              _showModalSheet(i = i);
-                                            },
-                                            icon: const Icon(
-                                              Icons.info_outline,
-                                              color: Colors.black,
-                                              size: 30,
-                                            )))
-                                  ],
-                                )),
-                          ),
+                                  ),
+                                  Positioned(
+                                      left: 80.w,
+                                      top: 3.sp,
+                                      child: IconButton(
+                                          onPressed: () {
+                                            _showModalSheet(i = i);
+                                          },
+                                          icon: const Icon(
+                                            Icons.info_outline,
+                                            color: Colors.black,
+                                            size: 30,
+                                          )))
+                                ],
+                              )),
                         ),
-                        SizedBox(
-                          height: 20.sp,
-                        )
-                      ],
-                    );
-                  }),
-            ),
-          ],
+                      ),
+                      SizedBox(
+                        height: 20.sp,
+                      )
+                    ],
+                  );
+                }),
+          ),
+        ],
       ),
     );
   }
@@ -202,8 +258,8 @@ class _categoriesState extends State<categories> {
                 padding: EdgeInsets.all(10.sp),
                 child: Text(
                   _categories[i]["desc"],
-                  style: TextStyle(fontSize: 18.sp,
-                  fontWeight: FontWeight.w600),
+                  style:
+                      TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600),
                 ),
               ),
             ),

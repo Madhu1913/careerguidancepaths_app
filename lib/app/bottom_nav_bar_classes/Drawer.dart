@@ -68,6 +68,7 @@ class _MyDrawerState extends State<MyDrawer> {
             child: ListTile(
               onTap: (){
                 Provider.of<ThemeProvider>(context,listen: false).toggleTheme();
+                Navigator.pop(context);
               },
               tileColor: Colors.red[600],
               leading: Icon(Icons.change_circle,size: 28.sp,color: Colors.white,),
