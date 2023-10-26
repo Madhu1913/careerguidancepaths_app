@@ -20,73 +20,64 @@ class _MyDrawerState extends State<MyDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: Colors.red[200],
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24.sp),
-          side: BorderSide(color: Colors.amber)),
-      child: Column(
-        children: [
-          DrawerHeader(
-              child: Container(
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.red),
-            child: Center(
-                child: Text(
-              'Career\nCatalyst',
-              style: GoogleFonts.varela(
-                  color: Colors.white,
-                  fontSize: 20.sp,
-                  fontWeight: FontWeight.w800),
-            )),
-          )),
-          Padding(
-            padding:  EdgeInsets.all(6.sp),
-            child: ListTile(
-              style: ListTileStyle.drawer,
-              tileColor: Colors.red[600],
-              onTap: signOut,
-              leading: Icon(
-                Icons.logout,
-                size: 32.sp,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Log Out',
+    return Consumer<ThemeProvider>(
+      builder: (BuildContext context,value,Widget? child)=>Drawer(
+        backgroundColor: Colors.red[200],
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24.sp),
+            side: BorderSide(color: Colors.amber)),
+        child: Column(
+          children: [
+            DrawerHeader(
+                child: Container(
+              decoration:
+                  BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+              child: Center(
+                  child: Text(
+                'Career\nCatalyst',
                 style: GoogleFonts.varela(
-                    fontWeight: FontWeight.w500,
                     color: Colors.white,
-                    fontSize: 20.sp),
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.w800),
+              )),
+            )),
+            Padding(
+              padding:  EdgeInsets.all(6.sp),
+              child: ListTile(
+                style: ListTileStyle.drawer,
+                tileColor: Colors.red[600],
+                onTap: signOut,
+                leading: Icon(
+                  Icons.logout,
+                  size: 32.sp,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Log Out',
+                  style: GoogleFonts.varela(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                      fontSize: 20.sp),
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 16.sp,
-          ),
-          Padding(
-            padding:  EdgeInsets.all(6.sp),
-            child: ListTile(
-              onTap: (){
-                Provider.of<ThemeProvider>(context,listen: false).toggleTheme();
-                Navigator.pop(context);
-              },
-              tileColor: Colors.red[600],
-              leading: Icon(Icons.change_circle,size: 28.sp,color: Colors.white,),
-              title:Text('Switch Mode',style: GoogleFonts.varela(fontWeight: FontWeight.w500,fontSize: 20.sp,color: Colors.white),),
-              // sel ==false
-              //     ? Text('Light Mode',
-              //         style: TextStyle(
-              //             fontWeight: FontWeight.w500,
-              //             color: Colors.white,
-              //             fontSize: 24))
-              //     : Text('Dark Mode',
-              //         style: TextStyle(
-              //             fontWeight: FontWeight.w500,
-              //             color: Colors.white,
-              //             fontSize: 24)),
+            SizedBox(
+              height: 16.sp,
             ),
-          )
-        ],
+            Padding(
+              padding:  EdgeInsets.all(6.sp),
+              child: ListTile(
+                onTap: (){
+                  value.toggleTheme();
+                  Navigator.pop(context);
+                },
+                tileColor: Colors.red[600],
+                leading: Icon(Icons.change_circle,size: 28.sp,color: Colors.white,),
+                title:Text('Switch Mode',style: GoogleFonts.varela(fontWeight: FontWeight.w500,fontSize: 20.sp,color: Colors.white),),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
