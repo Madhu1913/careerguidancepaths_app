@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
             title: Center(
                 child: Text(
               msg,
-              style:  TextStyle(
+              style:  GoogleFonts.varela(
                   fontWeight: FontWeight.bold,
                   fontSize: 13.sp,
                   color: Colors.white),
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Center(
                     child: Text(
                   'Login',
-                  style: TextStyle(fontSize: 35.sp, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.varela(fontSize: 35.sp, fontWeight: FontWeight.bold),
                 )),
                  SizedBox(
                   height: 25.sp,
@@ -137,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         padding: EdgeInsets.only(bottom: 4.sp),
                         child: Text(
                           'Forgot Password? ',
-                          style: TextStyle(
+                          style: GoogleFonts.varela(
                               fontWeight: FontWeight.w600,
                               color: Colors.red,
                               fontSize: 11.sp),
@@ -174,7 +174,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         onTap: widget.onTap,
                         child:  Text(
                           'Register',
-                          style: TextStyle(
+                          style: GoogleFonts.varela(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
                               fontSize: 13.sp),

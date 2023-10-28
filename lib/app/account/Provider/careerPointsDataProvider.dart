@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 class cpdProvider extends ChangeNotifier{
   final i = TextEditingController();
@@ -37,10 +38,10 @@ class cpdProvider extends ChangeNotifier{
   Future<void> imgShowfil(BuildContext context,img)async{
     await showDialog(context: context, builder: (context){
       return AlertDialog(
-        title: Text(careerName,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(careerName,style: GoogleFonts.varela(fontWeight: FontWeight.bold),),
         content: SizedBox(height: 32.h,width: 70.w,child: Image.file(img,fit: BoxFit.fill,),),
         actions: [
-          TextButton(onPressed: (){Navigator.pop(context);}, child: Text('Minimize'))
+          TextButton(onPressed: (){Navigator.pop(context);}, child: const Text('Minimize'))
         ],
       );
     });
@@ -49,10 +50,10 @@ class cpdProvider extends ChangeNotifier{
   Future<void> imgShownet(BuildContext context,img)async{
     await showDialog(context: context, builder: (context){
       return AlertDialog(
-        title: Text(careerName,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(careerName,style: GoogleFonts.varela(fontWeight: FontWeight.bold),),
         content: SizedBox(height: 32.h,width: 70.w,child: Image.network(img,fit: BoxFit.fill,),),
         actions: [
-          TextButton(onPressed: (){Navigator.pop(context);}, child: Text('Minimize'))
+          TextButton(onPressed: (){Navigator.pop(context);}, child: const Text('Minimize'))
         ],
       );
     });
@@ -62,10 +63,10 @@ class cpdProvider extends ChangeNotifier{
     final edtxt=TextEditingController();
     await showDialog(context: context, builder: (context){
       return AlertDialog(
-        title: Text('Edit'),
+        title: const Text('Edit'),
         content: TextFormField(
           autofocus: true,
-          decoration: InputDecoration(hintText: 'Edit here'),
+          decoration: const InputDecoration(hintText: 'Edit here'),
           controller: edtxt,
         ),
         actions: [
@@ -74,10 +75,10 @@ class cpdProvider extends ChangeNotifier{
              li[i]=edtxt.text.trim();
            }
             Navigator.pop(context);
-          }, child: Text('Save')),
+          }, child: const Text('Save')),
           TextButton(onPressed: (){
             Navigator.pop(context);
-          }, child: Text('cancel')),
+          }, child: const Text('cancel')),
         ],
       );
     });

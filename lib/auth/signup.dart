@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,7 +14,7 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   final name = TextEditingController();
-  final phone = TextEditingController();
+  final occupation = TextEditingController();
   final mail = TextEditingController();
   final pass = TextEditingController();
   final cnfpass = TextEditingController();
@@ -43,8 +44,15 @@ class _SignUpState extends State<SignUp> {
     );
     try {
       if (pass.text == cnfpass.text) {
-        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        UserCredential userCredential=await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: mail.text, password: pass.text);
+        FirebaseFirestore.instance.collection('Users').doc(userCredential.user!.email).set({
+          'userName':name.text.trim(),
+          'occupation':occupation.text.trim(),
+          'age':age.text.trim(),
+          //'imag': 'https://th.bing.com/th?id=OIP.SxuyKL-Ca-_bXp1TC4c4-gHaF3&w=280&h=222&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'
+        });
+
         if (context.mounted) {
           Navigator.pop(context);
         }
@@ -94,7 +102,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 Text(
                   'Sign Up',
-                  style: GoogleFonts.alkatra(
+                  style: GoogleFonts.varela(
                       fontSize: 25.sp, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -113,11 +121,11 @@ class _SignUpState extends State<SignUp> {
                   height: 5.sp,
                 ),
                 TextFormField(
-                  keyboardType: TextInputType.phone,
-                  controller: phone,
+                  //keyboardType: TextInputType.phone,
+                  controller: occupation,
                   //validator: (val) => val!.isEmpty ? 'Enter your number' : null,
                   decoration: InputDecoration(
-                    labelText: 'mobile number',
+                    labelText: 'Enter occupation',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15.sp)),
                   ),
@@ -131,7 +139,7 @@ class _SignUpState extends State<SignUp> {
                     Container(
                       child:  Text(
                         'Age :',
-                        style: TextStyle(
+                        style: GoogleFonts.varela(
                             fontWeight: FontWeight.w500, fontSize: 25.sp),
                       ),
                     ),
@@ -159,7 +167,7 @@ class _SignUpState extends State<SignUp> {
                     Container(
                       child: Text(
                         'Gender :',
-                        style: TextStyle(
+                        style: GoogleFonts.varela(
                             fontWeight: FontWeight.w500, fontSize: 25.sp),
                       ),
                     ),
@@ -173,7 +181,7 @@ class _SignUpState extends State<SignUp> {
                             value: 'Male',
                             child: Text(
                               'Male',
-                              style: TextStyle(
+                              style: GoogleFonts.varela(
                                   fontWeight: FontWeight.w300, fontSize: 25.sp),
                             ),
                           ),
@@ -181,7 +189,7 @@ class _SignUpState extends State<SignUp> {
                             value: 'Female',
                             child: Text(
                               'Female',
-                              style: TextStyle(
+                              style: GoogleFonts.varela(
                                   fontWeight: FontWeight.w300, fontSize: 25.sp),
                             ),
                           ),
@@ -261,9 +269,9 @@ class _SignUpState extends State<SignUp> {
                         isEnabled = val;
                       });
                     },
-                    child: const Text(
+                    child:Text(
                       'I agree to Terms & Conditions',
-                      style: TextStyle(fontWeight: FontWeight.w700),
+                      style: GoogleFonts.varela(fontWeight: FontWeight.w700),
                     )),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -271,7 +279,7 @@ class _SignUpState extends State<SignUp> {
                     onPressed: signup,
                     child: Text(
                       'Sign Up',
-                      style: TextStyle(
+                      style: GoogleFonts.varela(
                           fontSize: 15.sp,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
@@ -293,7 +301,7 @@ class _SignUpState extends State<SignUp> {
                         onTap: widget.onTap,
                         child: Text(
                           'Login',
-                          style: TextStyle(
+                          style: GoogleFonts.varela(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
                               fontSize: 13.sp),

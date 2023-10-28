@@ -4,7 +4,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-
 import 'app/account/Provider/CPIprovider.dart';
 import 'app/account/Provider/careerPointsDataProvider.dart';
 void main() async {

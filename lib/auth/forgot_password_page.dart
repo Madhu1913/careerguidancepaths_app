@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
 
@@ -14,8 +15,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: _user.text.trim());
       _user.clear();
       showDialog(context: context, builder: (context){
-        return const AlertDialog(
-          content: Text('Password reset link sent!Check your Email',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 18),),
+        return  AlertDialog(
+          content: Text('Password reset link sent!Check your Email',style: GoogleFonts.varela(fontWeight: FontWeight.w700,fontSize: 18),),
         );
       },
       );

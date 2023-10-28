@@ -25,13 +25,13 @@ class _MyDrawerState extends State<MyDrawer> {
         backgroundColor: Colors.red[200],
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(24.sp),
-            side: BorderSide(color: Colors.amber)),
+            side: const BorderSide(color: Colors.amber)),
         child: Column(
           children: [
             DrawerHeader(
                 child: Container(
               decoration:
-                  BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+                  const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
               child: Center(
                   child: Text(
                 'Career\nCatalyst',

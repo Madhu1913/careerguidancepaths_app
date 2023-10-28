@@ -60,7 +60,7 @@ class _addPathPageState extends State<addPathPage> {
                 height: 5.sp,
               ),
               Center(
-                child: Container(
+                child: SizedBox(
                   height: (63.9).h,
                   child: value.classes[value.z],
                 ),

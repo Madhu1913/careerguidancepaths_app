@@ -1,14 +1,13 @@
 import 'dart:io';
-
 import 'package:careerguidancepaths_app/app/account/Pages/Step%204.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/Step1.dart';
-import 'package:careerguidancepaths_app/app/account/Pages/post.dart';
+import 'package:careerguidancepaths_app/app/account/Provider/careerPointsDataProvider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../Pages/Step 2.dart';
 import '../Pages/Step 3.dart';
-
 
 class cpiProvider extends ChangeNotifier {
   double _i = 0.0;
@@ -17,9 +16,9 @@ class cpiProvider extends ChangeNotifier {
   String get txt1 => _txt1;
   String _txt2 = 'Step 1';
   String get txt2 => _txt2;
-  List classes = [Step1(), Step2(), Step3(), Step4()];
+  List classes = [const Step1(), const Step2(), const Step3(), const Step4()];
   int z = 0;
-  var rows = [z0(), zmid(), zend()];
+  var rows = [const z0(), const zmid(), const zend()];
   int x = 0;
   void fun() {
     if (z == 0) {
@@ -46,14 +45,13 @@ class cpiProvider extends ChangeNotifier {
       x = 2;
       _txt1 = 'Check Everything';
     }
-    if(image!=null){
-      haveimg=1;
+    if (image != null) {
+      haveimg = 1;
     }
-    if(image==null){
-      haveimg=0;
+    if (image == null) {
+      haveimg = 0;
     }
     notifyListeners();
-
   }
 
   List imgs = [
@@ -68,6 +66,7 @@ class cpiProvider extends ChangeNotifier {
     selimg = val;
     notifyListeners();
   }
+
   File? image;
   Future<void> openImagePicker() async {
     final XFile? pickedImage =
@@ -78,11 +77,11 @@ class cpiProvider extends ChangeNotifier {
       notifyListeners();
     }
   }
+
   String defimg =
       'https://img.freepik.com/premium-vector/businessman-with-briefcase-cartoon-concept_24640-7643.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais';
-  int haveimg=0;
-  int selector=0;
-
+  int haveimg = 0;
+  int selector = 0;
 }
 
 class z0 extends StatelessWidget {
@@ -100,12 +99,13 @@ class z0 extends StatelessWidget {
                   value.z++;
                   value.fun();
                 } else {
-                  final snackBar =
-                      SnackBar(content: Text('Please select an image'));
+                  const snackBar =
+                      SnackBar(duration: Duration(seconds: 2),
+                          content: Text('Please select an image'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
               },
-              child: Text('Next'))
+              child: const Text('Next'))
         ],
       ),
     );
@@ -126,13 +126,13 @@ class zmid extends StatelessWidget {
                 value.z--;
                 value.fun();
               },
-              child: Text('Previous')),
+              child: const Text('Previous')),
           ElevatedButton(
               onPressed: () {
                 value.z++;
                 value.fun();
               },
-              child: Text('Next')),
+              child: const Text('Next')),
         ],
       ),
     );
@@ -149,21 +149,35 @@ class zend extends StatefulWidget {
 class _zendState extends State<zend> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<cpiProvider>(
-      builder: (BuildContext context, value, child) => Row(
+    return Consumer2<cpiProvider, cpdProvider>(
+      builder: (BuildContext context, value1, value2, child) => Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           ElevatedButton(
               onPressed: () {
-                value.z--;
-                value.fun();
+                value1.z--;
+                value1.fun();
               },
-              child: Text('Previous')),
+              child: const Text('Previous')),
           ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>test()));
+                FirebaseFirestore.instance.collection("UserPosts").add({
+                  'img': value1.image != null ? value1.image : value1.selimg,
+                  'careerPoints': value2.li,
+                  'careerPointsSub1':value2.li1,
+                  'careerPointsSub2':value2.li2,
+                  'careerPointsSub3':value2.li3,
+                   'TimeStamp':Timestamp.now(),
+                  'careerName': value2.careerName,
+                  'careerDescription': value2.desc,
+                  'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
+                  'Likes':[]
+                });
+                Navigator.pop(context);
+
+               // Navigator.push(context, MaterialPageRoute(builder: (context)=>Appdata()));
               },
-              child: Text('Post')),
+              child: const Text('Post')),
         ],
       ),
     );

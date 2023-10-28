@@ -82,21 +82,21 @@ class _categoriesState extends State<categories> {
       governmentEmploySubCategories(
         govEmpSub: _govEmpSub,
       ),
-      lawyer(),
-      judge(),
-      pilot(),
-      locoPilot(),
-      bankEmployee(),
-      airHosters(),
-      ias(),
-      ips(),
-      chef(),
-      sportsCoach(),
-      astrounaut(),
-      archeologist(),
-      fashionDesigner(),
-      eventManager(),
-      librarian()
+      const lawyer(),
+      const judge(),
+      const pilot(),
+      const locoPilot(),
+      const bankEmployee(),
+      const airHosters(),
+      const ias(),
+      const ips(),
+      const chef(),
+      const sportsCoach(),
+      const astrounaut(),
+      const archeologist(),
+      const fashionDesigner(),
+      const eventManager(),
+      const librarian()
     ];
     List tags = [
       001,
@@ -259,7 +259,7 @@ class _categoriesState extends State<categories> {
                 child: Text(
                   _categories[i]["desc"],
                   style:
-                      TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600),
+                      GoogleFonts.varela(fontSize: 18.sp, fontWeight: FontWeight.w600),
                 ),
               ),
             ),

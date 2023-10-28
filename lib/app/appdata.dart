@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 import 'account/accountPage.dart';
+import 'bottom_nav_bar_classes/PostedPathsPage.dart';
 
 class Appdata extends StatefulWidget {
   const Appdata({
@@ -23,11 +24,8 @@ class _AppdataState extends State<Appdata> {
   List classes = [
     const HomePage(),
     const categories(),
-    const AccountPage(
-      age: null,
-      name: null,
-      occupationOfPerson: null,
-    )
+    postedPathsPage(),
+    const AccountPage(),
   ];
   int index = 0;
   @override
@@ -56,6 +54,11 @@ class _AppdataState extends State<Appdata> {
               Icons.category,
               color: Colors.white,
             )),
+            CurvedNavigationBarItem(
+                child: Icon(
+                  Icons.book_online_rounded,
+                  color: Colors.white,
+                )),
             CurvedNavigationBarItem(
                 child: Icon(
               Icons.person,

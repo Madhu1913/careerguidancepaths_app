@@ -1,6 +1,7 @@
 import 'package:careerguidancepaths_app/app/account/Provider/careerPointsDataProvider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -18,9 +19,7 @@ class _Step4State extends State<Step4> {
   Widget build(BuildContext context) {
     return Consumer2<cpiProvider, cpdProvider>(
         builder: (BuildContext context, value1, value2, Widget? child) =>
-            Scaffold(
-              appBar: AppBar(),
-              body: SingleChildScrollView(
+          SingleChildScrollView(
                 child: Column(
                   children: [
                     Row(
@@ -30,7 +29,7 @@ class _Step4State extends State<Step4> {
                           padding:  EdgeInsets.symmetric(horizontal: 24.0.sp),
                           child: Text(
                             value2.careerName,
-                            style: TextStyle(
+                            style: GoogleFonts.varela(
                                 fontSize: 20.sp, fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -82,7 +81,7 @@ class _Step4State extends State<Step4> {
                                                 horizontal: (6.9).h),
                                             child: Text(
                                               value2.li1[i],
-                                              style:  TextStyle(
+                                              style:  GoogleFonts.varela(
                                                   fontSize: 15.sp,
                                                   fontWeight: FontWeight.bold),
                                             ),
@@ -93,7 +92,7 @@ class _Step4State extends State<Step4> {
                                       children: [
                                         Text(
                                           "|",
-                                          style: TextStyle(
+                                          style: GoogleFonts.varela(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 15.sp),
                                         ),
@@ -120,7 +119,7 @@ class _Step4State extends State<Step4> {
                                                 horizontal: (6.9).h),
                                             child: Text(
                                               value2.li2[i],
-                                              style:  TextStyle(
+                                              style:  GoogleFonts.varela(
                                                   fontSize: 15.sp,
                                                   fontWeight: FontWeight.bold),
                                             ),
@@ -131,7 +130,7 @@ class _Step4State extends State<Step4> {
                                       children: [
                                         Text(
                                           "|",
-                                          style: TextStyle(
+                                          style: GoogleFonts.varela(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 15.sp),
                                         ),
@@ -158,7 +157,7 @@ class _Step4State extends State<Step4> {
                                                 horizontal: (6.9).h),
                                             child: Text(
                                               value2.li3[i],
-                                              style:  TextStyle(
+                                              style:  GoogleFonts.varela(
                                                   fontSize: 15.sp,
                                                   fontWeight: FontWeight.bold),
                                             ),
@@ -169,7 +168,7 @@ class _Step4State extends State<Step4> {
                                       children: [
                                         Text(
                                           "|",
-                                          style: TextStyle(
+                                          style: GoogleFonts.varela(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 15.sp),
                                         ),
@@ -194,7 +193,7 @@ class _Step4State extends State<Step4> {
                           padding: EdgeInsets.symmetric(horizontal: 13.sp),
                           child: Text(
                             'Description',
-                            style: TextStyle(
+                            style: GoogleFonts.varela(
                                 fontWeight: FontWeight.bold, fontSize: 20.sp),
                           ),
                         ),
@@ -214,7 +213,7 @@ class _Step4State extends State<Step4> {
                           child: Text(
                             value2.desc,
                             style:
-                            TextStyle(fontWeight: FontWeight.bold, fontSize: 15.sp),
+                            GoogleFonts.varela(fontWeight: FontWeight.bold, fontSize: 15.sp),
                           )),
                     ),
                     Row(
@@ -224,7 +223,7 @@ class _Step4State extends State<Step4> {
                           padding: EdgeInsets.symmetric(horizontal: 13.sp),
                           child: Text(
                             'Sources',
-                            style: TextStyle(
+                            style: GoogleFonts.varela(
                                 fontWeight: FontWeight.bold, fontSize: 19.sp),
                           ),
                         ),
@@ -248,6 +247,6 @@ class _Step4State extends State<Step4> {
                   ],
                 ),
               ),
-            ));
+            );
   }
 }

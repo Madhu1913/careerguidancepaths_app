@@ -109,20 +109,19 @@ class _Step2State extends State<Step2> {
                               width: 75.w,
                               color: Colors.amberAccent,
                               child: Center(
-                                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding:  EdgeInsets.symmetric(horizontal: (6.9).h),
-                                        child: Text(
+                                  child: SingleChildScrollView(scrollDirection:Axis.horizontal,
+                                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
                                           value.li[idx],
                                           style:  TextStyle(
                                               fontSize: 15.sp, fontWeight: FontWeight.bold),
                                         ),
-                                      ),
-                                      IconButton(onPressed: (){
-                                        value.editField(context,idx);
-                                      }, icon: const Icon(Icons.edit)),
-                                    ],
+                                        IconButton(onPressed: (){
+                                          value.editField(context,idx);
+                                        }, icon: const Icon(Icons.edit)),
+                                      ],
+                                    ),
                                   )),
                             ),
                           ),
