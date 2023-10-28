@@ -9,6 +9,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
+import '../account/Pages/postedby.dart';
+
 class postedPathsPage extends StatefulWidget {
   const postedPathsPage({super.key});
 
@@ -39,267 +41,271 @@ class _postedPathsPageState extends State<postedPathsPage> {
                     (BuildContext context, value1, value2, Widget? child) =>
                         Column(
                           children: [
-                            SingleChildScrollView(scrollDirection: Axis.horizontal,
-                              child: Row(mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding:  EdgeInsets.only(right: 20.w,top: 5.sp,bottom: 5.sp),
-                                    child: Text('@${currentUser.email?.split('@')[0]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 28),),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Card(
-                              color: Colors.grey[300],
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 20.0.sp),
-                                        child: Card(color: Colors.redAccent,
-                                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.sp)),
-                                          child: Padding(
-                                            padding:  EdgeInsets.all(3.sp),
-                                            child: Text(
-                                              post['careerName'],
-                                              style: GoogleFonts.varela(
-                                                  color: Colors.grey[100],fontSize: 20.sp, fontWeight: FontWeight.bold),
+                            // SingleChildScrollView(scrollDirection: Axis.horizontal,
+                            //   child: Row(mainAxisAlignment: MainAxisAlignment.start,
+                            //     children: [
+                            //       Padding(
+                            //         padding:  EdgeInsets.only(right: 20.w,top: 5.sp,bottom: 5.sp),
+                            //         child: PostedBy(),
+                            //       ),
+                            //     ],
+                            //   ),
+                            // ),
+
+                            Padding(
+                              padding: EdgeInsets.all(8.sp),
+                              child: Card(
+                                color: Colors.grey[300],
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20.0.sp,top: 15.sp),
+                                          child: Card(color: Colors.redAccent,
+                                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.sp)),
+                                            child: Padding(
+                                              padding:  EdgeInsets.all(3.sp),
+                                              child: Text(
+                                                post['careerName'],
+                                                style: GoogleFonts.varela(
+                                                    color: Colors.grey[100],fontSize: 20.sp, fontWeight: FontWeight.bold),
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: (4.6).h,
-                                        width: 25.w,
-                                        child: Card(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(15.sp),
-                                          ),
-                                          child: ClipRRect(
+                                        SizedBox(
+                                          height: (4.6).h,
+                                          width: 25.w,
+                                          child: Card(
+                                            shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(15.sp),
-                                              child: value1.haveimg != 0
-                                                  ? InkWell(
-                                                      onTap: () {
-                                                        value2.imgShowfil(
-                                                            context, post['img']);
-                                                      },
-                                                      child: Image.file(
-                                                        post["img"]!,
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    )
-                                                  : InkWell(
-                                                      onTap: () {
-                                                        value2.imgShownet(context,
-                                                            post["img"].toString());
-                                                      },
-                                                      child: Image.network(
-                                                        post["img"].toString(),
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    )),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 13.sp),
-                                        child: Text(
-                                          'Career Points',
-                                          style: GoogleFonts.varela(
-                                              fontWeight: FontWeight.bold, fontSize: 20.sp),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.all(3.0.sp),
-                                    child: const Divider(
-                                      height: 2,
-                                      thickness: 2,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  CarouselSlider(
-                                      items: [
-                                        if (post["careerPoints"].length >= 3)
-                                          ListView.builder(
-                                              itemCount: post["careerPointsSub1"].length,
-                                              itemBuilder: (context, i) {
-                                                return Column(children: [
-                                                  Container(
-                                                    height: (6).h,
-                                                    width: 75.w,
-                                                    color: Colors.amberAccent,
-                                                    child: Center(
-                                                        child: Padding(
-                                                      padding: EdgeInsets.symmetric(
-                                                          horizontal: (6.9).h),
-                                                      child: Text(
-                                                        post["careerPointsSub1"][i],
-                                                        style: GoogleFonts.varela(
-                                                            fontSize: 15.sp,
-                                                            fontWeight: FontWeight.bold),
-                                                      ),
-                                                    )),
-                                                  ),
-                                                  Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Icon(
-                                                        Icons.arrow_downward_outlined,
-                                                        size: 25.sp,
-                                                      ),
-                                                    ],
-                                                  )
-                                                ]);
-                                              }),
-                                        if (post["careerPoints"].length>= 6)
-                                          ListView.builder(
-                                              itemCount: post["careerPointsSub2"].length,
-                                              itemBuilder: (context, i) {
-                                                return Column(children: [
-                                                  Container(
-                                                    height: (6).h,
-                                                    width: 75.w,
-                                                    color: Colors.amberAccent,
-                                                    child: Center(
-                                                        child: Padding(
-                                                      padding: EdgeInsets.symmetric(
-                                                          horizontal: (6.9).h),
-                                                      child: Text(
-                                                        post["careerPointsSub2"][i],
-                                                        style: GoogleFonts.varela(
-                                                            fontSize: 15.sp,
-                                                            fontWeight: FontWeight.bold),
-                                                      ),
-                                                    )),
-                                                  ),
-                                                  Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Icon(
-                                                        Icons.arrow_downward_outlined,
-                                                        size: 25.sp,
-                                                      ),
-                                                    ],
-                                                  )
-                                                ]);
-                                              }),
-                                        if (post["careerPoints"].length >= 9)
-                                          ListView.builder(
-                                              itemCount: post["careerPointsSub3"].length,
-                                              itemBuilder: (context, i) {
-                                                return Column(children: [
-                                                  Container(
-                                                    height: (6).h,
-                                                    width: 75.w,
-                                                    color: Colors.amberAccent,
-                                                    child: Center(
-                                                        child: Padding(
-                                                      padding: EdgeInsets.symmetric(
-                                                          horizontal: (6.9).h),
-                                                      child: Text(
-                                                        post["careerPointsSub3"][i],
-                                                        style: GoogleFonts.varela(
-                                                            fontSize: 15.sp,
-                                                            fontWeight: FontWeight.bold),
-                                                      ),
-                                                    )),
-                                                  ),
-                                                  Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Icon(
-                                                        Icons.arrow_downward_outlined,
-                                                        size: 25.sp,
-                                                      ),
-                                                    ],
-                                                  )
-                                                ]);
-                                              })
+                                            ),
+                                            child: ClipRRect(
+                                                borderRadius: BorderRadius.circular(15.sp),
+                                                child: value1.haveimg != 0
+                                                    ? InkWell(
+                                                        onTap: () {
+                                                          value2.imgShowfil(
+                                                              context, post['img']);
+                                                        },
+                                                        child: Image.file(
+                                                          post["img"]!,
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                      )
+                                                    : InkWell(
+                                                        onTap: () {
+                                                          value2.imgShownet(context,
+                                                              post["img"].toString());
+                                                        },
+                                                        child: Image.network(
+                                                          post["img"].toString(),
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                      )),
+                                          ),
+                                        )
                                       ],
-                                      options: CarouselOptions(
-                                        height: (26.74).h,
-                                        viewportFraction: 1,
-                                        enableInfiniteScroll: false,
-                                      )),
-                                  Padding(
-                                    padding:  EdgeInsets.all(5.sp),
-                                    child: Row(
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
                                       children: [
-                                        likeButton(postid: post.id,
-                                          likes: List<String>.from(post['Likes']?? []),),
-                                        SizedBox(width: 15.sp,),
-                                        Text(List<String>.from(post['Likes']?? []).length.toString(),style: GoogleFonts.varela(fontSize: 15.sp,fontWeight: FontWeight.w600),),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(horizontal: 13.sp),
+                                          child: Text(
+                                            'Career Points',
+                                            style: GoogleFonts.varela(
+                                                fontWeight: FontWeight.bold, fontSize: 20.sp),
+                                          ),
+                                        ),
                                       ],
                                     ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 13.sp),
-                                        child: Text(
-                                          'Description',
-                                          style: GoogleFonts.varela(
-                                              fontWeight: FontWeight.bold, fontSize: 20.sp),
-                                        ),
+                                    Padding(
+                                      padding: EdgeInsets.all(3.0.sp),
+                                      child: const Divider(
+                                        height: 2,
+                                        thickness: 2,
+                                        color: Colors.black,
                                       ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.all(3.0.sp),
-                                    child: const Divider(
-                                      height: 2,
-                                      thickness: 2,
-                                      color: Colors.black,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 13.h,
-                                    child: SingleChildScrollView(
-                                        child: Text(
-                                      post["careerDescription"],
-                                      style: GoogleFonts.varela(
-                                          fontWeight: FontWeight.bold, fontSize: 15.sp),
-                                    )),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 13.sp),
-                                        child: Text(
-                                          'Sources',
-                                          style: GoogleFonts.varela(
-                                              fontWeight: FontWeight.bold, fontSize: 19.sp),
-                                        ),
+                                    CarouselSlider(
+                                        items: [
+                                          if (post["careerPoints"].length >= 3)
+                                            ListView.builder(
+                                                itemCount: post["careerPointsSub1"].length,
+                                                itemBuilder: (context, i) {
+                                                  return Column(children: [
+                                                    Container(
+                                                      height: (6).h,
+                                                      width: 75.w,
+                                                      color: Colors.amberAccent,
+                                                      child: Center(
+                                                          child: Padding(
+                                                        padding: EdgeInsets.symmetric(
+                                                            horizontal: (6.9).h),
+                                                        child: Text(
+                                                          post["careerPointsSub1"][i],
+                                                          style: GoogleFonts.varela(
+                                                              fontSize: 15.sp,
+                                                              fontWeight: FontWeight.bold),
+                                                        ),
+                                                      )),
+                                                    ),
+                                                    Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment.start,
+                                                      children: [
+                                                        Icon(
+                                                          Icons.arrow_downward_outlined,
+                                                          size: 25.sp,
+                                                        ),
+                                                      ],
+                                                    )
+                                                  ]);
+                                                }),
+                                          if (post["careerPoints"].length>= 6)
+                                            ListView.builder(
+                                                itemCount: post["careerPointsSub2"].length,
+                                                itemBuilder: (context, i) {
+                                                  return Column(children: [
+                                                    Container(
+                                                      height: (6).h,
+                                                      width: 75.w,
+                                                      color: Colors.amberAccent,
+                                                      child: Center(
+                                                          child: Padding(
+                                                        padding: EdgeInsets.symmetric(
+                                                            horizontal: (6.9).h),
+                                                        child: Text(
+                                                          post["careerPointsSub2"][i],
+                                                          style: GoogleFonts.varela(
+                                                              fontSize: 15.sp,
+                                                              fontWeight: FontWeight.bold),
+                                                        ),
+                                                      )),
+                                                    ),
+                                                    Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment.start,
+                                                      children: [
+                                                        Icon(
+                                                          Icons.arrow_downward_outlined,
+                                                          size: 25.sp,
+                                                        ),
+                                                      ],
+                                                    )
+                                                  ]);
+                                                }),
+                                          if (post["careerPoints"].length >= 9)
+                                            ListView.builder(
+                                                itemCount: post["careerPointsSub3"].length,
+                                                itemBuilder: (context, i) {
+                                                  return Column(children: [
+                                                    Container(
+                                                      height: (6).h,
+                                                      width: 75.w,
+                                                      color: Colors.amberAccent,
+                                                      child: Center(
+                                                          child: Padding(
+                                                        padding: EdgeInsets.symmetric(
+                                                            horizontal: (6.9).h),
+                                                        child: Text(
+                                                          post["careerPointsSub3"][i],
+                                                          style: GoogleFonts.varela(
+                                                              fontSize: 15.sp,
+                                                              fontWeight: FontWeight.bold),
+                                                        ),
+                                                      )),
+                                                    ),
+                                                    Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment.start,
+                                                      children: [
+                                                        Icon(
+                                                          Icons.arrow_downward_outlined,
+                                                          size: 25.sp,
+                                                        ),
+                                                      ],
+                                                    )
+                                                  ]);
+                                                })
+                                        ],
+                                        options: CarouselOptions(
+                                          height: (26.74).h,
+                                          viewportFraction: 1,
+                                          enableInfiniteScroll: false,
+                                        )),
+                                    Padding(
+                                      padding:  EdgeInsets.all(5.sp),
+                                      child: Row(
+                                        children: [
+                                          likeButton(postid: post.id,
+                                            likes: List<String>.from(post['Likes']?? []),),
+                                          SizedBox(width: 15.sp,),
+                                          Text(List<String>.from(post['Likes']?? []).length.toString(),style: GoogleFonts.varela(fontSize: 15.sp,fontWeight: FontWeight.w600),),
+                                        ],
                                       ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.all(3.0.sp),
-                                    child: const Divider(
-                                      height: 2,
-                                      thickness: 2,
-                                      color: Colors.black,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    child: SingleChildScrollView(
-                                      child: Text(post["careerSources"].join().toString(),style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold),),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(horizontal: 13.sp),
+                                          child: Text(
+                                            'Description',
+                                            style: GoogleFonts.varela(
+                                                fontWeight: FontWeight.bold, fontSize: 20.sp),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding: EdgeInsets.all(3.0.sp),
+                                      child: const Divider(
+                                        height: 2,
+                                        thickness: 2,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 13.h,
+                                      child: SingleChildScrollView(
+                                          child: Text(
+                                        post["careerDescription"],
+                                        style: GoogleFonts.varela(
+                                            fontWeight: FontWeight.bold, fontSize: 15.sp),
+                                      )),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(horizontal: 13.sp),
+                                          child: Text(
+                                            'Sources',
+                                            style: GoogleFonts.varela(
+                                                fontWeight: FontWeight.bold, fontSize: 19.sp),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(3.0.sp),
+                                      child: const Divider(
+                                        height: 2,
+                                        thickness: 2,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      child: SingleChildScrollView(
+                                        child: Text( post["careerSources"]=='No Sources Available'? 'No Sources Available': post["careerSources"].join().toString(),style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold),),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             )
                           ],
