@@ -161,28 +161,39 @@ class _zendState extends State<zend> {
               child: const Text('Previous')),
           ElevatedButton(
               onPressed: () {
-                if(value2.li.length>=3){
+
                   FirebaseFirestore.instance.collection("UserPosts").add({
                     'img': value1.image != null ? value1.image : value1.selimg,
                     'careerPoints': value2.li,
                     'careerPointsSub1':value2.li1,
+                    'careerPointsSub2':value2.li2,
+                    'careerPointsSub3':value2.li3,
                     'TimeStamp':Timestamp.now(),
                     'careerName': value2.careerName,
                     'careerDescription': value2.desc,
                     'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
                     'Likes':[]
                   });
-                }
-                if(value2.li.length>=6){
-                  FirebaseFirestore.instance.collection("UserPosts").add({
-                    'careerPointsSub2':value2.li2,
-                  });
-                }
-                if(value2.li.length>=9){
-                  FirebaseFirestore.instance.collection("UserPosts").add({
-                    'careerPointsSub3':value2.li3,
-                  });
-                }
+                  value2.li.clear();
+                  value2.li1.clear();
+                value2.li2.clear();
+                value2.li3.clear();
+                value2.sour.clear();
+                value2.desc='To be Filled';
+                value2.careerName='To be Filled';
+                value1.selimg=null;
+                value1.image=null;
+
+                // if(value2.li.length>=6){
+                //   FirebaseFirestore.instance.collection("UserPosts").add({
+                //     'careerPointsSub2':value2.li2,
+                //   });
+                // }
+                // if(value2.li.length>=9){
+                //   FirebaseFirestore.instance.collection("UserPosts").add({
+                //     'careerPointsSub3':value2.li3,
+                //   });
+                // }
                 Navigator.pop(context);
 
                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Appdata()));
