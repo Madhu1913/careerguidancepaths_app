@@ -43,7 +43,7 @@ class _SignUpState extends State<SignUp> {
       },
     );
     try {
-      if (pass.text == cnfpass.text) {
+      if (pass.text == cnfpass.text ) {
         UserCredential userCredential=await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: mail.text, password: pass.text);
         FirebaseFirestore.instance.collection('Users').doc(userCredential.user!.email).set({
@@ -110,7 +110,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 TextFormField(
                   controller: name,
-                  //validator: (val) => val!.isEmpty ? 'Enter your name' : null,
+                  validator: (val) => val!.isEmpty ? 'Enter your name' : null,
                   decoration: InputDecoration(
                     labelText: 'User Name',
                     border: OutlineInputBorder(
@@ -123,7 +123,7 @@ class _SignUpState extends State<SignUp> {
                 TextFormField(
                   //keyboardType: TextInputType.phone,
                   controller: occupation,
-                  //validator: (val) => val!.isEmpty ? 'Enter your number' : null,
+                  validator: (val) => val!.isEmpty ? 'Enter your Occupation' : null,
                   decoration: InputDecoration(
                     labelText: 'Enter occupation',
                     border: OutlineInputBorder(
@@ -147,8 +147,8 @@ class _SignUpState extends State<SignUp> {
                       width: 175.sp,
                       child: TextFormField(
                         controller: age,
-                        // validator: (val) =>
-                        // val!.isEmpty ? 'Enter your age' : null,
+                        validator: (val) =>
+                        val!.isEmpty ? 'Enter your age' : null,
                         decoration: InputDecoration(
                           labelText: 'Age',
                           border: OutlineInputBorder(
@@ -276,7 +276,11 @@ class _SignUpState extends State<SignUp> {
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor:Colors.red),
-                    onPressed: signup,
+                    onPressed: (){
+                      if(key.currentState!.validate()){
+                        signup();
+                      }
+                    },
                     child: Text(
                       'Sign Up',
                       style: GoogleFonts.varela(

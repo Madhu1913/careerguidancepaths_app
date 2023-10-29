@@ -41,19 +41,19 @@ class _postedPathsPageState extends State<postedPathsPage> {
                     (BuildContext context, value1, value2, Widget? child) =>
                         Column(
                           children: [
-                            // SingleChildScrollView(scrollDirection: Axis.horizontal,
-                            //   child: Row(mainAxisAlignment: MainAxisAlignment.start,
-                            //     children: [
-                            //       Padding(
-                            //         padding:  EdgeInsets.only(right: 20.w,top: 5.sp,bottom: 5.sp),
-                            //         child: PostedBy(),
-                            //       ),
-                            //     ],
-                            //   ),
-                            // ),
+                            SingleChildScrollView(scrollDirection: Axis.horizontal,
+                              child: Row(mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding:  EdgeInsets.only(right: 20.w,top: 5.sp,bottom: 5.sp),
+                                    child: Text('Posted by @${post['userEmail']}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                  ),
+                                ],
+                              ),
+                            ),
 
                             Padding(
-                              padding: EdgeInsets.all(8.sp),
+                              padding: EdgeInsets.only(left: 8.sp,right: 8.sp),
                               child: Card(
                                 color: Colors.grey[300],
                                 child: Column(
@@ -62,7 +62,7 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       children: [
                                         Padding(
-                                          padding: EdgeInsets.only(left: 20.0.sp,top: 15.sp),
+                                          padding: EdgeInsets.only(left: 20.0.sp,top: 10.sp),
                                           child: Card(color: Colors.redAccent,
                                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.sp)),
                                             child: Padding(
@@ -92,7 +92,7 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                                         },
                                                         child: Image.file(
                                                           post["img"]!,
-                                                          fit: BoxFit.cover,
+                                                          fit: BoxFit.cover
                                                         ),
                                                       )
                                                     : InkWell(

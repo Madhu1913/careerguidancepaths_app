@@ -3,6 +3,7 @@ import 'package:careerguidancepaths_app/app/account/Pages/Step%204.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/Step1.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/careerPointsDataProvider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -147,6 +148,7 @@ class zend extends StatefulWidget {
 }
 
 class _zendState extends State<zend> {
+  final currentuser=FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Consumer2<cpiProvider, cpdProvider>(
@@ -162,28 +164,36 @@ class _zendState extends State<zend> {
           ElevatedButton(
               onPressed: () {
 
-                  FirebaseFirestore.instance.collection("UserPosts").add({
-                    'img': value1.image != null ? value1.image : value1.selimg,
-                    'careerPoints': value2.li,
-                    'careerPointsSub1':value2.li1,
-                    'careerPointsSub2':value2.li2,
-                    'careerPointsSub3':value2.li3,
-                    'TimeStamp':Timestamp.now(),
-                    'careerName': value2.careerName,
-                    'careerDescription': value2.desc,
-                    'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
-                    'Likes':[]
-                  });
-                  value2.li.clear();
-                  value2.li1.clear();
-                value2.li2.clear();
-                value2.li3.clear();
-                value2.sour.clear();
-                value2.desc='To be Filled';
-                value2.careerName='To be Filled';
-                value1.selimg=null;
-                value1.image=null;
-
+                 if(value2.li.isNotEmpty && value2.desc!='To be Filled' ){
+                   FirebaseFirestore.instance.collection("UserPosts").add({
+                     'userEmail': currentuser.email?.split('@')[0],
+                     'img': value1.image != null ? value1.image : value1.selimg,
+                     'careerPoints': value2.li,
+                     'careerPointsSub1':value2.li1,
+                     'careerPointsSub2':value2.li2,
+                     'careerPointsSub3':value2.li3,
+                     'TimeStamp':Timestamp.now(),
+                     'careerName': value2.careerName,
+                     'careerDescription': value2.desc,
+                     'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
+                     'Likes':[]
+                   });
+                   value2.li.clear();
+                   value2.li1.clear();
+                   value2.li2.clear();
+                   value2.li3.clear();
+                   value2.sour.clear();
+                   value2.desc='To be Filled';
+                   value2.careerName='To be Filled';
+                   value1.selimg=null;
+                   value1.image=null;
+                   Navigator.pop(context);
+                 }else {
+                   const snackBar =
+                   SnackBar(duration: Duration(seconds: 2),
+                       content: Text('Please Fill Out The Respective Fields'));
+                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                 }
                 // if(value2.li.length>=6){
                 //   FirebaseFirestore.instance.collection("UserPosts").add({
                 //     'careerPointsSub2':value2.li2,
@@ -194,7 +204,7 @@ class _zendState extends State<zend> {
                 //     'careerPointsSub3':value2.li3,
                 //   });
                 // }
-                Navigator.pop(context);
+
 
                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Appdata()));
               },
