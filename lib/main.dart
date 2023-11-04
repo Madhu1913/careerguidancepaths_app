@@ -1,4 +1,5 @@
 import 'package:careerguidancepaths_app/Extra/Theme/ThemeProvider.dart';
+import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
 import 'package:careerguidancepaths_app/auth/auth_Page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
           providers: [
             ChangeNotifierProvider(create: (context)=>ThemeProvider()),
             ChangeNotifierProvider(create: (context) => cpiProvider()),
-            ChangeNotifierProvider(create: (context)=>cpdProvider())
+            ChangeNotifierProvider(create: (context)=>cpdProvider()),
+            ChangeNotifierProvider(create: (context)=>myPathsProvider())
           ],
           child: Consumer<ThemeProvider>(
             builder:(BuildContext context,value,Widget? child)=> MaterialApp(

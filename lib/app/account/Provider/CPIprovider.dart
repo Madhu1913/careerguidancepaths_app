@@ -165,23 +165,47 @@ class _zendState extends State<zend> {
               onPressed: () {
 
                  if(value2.li.isNotEmpty && value2.desc!='To be Filled' ){
-                   FirebaseFirestore.instance.collection("UserPosts").add({
-                     'userEmail': currentuser.email?.split('@')[0],
-                     'img': value1.image != null ? value1.image : value1.selimg,
-                     'careerPoints': value2.li,
-                     'careerPointsSub1':value2.li1,
-                     'careerPointsSub2':value2.li2,
-                     'careerPointsSub3':value2.li3,
-                     'TimeStamp':Timestamp.now(),
-                     'careerName': value2.careerName,
-                     'careerDescription': value2.desc,
-                     'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
-                     'Likes':[]
-                   });
+                  try{
+                    FirebaseFirestore.instance.collection('Users').doc(currentuser.uid).collection("MyPosts").add({
+                      'userEmail': currentuser.email?.split('@')[0],
+                      'img': value1.image != null ? value1.image : value1.selimg,
+                      'careerPoints': value2.li,
+                      'TimeStamp':Timestamp.now(),
+                      'careerName': value2.careerName,
+                      'careerDescription': value2.desc,
+                      'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
+                      'Likes':[]
+                    }).then((value) => showDialog(context: context, builder: (context){
+                      return Center(
+                        child: AlertDialog(
+                          title: Text('Your Post is Added'),
+                        ),
+                      );
+                    }));
+                  }catch(err){
+                    throw Exception(err);
+                  }
+                  try{
+                    FirebaseFirestore.instance.collection('UserPosts').add({
+                      'userEmail': currentuser.email?.split('@')[0],
+                      'img': value1.image != null ? value1.image : value1.selimg,
+                      'careerPoints': value2.li,
+                      'TimeStamp':Timestamp.now(),
+                      'careerName': value2.careerName,
+                      'careerDescription': value2.desc,
+                      'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
+                      'Likes':[]
+                    }).then((value) => showDialog(context: context, builder: (context){
+                      return Center(
+                        child: AlertDialog(
+                          title: Text('Your Post is Added'),
+                        ),
+                      );
+                    }));
+                  }catch(err){
+                    throw Exception(err);
+                  }
                    value2.li.clear();
-                   value2.li1.clear();
-                   value2.li2.clear();
-                   value2.li3.clear();
                    value2.sour.clear();
                    value2.desc='To be Filled';
                    value2.careerName='To be Filled';

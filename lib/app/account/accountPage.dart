@@ -1,10 +1,13 @@
 import 'dart:io';
 import 'package:careerguidancepaths_app/app/account/AddpathPage.dart';
+import 'package:careerguidancepaths_app/app/account/Pages/TogglePage.dart';
+import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
 class AccountPage extends StatefulWidget {
@@ -28,7 +31,7 @@ class _AccountPageState extends State<AccountPage> {
         body: StreamBuilder<DocumentSnapshot>(
           stream: FirebaseFirestore.instance
               .collection('Users')
-              .doc(currentuser.email!)
+              .doc(currentuser.uid)
               .snapshots(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
@@ -76,10 +79,16 @@ class _AccountPageState extends State<AccountPage> {
                                 )))),
                         Column(
                           children: [
-                            Text(
-                              'Name : ${userdata['userName']}',
-                              style:  GoogleFonts.varela(
-                                  fontWeight: FontWeight.bold, fontSize: 15.sp),
+                            Row(
+                              children: [
+                                SingleChildScrollView(scrollDirection: Axis.horizontal,
+                                  child: Text(
+                                    'Name : ${userdata['userName']}',
+                                    style:  GoogleFonts.varela(
+                                        fontWeight: FontWeight.bold, fontSize: 15.sp),
+                                  ),
+                                ),
+                              ],
                             ),
                           SizedBox(
                               height: 5.sp,
@@ -112,40 +121,46 @@ class _AccountPageState extends State<AccountPage> {
                   SizedBox(
                     height: 15.sp,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  Consumer<myPathsProvider>(
+                   builder:(BuildContext context,value,Widget? child)=> Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        InkWell(
+                          onTap: (){
+                            value.toggle1();
+                            print(value.togglenum);
+                          },
+                          child: Card(
+                            child:Text(
+                              'Add Path',
+                              style: GoogleFonts.varela(
+                                  fontSize: 20.sp, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: (){
+                            value.toggle2();
+                            print(value.togglenum);
+
+                          },
+                          child: Card(
+                            child:  Text(
+                              'My Paths',
+                              style: GoogleFonts.varela(
+                                  fontSize: 20.sp, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Column(
                     children: [
-                      Container(
-                        child:Text(
-                          'Add Path',
-                          style: GoogleFonts.varela(
-                              fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Container(
-                        child:  Text(
-                          'Your Paths',
-                          style: GoogleFonts.varela(
-                              fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        ),
-                      ),
+                      togglePages(),
                     ],
-                  ),
-                   SizedBox(
-                    height: (9.3).h,
-                  ),
-                  IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const addPathPage()));
-                      },
-                      icon:  Icon(
-                        Icons.add_circle,
-                        size: (9.3).h,
-                        color: Colors.red,
-                      ))
+                  )
+
                 ],
               );
             } else if (snapshot.hasError) {
