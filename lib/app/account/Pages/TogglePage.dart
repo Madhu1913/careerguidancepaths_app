@@ -64,16 +64,10 @@ class _MyPathsPageState extends State<MyPathsPage> {
                     padding: EdgeInsets.all(5.sp),
                     child: Stack(children: [
                       Consumer<cpiProvider>(
-                        builder: (context, value, child) => Container(
+                        builder: (context, value1, child) => Container(
                           height: 10.h,
                           width: 95.w,
-                          child: value.haveimg != 0
-                              ? Image.file(
-                                  post["img"]!,
-                                  fit: BoxFit.cover,
-                                  alignment: Alignment.topCenter,
-                                )
-                              : Image.network(
+                          child: Image.network(
                                   post["img"].toString(),
                                   fit: BoxFit.cover,
                                   alignment: Alignment.topCenter,
@@ -87,11 +81,19 @@ class _MyPathsPageState extends State<MyPathsPage> {
                       ),
                       Positioned(
                         left: 86.w,
-                        child: Consumer<myPathsProvider>(
+                        child: Consumer<cpiProvider>(
                             builder:(context,value,child)=> IconButton(
                               icon: Icon(Icons.delete),
-                              onPressed: ()  {
-                               value.ondel(post.id);
+                              onPressed: ()  async{
+                                await FirebaseFirestore.instance.collection('Users').doc(currentuser.uid).collection('MyPosts')
+                                    .doc(post.id)
+                                    .delete()
+                                    .then((value) => print('deleted'));
+                                await FirebaseFirestore.instance
+                                    .collection('UserPosts')
+                                    .doc(post.id)
+                                    .delete()
+                                    .then((value) => print('deleted'));
                               }),
                         ),
                       )

@@ -1,7 +1,6 @@
 import 'package:careerguidancepaths_app/app/account/Pages/like.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/CPIprovider.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/careerPointsDataProvider.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
-import '../account/Pages/postedby.dart';
 
 class postedPathsPage extends StatefulWidget {
   const postedPathsPage({super.key});
@@ -39,7 +37,7 @@ class _postedPathsPageState extends State<postedPathsPage> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return PageView.builder(
-                scrollDirection: Axis.vertical,
+                // scrollDirection: Axis.vertical,
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, i) {
                   final post = snapshot.data!.docs[i];
@@ -106,17 +104,7 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                         child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(15.sp),
-                                            child: value1.haveimg != 0
-                                                ? InkWell(
-                                                    onTap: () {
-                                                      value2.imgShowfil(
-                                                          context, post['img']);
-                                                    },
-                                                    child: Image.file(
-                                                        post["img"]!,
-                                                        fit: BoxFit.cover),
-                                                  )
-                                                : InkWell(
+                                            child:InkWell(
                                                     onTap: () {
                                                       value2.imgShownet(
                                                           context,

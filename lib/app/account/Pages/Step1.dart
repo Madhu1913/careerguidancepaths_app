@@ -16,38 +16,38 @@ class _Step1State extends State<Step1> {
     return Consumer<cpiProvider>(
       builder: (BuildContext context, value, Widget? child) =>
           Column(children: [
-        InkWell(
-          onDoubleTap: (){
-            value.openImagePicker();
-            value.selimg=null;
-          },
-          onTap: () {
-            if(value.selimg==null){
-              value.openImagePicker();
-            }
-          },
-          child: Padding(
-            padding:  EdgeInsets.all(5.sp),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  'Select an image from gallery',
-                  style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
-                ),
-                value.image != null
-                    ? const Icon(
-                        Icons.circle,
-                        color: Colors.red,
-                      )
-                    : const Icon(
-                        Icons.circle_outlined,
-                        color: Colors.red,
-                      )
-              ],
-            ),
-          ),
-        ),
+        // InkWell(
+        //   onDoubleTap: (){
+        //     value.openImagePicker();
+        //     value.selimg=null;
+        //   },
+        //   onTap: () {
+        //     if(value.selimg==null){
+        //       value.openImagePicker();
+        //     }
+        //   },
+        //   child: Padding(
+        //     padding:  EdgeInsets.all(5.sp),
+        //     child: Row(
+        //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //       children: [
+        //         Text(
+        //           'Select an image from gallery',
+        //           style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
+        //         ),
+        //         value.image != null
+        //             ? const Icon(
+        //                 Icons.circle,
+        //                 color: Colors.red,
+        //               )
+        //             : const Icon(
+        //                 Icons.circle_outlined,
+        //                 color: Colors.red,
+        //               )
+        //       ],
+        //     ),
+        //   ),
+        // ),
         Expanded(
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -55,19 +55,11 @@ class _Step1State extends State<Step1> {
             itemCount: value.imgs.length,
             itemBuilder: (context, i) {
               return ListTile(
-                onLongPress: (){value.selector=1;},
                   leading: Radio(
                     value: value.imgs[i],
                     groupValue: value.selimg,
                     onChanged: (val) {
-                      if(value.image==null){
-                        value.selectImg(val);
-                      }
-                      else
-                      if(value.selector!=0){
-                        value.image=null;
-                        value.selectImg(val);
-                      }
+                      value.selectImg(val);
                     },
                   ),
                   title: Container(
@@ -84,13 +76,7 @@ class _Step1State extends State<Step1> {
               value: value.defimg,
               groupValue: value.selimg,
               onChanged: (val) {
-                if(value.image==null){
-                  value.selectImg(val);
-                }else
-                  if(value.selector!=0){
-                  value.image=null;
-                  value.selectImg(val);
-                }
+                value.selectImg(val);
               },
             ),
             title: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,

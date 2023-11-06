@@ -11,6 +11,8 @@ import '../Pages/Step 2.dart';
 import '../Pages/Step 3.dart';
 
 class cpiProvider extends ChangeNotifier {
+  int _id = 0;
+  int get id => _id;
   double _i = 0.0;
   double get i => _i;
   String _txt1 = 'Select an Image';
@@ -100,9 +102,9 @@ class z0 extends StatelessWidget {
                   value.z++;
                   value.fun();
                 } else {
-                  const snackBar =
-                      SnackBar(duration: Duration(seconds: 2),
-                          content: Text('Please select an image'));
+                  const snackBar = SnackBar(
+                      duration: Duration(seconds: 2),
+                      content: Text('Please select an image'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
               },
@@ -148,7 +150,7 @@ class zend extends StatefulWidget {
 }
 
 class _zendState extends State<zend> {
-  final currentuser=FirebaseAuth.instance.currentUser!;
+  final currentuser = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Consumer2<cpiProvider, cpdProvider>(
@@ -163,61 +165,68 @@ class _zendState extends State<zend> {
               child: const Text('Previous')),
           ElevatedButton(
               onPressed: () {
-
-                 if(value2.li.isNotEmpty && value2.desc!='To be Filled' ){
-                  try{
-                    FirebaseFirestore.instance.collection('Users').doc(currentuser.uid).collection("MyPosts").add({
+                if (value2.li.isNotEmpty && value2.desc != 'To be Filled') {
+                  try {
+                    FirebaseFirestore.instance
+                        .collection('Users')
+                        .doc(currentuser.uid)
+                        .collection("MyPosts")
+                        .doc(value1.id.toString())
+                        .set({
                       'userEmail': currentuser.email?.split('@')[0],
-                      'img': value1.image != null ? value1.image : value1.selimg,
+                      'img': value1.selimg,
                       'careerPoints': value2.li,
-                      'TimeStamp':Timestamp.now(),
+                      'TimeStamp': Timestamp.now(),
                       'careerName': value2.careerName,
                       'careerDescription': value2.desc,
-                      'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
-                      'Likes':[]
-                    }).then((value) => showDialog(context: context, builder: (context){
-                      return Center(
-                        child: AlertDialog(
-                          title: Text('Your Post is Added'),
-                        ),
-                      );
-                    }));
-                  }catch(err){
+                      'careerSources': value2.sour.isNotEmpty
+                          ? value2.sour
+                          : 'No Sources Available',
+                      'Likes': []
+                    }).then((value) {
+                      value1._id++;
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text('Your Post is Added'),
+                        duration: Duration(seconds: 2),
+                      ));
+                    });
+                  } catch (err) {
                     throw Exception(err);
                   }
-                  try{
-                    FirebaseFirestore.instance.collection('UserPosts').add({
+                  try {
+                    FirebaseFirestore.instance
+                        .collection('UserPosts')
+                        .doc(value1.id.toString())
+                        .set({
                       'userEmail': currentuser.email?.split('@')[0],
-                      'img': value1.image != null ? value1.image : value1.selimg,
+                      'img': value1.selimg,
                       'careerPoints': value2.li,
-                      'TimeStamp':Timestamp.now(),
+                      'TimeStamp': Timestamp.now(),
                       'careerName': value2.careerName,
                       'careerDescription': value2.desc,
-                      'careerSources': value2.sour.isNotEmpty? value2.sour: 'No Sources Available',
-                      'Likes':[]
-                    }).then((value) => showDialog(context: context, builder: (context){
-                      return Center(
-                        child: AlertDialog(
-                          title: Text('Your Post is Added'),
-                        ),
-                      );
-                    }));
-                  }catch(err){
+                      'careerSources': value2.sour.isNotEmpty
+                          ? value2.sour
+                          : 'No Sources Available',
+                      'Likes': []
+                    }).then((value) {
+                      value1._id++;
+                    });
+                  } catch (err) {
                     throw Exception(err);
                   }
-                   value2.li.clear();
-                   value2.sour.clear();
-                   value2.desc='To be Filled';
-                   value2.careerName='To be Filled';
-                   value1.selimg=null;
-                   value1.image=null;
-                   Navigator.pop(context);
-                 }else {
-                   const snackBar =
-                   SnackBar(duration: Duration(seconds: 2),
-                       content: Text('Please Fill Out The Respective Fields'));
-                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                 }
+                  value2.li.clear();
+                  value2.sour.clear();
+                  value2.desc = 'To be Filled';
+                  value2.careerName = 'To be Filled';
+                  value1.selimg = null;
+                  value1.image = null;
+                  Navigator.pop(context);
+                } else {
+                  const snackBar = SnackBar(
+                      duration: Duration(seconds: 2),
+                      content: Text('Please Fill Out The Respective Fields'));
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
                 // if(value2.li.length>=6){
                 //   FirebaseFirestore.instance.collection("UserPosts").add({
                 //     'careerPointsSub2':value2.li2,
@@ -229,8 +238,7 @@ class _zendState extends State<zend> {
                 //   });
                 // }
 
-
-               // Navigator.push(context, MaterialPageRoute(builder: (context)=>Appdata()));
+                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Appdata()));
               },
               child: const Text('Post')),
         ],
