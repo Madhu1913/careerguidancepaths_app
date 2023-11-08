@@ -1,4 +1,5 @@
 import 'package:careerguidancepaths_app/app/account/Pages/like.dart';
+import 'package:careerguidancepaths_app/app/account/Pages/savedPosts.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/CPIprovider.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/careerPointsDataProvider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -7,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-
 
 class postedPathsPage extends StatefulWidget {
   const postedPathsPage({super.key});
@@ -18,6 +18,9 @@ class postedPathsPage extends StatefulWidget {
 
 class _postedPathsPageState extends State<postedPathsPage> {
   final currentUser = FirebaseAuth.instance.currentUser!;
+  bool isSaved = false;
+  @override
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,9 +59,9 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                     right: 20.w, top: 5.sp, bottom: 5.sp),
                                 child: Text(
                                   'Posted by @${post['userEmail']}',
-                                  style: TextStyle(
+                                  style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 16.sp),
                                 ),
                               ),
                             ],
@@ -104,18 +107,16 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                         child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(15.sp),
-                                            child:InkWell(
-                                                    onTap: () {
-                                                      value2.imgShownet(
-                                                          context,
-                                                          post["img"]
-                                                              .toString());
-                                                    },
-                                                    child: Image.network(
-                                                      post["img"].toString(),
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                  )),
+                                            child: InkWell(
+                                              onTap: () {
+                                                value2.imgShownet(context,
+                                                    post["img"].toString());
+                                              },
+                                              child: Image.network(
+                                                post["img"].toString(),
+                                                fit: BoxFit.cover,
+                                              ),
+                                            )),
                                       ),
                                     )
                                   ],
@@ -298,28 +299,78 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                 //       viewportFraction: 1,
                                 //       enableInfiniteScroll: false,
                                 //     )),
-                                Padding(
-                                  padding: EdgeInsets.all(5.sp),
-                                  child: Row(
-                                    children: [
-                                      likeButton(
-                                        postid: post.id,
-                                        likes: List<String>.from(
-                                            post['Likes'] ?? []),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.all(5.sp),
+                                      child: Row(
+                                        children: [
+                                          likeButton(
+                                            postid: post.id,
+                                            likes: List<String>.from(
+                                                post['Likes'] ?? []),
+                                          ),
+                                          SizedBox(
+                                            width: 15.sp,
+                                          ),
+                                          Text(
+                                            List<String>.from(
+                                                    post['Likes'] ?? [])
+                                                .length
+                                                .toString(),
+                                            style: GoogleFonts.varela(
+                                                fontSize: 15.sp,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ],
                                       ),
-                                      SizedBox(
-                                        width: 15.sp,
-                                      ),
-                                      Text(
-                                        List<String>.from(post['Likes'] ?? [])
-                                            .length
-                                            .toString(),
-                                        style: GoogleFonts.varela(
-                                            fontSize: 15.sp,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                    SavedPostsButton(
+                                      postid: post.id,
+                                      saves: List<String>.from(
+                                          post['saves'] ?? []),
+                                      // onTap: () async {
+                                      // if (isSaved == false) {
+                                      //   await FirebaseFirestore.instance
+                                      //       .collection('Users')
+                                      //       .doc(currentUser.uid)
+                                      //       .collection('SavedPosts')
+                                      //       .doc(post.id)
+                                      //       .set({
+                                      //     'userEmail': post['userEmail'],
+                                      //     'img': post['img'],
+                                      //     'careerPoints':
+                                      //     post['careerPoints'],
+                                      //     'TimeStamp': Timestamp.now(),
+                                      //     'careerName': post['careerName'],
+                                      //     'careerDescription':
+                                      //     post['careerDescription'],
+                                      //     'careerSources':
+                                      //     post['careerSources'],
+                                      //     'Likes': []
+                                      //   }).then((value) {
+                                      //     isSaved = true;
+                                      //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Added to Saved Posts'),behavior: SnackBarBehavior.floating,));
+                                      //     print('Added to saved posts');
+                                      //   });
+                                      // } else {
+                                      //   await FirebaseFirestore.instance
+                                      //       .collection('Users')
+                                      //       .doc(currentUser.uid)
+                                      //       .collection('SavedPosts')
+                                      //       .doc(post.id)
+                                      //       .delete()
+                                      //       .then((value) {
+                                      //     isSaved = false;
+                                      //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Removed from saved posts'),behavior: SnackBarBehavior.floating,));
+                                      //     print('Removed from saved posts');
+                                      //   });
+                                      // }
+                                    // },
+            )
+                                  ],
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,

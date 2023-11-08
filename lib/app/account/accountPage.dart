@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:careerguidancepaths_app/app/account/AddpathPage.dart';
+import 'package:careerguidancepaths_app/app/account/Pages/SavedPostsPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/TogglePage.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -28,150 +28,163 @@ class _AccountPageState extends State<AccountPage> {
         appBar: AppBar(
           backgroundColor: Colors.white,
         ),
-        body: StreamBuilder<DocumentSnapshot>(
-          stream: FirebaseFirestore.instance
-              .collection('Users')
-              .doc(currentuser.uid)
-              .snapshots(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              final userdata = snapshot.data!.data() as Map<String, dynamic>;
-              return Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25.sp),
-                    child: Row(
-                      children: [
-                        Text(
-                          '@${userdata['userName']}',
-                          style: GoogleFonts.varela(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20.sp,
-                              color: Colors.black),
-                        ),
-                      ],
+        body: SingleChildScrollView(
+          child: StreamBuilder<DocumentSnapshot>(
+            stream: FirebaseFirestore.instance
+                .collection('Users')
+                .doc(currentuser.uid)
+                .snapshots(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                final userdata = snapshot.data!.data() as Map<String, dynamic>;
+                return Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 25.sp),
+                      child: Row(
+                        children: [
+                          Text(
+                            '@${userdata['userName']}',
+                            style: GoogleFonts.varela(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.sp,
+                                color: Colors.black),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding:
-                         EdgeInsets.only(top: 5.sp, left: 6, bottom: 25.sp),
-                    child: Row(
-                      children: [
-                        GestureDetector(
-                            onTap: () {
-                              _openImagePicker();
-                            },
-                            child: CircleAvatar(
-                                radius: 100,
-                                child: ClipOval(
-                                    child: AspectRatio(
-                                  aspectRatio: 1,
-                                  child: _selectedImage != null
-                                      ? Image.file(
-                                          _selectedImage!,
-                                          fit: BoxFit.cover,
-                                        )
-                                      :
-                                  Image.network(
-                                          'https://th.bing.com/th?id=OIP.SxuyKL-Ca-_bXp1TC4c4-gHaF3&w=280&h=222&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
-                                          fit: BoxFit.cover,
-                                        ),
-                                )))),
-                        Column(
-                          children: [
-                            Row(
+                    Padding(
+                      padding:
+                           EdgeInsets.only(top: 5.sp, left: 6, bottom: 25.sp),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                              onTap: () {
+                                _openImagePicker();
+                              },
+                              child: CircleAvatar(
+                                  radius: 100,
+                                  child: ClipOval(
+                                      child: AspectRatio(
+                                    aspectRatio: 1,
+                                    child: _selectedImage != null
+                                        ? Image.file(
+                                            _selectedImage!,
+                                            fit: BoxFit.cover,
+                                          )
+                                        :
+                                    Image.network(
+                                            'https://th.bing.com/th?id=OIP.SxuyKL-Ca-_bXp1TC4c4-gHaF3&w=280&h=222&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+                                            fit: BoxFit.cover,
+                                          ),
+                                  )))),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Column(
                               children: [
-                                SingleChildScrollView(scrollDirection: Axis.horizontal,
-                                  child: Text(
-                                    'Name : ${userdata['userName']}',
-                                    style:  GoogleFonts.varela(
-                                        fontWeight: FontWeight.bold, fontSize: 15.sp),
-                                  ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      'Name : ${userdata['userName']}',
+                                      style:  GoogleFonts.varela(
+                                          fontWeight: FontWeight.bold, fontSize: 15.sp),
+                                    ),
+                                  ],
+                                ),
+                              SizedBox(
+                                  height: 5.sp,
+                                ),
+                                Text(
+                                  'Age : ${userdata['age']}',
+                                  style:  GoogleFonts.varela(
+                                      fontSize: 15.sp, fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
-                          SizedBox(
-                              height: 5.sp,
-                            ),
-                            Text(
-                              'Age : ${userdata['age']}',
-                              style:  GoogleFonts.varela(
-                                  fontSize: 15.sp, fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                        'Job : ${userdata['occupation']}',
-                        style: GoogleFonts.varela(
-                            fontSize: 15.sp, fontWeight: FontWeight.bold),
-                      ),
-                       Text(
-                        'Favourites',
-                        style: GoogleFonts.varela(
-                            fontSize: 15.sp, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15.sp,
-                  ),
-                  Consumer<myPathsProvider>(
-                   builder:(BuildContext context,value,Widget? child)=> Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        InkWell(
-                          onTap: (){
-                            value.toggle1();
-                            print(value.togglenum);
-                          },
-                          child: Card(
-                            child:Text(
-                              'Add Path',
-                              style: GoogleFonts.varela(
-                                  fontSize: 20.sp, fontWeight: FontWeight.bold),
-                            ),
-                          ),
+                        Text(
+                          'Job : ${userdata['occupation']}',
+                          style: GoogleFonts.varela(
+                              fontSize: 15.sp, fontWeight: FontWeight.bold),
                         ),
-                        InkWell(
-                          onTap: (){
-                            value.toggle2();
-                            print(value.togglenum);
-
-                          },
-                          child: Card(
-                            child:  Text(
-                              'My Paths',
-                              style: GoogleFonts.varela(
-                                  fontSize: 20.sp, fontWeight: FontWeight.bold),
-                            ),
-                          ),
+                         GestureDetector(
+                           onTap: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>const savedPostsPage()));
+                           },
+                           child: Card(
+                             child: Padding(
+                               padding: EdgeInsets.all(3.sp),
+                               child: Text(
+                                'Saved',
+                                style: GoogleFonts.varela(
+                                    fontSize: 16.sp, fontWeight: FontWeight.bold),
                         ),
+                             ),
+                           ),
+                         ),
                       ],
                     ),
-                  ),
-                  Column(
-                    children: [
-                      togglePages(),
-                    ],
-                  )
+                    SizedBox(
+                      height: 15.sp,
+                    ),
+                    Consumer<myPathsProvider>(
+                     builder:(BuildContext context,value,Widget? child)=> Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          InkWell(
+                            onTap: (){
+                              value.toggle1();
+                              print(value.togglenum);
+                            },
+                            child: Card(
+                              child:Text(
+                                'Add Path',
+                                style: GoogleFonts.varela(
+                                    fontSize: 20.sp, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: (){
+                              value.toggle2();
+                              print(value.togglenum);
 
-                ],
+                            },
+                            child: Card(
+                              child:  Text(
+                                'My Paths',
+                                style: GoogleFonts.varela(
+                                    fontSize: 20.sp, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Column(
+                      children: [
+                        togglePages(),
+                      ],
+                    )
+
+                  ],
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text('Error ${snapshot.error}'),
+                );
+              }
+              return const Center(
+                child: CircularProgressIndicator(),
               );
-            } else if (snapshot.hasError) {
-              return Center(
-                child: Text('Error ${snapshot.error}'),
-              );
-            }
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          },
+            },
+          ),
         ));
   }
 

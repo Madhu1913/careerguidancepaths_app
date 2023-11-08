@@ -32,12 +32,20 @@ class _likeButtonState extends State<likeButton> {
     });
     DocumentReference postRef =
         FirebaseFirestore.instance.collection('UserPosts').doc(widget.postid);
+    DocumentReference MyPostRef =
+        FirebaseFirestore.instance.collection('Users').doc(currentUser.uid).collection('MyPosts').doc(widget.postid);
     if (isLiked) {
       postRef.update({
         'Likes': FieldValue.arrayUnion([currentUser.email])
       });
+      MyPostRef.update({
+        'Likes': FieldValue.arrayUnion([currentUser.email])
+      });
     } else {
       postRef.update({
+        'Likes': FieldValue.arrayRemove([currentUser.email])
+      });
+      MyPostRef.update({
         'Likes': FieldValue.arrayRemove([currentUser.email])
       });
     }

@@ -7,12 +7,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
+import 'package:uuid/uuid.dart';
 import '../Pages/Step 2.dart';
 import '../Pages/Step 3.dart';
 
 class cpiProvider extends ChangeNotifier {
-  int _id = 0;
-  int get id => _id;
+   var uuid=const Uuid();
+  late  var v4=uuid.v4();
   double _i = 0.0;
   double get i => _i;
   String _txt1 = 'Select an Image';
@@ -171,7 +172,7 @@ class _zendState extends State<zend> {
                         .collection('Users')
                         .doc(currentuser.uid)
                         .collection("MyPosts")
-                        .doc(value1.id.toString())
+                        .doc(value1.v4.toString())
                         .set({
                       'userEmail': currentuser.email?.split('@')[0],
                       'img': value1.selimg,
@@ -182,10 +183,12 @@ class _zendState extends State<zend> {
                       'careerSources': value2.sour.isNotEmpty
                           ? value2.sour
                           : 'No Sources Available',
-                      'Likes': []
+                      'Likes': [],
+                      'saves':[]
+
                     }).then((value) {
-                      value1._id++;
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      value1.v4=value1.uuid.v4();
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text('Your Post is Added'),
                         duration: Duration(seconds: 2),
                       ));
@@ -196,7 +199,7 @@ class _zendState extends State<zend> {
                   try {
                     FirebaseFirestore.instance
                         .collection('UserPosts')
-                        .doc(value1.id.toString())
+                        .doc(value1.v4.toString())
                         .set({
                       'userEmail': currentuser.email?.split('@')[0],
                       'img': value1.selimg,
@@ -207,9 +210,10 @@ class _zendState extends State<zend> {
                       'careerSources': value2.sour.isNotEmpty
                           ? value2.sour
                           : 'No Sources Available',
-                      'Likes': []
+                      'Likes': [],
+                      'saves':[]
                     }).then((value) {
-                      value1._id++;
+                      value1.v4=value1.uuid.v4();
                     });
                   } catch (err) {
                     throw Exception(err);
@@ -221,6 +225,8 @@ class _zendState extends State<zend> {
                   value1.selimg = null;
                   value1.image = null;
                   Navigator.pop(context);
+                  // value1.z=0;
+
                 } else {
                   const snackBar = SnackBar(
                       duration: Duration(seconds: 2),
