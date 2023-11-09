@@ -68,10 +68,10 @@ class _MyPathsPageState extends State<MyPathsPage> {
                           height: 10.h,
                           width: 95.w,
                           child: Image.network(
-                                  post["img"].toString(),
-                                  fit: BoxFit.cover,
-                                  alignment: Alignment.topCenter,
-                                ),
+                            post["img"].toString(),
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter,
+                          ),
                         ),
                       ),
                       Text(
@@ -82,13 +82,48 @@ class _MyPathsPageState extends State<MyPathsPage> {
                       Positioned(
                         left: 86.w,
                         child: Consumer<cpiProvider>(
-                            builder:(context,value,child)=> IconButton(
+                          builder: (context, value, child) => IconButton(
                               icon: Icon(Icons.delete),
-                              onPressed: ()  async{
-                                await FirebaseFirestore.instance.collection('Users').doc(currentuser.uid).collection('MyPosts')
+                              onPressed: () async {
+                                final commentDocs = await FirebaseFirestore
+                                    .instance
+                                    .collection('Users')
+                                    .doc(currentuser.uid)
+                                    .collection('MyPosts')
+                                    .doc(post.id)
+                                    .collection('Comments')
+                                    .get();
+                                for (var doc in commentDocs.docs) {
+                                  await FirebaseFirestore.instance
+                                      .collection('Users')
+                                      .doc(currentuser.uid)
+                                      .collection('MyPosts')
+                                      .doc(post.id)
+                                      .collection('Comments')
+                                      .doc(doc.id)
+                                      .delete();
+                                }
+                                await FirebaseFirestore.instance
+                                    .collection('Users')
+                                    .doc(currentuser.uid)
+                                    .collection('MyPosts')
                                     .doc(post.id)
                                     .delete()
                                     .then((value) => print('deleted'));
+                                final mainCommentDocs = await FirebaseFirestore
+                                    .instance
+                                    .collection('UserPosts')
+                                    .doc(post.id)
+                                    .collection('Comments')
+                                    .get();
+                                for (var doc in mainCommentDocs.docs) {
+                                  await FirebaseFirestore.instance
+                                      .collection('UserPosts')
+                                      .doc(post.id)
+                                      .collection('Comments')
+                                      .doc(doc.id)
+                                      .delete();
+                                }
                                 await FirebaseFirestore.instance
                                     .collection('UserPosts')
                                     .doc(post.id)

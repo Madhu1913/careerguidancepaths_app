@@ -1,3 +1,4 @@
+import 'package:careerguidancepaths_app/app/account/Pages/CommentsWriteAndReadPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/like.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/savedPosts.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/CPIprovider.dart';
@@ -20,7 +21,6 @@ class _postedPathsPageState extends State<postedPathsPage> {
   final currentUser = FirebaseAuth.instance.currentUser!;
   bool isSaved = false;
   @override
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +56,7 @@ class _postedPathsPageState extends State<postedPathsPage> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(
-                                    right: 20.w, top: 5.sp, bottom: 5.sp),
+                                    right: 20.w, top: 2.sp, bottom: 2.sp),
                                 child: Text(
                                   'Posted by @${post['userEmail']}',
                                   style: GoogleFonts.varela(
@@ -174,137 +174,12 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                         ]);
                                       }),
                                 ),
-                                // CarouselSlider(
-                                //     items: [
-                                //       if (post["careerPoints"].length >= 3)
-                                //         ListView.builder(
-                                //             itemCount:
-                                //                 post["careerPointsSub1"].length,
-                                //             itemBuilder: (context, i) {
-                                //               return Column(children: [
-                                //                 Container(
-                                //                   height: (6).h,
-                                //                   width: 75.w,
-                                //                   color: Colors.amberAccent,
-                                //                   child: Center(
-                                //                       child: Padding(
-                                //                     padding:
-                                //                         EdgeInsets.symmetric(
-                                //                             horizontal:
-                                //                                 (6.9).h),
-                                //                     child: Text(
-                                //                       post["careerPointsSub1"]
-                                //                           [i],
-                                //                       style: GoogleFonts.varela(
-                                //                           fontSize: 15.sp,
-                                //                           fontWeight:
-                                //                               FontWeight.bold),
-                                //                     ),
-                                //                   )),
-                                //                 ),
-                                //                 Column(
-                                //                   mainAxisAlignment:
-                                //                       MainAxisAlignment.start,
-                                //                   children: [
-                                //                     Icon(
-                                //                       Icons
-                                //                           .arrow_downward_outlined,
-                                //                       size: 25.sp,
-                                //                     ),
-                                //                   ],
-                                //                 )
-                                //               ]);
-                                //             }),
-                                //       if (post["careerPoints"].length >= 6)
-                                //         ListView.builder(
-                                //             itemCount:
-                                //                 post["careerPointsSub2"].length,
-                                //             itemBuilder: (context, i) {
-                                //               return Column(children: [
-                                //                 Container(
-                                //                   height: (6).h,
-                                //                   width: 75.w,
-                                //                   color: Colors.amberAccent,
-                                //                   child: Center(
-                                //                       child: Padding(
-                                //                     padding:
-                                //                         EdgeInsets.symmetric(
-                                //                             horizontal:
-                                //                                 (6.9).h),
-                                //                     child: Text(
-                                //                       post["careerPointsSub2"]
-                                //                           [i],
-                                //                       style: GoogleFonts.varela(
-                                //                           fontSize: 15.sp,
-                                //                           fontWeight:
-                                //                               FontWeight.bold),
-                                //                     ),
-                                //                   )),
-                                //                 ),
-                                //                 Column(
-                                //                   mainAxisAlignment:
-                                //                       MainAxisAlignment.start,
-                                //                   children: [
-                                //                     Icon(
-                                //                       Icons
-                                //                           .arrow_downward_outlined,
-                                //                       size: 25.sp,
-                                //                     ),
-                                //                   ],
-                                //                 )
-                                //               ]);
-                                //             }),
-                                //       if (post["careerPoints"].length >= 9)
-                                //         ListView.builder(
-                                //             itemCount:
-                                //                 post["careerPointsSub3"].length,
-                                //             itemBuilder: (context, i) {
-                                //               return Column(children: [
-                                //                 Container(
-                                //                   height: (6).h,
-                                //                   width: 75.w,
-                                //                   color: Colors.amberAccent,
-                                //                   child: Center(
-                                //                       child: Padding(
-                                //                     padding:
-                                //                         EdgeInsets.symmetric(
-                                //                             horizontal:
-                                //                                 (6.9).h),
-                                //                     child: Text(
-                                //                       post["careerPointsSub3"]
-                                //                           [i],
-                                //                       style: GoogleFonts.varela(
-                                //                           fontSize: 15.sp,
-                                //                           fontWeight:
-                                //                               FontWeight.bold),
-                                //                     ),
-                                //                   )),
-                                //                 ),
-                                //                 Column(
-                                //                   mainAxisAlignment:
-                                //                       MainAxisAlignment.start,
-                                //                   children: [
-                                //                     Icon(
-                                //                       Icons
-                                //                           .arrow_downward_outlined,
-                                //                       size: 25.sp,
-                                //                     ),
-                                //                   ],
-                                //                 )
-                                //               ]);
-                                //             })
-                                //     ],
-                                //     options: CarouselOptions(
-                                //       height: (26.74).h,
-                                //       viewportFraction: 1,
-                                //       enableInfiniteScroll: false,
-                                //     )),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.all(5.sp),
+                                      padding: EdgeInsets.all(3.sp),
                                       child: Row(
                                         children: [
                                           likeButton(
@@ -324,6 +199,17 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                                 fontSize: 15.sp,
                                                 fontWeight: FontWeight.w600),
                                           ),
+                                          IconButton(
+                                              onPressed: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            writeAndReadComments(
+                                                              postid: post.id,
+                                                            )));
+                                              },
+                                              icon: Icon(Icons.comment))
                                         ],
                                       ),
                                     ),
@@ -331,45 +217,7 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                       postid: post.id,
                                       saves: List<String>.from(
                                           post['saves'] ?? []),
-                                      // onTap: () async {
-                                      // if (isSaved == false) {
-                                      //   await FirebaseFirestore.instance
-                                      //       .collection('Users')
-                                      //       .doc(currentUser.uid)
-                                      //       .collection('SavedPosts')
-                                      //       .doc(post.id)
-                                      //       .set({
-                                      //     'userEmail': post['userEmail'],
-                                      //     'img': post['img'],
-                                      //     'careerPoints':
-                                      //     post['careerPoints'],
-                                      //     'TimeStamp': Timestamp.now(),
-                                      //     'careerName': post['careerName'],
-                                      //     'careerDescription':
-                                      //     post['careerDescription'],
-                                      //     'careerSources':
-                                      //     post['careerSources'],
-                                      //     'Likes': []
-                                      //   }).then((value) {
-                                      //     isSaved = true;
-                                      //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Added to Saved Posts'),behavior: SnackBarBehavior.floating,));
-                                      //     print('Added to saved posts');
-                                      //   });
-                                      // } else {
-                                      //   await FirebaseFirestore.instance
-                                      //       .collection('Users')
-                                      //       .doc(currentUser.uid)
-                                      //       .collection('SavedPosts')
-                                      //       .doc(post.id)
-                                      //       .delete()
-                                      //       .then((value) {
-                                      //     isSaved = false;
-                                      //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Removed from saved posts'),behavior: SnackBarBehavior.floating,));
-                                      //     print('Removed from saved posts');
-                                      //   });
-                                      // }
-                                    // },
-            )
+                                    )
                                   ],
                                 ),
                                 Row(
