@@ -1,3 +1,4 @@
+import 'package:careerguidancepaths_app/app/account/Pages/CommentsWriteAndReadPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/savedPosts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -190,6 +191,17 @@ class _MySavedPostsOnTapState extends State<MySavedPostsOnTap> {
                                                     fontSize: 15.sp,
                                                     fontWeight: FontWeight.w600),
                                               ),
+                                              IconButton(
+                                                  onPressed: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                writeAndReadComments(
+                                                                  postid: post.id,
+                                                                )));
+                                                  },
+                                                  icon: Icon(Icons.comment))
                                             ],
                                           ),
                                         ),
