@@ -154,7 +154,7 @@ class _AccountPageState extends State<AccountPage> {
                                 setState(() {
                                   widget.img=true;
                                 });
-                              },icon: Icon(Icons.image,color: Colors.red,),))),
+                              },icon: const Icon(Icons.image,color: Colors.red,),))),
                     Positioned(
                         left: 32.5.w,
                         top: 32.h,
@@ -166,7 +166,7 @@ class _AccountPageState extends State<AccountPage> {
                             shadowColor: Colors.red,
                             elevation: 15.sp,
                             shape: RoundedRectangleBorder(
-                                side: BorderSide(color: Colors.red, width: 10),
+                                side: const BorderSide(color: Colors.red, width: 10),
                                 borderRadius: BorderRadius.circular(25.sp)),
                             child: Column(
                               children: [
@@ -174,7 +174,7 @@ class _AccountPageState extends State<AccountPage> {
                                 Text('DETAILS', style: GoogleFonts.varela(fontSize: 20.sp,
                                     color: Colors.red,
                                     fontWeight: FontWeight.w700),),
-                                SizedBox(height: 5,),
+                                const SizedBox(height: 5,),
                                 Container(height: 2,
                                   width: 60.w,
                                   color: Colors.red,),
@@ -260,7 +260,7 @@ class _AccountPageState extends State<AccountPage> {
                                             child: ElevatedButton(
                                                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                                                 onPressed: () {
-                                              Navigator.push(context, MaterialPageRoute(builder: (context)=>editPage()));
+                                              Navigator.push(context, MaterialPageRoute(builder: (context)=>const editPage()));
                                             },
                                                 child: Text('EDIT',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 20),)),
                                           )
@@ -288,7 +288,7 @@ class _AccountPageState extends State<AccountPage> {
                                 child: IconButton(
                                   onPressed: () {
                                     Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) =>  addPathPage()));
+                                        MaterialPageRoute(builder: (context) =>  const addPathPage()));
                                   },
                                   icon: Icon(
                                     Icons.add_circle,
@@ -302,7 +302,7 @@ class _AccountPageState extends State<AccountPage> {
                               ),
                               GestureDetector(
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MyPathsPage()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const MyPathsPage()));
                                 },
                                 child: SizedBox(
                                     height: 6.23.h,
@@ -401,11 +401,11 @@ class _AccountPageState extends State<AccountPage> {
                     )
                   ]);
                 }else if(!snapshot.hasData){
-                  return Center(child: Text('NOTHING HERE'));
+                  return const Center(child: Text('NOTHING HERE'));
                 }else if(snapshot.hasError){
                   return Center(child: Text('${snapshot.error}'),);
                 }
-                return Center(child: CircularProgressIndicator(),);
+                return const Center(child: CircularProgressIndicator(),);
               }
           )),
     );
