@@ -62,12 +62,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final _key = GlobalKey<FormState>();
+    final key = GlobalKey<FormState>();
 
     return Scaffold(
       body: SingleChildScrollView(
         child: Form(
-          key: _key,
+          key: key,
           child: Padding(
             padding:  EdgeInsets.all(5.sp),
             child: Column(

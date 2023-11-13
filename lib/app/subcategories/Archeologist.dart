@@ -9,6 +9,6 @@ class archeologist extends StatefulWidget {
 class _archeologistState extends State<archeologist> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 018, child: Scaffold(appBar: AppBar(title: Text('Archeologist'),),));
+    return Hero(tag: 018, child: Scaffold(appBar: AppBar(title: const Text('Archeologist'),),));
   }
 }

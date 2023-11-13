@@ -167,7 +167,7 @@ class _myWorkSpaceState extends State<myWorkSpace> {
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
                                                 children: [
-                                                  Container(
+                                                  SizedBox(
                                                     height: 6.25.h,
                                                     child: Center(
                                                         child: Text(
@@ -240,7 +240,7 @@ class _myWorkSpaceState extends State<myWorkSpace> {
                                                                 if(val.length==2){
                                                                   FocusScope.of(context).nextFocus();
                                                                 }
-                                                                else if(val.length==0){
+                                                                else if(val.isEmpty){
                                                                   FocusScope.of(context).previousFocus();
                                                                 }
                                                               },
@@ -263,7 +263,7 @@ class _myWorkSpaceState extends State<myWorkSpace> {
                                                                 if(val.length==2){
                                                                   FocusScope.of(context).nextFocus();
                                                                 }
-                                                                else if(val.length==0){
+                                                                else if(val.isEmpty){
                                                                   FocusScope.of(context).previousFocus();
                                                                 }
                                                               },
@@ -312,14 +312,14 @@ class _myWorkSpaceState extends State<myWorkSpace> {
                                                       int? min;
                                                       int? minRemain;
                                                       int? sec;
-                                                         hr=(timerTime/3600).toInt();
+                                                         hr=timerTime~/3600;
                                                          hrRemain=timerTime%3600;
-                                                         min=(hrRemain/60).toInt();
+                                                         min=hrRemain~/60;
                                                          minRemain=timerTime%60;
                                                          sec=minRemain;
 
                                                       return Text(
-                                                       '${hr} : ${min} : ${sec}',
+                                                       '$hr : $min : $sec',
                                                       style:  GoogleFonts.varela(fontSize: 14.sp,fontWeight: FontWeight.bold),
                                                     );
                                                      },

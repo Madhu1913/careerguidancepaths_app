@@ -9,6 +9,6 @@ class ias extends StatefulWidget {
 class _iasState extends State<ias> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 013, child: Scaffold(appBar: AppBar(title: Text('IAS'),),));
+    return Hero(tag: 013, child: Scaffold(appBar: AppBar(title: const Text('IAS'),),));
   }
 }

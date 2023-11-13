@@ -9,6 +9,6 @@ class sportsCoach extends StatefulWidget {
 class _sportsCoachState extends State<sportsCoach> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 016, child: Scaffold(appBar: AppBar(title: Text('Sports Coach'),),));
+    return Hero(tag: 016, child: Scaffold(appBar: AppBar(title: const Text('Sports Coach'),),));
   }
 }

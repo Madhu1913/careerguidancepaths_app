@@ -113,7 +113,7 @@ class cpdProvider extends ChangeNotifier{
    void defDescFun(){
      if(defDesc==true&& careerName!='To be Filled'){
        tffreadOnly=true;
-       desc='I Followed This Career Path To Succeed In My Career as an ${careerName}.\n'
+       desc='I Followed This Career Path To Succeed In My Career as an $careerName.\n'
            'I have to say that hard work is the one that leads me to success but as everyone knows luck also plays a role in our journey\n'
            'So motive of mine is if i did my part then everything will be ok....\n'
            'coz i believe only if i gave my best then luck will take a look at me(and it gives me a little confidence too)..';

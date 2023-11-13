@@ -9,6 +9,6 @@ class eventManager extends StatefulWidget {
 class _eventManagerState extends State<eventManager> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 020, child: Scaffold(appBar: AppBar(title: Text('Event Manager'),),));
+    return Hero(tag: 020, child: Scaffold(appBar: AppBar(title: const Text('Event Manager'),),));
   }
 }

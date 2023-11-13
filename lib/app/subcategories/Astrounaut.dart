@@ -9,6 +9,6 @@ class astrounaut extends StatefulWidget {
 class _astrounautState extends State<astrounaut> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 017, child: Scaffold(appBar: AppBar(title: Text('Astrounaut'),),));
+    return Hero(tag: 017, child: Scaffold(appBar: AppBar(title: const Text('Astrounaut'),),));
   }
 }

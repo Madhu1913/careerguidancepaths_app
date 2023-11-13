@@ -28,7 +28,7 @@ class AuthPage extends StatelessWidget {
 
 
 class _LoginOrRegister extends StatefulWidget {
-  const _LoginOrRegister({super.key});
+  const _LoginOrRegister();
 
   @override
   State<_LoginOrRegister> createState() => _LoginOrRegisterState();

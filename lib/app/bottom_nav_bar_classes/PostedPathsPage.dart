@@ -145,7 +145,7 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                     color: Colors.black,
                                   ),
                                 ),
-                                Container(
+                                SizedBox(
                                   height: 26.74.h,
                                   child: ListView.builder(
                                       itemCount: post['careerPoints'].length,

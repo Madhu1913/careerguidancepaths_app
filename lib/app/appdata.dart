@@ -86,7 +86,7 @@ class _AppdataState extends State<Appdata> {
         children: [
           const HomePage(),
           const categories(),
-          postedPathsPage(),
+          const postedPathsPage(),
           AccountPage(
             img: img,
           ),

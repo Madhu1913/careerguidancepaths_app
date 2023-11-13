@@ -9,6 +9,6 @@ class pilot extends StatefulWidget {
 class _pilotState extends State<pilot> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 009, child: Scaffold(appBar: AppBar(title: Text('Pilot'),),));
+    return Hero(tag: 009, child: Scaffold(appBar: AppBar(title: const Text('Pilot'),),));
   }
 }

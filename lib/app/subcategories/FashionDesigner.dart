@@ -9,7 +9,7 @@ class fashionDesigner extends StatefulWidget {
 class _fashionDesignerState extends State<fashionDesigner> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 019, child: Scaffold(appBar: AppBar(title: Text('Fashion Designer'),),));
+    return Hero(tag: 019, child: Scaffold(appBar: AppBar(title: const Text('Fashion Designer'),),));
   }
 }
 

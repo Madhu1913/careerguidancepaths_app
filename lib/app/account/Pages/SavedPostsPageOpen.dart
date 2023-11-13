@@ -201,7 +201,7 @@ class _MySavedPostsOnTapState extends State<MySavedPostsOnTap> {
                                                                   postid: post.id,
                                                                 )));
                                                   },
-                                                  icon: Icon(Icons.comment))
+                                                  icon: const Icon(Icons.comment))
                                             ],
                                           ),
                                         ),

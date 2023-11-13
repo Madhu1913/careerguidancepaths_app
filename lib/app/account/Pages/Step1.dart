@@ -1,7 +1,6 @@
 import 'package:careerguidancepaths_app/app/account/Provider/CPIprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sizer/sizer.dart';
 
 class Step1 extends StatefulWidget {
   const Step1({super.key});

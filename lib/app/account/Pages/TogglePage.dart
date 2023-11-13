@@ -24,7 +24,7 @@ class _togglePagesState extends State<togglePages> {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => addPathPage()));
+                        MaterialPageRoute(builder: (context) => const addPathPage()));
                   },
                   child: Icon(
                     Icons.add,
@@ -32,7 +32,7 @@ class _togglePagesState extends State<togglePages> {
                   ),
                 ),
               )
-            : MyPathsPage());
+            : const MyPathsPage());
   }
 }
 
@@ -51,98 +51,101 @@ class _MyPathsPageState extends State<MyPathsPage> {
       .collection('MyPosts');
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
-        stream: ref.orderBy('TimeStamp', descending: false).snapshots(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return ListView.builder(
-                shrinkWrap: true,
-                itemCount: snapshot.data!.docs.length,
-                itemBuilder: (context, i) {
-                  final post = snapshot.data!.docs[i];
-                  return Padding(
-                    padding: EdgeInsets.all(5.sp),
-                    child: Stack(children: [
-                      Consumer<cpiProvider>(
-                        builder: (context, value1, child) => Container(
-                          height: 10.h,
-                          width: 95.w,
-                          child: Image.network(
-                            post["img"].toString(),
-                            fit: BoxFit.cover,
-                            alignment: Alignment.topCenter,
+    return Scaffold(
+      appBar: AppBar(),
+      body: StreamBuilder(
+          stream: ref.orderBy('TimeStamp', descending: false).snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: snapshot.data!.docs.length,
+                  itemBuilder: (context, i) {
+                    final post = snapshot.data!.docs[i];
+                    return Padding(
+                      padding: EdgeInsets.all(5.sp),
+                      child: Stack(children: [
+                        Consumer<cpiProvider>(
+                          builder: (context, value1, child) => SizedBox(
+                            height: 10.h,
+                            width: 95.w,
+                            child: Image.network(
+                              post["img"].toString(),
+                              fit: BoxFit.cover,
+                              alignment: Alignment.topCenter,
+                            ),
                           ),
                         ),
-                      ),
-                      Text(
-                        post['careerName'],
-                        style: GoogleFonts.varela(
-                            fontWeight: FontWeight.bold, fontSize: 15.sp),
-                      ),
-                      Positioned(
-                        left: 86.w,
-                        child: Consumer<cpiProvider>(
-                          builder: (context, value, child) => IconButton(
-                              icon: Icon(Icons.delete),
-                              onPressed: () async {
-                                final commentDocs = await FirebaseFirestore
-                                    .instance
-                                    .collection('Users')
-                                    .doc(currentuser.uid)
-                                    .collection('MyPosts')
-                                    .doc(post.id)
-                                    .collection('Comments')
-                                    .get();
-                                for (var doc in commentDocs.docs) {
-                                  await FirebaseFirestore.instance
+                        Text(
+                          post['careerName'],
+                          style: GoogleFonts.varela(
+                              fontWeight: FontWeight.bold, fontSize: 15.sp),
+                        ),
+                        Positioned(
+                          left: 86.w,
+                          child: Consumer<cpiProvider>(
+                            builder: (context, value, child) => IconButton(
+                                icon: const Icon(Icons.delete),
+                                onPressed: () async {
+                                  final commentDocs = await FirebaseFirestore
+                                      .instance
                                       .collection('Users')
                                       .doc(currentuser.uid)
                                       .collection('MyPosts')
                                       .doc(post.id)
                                       .collection('Comments')
-                                      .doc(doc.id)
-                                      .delete();
-                                }
-                                await FirebaseFirestore.instance
-                                    .collection('Users')
-                                    .doc(currentuser.uid)
-                                    .collection('MyPosts')
-                                    .doc(post.id)
-                                    .delete()
-                                    .then((value) => print('deleted'));
-                                final mainCommentDocs = await FirebaseFirestore
-                                    .instance
-                                    .collection('UserPosts')
-                                    .doc(post.id)
-                                    .collection('Comments')
-                                    .get();
-                                for (var doc in mainCommentDocs.docs) {
+                                      .get();
+                                  for (var doc in commentDocs.docs) {
+                                    await FirebaseFirestore.instance
+                                        .collection('Users')
+                                        .doc(currentuser.uid)
+                                        .collection('MyPosts')
+                                        .doc(post.id)
+                                        .collection('Comments')
+                                        .doc(doc.id)
+                                        .delete();
+                                  }
                                   await FirebaseFirestore.instance
+                                      .collection('Users')
+                                      .doc(currentuser.uid)
+                                      .collection('MyPosts')
+                                      .doc(post.id)
+                                      .delete()
+                                      .then((value) => print('deleted'));
+                                  final mainCommentDocs = await FirebaseFirestore
+                                      .instance
                                       .collection('UserPosts')
                                       .doc(post.id)
                                       .collection('Comments')
-                                      .doc(doc.id)
-                                      .delete();
-                                }
-                                await FirebaseFirestore.instance
-                                    .collection('UserPosts')
-                                    .doc(post.id)
-                                    .delete()
-                                    .then((value) => print('deleted'));
-                              }),
-                        ),
-                      )
-                    ]),
-                  );
-                });
-          } else if (snapshot.hasError) {
-            return Center(
-              child: Text(snapshot.error.toString()),
+                                      .get();
+                                  for (var doc in mainCommentDocs.docs) {
+                                    await FirebaseFirestore.instance
+                                        .collection('UserPosts')
+                                        .doc(post.id)
+                                        .collection('Comments')
+                                        .doc(doc.id)
+                                        .delete();
+                                  }
+                                  await FirebaseFirestore.instance
+                                      .collection('UserPosts')
+                                      .doc(post.id)
+                                      .delete()
+                                      .then((value) => print('deleted'));
+                                }),
+                          ),
+                        )
+                      ]),
+                    );
+                  });
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text(snapshot.error.toString()),
+              );
+            }
+            return const Center(
+              child: CircularProgressIndicator(),
             );
-          }
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        });
+          }),
+    );
   }
 }

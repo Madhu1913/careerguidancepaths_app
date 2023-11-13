@@ -9,6 +9,6 @@ class bankEmployee extends StatefulWidget {
 class _bankEmployeeState extends State<bankEmployee> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 011, child: Scaffold(appBar: AppBar(title: Text('Bank Employee'),),));
+    return Hero(tag: 011, child: Scaffold(appBar: AppBar(title: const Text('Bank Employee'),),));
   }
 }

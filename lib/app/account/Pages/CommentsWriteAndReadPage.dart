@@ -72,7 +72,7 @@ class _writeAndReadCommentsState extends State<writeAndReadComments> {
                                         child: Row(
                                           children: [
                                             Text(cmnt['CommentedBy'],style: GoogleFonts.varela(color: Colors.white),),
-                                            Text(' . '),
+                                            const Text(' . '),
                                             // Text(cmnt['TimeStamp'].toString()),
                                           ],
                                         ),
@@ -81,7 +81,7 @@ class _writeAndReadCommentsState extends State<writeAndReadComments> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               )
                             ],
@@ -92,7 +92,7 @@ class _writeAndReadCommentsState extends State<writeAndReadComments> {
                       child: Text('${snapshot.error}'),
                     );
                   }
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 }),
@@ -110,7 +110,7 @@ class _writeAndReadCommentsState extends State<writeAndReadComments> {
                       addComment(commentController.text.trim());
                       commentController.clear();
                     },
-                    icon: Icon(Icons.send_rounded),
+                    icon: const Icon(Icons.send_rounded),
                   )),
             ),
           ),

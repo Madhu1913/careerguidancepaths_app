@@ -9,6 +9,6 @@ class lawyer extends StatefulWidget {
 class _lawyerState extends State<lawyer> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag:007,child: Scaffold(appBar: AppBar(title: Text('Lawyer'),),));
+    return Hero(tag:007,child: Scaffold(appBar: AppBar(title: const Text('Lawyer'),),));
   }
 }

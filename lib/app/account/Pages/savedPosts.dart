@@ -7,7 +7,7 @@ class SavedPostsButton extends StatefulWidget {
   final String postid;
   final List saves;
 
-  SavedPostsButton({
+  const SavedPostsButton({
     super.key,
     required this.postid, required this.saves,
   });

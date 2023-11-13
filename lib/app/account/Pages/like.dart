@@ -7,7 +7,7 @@ class likeButton extends StatefulWidget {
   final List likes;
   final String postid;
 
-  likeButton(
+  const likeButton(
       {super.key,
       required this.likes,
       required this.postid});

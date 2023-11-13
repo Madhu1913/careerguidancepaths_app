@@ -9,6 +9,6 @@ class judge extends StatefulWidget {
 class _judgeState extends State<judge> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 008, child: Scaffold(appBar: AppBar(title: Text('Judge'),),));
+    return Hero(tag: 008, child: Scaffold(appBar: AppBar(title: const Text('Judge'),),));
   }
 }

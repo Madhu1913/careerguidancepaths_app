@@ -9,6 +9,6 @@ class ips extends StatefulWidget {
 class _ipsState extends State<ips> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 014, child: Scaffold(appBar: AppBar(title: Text('IPS'),),));
+    return Hero(tag: 014, child: Scaffold(appBar: AppBar(title: const Text('IPS'),),));
   }
 }

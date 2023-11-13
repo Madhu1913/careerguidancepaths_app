@@ -9,6 +9,6 @@ class airHosters extends StatefulWidget {
 class _airHostersState extends State<airHosters> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 012, child: Scaffold(appBar: AppBar(title: Text('Air Hosters'),),));
+    return Hero(tag: 012, child: Scaffold(appBar: AppBar(title: const Text('Air Hosters'),),));
   }
 }

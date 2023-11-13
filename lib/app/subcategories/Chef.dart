@@ -9,6 +9,6 @@ class chef extends StatefulWidget {
 class _chefState extends State<chef> {
   @override
   Widget build(BuildContext context) {
-    return Hero(tag: 015, child: Scaffold(appBar: AppBar(title: Text('Chef'),),));
+    return Hero(tag: 015, child: Scaffold(appBar: AppBar(title: const Text('Chef'),),));
   }
 }

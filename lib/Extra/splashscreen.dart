@@ -16,7 +16,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5), () => Navigator.pushNamed(context, 'login'));
+    Timer(const Duration(seconds: 5), () => Navigator.pushNamed(context, 'login'));
   }
 
   @override
@@ -31,7 +31,7 @@ class _SplashState extends State<Splash> {
                   fontWeight: FontWeight.bold,
                   fontSize: 40,
                   color: Theme.of(context).secondaryHeaderColor),
-              speed: Duration(milliseconds: 300))
+              speed: const Duration(milliseconds: 300))
         ],
       )),
     );
