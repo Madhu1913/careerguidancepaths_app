@@ -5,7 +5,7 @@ import 'package:careerguidancepaths_app/app/account/Pages/EditPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/MyWorkSpace.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/SavedPostsPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/TogglePage.dart';
-import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/PostedPathsPage.dart';
+import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/DynamicPaths.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -376,7 +376,7 @@ class _AccountPageState extends State<AccountPage> {
                                                             context,
                                                             MaterialPageRoute(
                                                                 builder: (context) =>
-                                                                const postedPathsPage())).then(
+                                                                const dynamicPaths())).then(
                                                                 (value) {
                                                               Navigator.pop(context);
                                                             });

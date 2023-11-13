@@ -187,21 +187,6 @@ class _categoriesState extends State<categories> {
                                       ),
                                     ),
                                   ),
-                                  // Positioned(
-                                  //   left: 20.sp,
-                                  //   top: 6.sp,
-                                  //   child: Text(
-                                  //     _categories[i]["name"],
-                                  //     style: TextStyle(
-                                  //         letterSpacing: 4,
-                                  //         foreground: Paint()
-                                  //           ..style = PaintingStyle.stroke
-                                  //           ..strokeWidth = 4
-                                  //           ..color = Colors.red,
-                                  //         fontWeight: FontWeight.bold,
-                                  //         fontSize: 20.sp),
-                                  //   ),
-                                  // ),
                                   Positioned(
                                     left: 20.sp,
                                     top: 6.sp,

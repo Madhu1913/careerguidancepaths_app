@@ -1,14 +1,12 @@
 import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/Categories.dart';
+import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/DynamicPaths.dart';
 import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/homepage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-
 import 'account/accountPage.dart';
-import 'bottom_nav_bar_classes/PostedPathsPage.dart';
 
 class Appdata extends StatefulWidget {
   const Appdata({
@@ -86,7 +84,7 @@ class _AppdataState extends State<Appdata> {
         children: [
           const HomePage(),
           const categories(),
-          const postedPathsPage(),
+          const dynamicPaths(),
           AccountPage(
             img: img,
           ),
