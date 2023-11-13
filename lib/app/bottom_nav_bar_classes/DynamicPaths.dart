@@ -485,7 +485,7 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                   child: Text(
                                                     post['careerName'],
                                                     style: GoogleFonts.varela(
-                                                        fontSize: 30),
+                                                        fontSize: 30,color: Colors.black),
                                                   ),
                                                 )
                                               ],
