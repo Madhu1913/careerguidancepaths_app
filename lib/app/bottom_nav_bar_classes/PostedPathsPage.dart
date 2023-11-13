@@ -3,6 +3,7 @@ import 'package:careerguidancepaths_app/app/account/Pages/like.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/savedPosts.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/CPIprovider.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/careerPointsDataProvider.dart';
+import 'package:careerguidancepaths_app/app/account/Provider/sharedPreferenceProvider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class postedPathsPage extends StatefulWidget {
 class _postedPathsPageState extends State<postedPathsPage> {
   final currentUser = FirebaseAuth.instance.currentUser!;
   bool isSaved = false;
-  @override
+  String? item;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -209,7 +210,31 @@ class _postedPathsPageState extends State<postedPathsPage> {
                                                               postid: post.id,
                                                             )));
                                               },
-                                              icon: Icon(Icons.comment))
+                                              icon: const Icon(Icons.comment)),
+                                          Consumer<sharedprefs>(
+                                            builder:(context,value5,child)=> IconButton(
+                                                onPressed: () async{
+                                                  final data=await FirebaseFirestore.instance
+                                                      .collection('Users')
+                                                      .doc(currentUser.uid)
+                                                      .collection('WorkSpace')
+                                                      .doc(currentUser.email).get();
+                                                  if(data.exists){
+                                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('only one')));
+                                                  }else {
+                                                   await FirebaseFirestore.instance
+                                                        .collection('Users')
+                                                        .doc(currentUser.uid)
+                                                        .collection('WorkSpace')
+                                                        .doc(currentUser.email)
+                                                        .set({
+                                                      'points': post["careerPoints"]
+                                                    }).then((value) =>
+                                                        print('added'));
+                                                  }
+                                                },
+                                                icon: const Icon(Icons.add)),
+                                          )
                                         ],
                                       ),
                                     ),

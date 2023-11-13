@@ -1,4 +1,4 @@
-import 'package:careerguidancepaths_app/Extra/Theme/ThemeProvider.dart';
+import 'package:careerguidancepaths_app/app/account/Provider/sharedPreferenceProvider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +20,7 @@ class _MyDrawerState extends State<MyDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeProvider>(
+    return Consumer<sharedprefs>(
       builder: (BuildContext context,value,Widget? child)=>Drawer(
         backgroundColor: Colors.red[200],
         shape: RoundedRectangleBorder(
@@ -43,21 +43,26 @@ class _MyDrawerState extends State<MyDrawer> {
             )),
             Padding(
               padding:  EdgeInsets.all(6.sp),
-              child: ListTile(
-                style: ListTileStyle.drawer,
-                tileColor: Colors.red[600],
-                onTap: signOut,
-                leading: Icon(
-                  Icons.logout,
-                  size: 32.sp,
-                  color: Colors.white,
-                ),
-                title: Text(
-                  'Log Out',
-                  style: GoogleFonts.varela(
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                      fontSize: 20.sp),
+              child: Consumer<sharedprefs>(
+                builder:(context,value10,child)=> ListTile(
+                  style: ListTileStyle.drawer,
+                  tileColor: Colors.red[600],
+                  onTap: (){
+
+                    signOut();
+                  },
+                  leading: Icon(
+                    Icons.logout,
+                    size: 32.sp,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'Log Out',
+                    style: GoogleFonts.varela(
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 20.sp),
+                  ),
                 ),
               ),
             ),
@@ -68,7 +73,13 @@ class _MyDrawerState extends State<MyDrawer> {
               padding:  EdgeInsets.all(6.sp),
               child: ListTile(
                 onTap: (){
-                  value.toggleTheme();
+                  if(value.isDark==false){
+                    value.changeMode();
+                    value.getMode();
+                  }else{
+                    value.revertMode();
+                    value.getMode();
+                  }
                   Navigator.pop(context);
                 },
                 tileColor: Colors.red[600],

@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 
 class SignUp extends StatefulWidget {
@@ -278,7 +277,7 @@ class _SignUpState extends State<SignUp> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor:Colors.red),
                     onPressed: (){
-                      if(key.currentState!.validate()){
+                      if(key.currentState!.validate() && isEnabled==true){
                         signup();
                       }
                     },

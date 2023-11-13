@@ -1,5 +1,6 @@
-import 'package:careerguidancepaths_app/Extra/Theme/ThemeProvider.dart';
+import 'package:careerguidancepaths_app/Extra/Theme/theme.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
+import 'package:careerguidancepaths_app/app/account/Provider/sharedPreferenceProvider.dart';
 import 'package:careerguidancepaths_app/auth/auth_Page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +19,14 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +35,14 @@ class MyApp extends StatelessWidget {
           DeviceType deviceType) {
         return MultiProvider(
           providers: [
-            ChangeNotifierProvider(create: (context)=>ThemeProvider()),
             ChangeNotifierProvider(create: (context) => cpiProvider()),
             ChangeNotifierProvider(create: (context)=>cpdProvider()),
-            ChangeNotifierProvider(create: (context)=>myPathsProvider())
+            ChangeNotifierProvider(create: (context)=>myPathsProvider()),
+            ChangeNotifierProvider(create: (context)=>sharedprefs()..getMode())
           ],
-          child: Consumer<ThemeProvider>(
-            builder:(BuildContext context,value,Widget? child)=> MaterialApp(
-              theme: value.themeData,
+          child: Consumer<sharedprefs>(
+            builder:(BuildContext context,value2,Widget? child)=> MaterialApp(
+              theme: !value2.isDark? lightMode:darkMode,
               title: 'Career Catalyst',
               home: const AuthPage(),
               debugShowCheckedModeBanner: false,

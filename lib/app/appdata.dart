@@ -1,12 +1,11 @@
 import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/Categories.dart';
-import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/Drawer.dart';
 import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/homepage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
+
 
 import 'account/accountPage.dart';
 import 'bottom_nav_bar_classes/PostedPathsPage.dart';
@@ -21,12 +20,29 @@ class Appdata extends StatefulWidget {
 }
 
 class _AppdataState extends State<Appdata> {
-  List classes = [
-    const HomePage(),
-    const categories(),
-    postedPathsPage(),
-    const AccountPage(),
-  ];
+  final currentUser = FirebaseAuth.instance.currentUser!;
+    bool img=false;
+  void  change() async {
+    final data = await FirebaseFirestore.instance
+        .collection('Users')
+        .doc(currentUser.uid)
+        .collection('Profile')
+        .doc(currentUser.email)
+        .get();
+    if(data.exists){
+      img=true;
+    }else{
+      img=false;
+    }
+  }
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    change();
+
+  }
+
   int index = 0;
   @override
   Widget build(BuildContext context) {
@@ -36,7 +52,7 @@ class _AppdataState extends State<Appdata> {
             setState(() {
               index = idx;
             });
-          },
+            },
           animationCurve: Curves.fastOutSlowIn,
           animationDuration: const Duration(milliseconds: 400),
           backgroundColor: Colors.white,
@@ -56,16 +72,26 @@ class _AppdataState extends State<Appdata> {
             )),
             CurvedNavigationBarItem(
                 child: Icon(
-                  Icons.book_online_rounded,
-                  color: Colors.white,
-                )),
+              Icons.book_online_rounded,
+              color: Colors.white,
+            )),
             CurvedNavigationBarItem(
                 child: Icon(
               Icons.person,
               color: Colors.white,
             )),
           ]),
-      body: classes[index],
+      body: IndexedStack(
+        index: index,
+        children: [
+          const HomePage(),
+          const categories(),
+          postedPathsPage(),
+          AccountPage(
+            img: img,
+          ),
+        ],
+      ),
     );
   }
 }
