@@ -260,7 +260,7 @@ class _AccountPageState extends State<AccountPage> {
                                             child: ElevatedButton(
                                                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                                                 onPressed: () {
-                                              Navigator.push(context, MaterialPageRoute(builder: (context)=>const editPage()));
+                                              Navigator.push(context, MaterialPageRoute(builder: (context)=> editPage(name: '${userdata['userName']}', age: '${userdata['age']}', occupation: '${userdata['occupation']}',)));
                                             },
                                                 child: Text('EDIT',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 20),)),
                                           )

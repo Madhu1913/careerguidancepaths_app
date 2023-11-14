@@ -1,4 +1,8 @@
 import 'package:careerguidancepaths_app/Extra/Theme/theme.dart';
+import 'package:careerguidancepaths_app/app/account/Pages/Step%202.dart';
+import 'package:careerguidancepaths_app/app/account/Pages/Step%203.dart';
+import 'package:careerguidancepaths_app/app/account/Pages/Step%204.dart';
+import 'package:careerguidancepaths_app/app/account/Pages/Step1.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/sharedPreferenceProvider.dart';
 import 'package:careerguidancepaths_app/auth/auth_Page.dart';
@@ -46,6 +50,7 @@ class _MyAppState extends State<MyApp> {
               title: 'Career Catalyst',
               home: const AuthPage(),
               debugShowCheckedModeBanner: false,
+
             ),
           ),
         );

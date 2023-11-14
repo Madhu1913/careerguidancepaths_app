@@ -65,8 +65,7 @@ class _dynamicPathsState extends State<dynamicPaths> {
                             child: Row(
                               children: [
                                 SizedBox(
-                                  // width: 50,
-                                  height: 45.h,
+                                  height: 50.h,
                                   child: Column(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
@@ -90,26 +89,21 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                           ),
                                         ),
                                       ),
-                                      Card(
-                                        child: Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 3.sp,
-                                              top: 2.sp,
-                                              bottom: 2.sp,
-                                              right: 3.sp),
-                                          child: Text(
-                                            List<String>.from(
-                                                    post['Likes'] ?? [])
-                                                .length
-                                                .toString(),
-                                            style: GoogleFonts.varela(
-                                                fontSize: 15.sp,
-                                                fontWeight: FontWeight.w600),
-                                          ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 3.sp,
+                                            top: 2.sp,
+                                            bottom: 2.sp,
+                                            right: 3.sp),
+                                        child: Text(
+                                          List<String>.from(
+                                                  post['Likes'] ?? [])
+                                              .length
+                                              .toString(),
+                                          style: GoogleFonts.varela(
+                                              fontSize: 15.sp,
+                                              fontWeight: FontWeight.w600),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 2.5.h,
                                       ),
                                       SizedBox(
                                         height: 7.5.h,
@@ -215,19 +209,22 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                                         );
                                                                       }),
                                                             ),
-                                                            ElevatedButton(
-                                                                onPressed: () {
-                                                                  Navigator.push(
-                                                                      context,
-                                                                      MaterialPageRoute(
-                                                                          builder: (context) => writeAndReadComments(
-                                                                                postid: post.id,
-                                                                              ))).then((value) {
-                                                                                Navigator.pop(context);
-                                                                  });
-                                                                },
-                                                                child: Text(
-                                                                    'Do Comment'))
+                                                            Hero(
+                                                              tag:100,
+                                                              child: ElevatedButton(
+                                                                  onPressed: () {
+                                                                    Navigator.push(
+                                                                        context,
+                                                                        MaterialPageRoute(
+                                                                            builder: (context) => writeAndReadComments(
+                                                                                  postid: post.id,
+                                                                                ),)).then((value) {
+                                                                                  Navigator.pop(context);
+                                                                    });
+                                                                  },
+                                                                  child: const Text(
+                                                                      'Do Comment')),
+                                                            )
                                                           ],
                                                         ),
                                                       );
@@ -314,7 +311,30 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                 post['saves'] ?? []),
                                           ),
                                         ),
-                                      )
+                                      ),
+                                      SizedBox(
+                                        height: 2.5.h,
+                                      ),
+                                      SizedBox(
+                                        height: 7.5.h,
+                                        width: 16.w,
+                                        child: Card(
+                                          shadowColor: Colors.black,
+                                          elevation: 10,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(360),
+                                              side: const BorderSide(
+                                                  color: Colors.black,
+                                                  width: 2)),
+                                          child: IconButton(onPressed: (){
+                                            setState(() {
+                                              con.flipcard();
+                                            });
+                                          },icon: Icon(Icons.flip),)
+                                        ),
+                                      ),
+
                                     ],
                                   ),
                                 ),

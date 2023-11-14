@@ -693,7 +693,2226 @@
     {
 
     }
+  ],
+  "Cardeologist": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point":"mbbs"
+    },
+    {
+      "point": "internship"
+    },
+    {
+      "point": "mcat or aamc"
+    },
+    {
+      "point": "postgraduate education in dermatology"
+    },
+    {
+      "point": "licensing and certification"
+    },
+    {
+      "point": "begin mediacl carrer"
+    },
+    {
+      "point": "Specialize in cardeologist"
+    }
+  ],
+  "Dermatologist": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point": "mcat or aamc"
+    },
+    {
+      "point": "postgraduate education in dermatology"
+    },
+    {
+      "point": "licensing and certification"
+    },
+    {
+      "point": "begin mediacl carrer"
+    },
+    {
+      "point": "Specialize in dermatologist"
+    }
+  ],
+  "General practitioner(gp)": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point": "mcat or aamc"
+    },
+    {
+      "point": "postgraduate education in dermatology"
+    },
+    {
+      "point": "licensing and certification"
+    },
+    {
+      "point": "begin mediacl carrer"
+    },
+    {
+      "point": "Specialize in General practitioner"
+    }
+  ],
+  "Pediatrician": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point": "mcat or aamc"
+    },
+    {
+      "point": "postgraduate education in dermatology"
+    },
+    {
+      "point": "licensing and certification"
+    },
+    {
+      "point": "begin mediacl carrer"
+    },
+    {
+      "point": "Specialize in pediatrician"
+    }
+  ],
+  "Ophthalmologist": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point": "mcat"
+    },
+    {
+      "point": "Specialize in ophthamologist"
+    }
+  ],
+  "Orthopedic surgeon": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point": "mcat"
+    },
+    {
+      "point": "pursue a postgraduate degree "
+    },
+    {
+      "point": "Specialize in orthopedic surgeon"
+    }
+  ],
+  "Neurologist": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point": "mcat or aamc"
+    },
+    {
+      "point": "doctor of medicine(md) or dnb"
+    },
+    {
+      "point": "register with the medical council of india(mci)"
+    },
+    {
+      "point": "complete residency training"
+    },
+    {
+      "point": "obtain medical licensure"
+    },
+    {
+      "point": "become board-certified"
+    }
+  ],
+  "Psychiatrist": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "aiims ee"
+    },
+    {
+      "point": "jimper ee"
+    },
+    {
+      "point": "sctimist ee"
+    },
+    {
+      "point": "nimhans ee"
+    },
+    {
+      "point": "purse mbbs programme"
+    },
+    {
+      "point": "participing in intership"
+    },
+    {
+      "point": "license and medical certification"
+    },
+    {
+      "point": "enrolling for masters programme or diploma in psychiatry"
+    },
+    {
+      "point": "residency training"
+    },
+    {
+      "point": "become board-certified"
+    }
+  ],
+  "obstetrician/gynecologist(ob/gyn)": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "complete an internship"
+    },
+    {
+      "point": "appear the entrance test for taking admission in md/ms course"
+    },
+    {
+      "point" : "Choose gynecology as a specialization in MD/MS"
+    },
+    {
+      "point": "P.G. Diploma in Gynaecology & Obstetrics (D. G. O.)"
+    },
+    {
+      "point": "Doctor of Medicine (MD) in Gynaecology & Obstetrics"
+    },
+    {
+      "point": "Master of Surgery (MS) in Gynaecology & Obstetrics "
+    },
+    {
+      "point": "license and medical certification"
+    }
+  ],
+  "Urologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    },
+    {
+      "point": "Master of Surgery (MS) in Gynaecology & Obstetrics "
+    }
+  ],
+  "otolaryngologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    },
+    {
+      "point": "board certification"
+    }
+  ],
+  "Pulmonologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "doctor of medicine"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "fellowship training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "emergency medicine physician":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bachelors degree"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point": "residency training"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "nurse":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "bsn or adn"
+    },
+    {
+      "point": "pass the nclex-rn exam"
+    },
+    {
+      "point": "licensure"
+    },
+    {
+      "point" : "Specialize or Gain Experience"
+    },
+    {
+      "point": "Advanced Nursing Degree"
+    },
+    {
+      "point": "Nursing Certification"
+    }
+  ],
+  "Veternairian":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "get a bachelor's degree"
+    },
+    {
+      "point": "Pursue a master's or doctorate degree"
+    },
+    {
+      "point" : "Doctor of Veterinary Medicine (DVM) Program"
+    },
+    {
+      "point": "Pass the North American Veterinary Licensing Exam (NAVLE)"
+    },
+    {
+      "point": "licensure"
+    },
+    {
+      "point": "Pursue a specialisation "
+    }
+  ],
+  "Gastroenterologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "aiims"
+    },
+    {
+      "point": "jipmer"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "fellowship training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Rheumatologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "mcat or aams"
+    },
+    {
+      "point" : "Postgraduate Education in Rheumatologist"
+    },
+    {
+      "point": "Pass required examinations"
+    },
+    {
+      "point": "complete a residency program"
+    },
+    {
+      "point": "Licensing and Certification"
+    },
+    {
+      "point": "follow fellowship"
+    },
+    {
+      "point": "begin medical carrer"
+    }
+  ],
+  "endocrinologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "aiims"
+    },
+    {
+      "point": "jipmer"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Nephrologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "mcat or aams"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    },
+    {
+      "point": "begin medical carrer"
+    }
+  ],
+  "Allergist/immunologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "mcat or aams"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Infectious disease specialist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "aiims"
+    },
+    {
+      "point": "jipmer"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Family medicine physician":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    },
+    {
+      "point": "Master of Surgery (MS) in Gynaecology & Obstetrics "
+    }
+  ],
+  "Sports medicine physician":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Radiologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Anesthesiologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point": "internship"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Pathologist":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point": "internship"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "board certification"
+    },
+    {
+      "point": "licensure"
+    }
+  ],
+  "Internal medicine physician":[
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "bipc"
+    },
+    {
+      "point": "neet"
+    },
+    {
+      "point": "mbbs"
+    },
+    {
+      "point": "medical school"
+    },
+    {
+      "point": "postgraduate training in internal medicine"
+    },
+    {
+      "point" : "residency training"
+    },
+    {
+      "point": "fellowship"
+    },
+    {
+      "point": "licensing"
+    },
+    {
+      "point": "board certification"
+    }
+  ],
+
+  "policeOfficer": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Maintain 0 Criminal history"
+    },{
+      "point": "Police Academy"
+    },{
+      "point": "Apply for a Police job"
+    },{
+      "point": "Written and Physical exams"
+    },{
+      "point": "Interviews and Psychologist Evaluations"
+    },{
+      "point": "Police Academy Training"
+    },
+    {
+      "point": "probation period"
+    },{
+      "point": "Ongoing Training"
+    },{
+      "point": "Specilize and Advance"
+    }
+  ],
+  "detective": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Entry-Level Law Enforcement Position"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Practical Experience"
+    },{
+      "point": "Promotion to Detective"
+    },{
+      "point": "Detective Training"
+    },{
+      "point": "On-the-Job Training"
+    },{
+      "point": "Specilize "
+    }
+  ],
+  "Criminal investigator": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Entry-Level Law Enforcement Position"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Law Enforcement Officer"
+    },{
+      "point": "Apply for Criminal Investigator Positions"
+    },{
+      "point": "Specialized Training"
+    },{
+      "point": "On-the-Job Training"
+    },{
+      "point": "Specilize "
+    },{
+      "point": "Continuous Professional Development"
+    }
+  ],
+  "SWAT Officer": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Police Officer"
+    },{
+      "point": "Specialized Training and Certifications"
+    },{
+      "point": "Apply for SWAT Positions"
+    },{
+      "point": "SWAT Tryouts"
+    },{
+      "point": "SWAT Academy Training "
+    },{
+      "point": "Specialization"
+    }
+  ],
+  "K-9 Officer (Canine Unit)": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Law Enforcement Officer"
+    },{
+      "point": "Apply for K-9 Handler Positions"
+    },{
+      "point": "K-9 Handler Training"
+    },{
+      "point": "Build a Strong Bond with Your Canine Partners"
+    },{
+      "point": "Certifications and Continuous Training"
+    },{
+      "point": "Specialization"
+    }
+  ],
+  "Traffic Officer": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Law Enforcement Officer"
+    },{
+      "point": "Specialized Traffic Training"
+    },{
+      "point": "Apply for Traffic Officer Positions"
+    },{
+      "point": "Traffic Officer Training"
+    },{
+      "point": "On-the-Job Training"
+    },
+    {
+      "point": "Certifications and Continuous Training"
+    },{
+      "point": "Specialization"
+    }
+  ],
+  "Narcotics detective": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Law Enforcement Officer"
+    },{
+      "point": "Apply for Narcotics Detective Positions"
+    },{
+      "point": "Narcotics Detective Training"
+    },{
+      "point": "On-the-Job Training"
+    },
+    {
+      "point": "Certifications and Continuous Training"
+    },{
+      "point": "Networking and Collaboration"
+    },
+    {
+      "point": "Specialization"
+    }
+  ],
+  "Homicide detective ": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Law Enforcement Officer"
+    },{
+      "point": "Apply for Detective Positions"
+    },{
+      "point": "Detective Training"
+    },{
+      "point": "On-the-Job Training"
+    },
+    {
+      "point": "Certifications and Continuous Training"
+    },{
+      "point": "Networking and Collaboration"
+    },
+    {
+      "point": "Specialization"
+    },{
+      "point": "Emotional Resilience and Empathy"
+    }
+  ],
+
+  "Cybercrime detective": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Technical Skills Development"
+    },{
+      "point": "Computer Literacy"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Law Enforcement Officer"
+    },{
+      "point": "Apply for Cybercrime Detective Positions"
+    },{
+      "point": "Cybercrime Detective Training"
+    },{
+      "point": "On-the-Job Training"
+    },
+    {
+      "point": "Certifications and Continuous Training"
+    },{
+      "point": "Networking and Collaboration"
+    },
+    {
+      "point": "Specialization"
+    }
+  ],
+  "Crime Scene Investigator (CSI) ": [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Technical Skills Development"
+    },{
+      "point": "Internships or Volunteering"
+    },{
+      "point": "Computer Literacy"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Gain Experience as a Law Enforcement Officer"
+    },{
+      "point": "Apply for CSI Positions"
+    },{
+      "point": "CSI Training"
+    },{
+      "point": "On-the-Job Training"
+    },
+    {
+      "point": "Certifications and Continuous Training"
+    }, {
+      "point": "Specialization"
+    }
+  ],
+  "Intelligence Analyst":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Language Skills"
+    },{
+      "point": "Internships or Volunteering"
+    },{
+      "point": "Computer Literacy"
+    },{
+      "point": "Security Clearance"
+    },{
+      "point": "Continued Education and Training"
+    },{
+      "point": "Networking"
+    },{
+      "point": "Apply for Intelligence Analyst Positions"
+    },{
+      "point": "Security Clearance Process"
+    },{
+      "point": "Intelligence Analyst Training"
+    },{
+      "point": "On-the-Job Training"
+    },
+    {
+      "point": "Certifications"
+    },{
+      "point": "Security Clearance Maintenance"
+    }, {
+      "point": "Specialization"
+    }
+  ],
+  "Crisis Intervention Team (CIT) ":   [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Communication Skills"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "CIT Training"
+    },{
+      "point": "Field Experience"
+    },{
+      "point": "Build a Support Network"
+    },{
+      "point": "Crisis Intervention Team Certification"
+    },{
+      "point": "Continued Education and Training"
+    },{
+      "point": "Empathy and Cultural Competency"
+    },
+    {
+      "point": "Sensitivity to Mental Health Issues"
+    },{
+      "point": "Specialization"
+    }
+  ],
+  "Animal Control Officer":   [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Volunteer or Work with Animals"
+    },{
+      "point": "Certification or Training"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "On-the-Job Training"
+    },{
+      "point": "Continued Education and Training"
+    },{
+      "point": "Legal Knowledge"
+    },{
+      "point": "Empathy and Cultural Competency"
+    },
+    {
+      "point": "Community Engagement"
+    },{
+      "point": "Specialization"
+    }
+  ],
+  "forensic sketch artist ":   [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Anatomy and Facial Features"
+    },{
+      "point": "Portraiture Training"
+    },{
+      "point": "Forensic Art Training"
+    },{
+      "point": "Join Professional Associations"
+    },{
+      "point": "Practice and Portfolio Development"
+    },{
+      "point": "Internships or Apprenticeships"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "On-the-Job Training"
+    },{
+      "point": "Continued Education and Certification"
+    },{
+      "point": "Technology Skills"
+    },
+    {
+      "point": "Testifying in Court"
+    },{
+      "point": "Specialization"
+    }
+  ],
+  "Fraud investigator  ":   [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Develop Analytical Skills"
+    },{
+      "point": "Legal Knowledge"
+    },{
+      "point": "Computer Skills"
+    },{
+      "point": "Certifications"
+    },{
+      "point": "Internships or Entry-Level Positions"
+    },{
+      "point": "Networking"
+    },{
+      "point": "Computer Forensics Skills"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Police Academy Training"
+    },{
+      "point": "Specialized Training"
+    },
+    {
+      "point": "Continued Education"
+    },{
+      "point": "On-the-Job Training"
+    },{
+      "point": "Legal Testimony"
+    },{
+      "point": "Specialization"
+    }
+  ],
+  "FBI (Federal Bureau of Investigation) agent":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Language Skills"
+    },{
+      "point": "Legal Knowledge"
+    },{
+      "point": "Work Experience"
+    },{
+      "point": "Internships or Entry-Level Positions"
+    },{
+      "point": "Security Clearance"
+    },{
+      "point": "Networking"
+    },{
+      "point": "Apply to the FBI"
+    },{
+      "point": "FBI Special Agent Training"
+    },{
+      "point": "Field Training"
+    },
+    {
+      "point": "Continued Education and Training"
+    },{
+      "point": "Security Clearance Completion"
+    },{
+      "point": "FBI Specializations"
+    }
+  ],
+
+
+  "DEA (Drug Enforcement Administration) agent":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for the DEA"
+    },{
+      "point": "Specialized Training"
+    },{
+      "point": "Graduate from the DEA Training Academy"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "ATF (Bureau of Alcohol, Tobacco, Firearms, and Explosives) agent":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for the ATF"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Attend the ATF Special Agent Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Border Patrol Agent with the U.S. Customs and Border Protection (CBP) ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Apply for the Border Patrol"
+    },{
+      "point": "CBP Officer Entrance Examination"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Specializations"
+    }
+  ],
+
+
+  "Secret Service Agent ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for the Secret Service"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Training at the Federal Law Enforcement Training Center (FLETC)"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "U.S. Marshals Service":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for the U.S. Marshals Service"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "U.S. Marshals Service Basic Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+
+  "state trooper ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for State Trooper Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "State Trooper Academy Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+
+  "Transit Police Officer ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Transit Police Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Transit Police Academy Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "School Resource Officer (SRO)":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for SRO Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Law Enforcement Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Community Policing Officer":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Community Policing"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Law Enforcement Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Special Victims Unit (SVU) Detective":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Detective Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Detective Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Gang Unit Officer":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Gang Unit Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Specialized Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Hostage Negotiator":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Psychological and Crisis Intervention Training"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Hostage Negotiator Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Negotiation and Crisis Intervention Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Internal Affairs Investigator ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Advanced Training and Education"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Internal Affairs Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Internal Affairs Investigator Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+
+  "Undercover Officer":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Advanced Training and Education"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Undercover Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Undercover Officer Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Harbor Patrol Officer ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Advanced Training and Education"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Harbor Patrol Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Harbor Patrol Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+
+
+  "Park Ranger ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Advanced Training and Education"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Apply for Park Ranger Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Park Ranger Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Mounted Police Officer":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Equestrian Skills Training"
+    },{
+      "point": "Apply for Mounted Police Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Mounted Police Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Tactical Medic":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "EMS Training and Certification"
+    },{
+      "point": "Physical Fitness and Tactical Training"
+    },{
+      "point": "Apply for Tactical Medic Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Tactical Medic Training"
+    },{
+      "point": "Field Training and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+  "Public Information Officer (PIO) ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Advanced Education"
+    },{
+      "point": "Apply for PIO Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "PIO Training and Certifications"
+    },{
+      "point": "Field Experience and Career Advancement"
+    },{
+      "point": "Professional Development"
+    }
+  ],
+
+
+  "Emergency Response Team (ERT) Officer  ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Physical Fitness and Skills Training"
+    },{
+      "point": "Advanced Tactical Training"
+    },{
+      "point": "Apply for ERT Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "ERT Training"
+    },{
+      "point": "Field Experience and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Counterterrorism Unit Officer  ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Tactical Training and Firearms Proficiency"
+    },{
+      "point": "Counterterrorism Training and Education"
+    },{
+      "point": "Apply for Counterterrorism Unit Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Counterterrorism Unit Training"
+    },{
+      "point": "Field Experience and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+
+  "Evidence Custodian ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Evidence Management Training"
+    },{
+      "point": "Apply for Evidence Custodian Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Evidence Custodian Training"
+    },{
+      "point": "Continued Education and Training"
+    },{
+      "point": "Field Experience and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Marine Patrol Officer ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Marine Training and Education"
+    },{
+      "point": "Apply for Marine Patrol Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Marine Patrol Training"
+    },{
+      "point": "Field Experience and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Hostage Rescue Team (HRT)  ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Specialized Training and Certification"
+    },{
+      "point": "Firearms Proficiency"
+    },{
+      "point": "Apply for HRT Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "HRT Training"
+    },{
+      "point": "Field Experience and Probation"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Behavioral Analysis Unit (BAU) Agent":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Advanced Education (optional)"
+    },{
+      "point": "Internships and Research"
+    },{
+      "point": "Apply for Federal Law Enforcement Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "FBI Training"
+    },{
+      "point": "BAU Training"
+    },{
+      "point": "Field Experience and Career Advancement"
+    }
+  ],
+
+  "Computer Forensic Analyst ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Certifications"
+    },{
+      "point": "Computer Forensic Training"
+    },{
+      "point": "Apply for Computer Forensic Analyst Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "On-the-Job Training"
+    },{
+      "point": "Continued Education"
+    },{
+      "point": "Career Advancement"
+    }
+  ],
+
+
+  "Polygraph Examiner ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Polygraph Examiner Training"
+    },{
+      "point": "Internship or Apprenticeship"
+    },{
+      "point": "Certification"
+    },{
+      "point": "Apply for Polygraph Examiner Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "On-the-Job Training"
+    },{
+      "point": "Continued Education"
+    }
+  ],
+
+  "Cold Case Detective  ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Advanced Training and Education "
+    },{
+      "point": "Networking and Professional Development"
+    },{
+      "point": "Apply for Detective Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Detective Training"
+    },{
+      "point": "Cold Case Training"
+    },{
+      "point": "Cold Case Squad or Unit Assignment"
+    },{
+      "point": "Field Experience and Career Advancement"
+    }
+  ],
+
+
+  "Police Chaplain":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Religious Training"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Crisis Intervention and Counseling Training"
+    },{
+      "point": "Familiarize Yourself with Law Enforcement"
+    },{
+      "point": "Apply for Police Chaplain Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Chaplaincy Training"
+    },{
+      "point": "On-the-Job Experience"
+    },{
+      "point": "Continued Education and Professional Development"
+    }
+  ],
+
+  "Crime Prevention Officer ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Internships and Volunteer Work"
+    },{
+      "point": "Advanced Education (optional)"
+    },{
+      "point": "Certifications"
+    },{
+      "point": "Community Involvement"
+    },{
+      "point": "Apply for Crime Prevention Officer Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "On-the-Job Experience"
+    },{
+      "point": "Continued Education and Professional Development"
+    }
+  ],
+
+
+  "Search and Rescue Officer ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Outdoor Training and Certifications"
+    },{
+      "point": "Volunteer or Intern with SAR Organizations"
+    },{
+      "point": "Emergency Medical Training"
+    },{
+      "point": "Outdoor Leadership Courses "
+    },{
+      "point": "Fitness and Physical Conditioning"
+    },{
+      "point": "Apply for SAR Officer Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "SAR Training"
+    },{
+      "point": "On-the-Job Experience"
+    },{
+      "point": "Continued Education and Professional Development"
+    }
+  ],
+
+
+  "Juvenile Detective":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Internships and Volunteering"
+    },{
+      "point": "Certifications and Training"
+    },{
+      "point": "Background in Law Enforcement"
+    },{
+      "point": "Law Enforcement Academy"
+    },{
+      "point": "Apply for Detective Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Detective Training"
+    },{
+      "point": "Field Experience and Career Advancement"
+    }
+  ],
+
+
+  "Underwater Recovery Team ":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Scuba Diving Certification"
+    },{
+      "point": "Swim Training"
+    },{
+      "point": "Volunteer or Intern with Search and Rescue Organizations"
+    },{
+      "point": "Advanced Diving Certifications"
+    },{
+      "point": "First Aid and Water Safety Training"
+    },{
+      "point": "Apply for Underwater Recovery Team Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "Underwater Recovery Training"
+    },{
+      "point": "Field Experience and Career Advancement"
+    }
+  ],
+
+
+  "Crisis Negotiation Team (CNT)":  [
+    {
+      "point": "10th Standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree"
+    },{
+      "point": "Law Enforcement Career"
+    },{
+      "point": "Advanced Training"
+    },{
+      "point": "Crisis Intervention Training"
+    },{
+      "point": "Mental Health Awareness"
+    },{
+      "point": "Apply for Crisis Negotiation Team Positions"
+    },{
+      "point": "Background Investigation and Clearance"
+    },{
+      "point": "CNT Training"
+    },{
+      "point": "Field Experience and Career Advancement"
+    }
   ]
+
+
+
+
+
+
 
 
 }

@@ -52,6 +52,7 @@ dependencies:
   shimmer: ^3.0.0
   timer_count_down: ^2.2.2
   flutter_flip_card: ^0.0.4
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:

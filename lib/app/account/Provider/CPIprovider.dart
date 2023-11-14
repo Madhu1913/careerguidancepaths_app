@@ -225,7 +225,9 @@ class _zendState extends State<zend> {
                   value1.selimg = null;
                   value1.image = null;
                   Navigator.pop(context);
-                  // value1.z=0;
+                  value1.z=0;
+                  value1.x=0;
+                  value1.fun();
 
                 } else {
                   const snackBar = SnackBar(
@@ -233,18 +235,7 @@ class _zendState extends State<zend> {
                       content: Text('Please Fill Out The Respective Fields'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
-                // if(value2.li.length>=6){
-                //   FirebaseFirestore.instance.collection("UserPosts").add({
-                //     'careerPointsSub2':value2.li2,
-                //   });
-                // }
-                // if(value2.li.length>=9){
-                //   FirebaseFirestore.instance.collection("UserPosts").add({
-                //     'careerPointsSub3':value2.li3,
-                //   });
-                // }
 
-                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Appdata()));
               },
               child: const Text('Post')),
         ],

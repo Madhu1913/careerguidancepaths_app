@@ -3,18 +3,31 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 class editPage extends StatefulWidget {
-  const editPage({super.key});
+   String name;
+   String age;
+   String occupation;
+
+
+   editPage({super.key, required this.name, required this.age, required this.occupation});
 
   @override
   State<editPage> createState() => _editPageState();
 }
 
 class _editPageState extends State<editPage> {
-  final name=TextEditingController();
-  final age=TextEditingController();
-  final job=TextEditingController();
+   TextEditingController name=TextEditingController();
+   TextEditingController age=TextEditingController();
+   TextEditingController job=TextEditingController();
   final key=GlobalKey<FormState>();
   final currentUser=FirebaseAuth.instance.currentUser!;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    name.text=widget.name ;
+    age.text=widget.age ;
+    job.text=widget.occupation ;
+  }
 
   @override
   Widget build(BuildContext context) {
