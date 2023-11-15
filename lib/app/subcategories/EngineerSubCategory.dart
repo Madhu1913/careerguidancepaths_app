@@ -1,3 +1,4 @@
+import 'package:careerguidancepaths_app/app/StaticPaths/EngineerStaticPaths.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
@@ -72,41 +73,46 @@ class _engineerSubCategoriesState extends State<engineerSubCategories> with Sing
                 //crossAxisSpacing: 10,
               ),
               itemBuilder: (context, i) {
-                return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5.sp),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(5.sp),
-                    child: Container(
-                      // height: 40.h,
-                      // width: 45.w,
-                      color: Colors.amber,
-                      child: Center(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 22.h,
-                              child: Card(
-                                child: Image.network(
-                                  widget.engSub[i]["url"],
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 11.5.h,
-                              width: 45.w,
-                              child: Card(
-                                child: Center(
-                                  child: Text(
-                                    widget.engSub[i]["name"],
-                                    style: TextStyle(
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.bold),
+                return GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>engineerStaticPaths(i: i)));
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 5.sp),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5.sp),
+                      child: Container(
+                        // height: 40.h,
+                        // width: 45.w,
+                        color: Colors.amber,
+                        child: Center(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 22.h,
+                                child: Card(
+                                  child: Image.network(
+                                    widget.engSub[i]["url"],
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
-                            )
-                          ],
+                              SizedBox(
+                                height: 11.5.h,
+                                width: 45.w,
+                                child: Card(
+                                  child: Center(
+                                    child: Text(
+                                      widget.engSub[i]["name"],
+                                      style: TextStyle(
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),

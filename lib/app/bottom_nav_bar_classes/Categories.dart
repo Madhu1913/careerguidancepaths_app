@@ -49,7 +49,7 @@ class _categoriesState extends State<categories> {
       _engSub = data["subEng"];
       _polSub = data["subPol"];
       _tecSub = data["subTec"];
-      _sofEngSub = data["subSofEng"];
+      _sofEngSub = data["subSoft"];
       _govEmpSub = data["subGovEmp"];
     });
   }
@@ -79,9 +79,9 @@ class _categoriesState extends State<categories> {
       softwareEngineerSubCategories(
         sofEngSub: _sofEngSub,
       ),
-      governmentEmploySubCategories(
-        govEmpSub: _govEmpSub,
-      ),
+      // governmentEmploySubCategories(
+      //   govEmpSub: _govEmpSub,
+      // ),
       const lawyer(),
       const judge(),
       const pilot(),

@@ -9,6 +9,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../subcategories/AirHostress.dart';
@@ -33,6 +34,7 @@ import '../subcategories/SoftwareEngineerSubCategory.dart';
 import '../subcategories/SportsCoach.dart';
 import '../subcategories/TeacherSubCategory.dart';
 import 'Drawer.dart';
+import 'package:lottie/lottie.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -72,11 +74,14 @@ class _HomePageState extends State<HomePage> {
   int activeIndex=0;
   final _Controller=CarouselController();
   List li = [
-    'https://img.freepik.com/premium-vector/doctor-character-background-design_730620-7986.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais',
-    "https://img.freepik.com/free-vector/engineering-isolated-set_1284-24473.jpg",
-    "https://img.freepik.com/premium-vector/law-order-concept-with-flat-icons-policeman-badge-handcuffs-gun-radio-vector-illustration_108855-5272.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais",
-    "https://img.freepik.com/free-vector/teacher-concept-illustration_114360-2166.jpg",
-    "https://img.freepik.com/free-vector/professional-programmer-engineer-writing-code_3446-693.jpg",
+    'https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg',
+    'https://img.freepik.com/free-vector/building-safety-concept-illustration_114360-7300.jpg',
+    'https://img.freepik.com/free-vector/police-officers-concept-illustration_114360-13667.jpg',
+    'https://img.freepik.com/free-vector/teacher-concept-illustration_114360-1638.jpg',
+    'https://img.freepik.com/free-vector/hand-coding-concept-illustration_114360-8113.jpg?size=626&ext=jpg&uid=R125384538&ga=GA1.1.179435846.1697645450',
+    'https://img.freepik.com/free-vector/air-support-concept-illustration_114360-518.jpg',
+    'https://img.freepik.com/free-vector/astronaut-suit-illustration_114360-8538.jpg',
+    'https://img.freepik.com/free-vector/female-lawyer-concept-illustration_114360-16427.jpg'
   ];
 
 
@@ -122,7 +127,7 @@ class _HomePageState extends State<HomePage> {
         toolbarHeight: 8.h,
         backgroundColor: Colors.red,
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.sp)),
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.sp)),
         title: Text(
           'Career Catalyst',
           style: GoogleFonts.varela(fontSize: 24.sp, color: Colors.white),
@@ -152,6 +157,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 3.75.h,),
             CarouselSlider.builder(
                 carouselController: _Controller,
                 itemCount: li.length,
@@ -186,136 +192,27 @@ class _HomePageState extends State<HomePage> {
                 )),
             SizedBox(height: 2.5.h,
               child: AnimatedSmoothIndicator(
-                effect: const JumpingDotEffect(),
+                effect: const ExpandingDotsEffect(),
                 activeIndex: activeIndex, count: li.length,onDotClicked: (val){
                 _Controller.animateToPage(val);
               },),),
-            SizedBox(height: 1.25.h,),
-            Container(height: 2.5.h,width: 100.w,color: Colors.amber,),
-            SizedBox(height: 1.25.h,),
+            SizedBox(height: 2.0.h,),
+            Container(height: 1.0.h,width: 100.w,color: Colors.amber,),
+            SizedBox(height: 2.0.h,),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("If you don't have an any idea ",style: GoogleFonts.varela(fontSize: 18,fontWeight: FontWeight.bold),),
-                InkWell(
-                  onTap:(){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const categories()));
-                  } ,
-                  child: Padding(
-                    padding:  EdgeInsets.all(3.sp),
-                    child: const Text('See All'),
-                  ),
-                )
+                Text("  If you don't have an any idea",style: GoogleFonts.varela(fontSize: 19,fontWeight: FontWeight.bold),),
               ],
             ),
+            SizedBox(height: 2.5.h,),
             Row(
               children: [
-                Column(
-                  children: [
-                    Padding(
-                      padding:  EdgeInsets.all(3.sp),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 40,
-                            backgroundColor: Colors.red,
-                            child: Padding(
-                              padding:  EdgeInsets.all(3.sp),
-                              child: AspectRatio(
-                                aspectRatio: 1,
-                                 child: ClipRRect(borderRadius: BorderRadius.circular(360),
-                                   child: Image.network(
-                                     'https://img.freepik.com/premium-vector/doctor-character-background-design_730620-7986.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais',
-                                     fit: BoxFit.cover,
-                                   ),
-                                 ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 2.5.w,),
-                          CircleAvatar(
-                            radius: 40,
-                            backgroundColor: Colors.red,
-                            child: Padding(
-                              padding:  EdgeInsets.all(3.sp),
-                              child: AspectRatio(
-                                aspectRatio: 1,
-                                child: ClipRRect(borderRadius: BorderRadius.circular(360),
-                                  child: Image.network(
-                                    "https://img.freepik.com/free-vector/engineering-isolated-set_1284-24473.jpg",
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 2.5.w,),
-                          CircleAvatar(backgroundColor: Colors.red,
-                            radius: 40,
-                            child: Padding(
-                              padding:  EdgeInsets.all(3.sp),
-                              child: AspectRatio(
-                                aspectRatio: 1,
-                                child: ClipRRect(borderRadius: BorderRadius.circular(360),
-                                  child: Image.network(
-                                    "https://img.freepik.com/premium-vector/law-order-concept-with-flat-icons-policeman-badge-handcuffs-gun-radio-vector-illustration_108855-5272.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais",
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(width: 7.5.w,),
-                        CircleAvatar(
-                          radius: 50,
-                          backgroundColor: Colors.red,
-                          child: Padding(
-                            padding:  EdgeInsets.all(3.sp),
-                            child: AspectRatio(
-                              aspectRatio: 1,
-                              child: ClipRRect(borderRadius: BorderRadius.circular(360),
-                                child: Image.network(
-                                  "https://img.freepik.com/free-vector/engineering-isolated-set_1284-24473.jpg",
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 2.5.w,),
-                        CircleAvatar(backgroundColor: Colors.red,
-                          radius: 50,
-                          child: Padding(
-                            padding:  EdgeInsets.all(3.sp),
-                            child: AspectRatio(
-                              aspectRatio: 1,
-                              child: ClipRRect(borderRadius: BorderRadius.circular(360),
-                                child: Image.network(
-                                  "https://img.freepik.com/premium-vector/law-order-concept-with-flat-icons-policeman-badge-handcuffs-gun-radio-vector-illustration_108855-5272.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais",
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(height: 22.5.h,width: 27.5.w,child: Card(
-                  color: Colors.teal,
-                  child: Center(
-                    child: Text('Click Here',style: GoogleFonts.varela(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 20),),
-                  ),
-                ),)
+                Container(height:22.5.h,width:100.w,child: Lottie.asset('assets/doubtAnimation.json')),
               ],
             ),
-            SizedBox(height: 1.25.h,),
-            Container(height: 2.5.h,width:100.w,color: Colors.amber,),
+            ElevatedButton(onPressed: (){}, child: const Text('Click Here')),
+            SizedBox(height: 2.5.h,),
+            Container(height: 1.0.h,width:100.w,color: Colors.amber,),
             SizedBox(height: 1.25.h,),
             Row(
               children: [
@@ -332,36 +229,234 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             SizedBox(height: 1.25.h,),
-            Container(height: 2.5.h,width: 100.w,color: Colors.amber,),
+            Container(height: 1.0.h,width: 100.w,color: Colors.amber,),
             SizedBox(height: 1.25.h,),
+            const Text('Average Salaries',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
             Padding(
               padding:  EdgeInsets.all(3.sp),
-              child: CarouselSlider(items: [
-                Padding(
-                  padding:  EdgeInsets.all(3.sp),
-                  child: Container(color: Colors.green,),
-                ),
-                Padding(
-                  padding:  EdgeInsets.all(3.sp),
-                  child: Container(color: Colors.red,),
-                ),
-                Padding(
-                  padding:  EdgeInsets.all(3.sp),
-                  child: Container(color: Colors.black12,),
-                ),
-                Padding(
-                  padding:  EdgeInsets.all(3.sp),
-                  child: Container(color: Colors.purpleAccent,),
-                ),
-                Padding(
-                  padding:  EdgeInsets.all(3.sp),
-                  child: Container(color: Colors.pink,),
-                )
-              ], options: CarouselOptions(height: 31.25.h,autoPlay: true)),
+              child: CarouselSlider(
+                  items: [
+                    Padding(
+                      padding:  EdgeInsets.all(3.sp),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Container(height: 30.h,width: 32.5.w,
+                              decoration: const BoxDecoration(color: Colors.cyan,
+                                  image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/banknote-concept-illustration_114360-5640.jpg',),fit: BoxFit.fill)),),
+                            Column(
+                              children: [
+                                const Card(color:Colors.purple,
+                                    child: Text('Doctor',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),)),
+                                SizedBox(height: 2.5.h,),
+                                const Row(
+                                  children: [
+                                    Text('INDIA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ₹7.50 Lakhs',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('USA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : \$209.044',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('Germany',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : €209.044',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('China',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ¥688,987',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.all(3.sp),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Container(height: 30.h,width: 32.5.w,
+                              decoration: const BoxDecoration(color: Colors.cyan,
+                                  image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/refund-concept-illustration_114360-6803.jpg',),fit: BoxFit.fill)),),
+                            Column(
+                              children: [
+                                const Card(color:Colors.purple,
+                                    child: Text('Engineering',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),)),
+                                SizedBox(height: 2.5.h,),
+                                const Row(
+                                  children: [
+                                    Text('INDIA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ₹8 Lakhs',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('USA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : \$91,700',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('Germany',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : €77,000',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('China',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ¥24,800',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.all(3.sp),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Container(height: 30.h,width: 32.5.w,
+                              decoration: const BoxDecoration(color: Colors.cyan,
+                                  image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/money-income-concept-illustration_114360-7159.jpg?w=740&t=st=1700037666~exp=1700038266~hmac=065ea1e8ef34f63e1d9f5721eff2688ebe7db0034e69c0e191e84a84dd8b8036',),fit: BoxFit.fill)),),
+                            Column(
+                              children: [
+                                const Card(color:Colors.purple,
+                                    child: Text('Police',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),)),
+                                SizedBox(height: 2.5.h,),
+                                const Row(
+                                  children: [
+                                    Text('INDIA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ₹4 Lakhs',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('USA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : \$54,100',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('Germany',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : €60,376',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('China',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ¥189,554',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.all(3.sp),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Container(height: 30.h,width: 32.5.w,
+                              decoration: const BoxDecoration(color: Colors.cyan,
+                                  image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/global-economy-money-business_24877-50954.jpg',),fit: BoxFit.fill)),),
+                            Column(
+                              children: [
+                                const Card(color:Colors.purple,
+                                    child: Text('Teacher',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),)),
+                                SizedBox(height: 2.5.h,),
+                                const Row(
+                                  children: [
+                                    Text('INDIA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ₹3.4 Lakhs',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('USA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : \$61,420',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('Germany',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : €50,172',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('China',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ¥194,519',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.all(3.sp),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Container(height: 30.h,width: 32.5.w,
+                              decoration: const BoxDecoration(color: Colors.cyan,
+                                  image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/startup-managers-presenting-analyzing-sales-growth-chart-group-workers-with-heap-cash-rocket-bar-diagrams-with-arrow-heap-money_74855-14166.jpg',),fit: BoxFit.fill)),),
+                            Column(
+                              children: [
+                                const Card(color:Colors.purple,
+                                    child: Text('Astronaut',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),)),
+                                SizedBox(height: 2.5.h,),
+                                const Row(
+                                  children: [
+                                    Text('INDIA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ₹9.7 Lakhs',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('USA',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : \$1,37,751',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('Germany',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : €49,287',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text('China',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    Text(' : ¥202,524',style: TextStyle(fontSize: 15),)
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ], options: CarouselOptions(
+                  height: 31.25.h,autoPlay: false)),
             ),
             ElevatedButton(onPressed: (){}, child: const Text('View All')),
             SizedBox(height: 1.25.h,),
-            Container(height: 2.5.h,width: 100.w,color: Colors.amber,),
+            Container(height: 1.0.h,width: 100.w,color: Colors.amber,),
             SizedBox(height: 1.25.h,),
             Padding(
               padding:  EdgeInsets.all(4.sp),
@@ -372,13 +467,8 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Text('Career Success Stories',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 24),),
                       SizedBox(height: 2.5.h,),
-                      Container(height: 22.5.h,width: 80.w,decoration: BoxDecoration(color: Colors.redAccent,borderRadius: BorderRadius.circular(30)),
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(height: 17.5.h,width: 35.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),color: Colors.black,),),
-                          Container(height: 17.5.h,width: 37.5.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),color: Colors.white),)
-                        ],
-                      ),),
+                      Container(height: 22.5.h,width: 80.w,decoration: BoxDecoration(color: Colors.redAccent,image:const DecorationImage(image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gtIglmRGkI3sgPTkjTZ00j4bDFOCXSwefg&usqp=CAU'),fit: BoxFit.fill),borderRadius: BorderRadius.circular(30)),
+                      ),
                       ElevatedButton(onPressed: (){}, child: Text('Check Out Some Stories',style: GoogleFonts.varela(),),style: ElevatedButton.styleFrom(backgroundColor: Colors.black),)
                     ],
                   ),
@@ -386,47 +476,39 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 1.25.h,),
-            Container(height: 2.5.h,width: 100.w,color: Colors.amber,),
+            Container(height: 1.0.h,width: 100.w,color: Colors.amber,),
             SizedBox(height: 1.25.h,),
             Padding(
               padding:  EdgeInsets.all(3.sp),
               child: Container(height: 75.h,width: 95.w,decoration: const BoxDecoration(color: Colors.orangeAccent,borderRadius: BorderRadius.only(topRight: Radius.circular(80),bottomLeft: Radius.circular(80))),
-              child: Column(
-                children: [
-                  Text('Trending Paths',style: GoogleFonts.varela(fontSize: 22.sp,fontWeight: FontWeight.bold),),
-                  SizedBox(height: 2.5.h,),
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        height: 20.h,width: 35.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(24),),color: Colors.brown),
-                      ),
-                      Container(
-                        height: 20.h,width: 35.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(24),),color: Colors.brown),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 2.5.h,),
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        height: 20.h,width: 35.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(24),),color: Colors.brown),
-                      ),
-                      Container(
-                        height: 20.h,width: 35.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(24),),color: Colors.brown),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 2.5.h,),
-                  Row(mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 20.h,width: 35.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(24),),color: Colors.brown),
-                      ),
-
-                    ],
-                  )
-                ],
-              )
+                child: Column(
+                  children: [
+                    Text('Trending Paths',style: GoogleFonts.varela(fontSize: 22.sp,fontWeight: FontWeight.bold),),
+                    SizedBox(height: 2.5.h,),
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 30.h,width: 40.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(24),),color: Colors.brown),
+                        ),
+                        Container(
+                          height: 30.h,width: 40.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(topRight: Radius.circular(24),),color: Colors.brown),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 4.5.h,),
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 30.h,width: 40.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(24),),color: Colors.brown),
+                          child: Container(decoration: const BoxDecoration(color: Colors.white,shape: BoxShape.circle),height: 30,width: 30,),),
+                        Container(
+                          height: 30.h,width: 40.w,decoration: const BoxDecoration(borderRadius: BorderRadius.only(bottomRight: Radius.circular(24),),color: Colors.brown),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 2.5.h,),
+                  ],
+                )
                 ,),
             ),
             Padding(
@@ -590,6 +672,6 @@ class CustomSearchDelegate extends SearchDelegate {
           },
             title: Text(result),
           );
-        });
-  }
+          });
+    }
 }

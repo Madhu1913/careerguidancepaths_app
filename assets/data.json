@@ -26,11 +26,7 @@
       "url": "https://img.freepik.com/free-vector/professional-programmer-engineer-writing-code_3446-693.jpg",
       "desc": "Software engineers are responsible for designing, developing, and maintaining software applications. They apply engineering principles to the process of building software and write high-quality, maintainable, reusable code ."
     },
-    {
-      "name": "Government Employ",
-      "url": "https://img.freepik.com/premium-photo/illustration-team-managers-overseeing-project_894855-4630.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais",
-      "desc": "In general, a government employee is an individual who works for a government agency or department. They are responsible for carrying out various tasks and duties that are essential to the functioning of the government."
-    },
+
     {
       "name" : "Lawyer",
       "url" : "https://img.freepik.com/free-vector/boy-graduation-concept-illustration_114360-12063.jpg?w=740&t=st=1697620056~exp=1697620656~hmac=abc8677569ee4d9ee8c8a35ab9b73e05a63c7d27f33979473ea776b77358433e",
@@ -228,7 +224,7 @@
       "url" : "https://img.freepik.com/free-vector/detective-looking-clues-template_1308-107980.jpg?size=626&ext=jpg&ga=GA1.1.179435846.1697645450&semt=ais"
     },
     {
-      "name" : "SWAT Officer (Special Weapons and Tactics)",
+      "name" : "SWAT Officer ",
       "url" : "https://img.freepik.com/free-vector/soldier-uniform-cartoon-character_1308-102083.jpg?size=626&ext=jpg&ga=GA1.1.179435846.1697645450&semt=ais"
     },
     {
@@ -684,11 +680,235 @@
       "url" : "https://img.freepik.com/premium-vector/teacher-pointing-blackboard-front-class-flat-vector-illustration_110249-118.jpg?w=740"
     }
   ],
-  "subSofEng": [
+  "subSoft": [
     {
-
+      "name":"FrontEnd",
+      "url": "https://img.freepik.com/premium-vector/young-men-working-laptop-home-concept-web-development-programmer-coding-website_530733-3076.jpg?w=740"
+    },
+    {
+      "name": "BackEnd",
+      "url": "https://img.freepik.com/premium-vector/vector-concept-illustration-programmer-engineer-with-laptop-sitting-office-desk-holding-pen-while-coding-developing-flat-cartoon-style_270158-379.jpg?w=826"
+    },
+    {
+      "name": "DevOps",
+      "url": "https://img.freepik.com/free-vector/hand-drawn-flat-design-devops-illustration_52683-84603.jpg?w=826&t=st=1698831296~exp=1698831896~hmac=196351f38ff162a9231a28c98b0f46c20715bcc966b6e80aaf06cd551d810f7e"
+    },
+    {
+      "name": "FullStack",
+      "url": "https://img.freepik.com/free-vector/colored-isometric-programmers-composition-with-software-development-description-man-sit-work_1284-29045.jpg?w=740&t=st=1698831973~exp=1698832573~hmac=fb230f082b953c715672fe5df5b709ad14c079ab38ab4ce1983a1713a6e49152"
+    },
+    {
+      "name": "Andriod",
+      "url": "https://img.freepik.com/premium-vector/it-administrator-with-software-upgrade-process-mobile-digital-system-device-administration-network-upkeeping-smartphone-systems-configuration-concept-system-maintenance-application-vector_37895-623.jpg?w=826"
+    },
+    {
+      "name": "UI/UX",
+      "url": "https://img.freepik.com/free-vector/ui-ux-differences-concept-illustration_114360-10979.jpg?w=740&t=st=1698834930~exp=1698835530~hmac=c1ed101deb60323dbcca25e44169bd065db18decfd3847c6e71a93d9c7bee1e9"
+    },
+    {
+      "name": "Cyber Security",
+      "url": "https://img.freepik.com/free-vector/cloud-computing-security-abstract-concept-illustration_335657-2105.jpg?w=740&t=st=1698892628~exp=1698893228~hmac=c0e60770bacf16cf51b7d82166eb688da625bdffaf27261d48482c02f8af7923"
+    },
+    {
+      "name": "Game Devloper",
+      "url": "https://img.freepik.com/free-vector/game-analytics-concept-illustration_114360-6403.jpg?w=740&t=st=1698893071~exp=1698893671~hmac=7a112301a758526f3c7e2d25494dd2c4b061673486b849b2c9022b56b5d7a870"
+    },
+    {
+      "name": "React Native",
+      "url": "https://img.freepik.com/premium-vector/react-native-mobile-apps-development-concept-with-modern-flat-style-vector-illustration_25147-695.jpg?w=826"
+    },
+    {
+      "name": "Graphics Design",
+      "url": "https://img.freepik.com/premium-vector/designer-work-design-studio-working-computer-with-digital-pen-tablet-graphic-designer_316839-673.jpg?w=826"
+    },
+    {
+      "name": "AI and Data Scientist",
+      "url": "https://img.freepik.com/free-vector/robotic-process-automation-illustration_23-2149221119.jpg?w=740&t=st=1700026630~exp=1700027230~hmac=9dd992a03aa2a641bd13be5be00af2200e9a5c0f1f0c0811bb69f847facace97"
+    },
+    {
+      "name": "Software architect",
+      "url": "https://img.freepik.com/free-vector/programmer-working-isometric-style_52683-16805.jpg?w=740&t=st=1700026745~exp=1700027345~hmac=a2d33e6e61daf3a4b0da9f1852b0cab38d9de8a69f04724a27b79842f4143b69"
+    },
+    {
+      "name": "Flutter",
+      "url": "https://img.freepik.com/free-vector/app-development-concept-illustration_114360-5164.jpg?w=740&t=st=1700026846~exp=1700027446~hmac=ecb7b797b1ba50f4fbca71f129c1afb5ad515955dc7ee600d49e55c2003bfd45"
+    },
+    {
+      "name": "Block Chain",
+      "url": "https://img.freepik.com/free-vector/security-concept-illustration-people-holding-chain_53876-43028.jpg?w=740&t=st=1700026899~exp=1700027499~hmac=1a2bbb60b81aae933002c4858f9db8fc86b183c285a17c1b9445806bff45835d"
+    },
+    {
+      "name": "ASP.Net Core",
+      "url": "https://img.freepik.com/free-vector/flat-design-api-illustration_23-2149392284.jpg?w=740&t=st=1700027057~exp=1700027657~hmac=7128571767d814c49a391dbfde531c31bf955b66d9595aa2cf0a6c05a6c12d26"
+    },
+    {
+      "name": "Postgre SQL",
+      "url": "https://img.freepik.com/free-vector/abstract-technology-sql-illustration_23-2149229483.jpg?w=740&t=st=1700027332~exp=1700027932~hmac=6c486ed199f7bc5002901c6c13f389e2738668f9e14df4734ee9c3e98ab3c7f9"
+    },
+    {
+      "name": "QA(Quality Assurance)",
+      "url": "https://img.freepik.com/free-vector/tiny-people-testing-quality-assurance-software-isolated-flat-vector-illustration-cartoon-character-fixing-bugs-hardware-device-application-test-it-service-concept_74855-10172.jpg?w=740&t=st=1700027403~exp=1700028003~hmac=a176894b6b554eaccf13d32e0a30f8f2d44eeb2c8d84bfb47fef87f14b22198b"
+    },
+    {
+      "name": "Technical Writer",
+      "url": "https://img.freepik.com/free-vector/young-man-working-laptop-computer-cartoon-vector_24797-2211.jpg?w=740&t=st=1700027506~exp=1700028106~hmac=0dc48f73d280e5cab5bccf3ac3fedefd62bc45a12ebdfb1724f009d93210ff3b"
     }
   ],
+  "frontEnd": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn the Basics of Web Development(HTML,CSS,JAVASCRIPT)"
+    },
+    {
+      "point": "Responsive Web Design"
+    },
+    {
+      "point": "Version Control"
+    },
+    {
+      "point": "Learn a Frontend Framework"
+    },
+    {
+      "point": "API Integration"
+    },
+    {
+      "point": "Testing"
+    },
+    {
+      "point": "Performance Optimization"
+    },
+    {
+      "point": "Accessibility"
+    },
+    {
+      "point": "Learn about Frontend Build and Deployment"
+    },
+    {
+      "point": "Learn about Web Security"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Job Search"
+    }
+
+  ],
+  "backend": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming Fundamentals(Python, Java, Ruby, or Node.js)"
+    },
+    {
+      "point": "Data Structures and Algorithms"
+    },
+    {
+      "point": "Databases"
+    },
+    {
+      "point": "APIs and Web Development"
+    },
+    {
+      "point": "Server-Side Technologies"
+    },
+    {
+      "point": "Version Control"
+    },
+    {
+      "point": "Authentication and Authorization"
+    },
+    {
+      "point": "Testing"
+    },
+    {
+      "point": "Cloud Services"
+    },
+    {
+      "point": "DevOps Practices"
+    },
+    {
+      "point": "Collaboration and Communication"
+    },
+    {
+      "point": "Seek Internships or Junior Positions"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Apply for Backend Developer Jobs"
+    }
+  ],
+  "Devops": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming and Scripting(Python,Ruby,JavaScript and Bash,PowerShell)"
+    },
+    {
+      "point": "Understand System Administration"
+    },
+    {
+      "point": "Version Control"
+    },
+    {
+      "point": "Build and Continuous Integration (CI)"
+    },
+    {
+      "point": "Containerization(like Docker)"
+    },
+    {
+      "point": "Continuous Deployment"
+    },
+    {
+      "point": "Cloud Platforms"
+    },
+    {
+      "point": "Monitoring and Logging"
+    },
+    {
+      "point": "Security Best Practices"
+    },
+    {
+      "point": "Collaboration and Communication"
+    },
+    {
+      "point": "Build Personal Projectsand Certifications"
+    },
+    {
+      "point": "Internships or Junior Positions"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Apply for DevOps DeveloperJobs"
+    }
+  ],
+
   "subGovEmp": [
     {
 
@@ -2906,6 +3126,3687 @@
     },{
       "point": "Field Experience and Career Advancement"
     }
+  ],
+  "Lower Standard Teacher": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "TET  (PRT)-(Primary Teacher)"
+    }
+  ],
+
+
+  "Higher Standard Teacher": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree (B.ED)"
+    },{
+      "point": "TET  (TGT)-(Trainer Graduate Teacher)"
+    }
+  ],
+
+
+  "Intermediate Level Teacher": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree (B.ED)"
+    },{
+      "point": "Maters Degree (M.ED)"
+    },{
+      "point": "TET  (PGT)-(Post Graduate Teacher)"
+    }
+  ],
+
+  "Assistant Professor": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree "
+    },{
+      "point": "Maters Degree "
+    },{
+      "point": "PHD"
+    },{
+      "point": "NET/SLET Exam"
+    }
+  ],
+
+
+  "Professor": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree "
+    },{
+      "point": "Maters Degree "
+    },{
+      "point": "PHD"
+    },{
+      "point": "NET/SLET Exam"
+    },{
+      "point": "Teacher Training Programm"
+    },{
+      "point": "Certification"
+    },{
+      "point": "Interview and Secure a Teaching position"
+    }
+  ],
+
+
+  "DoctorDescription": [
+    {
+      "description": "Cardiologists are medical specialists dedicated to the intricate workings of the heart and blood vessels. These highly trained doctors possess a deep understanding of cardiovascular health, diagnosing conditions, and devising treatment plans to safeguard and enhance heart function."
+    },
+    {
+      "description": "Dermatologists are specialized medical professionals focused on the diagnosis, treatment, and management of conditions related to the skin, hair, nails, and mucous membranes. They possess a deep understanding of dermatology, which encompasses a wide array of skin issues, ranging from common skin conditions to complex diseases."
+    },
+    {
+      "description": "Pediatricians are specialized doctors devoted to the comprehensive healthcare of infants, children, adolescents, and young adults. They undergo extensive training to understand the physical, emotional, and developmental needs unique to these age groups."
+    },
+    {
+      "description": "Ophthalmologists are highly specialized medical doctors focused on the diagnosis, treatment, and management of disorders related to the eyes and visual system. Their expertise encompasses a wide range of conditions affecting vision and eye health, from common refractive errors to complex eye diseases."
+    },
+    {
+      "description": "Orthopedic surgeons are specialized medical professionals focused on diagnosing, treating, and surgically managing musculoskeletal conditions and injuries. Their expertise revolves around the complex network of bones, joints, ligaments, tendons, muscles, and nerves that make up the human body's musculoskeletal system."
+    },
+    {
+      "description": "Neurologists are specialized physicians who focus on diagnosing and treating disorders of the nervous system. This encompasses an intricate network that includes the brain, spinal cord, nerves, and muscles. They undergo extensive training to understand the complexities of the nervous system and the various conditions that can affect it."
+    },
+    {
+      "description": "Psychiatrists are medical doctors who specialize in mental health and mental illnesses. They undergo extensive medical training and then specialize in psychiatry, which equips them to understand the complexities of the human mind, emotions, behaviors, and the biological factors that contribute to mental health conditions."
+    },
+    {
+      "description": "Gynecologists are medical doctors who specialize in women's reproductive health, focusing on the female reproductive system, including the uterus, ovaries, fallopian tubes, cervix, and vagina. They undergo extensive training in obstetrics and gynecology, equipping them to provide comprehensive care for women across various stages of life, from adolescence through menopause and beyond."
+    },
+    {
+      "description": "Urologists are medical specialists who focus on diagnosing and treating conditions related to the urinary tract and male reproductive system. They possess expertise in both surgical and non-surgical management of a wide range of urological conditions affecting individuals of all ages."
+    },
+    {
+      "description": "Otolaryngologists, often referred to as ENT (Ear, Nose, and Throat) doctors, specialize in diagnosing and treating disorders related to the head and neck. Their expertise encompasses a diverse range of conditions affecting the ears, nose, throat, and related structures, including the sinuses, larynx (voice box), and mouth."
+    },
+    {
+      "description": "Pulmonologists are medical specialists who focus on the diagnosis and treatment of diseases related to the respiratory system, particularly the lungs and bronchial tubes. They possess expertise in managing a wide spectrum of respiratory conditions, ranging from common ailments to complex lung diseases."
+    },
+    {
+      "description": "Emergency medicine physicians are specialized doctors dedicated to providing immediate medical care to patients with acute illnesses or injuries. They work in emergency departments (EDs) and are trained to handle a wide spectrum of medical emergencies, often in high-stress and time-sensitive situations."
+    },
+    {
+      "description": "Nurses are essential healthcare professionals who play a critical role in patient care across various settings, providing invaluable support and expertise in the healthcare industry. They work in hospitals, clinics, nursing homes, schools, community health centers, and various other healthcare environments, delivering compassionate and skilled care to patients of all ages and backgrounds."
+    },
+    {
+      "description": "Veterinarians are highly trained medical professionals dedicated to the health and well-being of animals. Their expertise spans a wide range of species, including companion animals (such as dogs, cats, and birds), livestock, exotic animals, wildlife, and sometimes even aquatic creatures."
+    },
+    {
+      "description": "Gastroenterologists are medical specialists who focus on diagnosing and treating disorders of the digestive system. They possess expertise in the management of conditions affecting the gastrointestinal (GI) tract, including the esophagus, stomach, intestines, liver, pancreas, gallbladder, and other digestive organs."
+    },
+    {
+      "description": "Rheumatologists are medical specialists who focus on diagnosing and treating diseases that affect the joints, muscles, bones, and autoimmune conditions that cause inflammation throughout the body. Their expertise lies in managing a broad spectrum of rheumatic diseases, which can range from common to complex and systemic conditions."
+    },
+    {
+      "description": "Endocrinologists are medical professionals who specialize in the endocrine system, which includes glands that produce hormones regulating various bodily functions. These glands include the thyroid, pancreas, adrenal glands, pituitary gland, hypothalamus, ovaries, testes, and others. Endocrinologists diagnose and treat conditions related to hormonal imbalances or issues with these glands."
+    },
+    {
+      "description": "Nephrologists are medical specialists who focus on the diagnosis and treatment of kidney-related conditions and diseases. They are experts in managing conditions that affect the kidneys and their proper functioning."
+    },
+    {
+      "description": "Immunologists are specialized medical professionals who focus on the study and treatment of the immune system, which is crucial for defending the body against infections, diseases, and foreign substances. They investigate the complexities of the immune system's functions, dysfunctions, and responses to various pathogens and conditions."
+    },
+    {
+      "description": "Infectious disease specialists are medical professionals who specialize in the diagnosis, treatment, and prevention of infectious diseases caused by bacteria, viruses, fungi, parasites, and other organisms. These specialists have extensive knowledge and training in understanding how infections spread, their impact on the body, and the most effective ways to manage and control them."
+    },
+    {
+      "description": "Family medicine physicians, also known as family doctors or general practitioners, are primary care physicians who provide comprehensive healthcare to patients of all ages, genders, and diverse health conditions. They're trained to handle a wide range of medical issues and often serve as the first point of contact for individuals seeking medical care."
+    },
+    {
+      "description": "Sports medicine physicians specialize in treating injuries and medical conditions that affect athletes and individuals engaged in physical activities. They focus on both the treatment and prevention of injuries related to sports and exercise, aiming to help patients recover and return to their activities safely."
+    },
+    {
+      "description": "A radiologist is a specialized medical doctor who interprets and analyzes medical images to diagnose and treat diseases and injuries. They play a pivotal role in healthcare by using various imaging technologies, including X-rays, CT scans, MRIs, ultrasounds, and nuclear medicine scans, to visualize the internal structures of the body."
+    },
+    {
+      "description": "Anesthesiologists are medical doctors who specialize in administering anesthesia and managing pain before, during, and after surgical procedures or other medical treatments. Their primary focus is to ensure patients are comfortable, pain-free, and safe throughout procedures. Anesthesia can range from local numbing agents to general anesthesia that induces unconsciousness."
+    },
+    {
+      "description": "Pathologists are medical doctors who specialize in the study and diagnosis of diseases by examining tissues, cells, and bodily fluids. They play a critical role in healthcare by providing crucial information that helps diagnose diseases, determine the stage of illnesses, and guide treatment decisions."
+    },
+    {
+      "description": "Internal medicine physicians, often referred to as internists, are medical doctors who specialize in the prevention, diagnosis, and treatment of adult diseases. They focus on providing comprehensive care for a wide range of health conditions, emphasizing the holistic management of patients' health."
+    }
+  ],
+  "EngineerDescription": [
+    {
+      "description": "Civil engineers are professionals who specialize in the planning, design, construction, and maintenance of infrastructure projects essential for modern society. They are involved in creating and overseeing projects that shape our communities, including roads, bridges, buildings, airports, water supply systems, and more."
+    },
+    {
+      "description": "Mechanical engineers are professionals who design, analyze, and maintain mechanical systems, devices, and machinery. They work across various industries, contributing to the development of a wide range of products and technologies, from automobiles and aircraft to robotics and renewable energy systems."
+    },
+    {
+      "description": "Electrical engineers are professionals who specialize in designing, developing, and maintaining electrical systems, equipment, and devices. They work across various industries, playing a pivotal role in creating and advancing technologies that rely on electricity."
+    },
+    {
+      "description": "Chemical engineers are professionals who apply principles of chemistry, physics, biology, and mathematics to solve problems related to the production and use of chemicals, fuel, drugs, food, and a wide array of products. They design, develop, and optimize processes and equipment used in various industries, aiming to improve efficiency, safety, and sustainability."
+    },
+    {
+      "description": "Computer engineers are professionals who combine principles from both electrical engineering and computer science to design, develop, and maintain hardware and software systems. They play a critical role in the advancement of technology, working on a wide range of computing devices and systems."
+    },
+    {
+      "description": "Aerospace engineers are professionals who specialize in designing, developing, testing, and maintaining aircraft, spacecraft, missiles, and other aerospace-related systems. They work on projects that involve both aeronautical (aircraft) and astronautical (spacecraft) engineering, contributing to the advancement of aviation and space exploration."
+    },
+    {
+      "description": "Biomedical engineers are professionals who apply principles of engineering and biological sciences to develop innovative solutions in healthcare and medicine. They focus on creating technologies, devices, and systems that improve patient care, diagnostics, and treatment methods."
+    },
+    {
+      "description": "Environmental engineers are professionals who apply engineering principles to address environmental challenges and develop solutions that protect and improve the environment. They work on projects aimed at minimizing pollution, managing resources, and promoting sustainability."
+    },
+    {
+      "description": "Petroleum engineers are professionals who specialize in the exploration, extraction, production, and management of oil and gas resources. They play a crucial role in the energy industry, contributing to the extraction of oil and gas from underground reservoirs and maximizing their production."
+    },
+    {
+      "description": "Industrial engineers are professionals who focus on optimizing complex systems and processes in various industries to enhance efficiency, productivity, and quality while minimizing waste and costs. They apply engineering principles, analytical skills, and business knowledge to improve organizational systems and workflows."
+    },
+    {
+      "description": "Structural engineers are professionals who specialize in the design, analysis, and construction of structures to ensure they are safe, durable, and capable of withstanding various loads and environmental conditions. They play a critical role in creating and maintaining buildings, bridges, towers, dams, and other infrastructure."
+    },
+    {
+      "description": "Materials engineers specialize in the study, development, and application of materials that are used in various industries, ranging from aerospace and automotive to electronics, construction, and healthcare. They focus on understanding the properties and behavior of materials to design and create new materials or improve existing ones for specific applications."
+    },
+    {
+      "description": "Mining engineers are professionals responsible for the safe and efficient extraction of minerals, metals, and other valuable resources from the earth. They play a critical role in the mining industry by overseeing the entire mining process, from exploration and feasibility studies to extraction, processing, and reclamation of mined areas."
+    },
+    {
+      "description": "Geotechnical engineers specialize in understanding the behavior of Earth materials, especially soil and rock, to assess how they interact with structures and the environment. Their work is crucial in various construction projects, including buildings, bridges, dams, roads, and tunnels, where the stability and safety of structures depend on the properties of the underlying ground."
+    },
+    {
+      "description": "Nuclear engineers are specialists in the application of nuclear energy and radiation. They work in various fields, including power generation, medicine, research, and defense, applying principles of nuclear physics and engineering to develop, design, and operate systems and processes involving nuclear energy and radiation."
+    },
+    {
+      "description": "Marine engineers are responsible for designing, constructing, maintaining, and repairing various types of ships, boats, offshore platforms, and other maritime structures. Their work spans a broad range of areas within the maritime industry, involving both technical expertise and practical knowledge."
+    },
+    {
+      "description": "Robotics engineers specialize in designing, building, testing, and maintaining robotic systems and technologies. These professionals work at the intersection of mechanical engineering, electrical engineering, computer science, and often other fields like artificial intelligence and control systems."
+    },
+    {
+      "description": "Systems engineers work with complex systems, ensuring that they function effectively throughout their lifecycle. They focus on the interaction between various components within a system, considering both technical and non-technical aspects to meet specific requirements and goals. Their work spans multiple disciplines and industries, involving a holistic approach to designing, integrating, and managing systems."
+    },
+    {
+      "description": "Software engineers are professionals who design, develop, test, and maintain software systems and applications. They apply engineering principles to create software solutions that meet specific needs, often working in various domains such as web development, mobile applications, artificial intelligence, operating systems, and more."
+    },
+    {
+      "description": "Telecommunications engineers specialize in designing, implementing, and maintaining communication systems and networks. They play a crucial role in the development and operation of various communication technologies, including wired and wireless networks, mobile systems, satellite communications, and the internet."
+    },
+    {
+      "description": "Traffic engineers are professionals who design, plan, and manage transportation systems to ensure the safe and efficient movement of people and goods on roads, highways, and other transportation networks. Their work involves analyzing traffic patterns, designing roadways and intersections, implementing traffic control devices like signals and signs, and developing strategies to improve traffic flow and safety."
+    },
+    {
+      "description": "Water resource engineers specialize in the management, conservation, and distribution of water resources. They work on a wide range of projects involving water-related infrastructure, including dams, reservoirs, water treatment facilities, and irrigation systems."
+    },
+    {
+      "description": "Fire protection engineers specialize in designing systems and strategies to prevent and control fires in various environments, including buildings, industrial facilities, and public spaces. They focus on implementing measures to ensure safety from fire hazards and minimize potential damage."
+    },
+    {
+      "description": "Railway engineers are professionals involved in the design, construction, maintenance, and management of railway systems. Their work encompasses various aspects of railway infrastructure, including tracks, signaling systems, stations, bridges, tunnels, and rolling stock (trains and locomotives)."
+    },
+    {
+      "description": "Renewable energy engineers are professionals who specialize in the design, development, and implementation of technologies that harness renewable energy sources. Their work focuses on creating sustainable and environmentally friendly solutions to meet energy needs. Renewable energy engineers work across various sectors, including solar, wind, hydroelectric, geothermal, and biomass energy."
+    },
+    {
+      "description": "Automotive engineers are professionals who specialize in designing, developing, testing, and manufacturing vehicles and their components. They work in the automotive industry, contributing to the creation of cars, trucks, motorcycles, buses, and other vehicles."
+    },
+    {
+      "description": "Biomechanical engineers are specialists who apply principles from engineering, biology, and mechanics to study and understand the mechanics of the human body. They use this knowledge to design and develop devices, equipment, and technologies that can aid in medical treatments, enhance human performance, and improve overall health care."
+    },
+    {
+      "description": "A control systems engineer is a professional who designs, analyzes, and implements control systems for various applications. Control systems are used to manage and regulate the behavior of dynamic systems, ensuring that they operate in a desired and predictable manner. These systems are crucial in a wide range of industries, including manufacturing, aerospace, automotive, energy, and more."
+    },
+    {
+      "description": "The term phonotics engineer does not appear to be a widely recognized or established term in the field of engineering or related disciplines. However, considering the components of the term— \"phono\" related to sound and \"optics\" related to light—it could suggest a role that involves the integration of sound and light technologies."
+    },
+    {
+      "description": "A nano engineer, also known as a nanotechnology engineer, is a professional who works in the field of nanotechnology. Nanotechnology involves the manipulation of matter at the nanoscale, typically at dimensions less than 100 nanometers. At this scale, the properties of materials can be significantly different from those at the macro scale, leading to unique and often beneficial characteristics."
+    },
+    {
+      "description": "An acoustic engineer is a professional who specializes in the study, design, and implementation of systems and technologies related to sound and vibration. Acoustic engineering encompasses a wide range of applications, including the design of concert halls, noise control in buildings and transportation, audio system design, and the development of hearing aids, among other areas."
+    },
+    {
+      "description": "A broadcast engineer is a professional responsible for the technical aspects of broadcasting, ensuring that audio and video signals are transmitted smoothly and efficiently. This role is crucial in the television, radio, and other broadcasting industries. Broadcast engineers work with various equipment and technologies to maintain the quality and reliability of broadcasts. "
+    },
+    {
+      "description": "A facilities engineer is a professional responsible for the design, construction, operation, and maintenance of buildings and infrastructure within a facility. Facilities engineers play a crucial role in ensuring that a facility operates efficiently, safely, and in compliance with relevant regulations. "
+    },
+    {
+      "description": "A manufacturing engineer is a professional who focuses on the design, development, and improvement of manufacturing processes and systems. The primary goal is to optimize the production of goods by integrating engineering principles, technology, and management skills. Manufacturing engineers work across various industries, including automotive, aerospace, electronics, and consumer goods."
+    },
+    {
+      "description": "A piping engineer, also known as a piping designer or pipeline engineer, is a professional responsible for the design, layout, and implementation of piping systems within industrial and commercial facilities. These systems are essential for the transport of fluids, gases, and sometimes solids within a facility."
+    },
+    {
+      "description": "A reliability engineer is a professional who focuses on ensuring the reliability and performance of products, systems, and processes. The primary goal of reliability engineering is to prevent failures and minimize downtime, thereby improving the overall quality and dependability of a product or system. Reliability engineers use various tools, techniques, and methodologies to analyze, predict, and enhance the reliability of engineering systems."
+    },
+    {
+      "description": "A fire safety engineer is a professional who specializes in designing, implementing, and maintaining systems and measures to prevent, control, and mitigate the impact of fires in various settings. Their work is crucial for ensuring the safety of people, property, and the environment. Fire safety engineers apply principles of engineering, physics, and chemistry to create effective fire protection strategies and systems."
+    },
+    {
+      "description": "HVAC (Heating, Ventilation, and Air Conditioning) engineers are professionals who specialize in the design, installation, maintenance, and optimization of HVAC systems. These systems are crucial for providing comfortable indoor environments in buildings, as well as ensuring adequate air quality and energy efficiency. HVAC engineers work in various industries, including commercial buildings, residential construction, industrial facilities, and more."
+    },
+    {
+      "description": "A Human Factors Engineer, also known as an Ergonomics Engineer or Human Factors and Ergonomics (HF/E) professional, specializes in the application of human-centered design principles to improve the interaction between people and the systems, products, or environments they use. The goal is to enhance efficiency, safety, and overall user experience by considering human capabilities and limitations. "
+    },
+    {
+      "description": "A packaging engineer is a professional who specializes in designing, developing, and implementing packaging solutions for products. Their primary goal is to create packaging that protects the product during transportation, storage, and display, while also considering factors such as cost-effectiveness, sustainability, and marketing appeal. "
+    },
+    {
+      "description": "A process engineer is a professional who applies engineering principles to the design, optimization, and management of industrial processes. These processes can be related to manufacturing, chemical production, petrochemicals, food and beverage production, and various other industries. "
+    },
+    {
+      "description": "A quality engineer is a professional responsible for ensuring that products and processes meet the required quality standards and specifications. Quality engineers play a crucial role in various industries, including manufacturing, healthcare, automotive, aerospace, and technology."
+    },
+    {
+      "description": "A remote sensing engineer is a professional who specializes in the acquisition, analysis, and interpretation of information about the Earth's surface and atmosphere using remote sensing technologies. Remote sensing involves capturing data from a distance, typically using sensors mounted on satellites, aircraft, drones, or ground-based platforms. "
+    },
+    {
+      "description": "A safety engineer, also known as a safety specialist or safety manager, is a professional responsible for ensuring that workplaces and processes are safe for employees and the public. Their primary focus is on preventing accidents, injuries, and occupational illnesses."
+    },
+    {
+      "description": "A Software Quality Assurance (SQA) engineer, also known as a QA engineer or tester, is a professional responsible for ensuring the quality of software products through systematic testing and quality assurance processes. Their primary goal is to identify and rectify any defects or issues in the software before it is released to end-users."
+    },
+    {
+      "description": "A Telecom Network Engineer is a professional who designs, implements, manages, and troubleshoots the telecommunications networks that allow data, voice, and video communication to occur. These engineers play a crucial role in ensuring that communication networks operate efficiently and securely."
+    },
+    {
+      "description": "A Wind Energy Engineer is a professional who specializes in the design, development, and maintenance of systems that harness wind energy for power generation. Wind energy engineering involves a multidisciplinary approach, combining elements of mechanical engineering, electrical engineering, and environmental science."
+    },
+    {
+      "description": "Forensic engineers are professionals who apply engineering principles and techniques to investigate and analyze failures, accidents, or incidents involving structures, materials, products, or systems. Their role is to determine the root cause of these incidents, provide expert opinions, and sometimes testify in legal proceedings."
+    },
+    {
+      "description": "Humanitarian engineering is a field that applies engineering principles and problem-solving skills to address global challenges and improve the well-being of communities, particularly in underserved or disaster-affected areas. Humanitarian engineers work on projects that aim to provide sustainable solutions to issues such as access to clean water, sanitation, energy, healthcare, and infrastructure development."
+    },
+    {
+      "description": "A cybersecurity engineer is a professional responsible for protecting an organization's computer systems, networks, and data from security breaches, attacks, and unauthorized access. Their primary goal is to ensure the confidentiality, integrity, and availability of information and systems."
+    },
+    {
+      "description": "An energy engineer is a professional who specializes in the field of energy, with a focus on improving energy efficiency, sustainability, and the overall performance of energy systems. These engineers work across various industries, including renewable energy, traditional energy, manufacturing, construction, and consulting. "
+    },
+    {
+      "description": "A firmware engineer is a professional who specializes in designing, developing, testing, and maintaining firmware, which is a type of software that is closely tied to hardware and typically provides low-level control for the specific device it is associated with. Firmware is often embedded in electronic devices such as microcontrollers, programmable logic devices, and other hardware components."
+    },
+    {
+      "description": "A game developer is a professional involved in the creation, design, and development of video games. Game development is a multidisciplinary field that encompasses various roles and responsibilities, often requiring collaboration among individuals with different skills."
+    },
+    {
+      "description": "An instrumentation engineer is a professional who specializes in the design, development, installation, and maintenance of control systems and instruments used in various industries. Instrumentation engineering involves the application of measurement and control principles to create systems that monitor and regulate processes."
+    },
+    {
+      "description": "A laser engineer is a professional who specializes in the design, development, and application of lasers. Lasers, which stands for \"Light Amplification by Stimulated Emission of Radiation,\" are devices that produce highly focused and coherent beams of light with unique properties. Laser engineers work in various fields, including telecommunications, medical applications, manufacturing, research, and defense."
+    },
+    {
+      "description": "A plumbing engineer is a professional who specializes in the design, planning, and implementation of plumbing systems for residential, commercial, industrial, and institutional buildings. These engineers ensure that buildings have efficient and safe water supply, wastewater drainage, and gas distribution systems."
+    },
+    {
+      "description": "A quantum computing engineer is a professional who specializes in the field of quantum computing, a branch of computing that leverages the principles of quantum mechanics to perform certain types of calculations much faster than classical computers. Quantum computing engineers are involved in designing, developing, and implementing quantum algorithms and systems."
+    },
+    {
+      "description": "Reverse engineering is the process of analyzing a product, system, or technology to understand its design, functionality, and inner workings. It involves dissecting a device or software to uncover how it was made, with the goal of gaining insights into its structure, behavior, and components."
+    },
+    {
+      "description": "A sustainable design engineer is a professional who specializes in creating environmentally friendly and socially responsible solutions in various fields such as architecture, urban planning, product design, and engineering. The primary goal of sustainable design is to minimize the negative impact on the environment, conserve resources, and create designs that contribute to the well-being of individuals and communities."
+    },
+    {
+      "description": "A virtual reality (VR) engineer is a professional who specializes in the design, development, and implementation of virtual reality experiences and technologies. Virtual reality is a computer-generated simulation of a three-dimensional environment that users can interact with, often through the use of specialized hardware such as VR headsets."
+    },
+    {
+      "description": "A graphic designer is a professional who specializes in creating visual content to communicate messages or ideas through various mediums. Graphic designers use a combination of artistic and technical skills to produce designs that are visually appealing, informative, and effective."
+    }
+  ],
+  "PoliceDescription": [
+    {
+      "description": "Police officers are law enforcement officials responsible for maintaining public order and safety, enforcing laws, and preventing and investigating crimes. Their duties can vary depending on the jurisdiction and the specific department they work for."
+    },
+    {
+      "description": "Detectives, also known as investigators, are law enforcement officers who specialize in investigating and solving crimes. Unlike uniformed police officers who primarily handle general law enforcement duties, detectives focus on more complex cases that require in-depth analysis and investigative skills."
+    },
+    {
+      "description": "A criminal investigator, often referred to as a criminal investigator or criminal investigator, is a law enforcement professional who specializes in investigating criminal activities. The role of a criminal investigator is similar to that of a detective, but the terminology may vary depending on the jurisdiction and the specific law enforcement agency."
+    },
+    {
+      "description": "A SWAT (Special Weapons and Tactics) officer is a specialized law enforcement professional trained to handle high-risk situations that go beyond the capabilities of regular police officers. SWAT teams are typically called in to deal with incidents such as hostage situations, barricaded suspects, counter-terrorism operations, and high-risk arrests."
+    },
+    {
+      "description": "A K-9 officer, also known as a police dog handler or K-9 unit, is a law enforcement professional partnered with a specially trained police dog (K-9). Together, they form a highly effective team that can be deployed for various law enforcement tasks."
+    },
+    {
+      "description": "Traffic officers, also known as traffic police or traffic enforcement officers, play a crucial role in regulating and managing traffic on roadways. Their primary responsibilities involve ensuring the safe and efficient flow of traffic, enforcing traffic laws, and promoting road safety."
+    },
+    {
+      "description": "A narcotics detective, also known as a drug enforcement agent or narcotics investigator, is a specialized law enforcement officer responsible for investigating and combating illegal drug-related activities. These officers work within dedicated units or task forces focused on addressing the production, distribution, and trafficking of illegal drugs."
+    },
+    {
+      "description": "A homicide detective, also known as a homicide investigator or detective, is a specialized law enforcement officer responsible for investigating murders and other cases involving suspicious deaths. Homicide detectives play a crucial role in solving crimes, bringing perpetrators to justice, and providing closure for victims' families."
+    },
+    {
+      "description": "A cybercrime detective, also known as a cybercrime investigator or digital forensics investigator, is a specialized law enforcement professional who focuses on investigating crimes committed in the digital realm. The field of cybercrime involves various offenses, including hacking, identity theft, online fraud, cyberterrorism, and other illicit activities conducted through computer networks and the internet."
+    },
+    {
+      "description": "A crime scene investigator (CSI), also known as a forensic investigator or forensic analyst, is a specialized professional trained to collect, analyze, and preserve physical evidence from crime scenes. Their work is crucial in helping law enforcement solve crimes by providing scientific analysis and documentation."
+    },
+    {
+      "description": "An FBI (Federal Bureau of Investigation) agent is a federal law enforcement officer employed by the United States government. The FBI is the principal federal investigative agency and operates under the jurisdiction of the Department of Justice. FBI agents play a critical role in enforcing federal laws, investigating and preventing crimes, and protecting national security."
+    },
+    {
+      "description": "A DEA (Drug Enforcement Administration) agent is a federal law enforcement officer employed by the United States Department of Justice. The DEA is tasked with enforcing the controlled substances laws and regulations of the United States, with a primary focus on combating drug trafficking and abuse."
+    },
+    {
+      "description": "An ATF (Bureau of Alcohol, Tobacco, Firearms and Explosives) agent is a federal law enforcement officer employed by the United States Department of Justice. ATF agents play a critical role in enforcing federal laws related to the regulation of alcohol, tobacco, firearms, explosives, and arson."
+    },
+    {
+      "description": "A Border Patrol agent is a federal law enforcement officer employed by U.S. Customs and Border Protection (CBP), which is part of the Department of Homeland Security (DHS). Border Patrol agents play a crucial role in securing the nation's borders, preventing illegal immigration, and enforcing immigration laws."
+    },
+    {
+      "description": "Secret Service agents are federal law enforcement officers who serve in the United States Secret Service, an agency within the Department of Homeland Security (DHS). The primary mission of the Secret Service is to safeguard national leaders, protect the financial infrastructure of the United States, and combat financial and electronic crimes."
+    },
+    {
+      "description": "United States Marshals are federal law enforcement officers who serve under the United States Marshals Service (USMS), a component of the Department of Justice. U.S. Marshals play a diverse and crucial role in the federal justice system."
+    },
+    {
+      "description": "State troopers, also known as state police officers or state highway patrol officers, are law enforcement officers who work for state police or highway patrol agencies. Their primary responsibilities include enforcing traffic laws, ensuring public safety on highways, and providing a range of law enforcement services within the state."
+    },
+    {
+      "description": "Transit police officers are law enforcement officers who are specifically assigned to provide security and enforce laws within public transportation systems. Their primary focus is on ensuring the safety and security of passengers and staff within transit facilities, such as buses, trains, subways, and transit stations."
+    },
+    {
+      "description": "A School Resource Officer (SRO) is a law enforcement officer who is assigned to work within a school or educational institution. The primary role of an SRO is to ensure the safety and security of students, staff, and the school environment. SROs often engage in a combination of law enforcement, mentoring, and education-related activities."
+    },
+    {
+      "description": "Community policing officers play a crucial role in fostering positive relationships between law enforcement and the communities they serve. These officers typically work closely with residents, local organizations, and businesses to address public safety concerns and build trust within the community."
+    },
+    {
+      "description": "SVU stands for Special Victims Unit,\" which is a specialized division within many police departments dedicated to investigating crimes involving victims of sexual assault, domestic violence, child abuse, and other related offenses. Detectives within an SVU typically undergo specialized training to handle these sensitive cases, often working closely with victims to gather evidence, build cases, and bring perpetrators to justice."
+    },
+    {
+      "description": "Gang unit officers are law enforcement personnel assigned to specialized units within police departments that focus on investigating, monitoring, and addressing issues related to gang activity. Their primary objective is to suppress gang-related crimes, dismantle gang networks, and improve community safety."
+    },
+    {
+      "description": "Hostage negotiators are highly trained law enforcement professionals who specialize in crisis communication and conflict resolution. Their primary objective is to peacefully resolve high-stakes situations such as hostage crises, barricade incidents, suicidal individuals, or other scenarios involving life-threatening situations."
+    },
+    {
+      "description": "Intelligence analysts are professionals who gather, evaluate, and interpret information to produce valuable insights and support decision-making within various fields, including law enforcement, national security, business, and more. Their primary focus is to collect data from various sources, analyze it, and generate reports or recommendations based on their findings."
+    },
+    {
+      "description": "Internal affairs investigators, commonly referred to as IA investigators or simply IA, are individuals within a law enforcement agency tasked with conducting inquiries into allegations of misconduct, violations of departmental policies, or illegal activities involving members of the agency itself."
+    },
+    {
+      "description": "A CIT (Crisis Intervention Team) officer is a law enforcement professional specially trained to handle crisis situations involving individuals experiencing mental health crises or emotional distress. These officers undergo specialized training programs that equip them with skills in de-escalation, communication, and understanding mental health issues."
+    },
+    {
+      "description": "Undercover officers are law enforcement professionals who operate covertly, assuming false identities or personas to infiltrate criminal organizations, gather intelligence, and gather evidence for investigations. Their work involves blending into various environments or communities to observe, gather information, and build cases against individuals involved in criminal activities."
+    },
+    {
+      "description": "Harbor patrol officers are law enforcement officials who specialize in patrolling and ensuring the safety and security of waterways, ports, harbors, and coastal areas. Their primary responsibility is to enforce laws, regulations, and safety measures within these maritime environments."
+    },
+    {
+      "description": "Park rangers are professionals responsible for managing and protecting national parks, state parks, forests, wildlife refuges, and other protected natural areas. They serve a variety of roles, often combining elements of law enforcement, conservation, education, and public service."
+    },
+    {
+      "description": "Mounted police units are specialized divisions within law enforcement agencies that use horses as a means of patrol, crowd control, and community engagement. These units have a long history and continue to serve various purposes in modern policing."
+    },
+    {
+      "description": "Tactical medics are highly trained medical professionals who work in conjunction with tactical law enforcement teams, such as SWAT (Special Weapons and Tactics), during high-risk situations like hostage rescues, armed standoffs, or other incidents where there's a risk of violence or injury."
+    },
+    {
+      "description": "A PIO, or Public Information Officer, serves as the official spokesperson for an organization, often within a government agency, law enforcement department, or other public entities. The primary role of a PIO is to manage communication between the organization and the public, media, stakeholders, and other relevant parties."
+    },
+    {
+      "description": "ERT stands for Emergency Response Team, which is a specialized unit within law enforcement agencies. ERT officers are highly trained and equipped to handle high-risk situations that go beyond the scope of regular police duties. They are sometimes referred to as SWAT (Special Weapons and Tactics) in certain regions or departments."
+    },
+    {
+      "description": "Counterterrorism unit officers are specialized law enforcement professionals dedicated to preventing, investigating, and responding to terrorism-related threats or activities. Their primary objective is to safeguard public safety by countering and disrupting terrorist plots, organizations, or individuals."
+    },
+    {
+      "description": "An evidence custodian, also known as an evidence technician or property officer, is responsible for the management, preservation, and safekeeping of all evidence and property collected by a law enforcement agency. Their role is critical in maintaining the integrity of evidence for legal proceedings and ensuring compliance with chain of custody protocols."
+    },
+    {
+      "description": "Marine patrol officers, also known as marine law enforcement officers or waterway enforcement officers, are specially trained law enforcement professionals responsible for patrolling water bodies such as lakes, rivers, coastal areas, and other navigable waters. They play a crucial role in ensuring the safety, security, and compliance with laws and regulations in maritime environments."
+    },
+    {
+      "description": "Animal control officers are professionals responsible for enforcing animal-related laws and regulations, ensuring public safety, and promoting animal welfare within communities. Their primary role is to handle and manage situations involving animals, ranging from domestic pets to wildlife, addressing issues related to animal cruelty, stray animals, public health concerns, and wildlife management."
+    },
+    {
+      "description": "Forensic sketch artists, also known as police sketch artists or composite artists, are trained professionals who create visual representations of suspects, persons of interest, or witnesses based on their descriptions. These sketches are used by law enforcement agencies to assist in identifying and apprehending suspects in criminal investigations."
+    },
+    {
+      "description": "HRT stands for Hostage Rescue Team, which is a specialized unit within the Federal Bureau of Investigation (FBI). HRT members are highly trained law enforcement professionals tasked with handling high-risk situations, including hostage rescues, counterterrorism operations, and other critical incidents."
+    },
+    {
+      "description": "BAU stands for the Behavioral Analysis Unit, a specialized division within the Federal Bureau of Investigation (FBI). Agents within the BAU are highly trained in behavioral analysis and profiling, focusing on understanding and predicting the behavior of criminals, particularly those involved in violent crimes and serial offenses."
+    },
+    {
+      "description": "Computer forensic analysts are highly trained professionals who specialize in collecting, preserving, and analyzing digital evidence from computers, mobile devices, networks, and other digital storage media. Their primary role is to investigate cybercrimes, data breaches, or other incidents where digital evidence is crucial."
+    },
+    {
+      "description": "A polygraph examiner, also known as a polygraphist or forensic psychophysiologist, is a professional trained to administer and interpret polygraph examinations, commonly known as lie detector tests. These tests measure physiological responses such as heart rate, blood pressure, respiratory rate, and skin conductivity in response to questioning to assess truthfulness or deception."
+    },
+    {
+      "description": "Cold case detectives are law enforcement professionals dedicated to investigating unsolved or \"cold\" cases—those for which all leads have been exhausted and remained unresolved for a significant period, often years or even decades. These cases typically involve serious crimes such as homicides, missing persons, sexual assaults, or other major offenses."
+    },
+    {
+      "description": "Police chaplains are clergy members who serve as spiritual and emotional support providers for law enforcement agencies and their personnel. They offer counseling, guidance, and pastoral care to officers, their families, and sometimes the broader community."
+    },
+    {
+      "description": "Crime prevention officers are law enforcement professionals specializing in reducing crime rates and enhancing community safety through proactive strategies, education, and community engagement. Their primary goal is to prevent crime by implementing initiatives and programs aimed at deterring criminal activity and promoting public safety."
+    },
+    {
+      "description": "Search and rescue (SAR) officers are highly trained professionals who specialize in conducting and coordinating search and rescue operations in various environments, including wilderness areas, mountains, waterways, and urban settings. Their primary objective is to locate and rescue individuals who are lost, injured, or in distress."
+    },
+    {
+      "description": "Juvenile detectives are law enforcement officers specializing in investigations involving minors, typically individuals under the age of 18. Their primary focus is on handling cases related to juvenile delinquency, crimes committed by minors, and situations involving at-risk or vulnerable youth."
+    },
+    {
+      "description": "An underwater recovery team member is a specialized professional trained to conduct search and recovery operations in underwater environments. These individuals are typically part of law enforcement agencies, emergency services, or specialized teams dedicated to locating and retrieving objects, evidence, or individuals submerged in water bodies like rivers, lakes, or oceans."
+    },
+    {
+      "description": "Crisis negotiation teams, also known as hostage negotiation teams or crisis intervention teams, are specialized law enforcement units tasked with managing high-stress, critical incidents involving hostages, barricaded subjects, suicidal individuals, or other crisis situations."
+    },
+    {
+      "description": "Fraud investigators are professionals who specialize in uncovering, preventing, and mitigating instances of fraudulent activity within various domains, such as financial institutions, corporations, insurance companies, government agencies, or law enforcement."
+    }
+  ],
+  "TeacherDescription": [
+    {
+      "description": "Teachers in lower grade levels, often referred to as elementary or primary school teachers, possess a unique set of skills. They nurture young minds, focusing on fundamental academic concepts while creating a supportive and engaging classroom environment. Their responsibilities include introducing basic subjects like math, reading, science, and social studies, as well as fostering social and emotional development."
+    },
+    {
+      "description": "Teachers in higher standards, such as middle school, high school, or even college instructors, specialize in specific subjects and often teach more complex concepts within those subjects. They have a deeper understanding of their field and usually teach multiple classes to students at different levels."
+    },
+    {
+      "description": "Intermediate teachers typically work with students in middle school, bridging the gap between elementary and high school education. They cover a wide range of subjects, preparing students for more specialized studies while focusing on core subjects like math, science, language arts, and social studies. Intermediate teachers play a crucial role in guiding students through a period of significant change both academically and personally."
+    },
+    {
+      "description": "An assistant professor holds an academic position at a college or university, typically early in their career. They engage in teaching, research, and often contribute to the institution's academic community through publications and other scholarly activities. Assistant professors usually teach undergraduate and sometimes graduate-level courses, while also conducting research in their specialized field."
+    },
+    {
+      "description": "A professor is a senior academic position within a college or university. They have achieved tenure, demonstrating excellence in teaching, research, and service to the academic community. Professors typically hold a high level of expertise in their field and often have extensive experience in teaching and conducting research."
+    }
+  ],
+  "SoftwareEngineerDescription": [
+    {
+      "description": "Frontend development involves creating the user interface and experience of a website or application. It's the part of web development that users interact with directly. Frontend developers use languages like HTML, CSS, and JavaScript to build the structure, style, and behavior of websites."
+    },
+    {
+      "description": "Backend development focuses on the server-side of web applications, dealing with the logic, database interactions, and server operations that power the frontend. It involves working with server-side languages such as Python, Ruby, PHP, Java, Node.js, and frameworks like Django, Ruby on Rails, Laravel, Spring, and Express.js."
+    },
+    {
+      "description": "DevOps, short for Development and Operations, is a set of practices aimed at streamlining collaboration between software development (Dev) and IT operations (Ops). It emphasizes communication, integration, and automation to improve the speed and quality of software delivery."
+    },
+    {
+      "description": "A full-stack developer is someone who possesses skills and expertise in both frontend and backend development. They have a comprehensive understanding of how to build the complete structure of a web application, from the user interface to the server-side logic."
+    },
+    {
+      "description": "Android is an open-source mobile operating system developed by Google. It's designed primarily for touchscreen mobile devices such as smartphones and tablets but has also been extended to other devices like smart TVs, smartwatches, and more."
+    },
+    {
+      "description": "UI (User Interface) and UX (User Experience) are two integral components of designing digital products like websites, apps, and software. They work together to create an intuitive, visually appealing, and user-friendly experience for the end user."
+    },
+    {
+      "description": "Cybersecurity involves practices, technologies, and measures designed to protect digital systems, networks, devices, and data from unauthorized access, cyber attacks, and damage or theft of sensitive information. It's a critical aspect of our increasingly digital world, encompassing various layers of defense to safeguard against a wide range of threats."
+    },
+    {
+      "description": "Game developers are professionals who create video games across various platforms like consoles, PCs, mobile devices, and more. Game development involves a multidisciplinary approach, bringing together various skills and expertise to design, code, produce, and test games."
+    },
+    {
+      "description": "React Native is an open-source framework developed by Facebook that allows developers to build mobile applications using JavaScript and React. It enables the creation of native mobile apps for iOS and Android platforms using a single codebase, reducing development time and effort."
+    },
+    {
+      "description": "Graphic design is a creative discipline that involves combining art and technology to communicate ideas visually. It encompasses a wide range of visual communication techniques used to create images, typography, illustrations, and layouts to convey messages, concepts, or information."
+    },
+    {
+      "description": "AI (Artificial Intelligence) and data science are closely related fields that focus on extracting insights, making predictions, and automating processes using data-driven approaches. While they have overlapping areas, they involve distinct skill sets and objectives."
+    },
+    {
+      "description": "A software architect is a senior-level professional responsible for designing and structuring software systems to meet specific requirements, ensuring that they are scalable, maintainable, and aligned with business goals."
+    },
+    {
+      "description": "Flutter is an open-source UI software development toolkit created by Google. It allows developers to build natively compiled applications for mobile, web, and desktop from a single codebase. Using the Dart programming language."
+    },
+    {
+      "description": "Blockchain is a distributed ledger technology that enables secure, transparent, and immutable record-keeping of transactions across a network of computers. It gained prominence as the underlying technology for cryptocurrencies like Bitcoin, but its applications extend far beyond digital currencies."
+    },
+    {
+      "description": "ASP.NET Core is an open-source, cross-platform framework for building modern, high-performance web applications and services. It's a significant evolution of Microsoft's ASP.NET framework, designed to be modular, lightweight, and more scalable."
+    },
+    {
+      "description": "PostgreSQL, often referred to as Postgres, is an open-source, powerful, and advanced relational database management system (RDBMS). It's known for its robustness, reliability, extensibility, and adherence to SQL standards, making it a popular choice for a wide range of applications."
+    },
+    {
+      "description": "QA stands for Quality Assurance, which is a crucial part of the software development process. It's a systematic way of ensuring that the software being developed meets specified requirements and functions correctly. QA involves various activities aimed at preventing defects and ensuring the overall quality of the product."
+    },
+    {
+      "description": "Technical writers play a critical role in translating complex technical information into clear, understandable, and accessible content for various audiences. They bridge the gap between technical experts and end-users by creating documentation, guides, manuals, and instructional materials that convey technical information concisely and effectively."
+    }
+  ],
+
+
+
+  "civil engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "jee"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "autocad"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "mechanical engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point" : "networking and professional development"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "electrical engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "chemical engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "computer engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "aerospace engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "biomedical engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "evironmental engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "petroleum engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "develop the soft skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "industrial engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "structural engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "materials engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and projects"
+    },
+    {
+      "point" : "communication skils"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "mining engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "geotechincal engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "nuclear engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "marine engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop problem solving skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "master's degree"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "robotics engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop programming skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "build a portfolio"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "systems engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop project management skills"
+    },
+    {
+      "point": "technical skills"
+    },
+    {
+      "point": "develop systems thinking skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communcation skills"
+    },
+    {
+      "point": "master's Degree"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "software engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop programming  and web development skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and co-op programs"
+    },
+    {
+      "point" : "buid a portfolio"
+    },
+    {
+      "point" : "communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "telecommunication engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "traffic engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "learn trasportation planning"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "water resource engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and projects"
+    },
+    {
+      "point" : "software skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "fire protection engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "software and communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "railway engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "study signaling systems"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "software skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "renewable energy engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "learn energy storage technologies"
+    },
+    {
+      "point": "study grid systems"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "soft skills"
+    },
+    {
+      "point" : "master's degree"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "automotive engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "learn automotive design and manufacturing"
+    },
+    {
+      "point": "CAD"
+    },
+    {
+      "point": "intership and projects"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "biomechanical engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point" : "learn imaging techniques"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "master's degree or phD"
+    }
+  ],
+  "control systems engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop programming languages"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "software"
+    },
+    {
+      "point": "master's or phD"
+    }
+  ],
+  "photonics engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "study photonics components"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "commmunication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "nano engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point" : "study nanomaterial properties"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communications"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point" : "master's or phD"
+    }
+  ],
+  "acoustic  engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop techniccal skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point" : "study audio systems"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "master's Degree or phD"
+    }
+  ],
+  "broadcast engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and practical experience"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point" : "master's Degree"
+    }
+  ],
+  "facilities engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical software skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point" : "learn building systems"
+    },
+    {
+      "point": "intership and practical experience"
+    },
+    {
+      "point" : "certifications"
+    },
+    {
+      "point": "soft skills"
+    }
+  ],
+  "manufacturing engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop techinal skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "CAD and CAM"
+    },
+    {
+      "point": "intership and practical experience"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point" : "master's Degree"
+    }
+  ],
+  "piping engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and practical experience"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "reliability engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical & communication skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "soft skills"
+    },
+    {
+      "point" : "interships and practical experience"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point" : "master's Degree"
+    }
+  ],
+  "fire safety engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop tehnical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "HVAC engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical and communications skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and practical experience"
+    },
+    {
+      "point" : "certifications"
+    },
+    {
+      "point": "soft skills"
+    },
+    {
+      "point" : "master's Degree"
+    }
+  ],
+  "human factors engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and practical experience"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point": "master's or phD"
+    }
+  ],
+  "packing engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "soft Skills"
+    },
+    {
+      "point" : "intership and practical experience"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "process engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and projects"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "quality engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "develop soft skills"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point": "master's Degree"
+    }
+  ],
+  "remote sensing engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop programming  skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point" : "master's Degree"
+    }
+  ],
+  "safety engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "software quality assurance(SQA) engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop communication skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "mobile and web testing"
+    },
+    {
+      "point":"master's Degree"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "telecom network engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop techinal skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "study telecommunication systems"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "wind energy engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "forensic engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop communications skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and projects"
+    },
+    {
+      "point" : "master's Degree"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "humanitarian engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop techinal skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "projrct management"
+    },
+    {
+      "point" : "soft skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "cybersecurity engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop techinal skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "operating systems knoledge"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point": "master's Degree"
+    }
+  ],
+  "energy engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop techinal skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership and projects"
+    },
+    {
+      "point" : "master's Degree"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "firmware engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop programming languages"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "idebugging and testing"
+    },
+    {
+      "point" : "learn VHDL or Verilog"
+    },
+    {
+      "point": "master's or phD"
+    }
+  ],
+  "game developer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop programming languages"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "basics of AI"
+    },
+    {
+      "point": "mobile game development"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "instrumentation engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop software skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "communication skills "
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "laser engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop techinal skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "cad software"
+    },
+    {
+      "point": "develop soft skills"
+    },
+    {
+      "point" : "develop communication skills"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+  "plumbing engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "study plumbing fixtures"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "cad software"
+    },
+    {
+      "point" : "develop communication skilss"
+    },
+    {
+      "point": "certifications"
+    },
+    {
+      "point": "develop soft skills"
+    },
+    {
+      "point" : "master's degree"
+    }
+  ],
+  "quantum computing engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop quantum programming languages"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "iternship and research opportunities"
+    },
+    {
+      "point" : "develop soft skills"
+    },
+    {
+      "point": "master's or phD"
+    }
+  ],
+  "reverse engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop programming skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "binary exploitation"
+    },
+    {
+      "point" : "develop soft skills"
+    },
+    {
+      "point": "master's or phD"
+    }
+  ],
+  "sastainable design engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point" : "study environmwntal science and policy"
+    },
+    {
+      "point": "develop project management skills"
+    },
+    {
+      "point": "project management"
+    },
+    {
+      "point" : "public speaking and communication"
+    },
+    {
+      "point": "master's or phD"
+    }
+  ],
+  "virtual reality engineer": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "learning programming languages"
+    },
+    {
+      "point" : "understanding graphics and 3D math"
+    },
+    {
+      "point": "develop technicall skills"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "testing and debugging"
+    },
+    {
+      "point" : "develop soft skills"
+    },
+    {
+      "point" : "build a portfolio"
+    },
+    {
+      "point": "master's or phD"
+    }
+  ],
+  "graphic desiner": [
+    {
+      "point" : "10th class"
+    },
+    {
+      "point": "intermediate"
+    },
+    {
+      "point": "btech"
+    },
+    {
+      "point": "develop technical skills"
+    },
+    {
+      "point": "learn web design basics"
+    },
+    {
+      "point": "maintain a strong gpa"
+    },
+    {
+      "point": "build a portfolio"
+    },
+    {
+      "point": "develop soft skills"
+    },
+    {
+      "point": "intership"
+    },
+    {
+      "point" : "licensure"
+    },
+    {
+      "point": "certifications"
+    }
+  ],
+
+
+
+  "Lawyer": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree "
+    },{
+      "point": "LSAT Test / CLAT"
+    },{
+      "point": "Apply Law Schools"
+    },{
+      "point": "Complete Law School"
+    },{
+      "point": "Pass BAR Exam"
+    },{
+      "point": "Licensed Attorney"
+    },{
+      "point": "Legal Practice"
+    },{
+      "point": "Gain Experience"
+    },{
+      "point": "Optional Additional Education"
+    },{
+      "point": "Continuing Legal Education"
+    }
+  ],
+
+  "Judge": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree "
+    },{
+      "point": "Gain Experience"
+    },{
+      "point": "Judicial Clerkship"
+    },{
+      "point": "Additional Experience"
+    },{
+      "point": "Judicial Appointments"
+    },{
+      "point": "Judicial Training and Education"
+    },{
+      "point": ". Professional Associations"
+    }
+  ],
+
+  "PILOT": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelors Degree "
+    },{
+      "point": "Join a Flight School or College"
+    },{
+      "point": "Obtain Your PPL(Private Pilot License)"
+    },{
+      "point": "Additional Certifications and Ratings"
+    },{
+      "point": "Network and Job Search"
+    }
+  ],
+
+
+  "LOCO PILOT": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Railway Recruitment Board (RRB) Exams "
+    },{
+      "point": "Apply for Assistant Loco Pilot (ALP) or Loco Pilot Positions"
+    },{
+      "point": "Complete Training"
+    },{
+      "point": "Gain Experience"
+    },{
+      "point": "Promotion"
+    }
+  ],
+
+
+
+  "BANK EMPLOYEE": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Undergraduate Degree "
+    },{
+      "point": "Maintain Good Academic Performance"
+    },{
+      "point": "Competitive Exams"
+    },{
+      "point": "Bank Exam Preparation"
+    },{
+      "point": "Apply for Bank Jobs"
+    },{
+      "point": "Clear the Interview and Group Discussion"
+    },{
+      "point": "Join as a Probationary Officer or Clerk"
+    },{
+      "point": "On-the-Job Training and Promotion"
+    }
+  ],
+
+
+  "AIR HOSTESS": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelor's Degree "
+    },{
+      "point": "Maintain a Good Physical and Health Condition"
+    },{
+      "point": "Learn Additional Languages"
+    },{
+      "point": "Enroll in an Aviation Training Institute "
+    },{
+      "point": "Internships and Practical Training"
+    },{
+      "point": "Apply for Air Hostess Positions"
+    },{
+      "point": "Attend Interviews and Group Discussions"
+    },{
+      "point": "Training and Onboarding"
+    },{
+      "point": "Start Your Career as an Air Hostess"
+    }
+  ],
+
+
+  "IAS": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelor's Degree "
+    },{
+      "point": " Preparation for Civil Services Examination"
+    },{
+      "point": "Clear the Preliminary Exam (CSE - Paper I & Paper II)"
+    },{
+      "point": "Clear the Mains Exam"
+    },{
+      "point": "Personality Test (Interview)"
+    },{
+      "point": "Final Selection"
+    },{
+      "point": "Training at LBSNAA"
+    },{
+      "point": "On-The-Job Training"
+    },{
+      "point": "Continuing Education and Career Advancement"
+    }
+  ],
+
+  "IPS": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelor's Degree "
+    },{
+      "point": " Preparation for Civil Services Examination"
+    },{
+      "point": "Clear the Preliminary Exam (CSE - Paper I & Paper II)"
+    },{
+      "point": "Clear the Mains Exam"
+    },{
+      "point": "Personality Test (Interview)"
+    },{
+      "point": "Final Selection"
+    },{
+      "point": "Clear the Medical Examination and Background Check"
+    },{
+      "point": "Training at the Sardar Vallabhbhai Patel National Police Academy"
+    },{
+      "point": "Join the Police Force as a Probationary IPS Officer"
+    }
+  ],
+
+
+  "CHEF": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Consider a Culinary School or College"
+    },{
+      "point": "Enroll in a Culinary Program"
+    },{
+      "point": "Gain Practical Experience"
+    },{
+      "point": "Culinary School Graduation"
+    },{
+      "point": "Choose a Culinary Specialization"
+    },{
+      "point": "Work in Professional Kitchens"
+    },{
+      "point": "Culinary Certifications (Optional)"
+    },{
+      "point": "Consider Further Education"
+    },{
+      "point": "Open Your Own Restaurant or Business (Optional)"
+    }
+  ],
+
+
+  "SPORTS COACH": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Undergraduate Degree"
+    },{
+      "point": "Gain Coaching Experience (During and After Undergrad)"
+    },{
+      "point": "Advanced Education (Optional)"
+    },{
+      "point": "Certifications and Licensing"
+    },{
+      "point": "Networking"
+    },{
+      "point": "Apply for Coaching Positions"
+    },{
+      "point": "Continual Learning"
+    }
+  ],
+
+
+  "ASTROUNAUT": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Bachelor's  Degree"
+    },{
+      "point": "Gain Practical Experience"
+    },{
+      "point": "Physical Fitness"
+    },{
+      "point": "Learn a Second Language"
+    },{
+      "point": "Gain Professional Experience"
+    },{
+      "point": "Apply to Space Agencies"
+    },{
+      "point": "Network with Astronauts and Professionals"
+    }
+  ],
+
+
+  "ARCHEOLOGIST": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Volunteer and Gain Experience"
+    },{
+      "point": "Bachelor's  Degree"
+    },{
+      "point": "Take Archaeology Courses"
+    },{
+      "point": "Participate in Fieldwork"
+    },{
+      "point": "Develop Research and Writing Skills"
+    },{
+      "point": "Join Professional Organizations"
+    },{
+      "point": "Stay Informed and Network"
+    }
+  ],
+
+
+  "FASHION DESIGNER": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Learn About Fashion"
+    },{
+      "point": "Participate in School Clubs or Activities"
+    },{
+      "point": "Take Sewing Classes"
+    },{
+      "point": "Build a Portfolio"
+    },{
+      "point": "Volunteer or Intern"
+    },{
+      "point": "Choose a Bachelor's Program"
+    },{
+      "point": "Design and Create Your Own Pieces"
+    },{
+      "point": "Participate in Fashion Shows"
+    },{
+      "point": "Networking"
+    },{
+      "point": "Internships and Apprenticeships"
+    },{
+      "point": "Stay Current => Create Your Brand"
+    },{
+      "point": "Apply for Jobs or Start Your Own Business"
+    }
+  ],
+
+  "EVENT MANAGER": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Relevant Bachelor's Degree"
+    },{
+      "point": "Internships and Part-Time Jobs"
+    },{
+      "point": "Network and Build Contacts"
+    },{
+      "point": "Gain Relevant Experience"
+    },{
+      "point": "Create a Portfolio"
+    },{
+      "point": "Plan Your Own Events"
+    },{
+      "point": "Apply for Entry-Level Positions "
+    },{
+      "point": "Work Your Way Up"
+    }
+  ],
+
+
+  "LIBRARIAN": [
+    {
+      "point": "10th standard"
+    },{
+      "point": "Intermediate"
+    },{
+      "point": "Develop a Love for Reading"
+    },{
+      "point": "Volunteer in a Library"
+    },{
+      "point": "Right College Program"
+    },{
+      "point": "Get a Master's Degree (Optional)"
+    },{
+      "point": "Complete Internships or Work-Study Programs"
+    },{
+      "point": "Join Library Associations"
+    },{
+      "point": "Build a Professional Network "
+    },{
+      "point": "Develop Technological Skills"
+    },{
+      "point": "Apply for Entry-Level Positions"
+    },{
+      "point": "Pursue Specialization (Optional)"
+    },{
+      "point": "Stay Committed to Professional Ethics"
+    },{
+      "point": "Seek Professional Development Opportunities"
+    },{
+      "point": "Consider Further Education (Optional)"
+    }
+  ],
+  "FrontEnd": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn the Basics of Web Development(HTML,CSS,JAVASCRIPT)"
+    },
+    {
+      "point": "Responsive Web Design"
+    },
+    {
+      "point": "Version Control"
+    },
+    {
+      "point": "Learn a Frontend Framework"
+    },
+    {
+      "point": "API Integration"
+    },
+    {
+      "point": "Testing"
+    },
+    {
+      "point": "Performance Optimization"
+    },
+    {
+      "point": "Accessibility"
+    },
+    {
+      "point": "Learn about Frontend Build and Deployment"
+    },
+    {
+      "point": "Learn about Web Security"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Job Search"
+    }
+
+  ],
+  "Backend": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming Fundamentals(Python, Java, Ruby, or Node.js)"
+    },
+    {
+      "point": "Data Structures and Algorithms"
+    },
+    {
+      "point": "Databases"
+    },
+    {
+      "point": "APIs and Web Development"
+    },
+    {
+      "point": "Server-Side Technologies"
+    },
+    {
+      "point": "Version Control"
+    },
+    {
+      "point": "Authentication and Authorization"
+    },
+    {
+      "point": "Testing"
+    },
+    {
+      "point": "Cloud Services"
+    },
+    {
+      "point": "DevOps Practices"
+    },
+    {
+      "point": "Collaboration and Communication"
+    },
+    {
+      "point": "Seek Internships or Junior Positions"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Apply for Backend Developer Jobs"
+    }
+  ],
+  "devops": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming and Scripting(Python,Ruby,JavaScript and Bash,PowerShell)"
+    },
+    {
+      "point": "Understand System Administration"
+    },
+    {
+      "point": "Version Control"
+    },
+    {
+      "point": "Build and Continuous Integration (CI)"
+    },
+    {
+      "point": "Containerization(like Docker)"
+    },
+    {
+      "point": "Continuous Deployment"
+    },
+    {
+      "point": "Cloud Platforms"
+    },
+    {
+      "point": "Monitoring and Logging"
+    },
+    {
+      "point": "Security Best Practices"
+    },
+    {
+      "point": "Collaboration and Communication"
+    },
+    {
+      "point": "Build Personal Projectsand Certifications"
+    },
+    {
+      "point": "Internships or Junior Positions"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Apply for DevOps Developer Jobs"
+    }
+  ],
+  "FullStack": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Start with Fundamentals"
+    },
+    {
+      "point": "Frontend Development(HTML,CSS,JavaScript,Frontend Frameworks)"
+    },
+    {
+      "point": "Version Control"
+    },
+    {
+      "point": "Backend Development(Node.js, Python,Java,Ruby,c#)"
+    },
+    {
+      "point": "Databases"
+    },
+    {
+      "point": "APIs"
+    },
+    {
+      "point": "Full-Stack Frameworks"
+    },
+    {
+      "point": "Authentication and Authorization"
+    },
+    {
+      "point": "Frontend Build Tools"
+    },
+    {
+      "point": "Web Security"
+    },
+    {
+      "point": "Testing"
+    },
+    {
+      "point": "DevOps Basics"
+    },
+    {
+      "point": "Cloud Services"
+    },
+    {
+      "point": "Collaboration and Communication"
+    },
+    {
+      "point": "Personal Projects and Certifications"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Apply for Full-Stack Developer Jobs"
+    }
+  ],
+  "Andriod": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming"
+    },
+    {
+      "point": "Setup Development Environment "
+    },
+    {
+      "point": "Basic Android Components"
+    },
+    {
+      "point": "User Interface (UI) Design"
+    },
+    {
+      "point": "Activity and Intent"
+    },
+    {
+      "point": "Data Storage"
+    },
+    {
+      "point": "UI Components and Widgets"
+    },
+    {
+      "point": "Permissions and Security"
+    },
+    {
+      "point": "Background Processing"
+    },
+    {
+      "point": "Testing"
+    },
+    {
+      "point": "Localization"
+    },
+    {
+      "point": "Publishing on Google Play"
+    }
+  ],
+  "UI/UX": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn the Basics of Software Development"
+    },
+    {
+      "point": "Understand UX Principles "
+    },
+    {
+      "point": "Learn HTML,CSS ,JavaScript and Frontend Frameworks"
+    },
+    {
+      "point": "UI Design Tools"
+    },
+    {
+      "point": "User Research "
+    },
+    {
+      "point": "Visual Design"
+    },
+    {
+      "point": "Accessibility"
+    },
+    {
+      "point": "Responsive Design "
+    },
+    {
+      "point": "Prototyping "
+    },
+    {
+      "point": "User Testing "
+    },
+    {
+      "point": "Back-End Development"
+    },
+    {
+      "point": "Mobile App Development"
+    },
+    {
+      "point": "Build Personal Projects"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Apply for Developer Positions with UX Emphasis"
+    }
+  ],
+  "CyberSecurity": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming and Networking "
+    },
+    {
+      "point": "Gain Practical Experience "
+    },
+    {
+      "point": "Cybersecurity Certifications"
+    },
+    {
+      "point": "Master Secure Coding"
+    },
+    {
+      "point": "Understand Web Application Security"
+    },
+    {
+      "point": "Master Secure Coding"
+    },
+    {
+      "point": "Understand Web Application Security"
+    },
+    {
+      "point": "Explore Penetration Testing"
+    },
+    {
+      "point": "Keep Up with the Latest Trends"
+    },
+    {
+      "point": "Internships and Entry-Level Positions"
+    },
+    {
+      "point": "Specialize"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Network and Connect"
+    },
+    {
+      "point": "Stay Ethical and Legal"
+    }
+  ],
+  "Game Devloper": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming"
+    },
+    {
+      "point": "Practice Problem Solving"
+    },
+    {
+      "point": "Create Your First Games"
+    },
+    {
+      "point": "Explore Game Engines"
+    },
+    {
+      "point": "Art and Design Skills"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Join Game Development Communities"
+    },
+    {
+      "point": "Game Development Courses"
+    },
+    {
+      "point": "Understand Game Design Principles"
+    },
+    {
+      "point": "Specialize"
+    },
+    {
+      "point": "Apply for Internships"
+    },
+    {
+      "point": "Start Your Own Projects"
+    },
+    {
+      "point": "Build and Publish Games"
+    },
+    {
+      "point": "Work on a Game Portfolio"
+    }
+  ],
+  "ReactNative": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming Fundamentals"
+    },
+    {
+      "point": "Master JavaScript"
+    },
+    {
+      "point": "Understand HTML and CSS"
+    },
+    {
+      "point": "Learn React"
+    },
+    {
+      "point": "Start with React Native"
+    },
+    {
+      "point": "Work on Personal Projects"
+    },
+    {
+      "point": "Participate in Open Source"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Learn about API Integration"
+    },
+    {
+      "point": "State Management"
+    },
+    {
+      "point": "Navigation"
+    },
+    {
+      "point": "UI/UX Design"
+    },
+    {
+      "point": "Testing and Debugging"
+    },
+    {
+      "point": "Publish Apps"
+    },
+    {
+      "point": "Network and Connect"
+    },
+    {
+      "point": "Apply for Internships or Entry-Level Jobs"
+    }
+  ],
+  "GraphicsDesign": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming"
+    },
+    {
+      "point": "Master Mathematics"
+    },
+    {
+      "point": "Graphics Fundamentals"
+    },
+    {
+      "point": "Graphics APIs"
+    },
+    {
+      "point": "Computer Science Fundamentals"
+    },
+    {
+      "point": "3D Mathematics"
+    },
+    {
+      "point": "Graphics Libraries"
+    },
+    {
+      "point": "Game Development"
+    },
+    {
+      "point": "Shader Programming"
+    },
+    {
+      "point": "3D Modeling and Animation"
+    },
+    {
+      "point": "Graphics Design"
+    },
+    {
+      "point": "Physics Simulation"
+    },
+    {
+      "point": "Augmented and Virtual Reality (AR/VR) "
+    },
+    {
+      "point": "Graphics Hardware"
+    },
+    {
+      "point": "Open Source Projects"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Networking"
+    },
+    {
+      "point": "Apply for Internships and Entry-Level Positions"
+    }
+  ],
+  "AIandDataScientist": [
+    {
+      "point": "Learn Programming"
+    },
+    {
+      "point": "Master Mathematics and Statistics"
+    },
+    {
+      "point": "Data Structures and Algorithms"
+    },
+    {
+      "point": "Data Analysis and Visualization"
+    },
+    {
+      "point": "Machine Learning Fundamentals"
+    },
+    {
+      "point": "Deep Learning and Neural Networks"
+    },
+    {
+      "point": "Natural Language Processing (NLP) and Computer Vision"
+    },
+    {
+      "point": "Big Data Technologies"
+    },
+    {
+      "point": "Cloud Computing"
+    },
+    {
+      "point": "SQL and Database Management"
+    },
+    {
+      "point": "Data Preprocessing and Cleaning"
+    },
+    {
+      "point": "Experimental Design and A/B Testing"
+    },
+    {
+      "point": "Kaggle and Data Competitions"
+    },
+    {
+      "point": "Contribute to Open Source Projects"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Networking and Community Involvement"
+    },
+    {
+      "point": "Internships and Job Opportunities"
+    }
+  ],
+  "SoftwareArchitect": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming and Software Development"
+    },
+    {
+      "point": "Develop Strong Fundamentals"
+    },
+    {
+      "point": "Work on Real Projects"
+    },
+    {
+      "point": "Understand System Design"
+    },
+    {
+      "point": "Databases and Data Modeling"
+    },
+    {
+      "point": "Web Development and Technologies"
+    },
+    {
+      "point": "Cloud Computing"
+    },
+    {
+      "point": "Security Principles"
+    },
+    {
+      "point": "Soft Skills and Communication"
+    },
+    {
+      "point": "Leadership and Management Skills"
+    },
+    {
+      "point": "Business Understanding"
+    },
+    {
+      "point": "Continuous Learning and Certifications"
+    },
+    {
+      "point": "Networking and Mentoring"
+    },
+    {
+      "point": "Apply for Software Architect"
+    }
+  ],
+  "Flutter": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming Basics"
+    },
+    {
+      "point": "Understand Dart Programming"
+    },
+    {
+      "point": "Flutter Fundamentals"
+    },
+    {
+      "point": "Build Simple Apps"
+    },
+    {
+      "point": "Explore Dart Packages and Libraries"
+    },
+    {
+      "point": "User Interface (UI) Design"
+    },
+    {
+      "point": "State Management"
+    },
+    {
+      "point": "Networking and API Integration"
+    },
+    {
+      "point": "Database Integration"
+    },
+    {
+      "point": "Navigation and Routing"
+    },
+    {
+      "point": "Platform-Specific Features"
+    },
+    {
+      "point": "Flutter Testing and Debugging"
+    },
+    {
+      "point": "Contribute to Open Source/Projects"
+    },
+    {
+      "point": "Attend Workshops"
+    },
+    {
+      "point": "Create a Portfolio"
+    },
+    {
+      "point": "Apply wor Internships"
+    },
+    {
+      "point": "Work on Flutter Devloper"
+    }
+  ],
+  "BlockChain": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Programming Basics"
+    },
+    {
+      "point": "Understand Cryptography"
+    },
+    {
+      "point": "Get Familiar with Blockchain Basics"
+    },
+    {
+      "point": "Explore Blockchain Platforms"
+    },
+    {
+      "point": "Smart Contracts and Solidity"
+    },
+    {
+      "point": "Learn Blockchain Development Tools"
+    },
+    {
+      "point": "Ethereum Development Environment"
+    },
+    {
+      "point": "Decentralized Application (DApp) Development"
+    },
+    {
+      "point": "Interact with Public Blockchains"
+    },
+    {
+      "point": "Security Best Practices"
+    },
+    {
+      "point": "Explore Other Blockchain Platforms"
+    },
+    {
+      "point": "Contribute to Blockchain Projects"
+    },
+    {
+      "point": "Networking and Community Involvement"
+    },
+    {
+      "point": "Apply for Internships"
+    },
+    {
+      "point": "Build a Portfolio"
+    },
+    {
+      "point": "Join Block Chain Developer"
+    }
+  ],
+  "ASP.NETCore": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Learn Fundamentals of Programming"
+    },
+    {
+      "point": "Understand HTML,CSS, and JavaScript"
+    },
+    {
+      "point": "Introduction to ASP.NET Core"
+    },
+    {
+      "point": ".NET Framework and C#"
+    },
+    {
+      "point": "Database Concepts"
+    },
+    {
+      "point": "ASP.NET Core MVC"
+    },
+    {
+      "point": "Routing and Middleware"
+    },
+    {
+      "point": "Dependency Injection"
+    },
+    {
+      "point": "ASP.NET Core Web API"
+    },
+    {
+      "point": "Authentication and Authorization"
+    },
+    {
+      "point": "Testing and Debugging"
+    },
+    {
+      "point": "Front-End Framework Integration"
+    },
+    {
+      "point": "Version Control and Deployment:"
+    },
+    {
+      "point": "Build Projects and Portfolios"
+    },
+    {
+      "point": "Online Courses and Certifications"
+    },
+    {
+      "point": "Internships or Entry-Level Jobs"
+    }
+  ],
+  "PostgreSQL": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Introduction to Databases"
+    },
+    {
+      "point": "Learn SQL Basics"
+    },
+    {
+      "point": "Understand Relational Databases"
+    },
+    {
+      "point": "Introduction to PostgreSQL"
+    },
+    {
+      "point": "Data Types and Constraints in PostgreSQL"
+    },
+    {
+      "point": "SQL Query Optimization"
+    },
+    {
+      "point": "Database Design and Modeling"
+    },
+    {
+      "point": "Advanced SQL Queries and Joins"
+    },
+    {
+      "point": "Transactions and Concurrency Control"
+    },
+    {
+      "point": "Stored Procedures and Functions"
+    },
+    {
+      "point": "Data Manipulation Language (DML) and Data Definition Language (DDL)"
+    },
+    {
+      "point": "PostgreSQL Administration and Security"
+    },
+    {
+      "point": "Data Import/Export and ETL Processes"
+    },
+    {
+      "point": "Version Control Systems"
+    },
+    {
+      "point": "Build Projects and Portfolios"
+    },
+    {
+      "point": "Online Courses and Certifications"
+    },
+    {
+      "point": "Internships or Entry-Level Jobs"
+    }
+  ],
+  "QA": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Introduction to Software Development"
+    },
+    {
+      "point": "Learn Programming Basics"
+    },
+    {
+      "point": "Understanding Software Development Life Cycle (SDLC)"
+    },
+    {
+      "point": "Introduction to Quality Assurance"
+    },
+    {
+      "point": "Software Testing Fundamentals"
+    },
+    {
+      "point": "Testing Tools and Techniques"
+    },
+    {
+      "point": "Basic Test Automation"
+    },
+    {
+      "point": "Database and SQL Basics"
+    },
+    {
+      "point": "Test Management Tools"
+    },
+    {
+      "point": "Agile Methodologies"
+    },
+    {
+      "point": "Continuous Integration/Continuous Deployment (CI/CD)"
+    },
+    {
+      "point": "Performance and Security Testing"
+    },
+    {
+      "point": "ISTQB Certification (Optional)"
+    },
+    {
+      "point": "Critical Thinking and Analytical Skills"
+    },
+    {
+      "point": "Practical Application"
+    },
+    {
+      "point": "Networking and Community Engagement"
+    },
+    {
+      "point": "Building a Portfolio"
+    },
+    {
+      "point": "Applyfor Internships or Entry level Jobs"
+    }
+  ],
+  "TechnicalWriter": [
+    {
+      "point": "10th class"
+    },
+    {
+      "point": "Intermediate in MPC"
+    },
+    {
+      "point": "B.Tech(Any Stream)"
+    },
+    {
+      "point": "Improve Writing Skills"
+    },
+    {
+      "point": "Learn Technical Skills"
+    },
+    {
+      "point": "Understand Technical Writing Basics"
+    },
+    {
+      "point": "Technical Writing Tools and Software"
+    },
+    {
+      "point": "HTML and CSS Basics"
+    },
+    {
+      "point": "Technical Writing Styles and Formats"
+    },
+    {
+      "point": "Interview Professionals"
+    },
+    {
+      "point": "API Documentation and Code Understanding"
+    },
+    {
+      "point": "Version Control Systems"
+    },
+    {
+      "point": "Usability and User Experience (UX)"
+    },
+    {
+      "point": "Create Sample Documentation"
+    },
+    {
+      "point": "Online Courses and Certifications"
+    },
+    {
+      "point": "Practice Writing Technical Content"
+    },
+    {
+      "point": "Learn about Localization and Globalization"
+    },
+    {
+      "point": "Networking and Community Engagement"
+    },
+    {
+      "point": "Building a Portfolio"
+    },
+    {
+      "point": "Internships or Entry-Level Positions"
+    }
   ]
 
 
@@ -2915,4 +6816,32 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+

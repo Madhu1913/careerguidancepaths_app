@@ -13,7 +13,8 @@ class doctorStaticPaths extends StatefulWidget {
   State<doctorStaticPaths> createState() => _doctorStaticPathsState();
 }
 
-class _doctorStaticPathsState extends State<doctorStaticPaths> {
+class _doctorStaticPathsState extends State<doctorStaticPaths>
+    with SingleTickerProviderStateMixin {
   List _cardeologist = [];
   List _nameImg = [];
   List _dermatoligist = [];
@@ -41,10 +42,12 @@ class _doctorStaticPathsState extends State<doctorStaticPaths> {
   List _anesthesiologist = [];
   List _pathologist = [];
   List _internalMedicinePhysician = [];
+  List _desc = [];
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('assets/data.json');
     final data = jsonDecode(response);
     setState(() {
+      _desc = data["DoctorDescription"];
       _cardeologist = data["Cardeologist"];
       _nameImg = data["subDoc"];
       _dermatoligist = data["Dermatologist"];
@@ -75,11 +78,30 @@ class _doctorStaticPathsState extends State<doctorStaticPaths> {
     });
   }
 
+  AnimationController? _controller;
+  Animation<Offset>? _offsetAnimation;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     readJson();
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+    _offsetAnimation = Tween<Offset>(
+      begin: const Offset(15, 0.0),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _controller!,
+      curve: Curves.elasticOut,
+    ));
+  }
+
+  @override
+  void dispose() {
+    _controller!.dispose();
+    super.dispose();
   }
 
   late List data = [
@@ -117,14 +139,14 @@ class _doctorStaticPathsState extends State<doctorStaticPaths> {
         // appBar: AppBar(backgroundColor: Colors.red,elevation: 0,),
         body: Stack(
           children: [
-            Container(
-              height: 32.5.h,
-              width: 50.w,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                image: NetworkImage(_nameImg[widget.i]['url']),
-              )),
-            ),
+            // Container(
+            //   height: 32.5.h,
+            //   width: 50.w,
+            //   decoration: BoxDecoration(
+            //       image: DecorationImage(
+            //     image: NetworkImage(_nameImg[widget.i]['url']),
+            //   )),
+            // ),
             Container(
               child: CustomPaint(
                 size: Size(
@@ -143,17 +165,17 @@ class _doctorStaticPathsState extends State<doctorStaticPaths> {
                       fontWeight: FontWeight.bold, fontSize: 24),
                 )),
             Positioned(
-              top: 23.h,
+              top: 19.h,
               left: 12.w,
               child: SizedBox(
-                height: 62.5.h,
+                height: 56.h,
                 width: 65.w,
                 // alignment: Alignment(0,1),
                 child: ListView.builder(
                     // shrinkWrap: true,
                     itemCount: data[widget.i].length,
                     itemBuilder: (context, i) {
-                      List myList=data[widget.i];
+                      List myList = data[widget.i];
                       return Column(
                         children: [
                           SizedBox(
@@ -172,13 +194,83 @@ class _doctorStaticPathsState extends State<doctorStaticPaths> {
                             ),
                           ),
                           i != myList.length - 1
-                              ? Icon(Icons.arrow_downward_outlined)
+                              ? const Icon(Icons.arrow_downward_outlined)
                               : Container(),
                         ],
                       );
                     }),
               ),
-            )
+            ),
+            Positioned(
+              top: 18.h,
+              left: 6.w,
+              child: SlideTransition(
+                  position: _offsetAnimation!,
+                  child: SizedBox(
+                    height: 58.h,
+                    width: 90.w,
+                    child: Card(
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'DESCRIPTION',
+                                style: GoogleFonts.varela(
+                                    fontSize: 24, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 1.h,
+                          ),
+                          Text(
+                            '${_desc[widget.i]["description"]}',
+                            style: GoogleFonts.varela(
+                                fontWeight: FontWeight.bold, fontSize: 14.sp),
+                            textAlign: TextAlign.justify,
+                          )
+                        ],
+                      ),
+                    ),
+                  )),
+            ),
+            Positioned(
+                top: 78.h,
+                left: 30.w,
+                child: Card(
+                  color: Colors.red,
+                  child: Center(
+                    child: IconButton(
+                        onPressed: () {
+                          _controller!.reverse();
+                        },
+                        icon: Icon(
+                          Icons.keyboard_double_arrow_left_outlined,
+                          size: 24.sp,
+                          color: Colors.white,
+                        )),
+                  ),
+                )),
+            Positioned(
+                top: 78.h,
+                left: 60.w,
+                child: Card(
+                  color: Colors.red,
+                  child: Center(
+                    child: IconButton(
+                        onPressed: () {
+                          _controller!.forward();
+                        },
+                        icon: Icon(
+                          Icons.keyboard_double_arrow_right_outlined,
+                          size: 24.sp,
+                          color: Colors.white,
+                        )),
+                  ),
+                )),
+
             // Text('hii')
           ],
         ),
@@ -192,7 +284,7 @@ class RPSCustomPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Circle Copy
 
-    Paint paint_fill_0 = Paint()
+    Paint paintFill0 = Paint()
       ..color = const Color.fromARGB(255, 253, 13, 13)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
@@ -231,22 +323,22 @@ class RPSCustomPainter extends CustomPainter {
         size.height * 1.0012643);
     path_0.close();
 
-    canvas.drawPath(path_0, paint_fill_0);
+    canvas.drawPath(path_0, paintFill0);
 
     // Circle Copy
 
-    Paint paint_stroke_0 = Paint()
+    Paint paintStroke0 = Paint()
       ..color = const Color.fromARGB(255, 33, 150, 243)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
-    canvas.drawPath(path_0, paint_stroke_0);
+    canvas.drawPath(path_0, paintStroke0);
 
     // Circle Copy Copy
 
-    Paint paint_fill_1 = Paint()
+    Paint paintFill1 = Paint()
       ..color = const Color.fromARGB(255, 253, 13, 13)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
@@ -285,18 +377,18 @@ class RPSCustomPainter extends CustomPainter {
         size.height * -0.0012750);
     path_1.close();
 
-    canvas.drawPath(path_1, paint_fill_1);
+    canvas.drawPath(path_1, paintFill1);
 
     // Circle Copy Copy
 
-    Paint paint_stroke_1 = Paint()
+    Paint paintStroke1 = Paint()
       ..color = const Color.fromARGB(255, 33, 150, 243)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
-    canvas.drawPath(path_1, paint_stroke_1);
+    canvas.drawPath(path_1, paintStroke1);
   }
 
   @override

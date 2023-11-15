@@ -13,7 +13,7 @@ class policeStaticPaths extends StatefulWidget {
   State<policeStaticPaths> createState() => _policeStaticPathsState();
 }
 
-class _policeStaticPathsState extends State<policeStaticPaths> {
+class _policeStaticPathsState extends State<policeStaticPaths> with SingleTickerProviderStateMixin{
   List _policeOfficer = [];
   List _detective = [];
   List _criminalInvestigator = [];
@@ -65,6 +65,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> {
   List _crisisNegotiationTeam = [];
   List _fraudInvestigator = [];
   List _nameImg=[];
+  List _desc=[];
 
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('assets/data.json');
@@ -123,14 +124,33 @@ class _policeStaticPathsState extends State<policeStaticPaths> {
       _underwaterRecoveryTeam = data["Underwater Recovery Team "];
       _crisisNegotiationTeam = data["Crisis Negotiation Team (CNT)"];
       _fraudInvestigator = data["Fraud investigator  "];
+      _desc=data["PoliceDescription"];
     });
   }
+  AnimationController? _controller;
+  Animation<Offset>? _offsetAnimation;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     readJson();
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+    _offsetAnimation = Tween<Offset>(
+      begin: const Offset(15, 0.0),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _controller!,
+      curve: Curves.elasticOut,
+    ));
+  }
+  @override
+  void dispose() {
+    _controller!.dispose();
+    super.dispose();
   }
 
   late List data = [
@@ -191,17 +211,17 @@ class _policeStaticPathsState extends State<policeStaticPaths> {
       child: Scaffold(
         body: Stack(
           children: [
-            Positioned(
-              left: 26.w,
-              child: Container(
-                height: 32.5.h,
-                width: 50.w,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(14),
-                    image: DecorationImage(
-                      image: NetworkImage(_nameImg[widget.i]['url']),
-                    )),
-              ),
-            ),
+            // Positioned(
+            //   left: 26.w,
+            //   child: Container(
+            //     height: 32.5.h,
+            //     width: 50.w,
+            //     decoration: BoxDecoration(borderRadius: BorderRadius.circular(14),
+            //         image: DecorationImage(
+            //           image: NetworkImage(_nameImg[widget.i]['url']),
+            //         )),
+            //   ),
+            // ),
             Container(
               child: CustomPaint(
                 size: Size(
@@ -220,11 +240,13 @@ class _policeStaticPathsState extends State<policeStaticPaths> {
                   style: GoogleFonts.varela(
                       fontWeight: FontWeight.bold, fontSize: 24),
                 )),
+            Positioned(left: 11.w,top:17.h,child: Container(color: Colors.yellow,height: 0.4.h,width: 60.w,)),
+
             Positioned(
-              top: 23.h,
+              top: 20.h,
               left: 13.w,
               child: SizedBox(
-                height: 62.5.h,
+                height: 58.h,
                 width: 65.w,
                 // alignment: Alignment(0,1),
                 child: ListView.builder(
@@ -256,8 +278,57 @@ class _policeStaticPathsState extends State<policeStaticPaths> {
                       );
                     }),
               ),
-            )
-            // Text('hii')
+            ),
+            Positioned(
+              top: 20.h,
+              left: 10.w,
+              child: SlideTransition(
+                  position: _offsetAnimation!,
+                  child: SizedBox(
+                    height: 59.h,
+                    width: 79.w,
+                    child: Card(
+                      child: Column(
+                        children: [
+                          Row(mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('DESCRIPTION',style: GoogleFonts.varela(fontSize: 24,fontWeight: FontWeight.bold),),
+                            ],
+                          ),
+                          SizedBox(height: 1.h,),
+                          Text('${_desc[widget.i]["description"]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 14.sp),textAlign: TextAlign.justify,)
+                        ],
+                      ),
+                    ),
+                  )
+              ),
+            ),
+            Positioned(
+                top: 80.h,
+                left: 25.w,
+                child:
+                Card(color: Colors.red,
+                  child: Center(
+                    child: IconButton(
+                        onPressed: () {
+                          _controller!.reverse();
+                        },
+                        icon: Icon(Icons.keyboard_double_arrow_left_outlined,size: 24.sp,color: Colors.white,)),
+                  ),
+                )),
+            Positioned(
+                top: 80.h,
+                left: 45.w,
+                child:
+                Card(color: Colors.red,
+                  child: Center(
+                    child: IconButton(
+                        onPressed: () {
+                          _controller!.forward();
+                        },
+                        icon: Icon(Icons.keyboard_double_arrow_right_outlined,size: 24.sp,color: Colors.white,)),
+                  ),
+                )),
           ],
         ),
       ),

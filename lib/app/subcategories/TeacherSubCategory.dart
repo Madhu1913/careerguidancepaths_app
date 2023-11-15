@@ -1,16 +1,18 @@
+import 'package:careerguidancepaths_app/app/StaticPaths/TeacherStaticPaths.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
+
 class teacherSubCategory extends StatefulWidget {
   final List tecSub;
-  const teacherSubCategory({super.key,required this.tecSub});
+  const teacherSubCategory({super.key, required this.tecSub});
 
   @override
   State<teacherSubCategory> createState() => _teacherSubCategoryState();
 }
 
-class _teacherSubCategoryState extends State<teacherSubCategory>with SingleTickerProviderStateMixin {
-
+class _teacherSubCategoryState extends State<teacherSubCategory>
+    with SingleTickerProviderStateMixin {
   AnimationController? controller;
   Animation? gridAnimation;
   Animation? fabAnimation;
@@ -32,13 +34,15 @@ class _teacherSubCategoryState extends State<teacherSubCategory>with SingleTicke
         curve: const Interval(0.75, 1.0, curve: Curves.easeOut)));
     rotationAnimation = Tween(begin: 0.0, end: 6.2755).animate(controller!);
     rotationAnimation = Tween(begin: 0.0, end: 6.2755).animate(CurvedAnimation(
-        parent: controller!, curve: const Interval(0.2, 1, curve: Curves.easeOut)));
+        parent: controller!,
+        curve: const Interval(0.2, 1, curve: Curves.easeOut)));
 
     controller?.forward();
     controller?.addListener(() {
       setState(() {});
     });
   }
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -53,10 +57,12 @@ class _teacherSubCategoryState extends State<teacherSubCategory>with SingleTicke
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title:  Text(
+          title: Text(
             'Teacher',
             style: GoogleFonts.varela(
-                fontWeight: FontWeight.bold, fontSize: 19.sp, color: Colors.white),
+                fontWeight: FontWeight.bold,
+                fontSize: 19.sp,
+                color: Colors.white),
           ),
         ),
         body: Transform.scale(
@@ -73,41 +79,49 @@ class _teacherSubCategoryState extends State<teacherSubCategory>with SingleTicke
                 //crossAxisSpacing: 10,
               ),
               itemBuilder: (context, i) {
-                return Padding(
-                  padding: EdgeInsets.symmetric(horizontal:5.sp),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(5.sp),
-                    child: Container(
-                      // height: 40.h,
-                      // width: 45.w,
-                      color: Colors.amber,
-                      child: Center(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 22.h,
-                              child: Card(
-                                child: Image.network(
-                                  widget.tecSub[i]["url"],
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 11.5.h,
-                              width: 45.w,
-                              child: Card(
-                                child: Center(
-                                  child: Text(
-                                    widget.tecSub[i]["name"],
-                                    style: TextStyle(
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.bold),
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => teacherStaticPaths(i: i)));
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 5.sp),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5.sp),
+                      child: Container(
+                        // height: 40.h,
+                        // width: 45.w,
+                        color: Colors.amber,
+                        child: Center(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 22.h,
+                                child: Card(
+                                  child: Image.network(
+                                    widget.tecSub[i]["url"],
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
-                            )
-                          ],
+                              SizedBox(
+                                height: 11.5.h,
+                                width: 45.w,
+                                child: Card(
+                                  child: Center(
+                                    child: Text(
+                                      widget.tecSub[i]["name"],
+                                      style: TextStyle(
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),

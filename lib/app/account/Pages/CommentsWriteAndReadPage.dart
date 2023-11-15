@@ -52,7 +52,8 @@ class _writeAndReadCommentsState extends State<writeAndReadComments> {
                   stream: FirebaseFirestore.instance
                       .collection('UserPosts')
                       .doc(widget.postid)
-                      .collection('Comments').orderBy('TimeStamp',descending: true)
+                      .collection('Comments')
+                      .orderBy('TimeStamp', descending: true)
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {
@@ -68,12 +69,22 @@ class _writeAndReadCommentsState extends State<writeAndReadComments> {
                                     color: Colors.grey,
                                     child: Column(
                                       children: [
-                                        Text(cmnt['Comment'],style: GoogleFonts.varela(fontSize: 20.sp,color: Colors.white,fontWeight: FontWeight.w400),),
+                                        Text(
+                                          cmnt['Comment'],
+                                          style: GoogleFonts.varela(
+                                              fontSize: 20.sp,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w400),
+                                        ),
                                         Padding(
-                                          padding:  EdgeInsets.all(3.sp),
+                                          padding: EdgeInsets.all(3.sp),
                                           child: Row(
                                             children: [
-                                              Text(cmnt['CommentedBy'],style: GoogleFonts.varela(color: Colors.white),),
+                                              Text(
+                                                cmnt['CommentedBy'],
+                                                style: GoogleFonts.varela(
+                                                    color: Colors.white),
+                                              ),
                                               const Text(' . '),
                                               // Text(cmnt['TimeStamp'].toString()),
                                             ],
