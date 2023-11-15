@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui';
 import 'package:careerguidancepaths_app/app/account/AddpathPage.dart';
@@ -8,10 +9,12 @@ import 'package:careerguidancepaths_app/app/account/Pages/TogglePage.dart';
 import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/DynamicPaths.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sizer/sizer.dart';
+
 
 class AccountPage extends StatefulWidget {
   bool img;
@@ -23,26 +26,41 @@ class AccountPage extends StatefulWidget {
 
 class _AccountPageState extends State<AccountPage> {
   final currentuser = FirebaseAuth.instance.currentUser!;
-  Uint8List? profilePic;
+  String? profilePic;
+  File? _selectedImage;
+  UploadTask? uploadTask;
   String? item;
   pickImage() async {
     XFile? imgfile = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (imgfile != null) {
-      return imgfile.readAsBytes();
+      setState(() {
+        _selectedImage=File(imgfile.path);
+      });
     }
+  }
+  Future uploadFile()async{
+    final path='files/${currentuser.uid}';
+    final file=File(_selectedImage!.path);
+    final ref=FirebaseStorage.instance.ref().child(path);
+    setState(() {
+      uploadTask=ref.putFile(file);
+    });
+    final snapshot=await uploadTask!.whenComplete(() {});
+    final urlDownload= await snapshot.ref.getDownloadURL();
+
+    print('DownloadLink:${urlDownload}');
+    profilePic=urlDownload;
   }
 
   void selectImage() async {
-    Uint8List image = await pickImage();
-    setState(() {
-      profilePic = image;
-    });
+   await pickImage();
+   await uploadFile();
     await FirebaseFirestore.instance
         .collection('Users')
         .doc(currentuser.uid)
         .collection('Profile')
         .doc(currentuser.email)
-        .set({'img': profilePic?.join('.').toString()}).then(
+        .set({'img': profilePic}).then(
             (value){
         });
   }
@@ -104,22 +122,18 @@ class _AccountPageState extends State<AccountPage> {
                                 builder: (context, snapshot) {
                                   if (snapshot.hasData) {
                                     final data = snapshot.data!;
-                                    final String one =
-                                    data['img'];
-                                    var imgvarlist = one
-                                        .split('.')
-                                        .map((one) =>
-                                        int.parse(one))
-                                        .toList();
-                                    final Uint8List myimg =
-                                    Uint8List.fromList(
-                                        imgvarlist);
+                                    // final String one =
+                                    // data['img'];
+                                    // var imgvarlist = one
+                                    //     .split('.')
+                                    //     .map((one) =>
+                                    //     int.parse(one))
+                                    //     .toList();
+                                    // final Uint8List myimg =
+                                    // Uint8List.fromList(
+                                    //     imgvarlist);
                                     return ClipRRect(borderRadius: BorderRadius.circular(360),
-                                      child: Image(
-                                        image: MemoryImage(myimg),
-                                        fit: BoxFit.cover,
-                                        alignment: Alignment.topCenter,
-                                      ),
+                                      child:Image.network(data['img'],fit: BoxFit.fill,)
                                     );
                                   } else if (snapshot.hasError) {
                                     return Center(

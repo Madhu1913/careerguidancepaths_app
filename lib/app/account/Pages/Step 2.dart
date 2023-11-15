@@ -22,7 +22,7 @@ class _Step2State extends State<Step2> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding:  EdgeInsets.all(5.sp),
+                  padding:  EdgeInsets.all(1.sp),
                   child: SizedBox(
                     height: (6.9).h,
                     width: 20.w,
@@ -57,7 +57,7 @@ class _Step2State extends State<Step2> {
             //   height: 10,
             // ),
             Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 5.sp),
+              padding:  EdgeInsets.symmetric(horizontal: 5.sp,vertical: 2.sp),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -125,24 +125,15 @@ class _Step2State extends State<Step2> {
                                   )),
                             ),
                           ),
-                           Column(mainAxisAlignment: MainAxisAlignment.start,
+                           idx!=value.li.length-1?Column(mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text(
-                                "|",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 15.sp),
-                              ),
-                              Text(
-                                '|',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 15.sp),
-                              ),
+
                               Icon(
                                 Icons.arrow_downward_outlined,
                                 size: 25.sp,
                               ),
                             ],
-                          )
+                          ):Container()
                         ],
                       );
                     }))

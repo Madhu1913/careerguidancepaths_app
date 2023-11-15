@@ -64,128 +64,46 @@ class _Step4State extends State<Step4> {
                     SizedBox(
                       height: 5.sp,
                     ),
-                    CarouselSlider(
-                        items: [
-                          if (value2.li.length >= 3)
-                            ListView.builder(
-                                itemCount: value2.li1.length,
-                                itemBuilder: (context, i) {
-                                  return Column(children: [
-                                    Container(
-                                      height: (6.9).h,
-                                      width: 75.w,
-                                      color: Colors.amberAccent,
-                                      child: Center(
-                                          child: Padding(
-                                            padding: EdgeInsets.symmetric(
-                                                horizontal: (6.9).h),
-                                            child: Text(
-                                              value2.li1[i],
-                                              style:  GoogleFonts.varela(
-                                                  fontSize: 15.sp,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          )),
+                    SizedBox(
+                      height: 40.h,
+                       child: ListView.builder(
+                            itemCount: value2.li.length,
+                            itemBuilder: (context, i) {
+                              return Column(children: [
+                                Container(
+                                  height: (6.9).h,
+                                  width: 75.w,
+                                  color: Colors.amberAccent,
+                                  child: Center(
+                                      child: Padding(
+                                        padding:  EdgeInsets.symmetric(
+                                            horizontal: (6.9).h),
+                                        child: Text(
+                                          value2.li[i],
+                                          style:  GoogleFonts.varela(
+                                              fontSize: 15.sp,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      )),
+                                ),
+                                i!=value2.li.length?Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    // Text(
+                                    //   "|",
+                                    //   style: GoogleFonts.varela(
+                                    //       fontWeight: FontWeight.bold,
+                                    //       fontSize: 15.sp),
+                                    // ),
+                                    Icon(
+                                      Icons.arrow_downward_outlined,
+                                      size: 25.sp,
                                     ),
-                                    Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "|",
-                                          style: GoogleFonts.varela(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15.sp),
-                                        ),
-                                        Icon(
-                                          Icons.arrow_downward_outlined,
-                                          size: 25.sp,
-                                        ),
-                                      ],
-                                    )
-                                  ]);
-                                }),
-                          if (value2.li.length >= 6)
-                            ListView.builder(
-                                itemCount: value2.li2.length,
-                                itemBuilder: (context, i) {
-                                  return Column(children: [
-                                    Container(
-                                      height: (6.9).h,
-                                      width: 75.w,
-                                      color: Colors.amberAccent,
-                                      child: Center(
-                                          child: Padding(
-                                            padding:  EdgeInsets.symmetric(
-                                                horizontal: (6.9).h),
-                                            child: Text(
-                                              value2.li2[i],
-                                              style:  GoogleFonts.varela(
-                                                  fontSize: 15.sp,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          )),
-                                    ),
-                                    Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "|",
-                                          style: GoogleFonts.varela(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15.sp),
-                                        ),
-                                        Icon(
-                                          Icons.arrow_downward_outlined,
-                                          size: 25.sp,
-                                        ),
-                                      ],
-                                    )
-                                  ]);
-                                }),
-                          if (value2.li.length >= 9)
-                            ListView.builder(
-                                itemCount: value2.li3.length,
-                                itemBuilder: (context, i) {
-                                  return Column(children: [
-                                    Container(
-                                      height: (6.9).h,
-                                      width: 75.w,
-                                      color: Colors.amberAccent,
-                                      child: Center(
-                                          child: Padding(
-                                            padding:  EdgeInsets.symmetric(
-                                                horizontal: (6.9).h),
-                                            child: Text(
-                                              value2.li3[i],
-                                              style:  GoogleFonts.varela(
-                                                  fontSize: 15.sp,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          )),
-                                    ),
-                                    Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "|",
-                                          style: GoogleFonts.varela(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15.sp),
-                                        ),
-                                        Icon(
-                                          Icons.arrow_downward_outlined,
-                                          size: 25.sp,
-                                        ),
-                                      ],
-                                    )
-                                  ]);
-                                })
-                        ],
-                        options: CarouselOptions(
-                          height: 75.w,
-                          viewportFraction: 1,
-                          enableInfiniteScroll: false,
-                        )),
+                                  ],
+                                ):Container()
+                              ]);
+                            })
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -194,7 +112,7 @@ class _Step4State extends State<Step4> {
                           child: Text(
                             'Description',
                             style: GoogleFonts.varela(
-                                fontWeight: FontWeight.bold, fontSize: 20.sp),
+                                fontWeight: FontWeight.bold, fontSize: 18.sp),
                           ),
                         ),
                       ],
@@ -207,14 +125,13 @@ class _Step4State extends State<Step4> {
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(
-                      height: 23.h,
-                      child: SingleChildScrollView(
-                          child: Text(
-                            value2.desc,
-                            style:
-                            GoogleFonts.varela(fontWeight: FontWeight.bold, fontSize: 15.sp),
-                          )),
+                    Padding(
+                      padding:  EdgeInsets.all(3.sp),
+                      child: Text(
+                        value2.desc,
+                        style:
+                        GoogleFonts.varela(fontWeight: FontWeight.bold, fontSize: 15.sp),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -224,7 +141,7 @@ class _Step4State extends State<Step4> {
                           child: Text(
                             'Sources',
                             style: GoogleFonts.varela(
-                                fontWeight: FontWeight.bold, fontSize: 19.sp),
+                                fontWeight: FontWeight.bold, fontSize: 18.sp),
                           ),
                         ),
                       ],
@@ -241,7 +158,7 @@ class _Step4State extends State<Step4> {
                       height: 23.h,
                       width: 98.w,
                       child: SingleChildScrollView(
-                        child: Text(value2.sour.toString()),
+                        child: Text(value2.sour.join(" , ").toString()),
                       ),
                     )
                   ],

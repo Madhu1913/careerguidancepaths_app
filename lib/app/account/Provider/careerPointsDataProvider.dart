@@ -84,7 +84,7 @@ class cpdProvider extends ChangeNotifier{
     });
     notifyListeners();
   }
-  String careerName='To be Filled';
+  String careerName='';
   final careernamecont=TextEditingController();
   void headingsent(head){
     if(head.isNotEmpty){
@@ -93,7 +93,7 @@ class cpdProvider extends ChangeNotifier{
     careernamecont.clear();
     notifyListeners();
   }
-  String desc='To be Filled';
+  String desc='';
   final descCont=TextEditingController();
   void description(descr){
     if(descr.isNotEmpty){

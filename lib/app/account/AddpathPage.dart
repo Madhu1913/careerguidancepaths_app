@@ -1,5 +1,6 @@
 import 'package:careerguidancepaths_app/app/account/Provider/CPIprovider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -16,7 +17,7 @@ class _addPathPageState extends State<addPathPage> {
   Widget build(BuildContext context) {
     return Consumer<cpiProvider>(
       builder: (BuildContext context, value, Widget? child) => Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(backgroundColor: Colors.redAccent,title: Text('Add Post',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 20.sp,color: Colors.white),),),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -24,7 +25,7 @@ class _addPathPageState extends State<addPathPage> {
                 height: 5.sp,
               ),
               SizedBox(
-                height: (11.6).h,
+                height: (9.6).h,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -61,7 +62,7 @@ class _addPathPageState extends State<addPathPage> {
               ),
               Center(
                 child: SizedBox(
-                  height: (63.9).h,
+                  height: (68.9).h,
                   child: value.classes[value.z],
                 ),
               ),

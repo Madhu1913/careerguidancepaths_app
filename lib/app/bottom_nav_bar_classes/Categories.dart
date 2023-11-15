@@ -20,7 +20,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:careerguidancepaths_app/app/subcategories/DoctorSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/EngineerSubCategory.dart';
-import 'package:careerguidancepaths_app/app/subcategories/GovernmentEmploySubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/PoliceSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/SoftwareEngineerSubCategory.dart';
 import 'package:careerguidancepaths_app/app/subcategories/TeacherSubCategory.dart';
@@ -39,7 +38,6 @@ class _categoriesState extends State<categories> {
   List _polSub = [];
   List _tecSub = [];
   List _sofEngSub = [];
-  List _govEmpSub = [];
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('assets/data.json');
     final data = jsonDecode(response);
@@ -50,7 +48,6 @@ class _categoriesState extends State<categories> {
       _polSub = data["subPol"];
       _tecSub = data["subTec"];
       _sofEngSub = data["subSoft"];
-      _govEmpSub = data["subGovEmp"];
     });
   }
 
@@ -79,9 +76,6 @@ class _categoriesState extends State<categories> {
       softwareEngineerSubCategories(
         sofEngSub: _sofEngSub,
       ),
-      // governmentEmploySubCategories(
-      //   govEmpSub: _govEmpSub,
-      // ),
       const lawyer(),
       const judge(),
       const pilot(),
@@ -122,12 +116,12 @@ class _categoriesState extends State<categories> {
       021
     ];
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(elevation: 0,
         backgroundColor: Colors.white,
         title: Text(
           'Categories',
           style: GoogleFonts.varela(
-              fontSize: 26.sp, fontWeight: FontWeight.bold, color: Colors.red),
+              fontSize: 26.sp, fontWeight: FontWeight.bold, color: Colors.brown),
         ),
       ),
       body: Column(
@@ -151,66 +145,33 @@ class _categoriesState extends State<categories> {
                               child: Stack(
                                 children: [
                                   SizedBox(
-                                    height: 40.h,
+                                    height: 34.h,
                                     width: 96.w,
-                                    child: Card(
-                                      color: Colors.white,
-                                      elevation: 20.sp,
-                                      shadowColor: Colors.purple,
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(30),
-                                          side: const BorderSide(
-                                              color: Colors.black, width: 2)),
+                                    child: Card(elevation: 10,shadowColor: Colors.white,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.sp),side: BorderSide(color: Colors.black,width: 2)),
+                                      color: Colors.brown.shade200,
                                     ),
                                   ),
                                   Positioned(
-                                    left: 1.5.sp,
-                                    top: 6.h,
-                                    child: SizedBox(
-                                      height: 34.h,
-                                      width: 95.w,
-                                      child: Card(
-                                        shape: RoundedRectangleBorder(
-                                            side: const BorderSide(
-                                                color: Colors.black, width: 2),
-                                            borderRadius:
-                                                BorderRadius.circular(20)),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          child: Image.network(
-                                            _categories[i]["url"],
-                                            fit: BoxFit.fill,
+                                      top:9.h,left:6.w,
+                                      child: ClipRRect(borderRadius: BorderRadius.circular(20.sp),
+                                          child: Container(height: 15.h,width: 30.w,child: Image.network(_categories[i]['url'],fit: BoxFit.fill,),))),
+                                  Positioned(
+                                    left: 38.w,
+                                      top: 3.h,
+                                      child: SizedBox(height: 28.h,width: 54.w,child: Card(shape:RoundedRectangleBorder(side: BorderSide(color: Colors.brown.shade800,width: 2)),
+                                        child: Padding(
+                                          padding:  EdgeInsets.all(4.sp),
+                                          child: Column(
+                                            children: [
+                                              Text(_categories[i]['name'],style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 16.sp),),
+                                              SizedBox(height: 0.5.h,),
+                                              Text(_categories[i]['desc'],style: GoogleFonts.varela(fontSize: 10.5.sp),)
+                                            ],
                                           ),
                                         ),
-                                      ),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    left: 20.sp,
-                                    top: 6.sp,
-                                    child: Text(
-                                      _categories[i]["name"],
-                                      style: GoogleFonts.varela(
-                                          // letterSpacing: 3,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: 20.sp),
-                                    ),
-                                  ),
-                                  Positioned(
-                                      left: 80.w,
-                                      top: 3.sp,
-                                      child: IconButton(
-                                          onPressed: () {
-                                            _showModalSheet(i = i);
-                                          },
-                                          icon: const Icon(
-                                            Icons.info_outline,
-                                            color: Colors.black,
-                                            size: 30,
-                                          )))
+                                      ),))
+
+
                                 ],
                               )),
                         ),
@@ -227,28 +188,7 @@ class _categoriesState extends State<categories> {
     );
   }
 
-  void _showModalSheet(int i) {
-    showModalBottomSheet(
-        context: context,
-        builder: (builder) {
-          return SizedBox(
-            height: 41.h,
-            child: Card(
-              elevation: 10.sp,
-              shadowColor: Colors.pink,
-              shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.black, width: 2),
-                  borderRadius: BorderRadius.circular(30)),
-              child: Padding(
-                padding: EdgeInsets.all(10.sp),
-                child: Text(
-                  _categories[i]["desc"],
-                  style:
-                      GoogleFonts.varela(fontSize: 18.sp, fontWeight: FontWeight.w600),
-                ),
-              ),
-            ),
-          );
-        });
-  }
+
+
+
 }

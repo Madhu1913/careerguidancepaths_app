@@ -103,7 +103,7 @@ class z0 extends StatelessWidget {
                   value.z++;
                   value.fun();
                 } else {
-                  const snackBar = SnackBar(
+                  const snackBar = SnackBar(behavior: SnackBarBehavior.floating,
                       duration: Duration(seconds: 2),
                       content: Text('Please select an image'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -188,7 +188,7 @@ class _zendState extends State<zend> {
 
                     }).then((value) {
                       value1.v4=value1.uuid.v4();
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(behavior: SnackBarBehavior.floating,
                         content: Text('Your Post is Added'),
                         duration: Duration(seconds: 2),
                       ));
@@ -220,17 +220,18 @@ class _zendState extends State<zend> {
                   }
                   value2.li.clear();
                   value2.sour.clear();
-                  value2.desc = 'To be Filled';
-                  value2.careerName = 'To be Filled';
+                  value2.desc = '';
+                  value2.careerName = '';
                   value1.selimg = null;
                   value1.image = null;
                   Navigator.pop(context);
                   value1.z=0;
                   value1.x=0;
+                  value2.defDesc=false;
                   value1.fun();
 
                 } else {
-                  const snackBar = SnackBar(
+                  const snackBar = SnackBar(behavior: SnackBarBehavior.floating,
                       duration: Duration(seconds: 2),
                       content: Text('Please Fill Out The Respective Fields'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);

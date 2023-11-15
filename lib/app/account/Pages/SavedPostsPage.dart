@@ -18,7 +18,16 @@ class _savedPostsPageState extends State<savedPostsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          'Saved Posts',
+          style: GoogleFonts.varela(
+              fontSize: 22.sp,
+              fontWeight: FontWeight.bold,
+              color: Colors.black54),
+        ),
+        backgroundColor: Colors.orangeAccent.shade100,
+      ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('Users')
@@ -29,19 +38,25 @@ class _savedPostsPageState extends State<savedPostsPage> {
           if (snapshot.hasData) {
             return GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.8,
-                    mainAxisSpacing: 10,
+                  crossAxisCount: 2,
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 10,
                 ),
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, i) {
                   final savedPostsDocs = snapshot.data!.docs[i];
                   return GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MySavedPostsOnTap(postid: savedPostsDocs.id,)));
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MySavedPostsOnTap(
+                                    postid: savedPostsDocs.id,
+                                  )));
                     },
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 5.sp,vertical: 5.sp),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 5.sp, vertical: 5.sp),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(5.sp),
                         child: Container(
@@ -53,10 +68,11 @@ class _savedPostsPageState extends State<savedPostsPage> {
                               children: [
                                 SizedBox(
                                   height: 6.h,
-                                 width: 40.w,
+                                  width: 40.w,
                                   child: Card(
                                     child: Padding(
-                                      padding: EdgeInsets.symmetric(horizontal:6.sp),
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 6.sp),
                                       child: Text(
                                         savedPostsDocs['careerName'],
                                         style: GoogleFonts.varela(
@@ -82,7 +98,6 @@ class _savedPostsPageState extends State<savedPostsPage> {
                                 //         savedPostsDocs['saves'] ?? []),)
                                 //   ],
                                 // )
-
                               ],
                             ),
                           ),
