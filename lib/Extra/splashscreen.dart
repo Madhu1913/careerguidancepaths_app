@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:careerguidancepaths_app/auth/auth_Page.dart';
 import 'package:flutter/material.dart';
 // import 'package:careerguidancepaths_app/auth/login.dart';
 
@@ -11,29 +12,40 @@ class Splash extends StatefulWidget {
   State<Splash> createState() => _SplashState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashState extends State<Splash>with SingleTickerProviderStateMixin {
+  AnimationController? _controller;
+  Animation<Offset>? _offsetAnimation;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(const Duration(seconds: 5), () => Navigator.pushNamed(context, 'login'));
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+    _offsetAnimation = Tween<Offset>(
+      begin: const Offset(15, 0.0),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _controller!,
+      curve: Curves.linear,
+    ));
+    Timer(const Duration(seconds: 1), () => Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthPage())));
+
   }
+
+  @override
+  void dispose() {
+    _controller!.dispose();
+    super.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.purpleAccent,
-      body: Center(
-          child: AnimatedTextKit(
-        animatedTexts: [
-          WavyAnimatedText('Bright Career',
-              textStyle: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 40,
-                  color: Theme.of(context).secondaryHeaderColor),
-              speed: const Duration(milliseconds: 300))
-        ],
-      )),
+      body: Center(child: Text('Career Catalyst'),) ,
     );
   }
 }

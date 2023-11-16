@@ -1,4 +1,5 @@
 import 'package:careerguidancepaths_app/Extra/Theme/theme.dart';
+import 'package:careerguidancepaths_app/Extra/splashscreen.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/sharedPreferenceProvider.dart';
 import 'package:careerguidancepaths_app/auth/auth_Page.dart';
@@ -44,7 +45,7 @@ class _MyAppState extends State<MyApp> {
             builder:(BuildContext context,value2,Widget? child)=> MaterialApp(
               theme: !value2.isDark? lightMode:darkMode,
               title: 'Career Catalyst',
-              home: const AuthPage(),
+              home: const Splash(),
               debugShowCheckedModeBanner: false,
 
             ),

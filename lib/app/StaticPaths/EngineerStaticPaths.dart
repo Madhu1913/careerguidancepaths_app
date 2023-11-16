@@ -157,7 +157,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
     super.initState();
     readJson();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     _offsetAnimation = Tween<Offset>(
@@ -165,7 +165,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller!,
-      curve: Curves.elasticOut,
+      curve: Curves.linear,
     ));
   }
 
@@ -260,14 +260,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                   style: GoogleFonts.varela(
                       fontWeight: FontWeight.bold, fontSize: 24),
                 )),
-            Positioned(
-                left: 11.w,
-                top: 21.h,
-                child: Container(
-                  color: Colors.yellow,
-                  height: 0.4.h,
-                  width: 80.w,
-                )),
+
             Positioned(
               top: 23.h,
               left: 13.w,
@@ -286,7 +279,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                             height: 7.5.h,
                             // width: 100
                             child: Card(
-                              color: Colors.red,
+                              color: Color(0xffb38d97),
                               child: Center(
                                   child: Text(
                                 '${myList[i]['point']}',
@@ -313,27 +306,33 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                   child: SizedBox(
                     height: 45.h,
                     width: 90.w,
-                    child: Card(
+                    child: Card(shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xffb38d97,),width: 4)),
                       child: Column(
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                'DESCRIPTION',
-                                style: GoogleFonts.varela(
-                                    fontSize: 24, fontWeight: FontWeight.bold),
-                              ),
-                            ],
+                          Padding(
+                            padding: EdgeInsets.all(8.sp),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'DESCRIPTION',
+                                  style: GoogleFonts.varela(
+                                      fontSize: 24, fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(
                             height: 1.h,
                           ),
-                          Text(
-                            '${_desc[widget.i]["description"]}',
-                            style: GoogleFonts.varela(
-                                fontWeight: FontWeight.bold, fontSize: 14.sp),
-                            textAlign: TextAlign.justify,
+                          Padding(
+                            padding:  EdgeInsets.all(8.sp),
+                            child: Text(
+                              '${_desc[widget.i]["description"]}',
+                              style: GoogleFonts.varela(
+                                  fontWeight: FontWeight.bold, fontSize: 14.sp),
+                              textAlign: TextAlign.justify,
+                            ),
                           )
                         ],
                       ),
@@ -344,7 +343,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                 top: 68.h,
                 left: 30.w,
                 child: Card(
-                  color: Colors.red,
+                  color: Color(0xff2d00f7),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -361,7 +360,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                 top: 68.h,
                 left: 60.w,
                 child: Card(
-                  color: Colors.red,
+                  color: Color(0xff2d00f7),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -387,7 +386,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle
 
     Paint paintFill0 = Paint()
-      ..color = const Color.fromARGB(255, 249, 17, 17)
+      ..color = const Color(0xff90a959)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -430,7 +429,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paintFill1 = Paint()
-      ..color = const Color.fromARGB(255, 249, 17, 17)
+      ..color =  const Color(0xff90a959)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -473,7 +472,7 @@ class RPSCustomPainter extends CustomPainter {
     // Triangle Copy
 
     Paint paintFill2 = Paint()
-      ..color = const Color.fromARGB(255, 245, 10, 10)
+      ..color =  const Color(0xff90a959)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -491,7 +490,7 @@ class RPSCustomPainter extends CustomPainter {
     // Triangle Copy
 
     Paint paintStroke2 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = const Color(0xff90a959)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -502,7 +501,7 @@ class RPSCustomPainter extends CustomPainter {
     // Triangle Copy Copy
 
     Paint paintFill3 = Paint()
-      ..color = const Color.fromARGB(255, 245, 10, 10)
+      ..color =  const Color(0xff90a959)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -520,7 +519,7 @@ class RPSCustomPainter extends CustomPainter {
     // Triangle Copy Copy
 
     Paint paintStroke3 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = const Color(0xff90a959)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -531,7 +530,7 @@ class RPSCustomPainter extends CustomPainter {
     // Triangle Copy Copy
 
     Paint paintStroke4 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color =  const Color(0xff90a959)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

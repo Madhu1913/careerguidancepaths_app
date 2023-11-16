@@ -94,7 +94,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller!,
-      curve: Curves.elasticOut,
+      curve: Curves.linear,
     ));
   }
 
@@ -182,14 +182,14 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                             height: 7.5.h,
                             // width: 100
                             child: Card(
-                              color: Colors.red,
+                              color: Color(0xff81B29A),
                               child: Center(
                                   child: Text(
                                 '${myList[i]['point']}',
                                 style: GoogleFonts.varela(
-                                    fontSize: 16.sp,
+                                    fontSize: 14.sp,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Theme.of(context).colorScheme.background),
                               )),
                             ),
                           ),
@@ -203,33 +203,39 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
             ),
             Positioned(
               top: 18.h,
-              left: 6.w,
+              left: 5.w,
               child: SlideTransition(
                   position: _offsetAnimation!,
                   child: SizedBox(
                     height: 58.h,
                     width: 90.w,
-                    child: Card(
+                    child: Card(shape: RoundedRectangleBorder(side: BorderSide(color:Color(0xff81B29A),width: 4 )),
                       child: Column(
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                'DESCRIPTION',
-                                style: GoogleFonts.varela(
-                                    fontSize: 24, fontWeight: FontWeight.bold),
-                              ),
-                            ],
+                          Padding(
+                            padding:  EdgeInsets.all(8.sp),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'DESCRIPTION',
+                                  style: GoogleFonts.varela(
+                                      fontSize: 24, fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(
                             height: 1.h,
                           ),
-                          Text(
-                            '${_desc[widget.i]["description"]}',
-                            style: GoogleFonts.varela(
-                                fontWeight: FontWeight.bold, fontSize: 14.sp),
-                            textAlign: TextAlign.justify,
+                          Padding(
+                            padding:  EdgeInsets.all(8.sp),
+                            child: Text(
+                              '${_desc[widget.i]["description"]}',
+                              style: GoogleFonts.varela(
+                                  fontWeight: FontWeight.bold, fontSize: 14.sp),
+                              textAlign: TextAlign.justify,
+                            ),
                           )
                         ],
                       ),
@@ -240,7 +246,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                 top: 78.h,
                 left: 30.w,
                 child: Card(
-                  color: Colors.red,
+                  color: Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -249,7 +255,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                         icon: Icon(
                           Icons.keyboard_double_arrow_left_outlined,
                           size: 24.sp,
-                          color: Colors.white,
+                          color: Theme.of(context).colorScheme.background,
                         )),
                   ),
                 )),
@@ -257,7 +263,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                 top: 78.h,
                 left: 60.w,
                 child: Card(
-                  color: Colors.red,
+                  color: Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -266,7 +272,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                         icon: Icon(
                           Icons.keyboard_double_arrow_right_outlined,
                           size: 24.sp,
-                          color: Colors.white,
+                          color: Theme.of(context).colorScheme.background,
                         )),
                   ),
                 )),
@@ -285,7 +291,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paintFill0 = Paint()
-      ..color = const Color.fromARGB(255, 253, 13, 13)
+      ..color = Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -328,7 +334,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paintStroke0 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = Color(0xff3D405B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -339,7 +345,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy
 
     Paint paintFill1 = Paint()
-      ..color = const Color.fromARGB(255, 253, 13, 13)
+      ..color = Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -382,7 +388,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy
 
     Paint paintStroke1 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = Color(0xff3D405B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

@@ -136,7 +136,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
     super.initState();
     readJson();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     _offsetAnimation = Tween<Offset>(
@@ -144,7 +144,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller!,
-      curve: Curves.elasticOut,
+      curve: Curves.linear,
     ));
   }
   @override
@@ -234,19 +234,19 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
 
             Positioned(
                 left: 16.w,
-                top: 12.5.h,
+                top: 13.5.h,
                 child: Text(
                   _nameImg[widget.i]['name'],
                   style: GoogleFonts.varela(
                       fontWeight: FontWeight.bold, fontSize: 24),
                 )),
-            Positioned(left: 11.w,top:17.h,child: Container(color: Colors.yellow,height: 0.4.h,width: 60.w,)),
+            // Positioned(left: 11.w,top:17.h,child: Container(color: Colors.yellow,height: 0.4.h,width: 60.w,)),
 
             Positioned(
-              top: 20.h,
+              top: 19.h,
               left: 13.w,
               child: SizedBox(
-                height: 58.h,
+                height: 51.h,
                 width: 65.w,
                 // alignment: Alignment(0,1),
                 child: ListView.builder(
@@ -260,12 +260,12 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
                             height: 7.5.h,
                             // width: 100
                             child: Card(
-                              color: Colors.red,
+                              color: Color(0xffF7B267),
                               child: Center(
                                   child: Text(
                                     '${myList[i]['point']}',
                                     style: GoogleFonts.varela(
-                                        fontSize: 16.sp,
+                                        fontSize: 14.sp,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),
                                   )),
@@ -280,23 +280,29 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
               ),
             ),
             Positioned(
-              top: 20.h,
-              left: 10.w,
+              top: 19.h,
+              left: 8.w,
               child: SlideTransition(
                   position: _offsetAnimation!,
                   child: SizedBox(
-                    height: 59.h,
+                    height: 52.h,
                     width: 79.w,
-                    child: Card(
+                    child: Card(shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xffF7B267),width: 4)),
                       child: Column(
                         children: [
-                          Row(mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text('DESCRIPTION',style: GoogleFonts.varela(fontSize: 24,fontWeight: FontWeight.bold),),
-                            ],
+                          Padding(
+                            padding: EdgeInsets.all(8.0.sp),
+                            child: Row(mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text('DESCRIPTION',style: GoogleFonts.varela(fontSize: 24,fontWeight: FontWeight.bold),),
+                              ],
+                            ),
                           ),
                           SizedBox(height: 1.h,),
-                          Text('${_desc[widget.i]["description"]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 14.sp),textAlign: TextAlign.justify,)
+                          Padding(
+                            padding:  EdgeInsets.all(8.0.sp),
+                            child: Text('${_desc[widget.i]["description"]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 14.sp),textAlign: TextAlign.justify,),
+                          )
                         ],
                       ),
                     ),
@@ -304,10 +310,10 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
               ),
             ),
             Positioned(
-                top: 80.h,
+                top: 74.h,
                 left: 25.w,
                 child:
-                Card(color: Colors.red,
+                Card(color: Color(0xffFb6f92),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -317,10 +323,10 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
                   ),
                 )),
             Positioned(
-                top: 80.h,
+                top: 74.h,
                 left: 45.w,
                 child:
-                Card(color: Colors.red,
+                Card(color: Color(0xffFb6f92),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -342,7 +348,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle
 
     Paint paint_fill_0 = Paint()
-      ..color = const Color.fromARGB(255, 243, 11, 11)
+      ..color = const Color(0xff0F4C5C)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -385,7 +391,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paint_fill_1 = Paint()
-      ..color = const Color.fromARGB(255, 231, 10, 10)
+      ..color = const Color(0xff0F4C5C)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

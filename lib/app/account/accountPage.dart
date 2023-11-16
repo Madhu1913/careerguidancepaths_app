@@ -62,6 +62,7 @@ class _AccountPageState extends State<AccountPage> {
         .doc(currentuser.email)
         .set({'img': profilePic}).then(
             (value){
+              widget.img=true;
         });
   }
 
@@ -92,9 +93,9 @@ class _AccountPageState extends State<AccountPage> {
                     Positioned(
                         left: 20.w,
                         top: 5.sp,
-                        child: Text('CAREER CATALYST',style: GoogleFonts.varela(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 26),)),
+                        child: Text('CAREER CATALYST',style: GoogleFonts.varela(fontWeight: FontWeight.bold,color: Theme.of(context).colorScheme.background,fontSize: 26),)),
                     Positioned(
-                        left: 14.sp,
+                        left: 5.25.w,
                         top: 6.28.h,
                         child: Container(
                           height: 19.h,
@@ -105,10 +106,10 @@ class _AccountPageState extends State<AccountPage> {
                           // child: Image.network(''),
                         )),
                     Positioned(
-                        left: 21.sp,
-                        top: 7.3.h,
+                        left: 7.1.w,
+                        top: 7.h,
                         child: CircleAvatar(
-                          radius: 70,
+                          radius: 8.9.h,
                           child:  AspectRatio(
                             aspectRatio: 1,
                             child: widget.img
@@ -179,8 +180,9 @@ class _AccountPageState extends State<AccountPage> {
                             // color: Colors.red,
                             shadowColor: Colors.red,
                             elevation: 15.sp,
+                            color: Colors.white,
                             shape: RoundedRectangleBorder(
-                                side: const BorderSide(color: Colors.red, width: 10),
+                                side:  BorderSide(color: Color(0xff72efdd), width: 10),
                                 borderRadius: BorderRadius.circular(25.sp)),
                             child: Column(
                               children: [
@@ -296,7 +298,7 @@ class _AccountPageState extends State<AccountPage> {
                           Row(
                             children: [
                               Card(
-                                color: Colors.red,
+                                color:  Theme.of(context).colorScheme.primary,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(360)),
                                 child: IconButton(
@@ -321,7 +323,7 @@ class _AccountPageState extends State<AccountPage> {
                                 child: SizedBox(
                                     height: 6.23.h,
                                     width: 30.w,
-                                    child: Card(color: Colors.red,
+                                    child: Card(color:  Theme.of(context).colorScheme.primary,
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(25.sp)),
                                       child: Center(child: Text('MyPaths',
@@ -347,7 +349,7 @@ class _AccountPageState extends State<AccountPage> {
                                     height: 6.23.h,
                                     width: 25.w,
                                     child: Card(
-                                      color: Colors.red,
+                                      color: Theme.of(context).colorScheme.primary,
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(25.sp)),
                                       child: Center(child: Text('Saved',
@@ -360,7 +362,7 @@ class _AccountPageState extends State<AccountPage> {
                                 width: 5.w,
                               ),
                               Card(
-                                color: Colors.red,
+                                color:  Theme.of(context).colorScheme.primary,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(360)),
                                 child: IconButton(
@@ -432,7 +434,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle
 
     Paint paint_fill_1 = Paint()
-      ..color = const Color.fromARGB(255, 231, 18, 18)
+      ..color = const Color(0xff72efdd)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -475,7 +477,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle
 
     Paint paint_stroke_1 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = const Color(0xff72efdd)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

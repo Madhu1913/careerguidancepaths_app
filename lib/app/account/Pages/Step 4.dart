@@ -34,11 +34,11 @@ class _Step4State extends State<Step4> {
                           ),
                         ),
                         SizedBox(
-                          height: (4.6).h,
-                          width: 25.w,
+                          height: 7.h,
+                          width: 14.w,
                           child: Card(
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.sp),
+                              borderRadius: BorderRadius.circular(360),
                             ),
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(15.sp),
@@ -47,7 +47,7 @@ class _Step4State extends State<Step4> {
                                   onTap: (){value2.imgShowfil(context, value1.image);},
                                   child: Image.file(
                                     value1.image!,
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.fill,
                                   ),
                                 )
                                     : InkWell(

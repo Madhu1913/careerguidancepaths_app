@@ -22,7 +22,7 @@ class _MyDrawerState extends State<MyDrawer> {
   Widget build(BuildContext context) {
     return Consumer<sharedprefs>(
       builder: (BuildContext context,value,Widget? child)=>Drawer(
-        backgroundColor: Colors.red[200],
+        // backgroundColor: Colors.red[200],
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(24.sp),
             side: const BorderSide(color: Colors.amber)),
@@ -31,7 +31,7 @@ class _MyDrawerState extends State<MyDrawer> {
             DrawerHeader(
                 child: Container(
               decoration:
-                  const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+                   BoxDecoration(shape: BoxShape.circle, color: Colors.red[500]),
               child: Center(
                   child: Text(
                 'Career\nCatalyst',
@@ -41,34 +41,7 @@ class _MyDrawerState extends State<MyDrawer> {
                     fontWeight: FontWeight.w800),
               )),
             )),
-            Padding(
-              padding:  EdgeInsets.all(6.sp),
-              child: Consumer<sharedprefs>(
-                builder:(context,value10,child)=> ListTile(
-                  style: ListTileStyle.drawer,
-                  tileColor: Colors.red[600],
-                  onTap: (){
 
-                    signOut();
-                  },
-                  leading: Icon(
-                    Icons.logout,
-                    size: 32.sp,
-                    color: Colors.white,
-                  ),
-                  title: Text(
-                    'Log Out',
-                    style: GoogleFonts.varela(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                        fontSize: 20.sp),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 16.sp,
-            ),
             Padding(
               padding:  EdgeInsets.all(6.sp),
               child: ListTile(
@@ -83,10 +56,56 @@ class _MyDrawerState extends State<MyDrawer> {
                   Navigator.pop(context);
                 },
                 tileColor: Colors.red[600],
-                leading: Icon(Icons.change_circle,size: 28.sp,color: Colors.white,),
-                title:Text('Switch Mode',style: GoogleFonts.varela(fontWeight: FontWeight.w500,fontSize: 20.sp,color: Colors.white),),
+                leading: Icon(Icons.change_circle,size: 25.sp,color: Colors.white,),
+                title:Text('Switch Mode',style: GoogleFonts.varela(fontWeight: FontWeight.w500,fontSize: 14.sp,color: Colors.white),),
               ),
-            )
+            ),
+            Padding(
+              padding:  EdgeInsets.all(6.sp),
+              child: ListTile(
+                tileColor: Colors.red[600],
+
+                title: Text('Help',style: GoogleFonts.varela(fontWeight: FontWeight.w500,fontSize: 14.sp,color: Colors.white),),),
+            ),
+            Padding(
+              padding:  EdgeInsets.all(6.sp),
+              child: ListTile(
+                tileColor: Colors.red[600],
+
+                title: Text('Support',style: GoogleFonts.varela(fontWeight: FontWeight.w500,fontSize: 14.sp,color: Colors.white),),),
+            ),
+            Padding(
+              padding:  EdgeInsets.all(6.sp),
+              child: ListTile(
+                tileColor: Colors.red[600],
+
+                title: Text('Terms and conditions',style: GoogleFonts.varela(fontWeight: FontWeight.w500,fontSize: 14.sp,color: Colors.white),),),
+            ),
+            SizedBox(height: 21.h,),
+            Padding(
+              padding:  EdgeInsets.all(6.sp),
+              child: Consumer<sharedprefs>(
+                builder:(context,value10,child)=> ListTile(
+                  style: ListTileStyle.drawer,
+                  tileColor: Colors.red[600],
+                  onTap: (){
+                    signOut();
+                  },
+                  leading: Icon(
+                    Icons.logout,
+                    size: 25.sp,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'Log Out',
+                    style: GoogleFonts.varela(
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 15.sp),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

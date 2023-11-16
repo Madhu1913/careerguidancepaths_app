@@ -74,7 +74,7 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
     super.initState();
     readJson();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     _offsetAnimation = Tween<Offset>(
@@ -82,7 +82,7 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller!,
-      curve: Curves.elasticOut,
+      curve: Curves.linear,
     ));
   }
 
@@ -142,12 +142,12 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
                           height: 7.5.h,
                           // width: 100
                           child: Card(
-                            color: Colors.red,
+                            color: Color(0xff34623f),
                             child: Center(
                                 child: Text(
                                   '${myList[i]['point']}',
                                   style: GoogleFonts.varela(
-                                      fontSize: 16.sp,
+                                      fontSize: 14.sp,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white),
                                 )),
@@ -163,22 +163,28 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
           ),
           Positioned(
             top: 18.h,
-            left: 6.w,
+            left: 5.w,
             child: SlideTransition(
                 position: _offsetAnimation!,
                 child: SizedBox(
                   height: 58.h,
                   width: 90.w,
-                  child: Card(
+                  child: Card(shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff34623f),width: 4)),
                     child: Column(
                       children: [
-                        Row(mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text('DESCRIPTION',style: GoogleFonts.varela(fontSize: 24,fontWeight: FontWeight.bold),),
-                          ],
+                        Padding(
+                          padding:  EdgeInsets.all(8.sp),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('DESCRIPTION',style: GoogleFonts.varela(fontSize: 24,fontWeight: FontWeight.bold),),
+                            ],
+                          ),
                         ),
                         SizedBox(height: 1.h,),
-                        Text('${_desc[widget.i]["description"]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 14.sp),textAlign: TextAlign.justify,)
+                        Padding(
+                          padding:  EdgeInsets.all(8.0.sp),
+                          child: Text('${_desc[widget.i]["description"]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 14.sp),textAlign: TextAlign.justify,),
+                        )
                       ],
                     ),
                   ),
@@ -226,7 +232,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paint_fill_0 = Paint()
-      ..color = const Color.fromARGB(255, 253, 13, 13)
+      ..color = const Color(0xffffcf00)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -269,7 +275,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paint_stroke_0 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = const Color(0xffffcf00)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -280,7 +286,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy
 
     Paint paint_fill_1 = Paint()
-      ..color = const Color.fromARGB(255, 253, 13, 13)
+      ..color = const Color(0xffffcf00)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -323,7 +329,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy
 
     Paint paint_stroke_1 = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = const Color(0xffffcf00)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

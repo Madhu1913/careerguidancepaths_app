@@ -58,7 +58,17 @@ class _MyPathsPageState extends State<MyPathsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('My Paths',style: GoogleFonts.varela(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 22.sp),),backgroundColor: Colors.amber.shade300,elevation: 0,),
+      appBar: AppBar(
+        title: Text(
+          'My Paths',
+          style: GoogleFonts.varela(
+              color: Colors.green,
+              fontWeight: FontWeight.bold,
+              fontSize: 22.sp),
+        ),
+        backgroundColor: Colors.amber.shade300,
+        elevation: 0,
+      ),
       body: StreamBuilder(
           stream: ref.orderBy('TimeStamp', descending: true).snapshots(),
           builder: (context, snapshot) {
@@ -78,206 +88,303 @@ class _MyPathsPageState extends State<MyPathsPage> {
                               color: Colors.green.shade300,
                               borderRadius: BorderRadius.circular(8.sp)),
                         ),
-                        Positioned(left:5.w,top:1.75.h,child: Text(post['careerName'],style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.w600,color: Colors.brown.shade800),)),
-                        Positioned(left:10.w,top:6.75.h,child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
+                        Positioned(
+                            left: 5.w,
+                            top: 1.75.h,
+                            child: Text(
+                              post['careerName'],
+                              style: GoogleFonts.varela(
+                                  fontSize: 20.sp,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.brown.shade800),
+                            )),
+                        Positioned(
+                            left: 10.w,
+                            top: 6.75.h,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  height: 7.5.h,
-                                  width: 16.w,
-                                  child: Card(
-                                    elevation: 10,
-                                    shadowColor: Colors.black,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                        BorderRadius.circular(360),
-                                        side:  BorderSide(
-                                            color: Colors.amber.shade800,
-                                            width: 2)),
-                                    child: likeButton(
-                                      postid: post.id,
-                                      likes: List<String>.from(
-                                          post['Likes'] ?? []),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 7.5.h,
+                                      width: 16.w,
+                                      child: Card(
+                                        elevation: 10,
+                                        shadowColor: Colors.black,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(360),
+                                            side: BorderSide(
+                                                color: Colors.amber.shade800,
+                                                width: 2)),
+                                        child: likeButton(
+                                          postid: post.id,
+                                          likes: List<String>.from(
+                                              post['Likes'] ?? []),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 3.sp,
+                                          top: 2.sp,
+                                          bottom: 2.sp,
+                                          right: 3.sp),
+                                      child: Text(
+                                        List<String>.from(post['Likes'] ?? [])
+                                            .length
+                                            .toString(),
+                                        style: GoogleFonts.varela(
+                                            fontSize: 15.sp,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 2.sp),
+                                  child: SizedBox(
+                                    height: 7.5.h,
+                                    width: 16.w,
+                                    child: Card(
+                                      shadowColor: Colors.black,
+                                      elevation: 10,
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(360),
+                                          side: BorderSide(
+                                              color: Colors.amber.shade800,
+                                              width: 2)),
+                                      child: IconButton(
+                                          onPressed: () {
+                                            showModalBottomSheet(
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20)),
+                                                showDragHandle: true,
+                                                context: context,
+                                                builder: (context) {
+                                                  return SizedBox(
+                                                    height: 70.h,
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        Expanded(
+                                                          child: StreamBuilder(
+                                                              stream: FirebaseFirestore
+                                                                  .instance
+                                                                  .collection(
+                                                                      'UserPosts')
+                                                                  .doc(post.id)
+                                                                  .collection(
+                                                                      'Comments')
+                                                                  .orderBy(
+                                                                      'TimeStamp',
+                                                                      descending:
+                                                                          true)
+                                                                  .snapshots(),
+                                                              builder: (context,
+                                                                  snapshot) {
+                                                                if (snapshot
+                                                                    .hasData) {
+                                                                  return ListView
+                                                                      .builder(
+                                                                          itemCount: snapshot
+                                                                              .data!
+                                                                              .docs
+                                                                              .length,
+                                                                          itemBuilder:
+                                                                              (context, i) {
+                                                                            final cmnt =
+                                                                                snapshot.data!.docs[i];
+                                                                            return Column(
+                                                                              children: [
+                                                                                Padding(
+                                                                                  padding: EdgeInsets.all(8.sp),
+                                                                                  child: Container(
+                                                                                    color: Colors.grey,
+                                                                                    child: Column(
+                                                                                      children: [
+                                                                                        Text(
+                                                                                          cmnt['Comment'],
+                                                                                          style: GoogleFonts.varela(fontSize: 20.sp, color: Colors.white, fontWeight: FontWeight.w400),
+                                                                                        ),
+                                                                                        Padding(
+                                                                                          padding: EdgeInsets.all(3.sp),
+                                                                                          child: Row(
+                                                                                            children: [
+                                                                                              Text(
+                                                                                                cmnt['CommentedBy'],
+                                                                                                style: GoogleFonts.varela(color: Colors.white),
+                                                                                              ),
+                                                                                              const Text(' . '),
+                                                                                              // Text(cmnt['TimeStamp'].toString().split('.')[0]),
+                                                                                            ],
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                                const SizedBox(
+                                                                                  height: 10,
+                                                                                )
+                                                                              ],
+                                                                            );
+                                                                          });
+                                                                } else if (snapshot
+                                                                    .hasError) {
+                                                                  return Center(
+                                                                    child: Text(
+                                                                        '${snapshot.error}'),
+                                                                  );
+                                                                }
+                                                                return const Center(
+                                                                  child:
+                                                                      CircularProgressIndicator(),
+                                                                );
+                                                              }),
+                                                        ),
+                                                        Hero(
+                                                          tag: 100,
+                                                          child: ElevatedButton(
+                                                              onPressed: () {
+                                                                Navigator.push(
+                                                                    context,
+                                                                    MaterialPageRoute(
+                                                                      builder:
+                                                                          (context) =>
+                                                                              writeAndReadComments(
+                                                                        postid:
+                                                                            post.id,
+                                                                      ),
+                                                                    )).then((value) {
+                                                                  Navigator.pop(
+                                                                      context);
+                                                                });
+                                                              },
+                                                              child: const Text(
+                                                                  'Do Comment')),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  );
+                                                });
+                                          },
+                                          icon: const Icon(Icons.comment)),
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(
-                                      left: 3.sp,
-                                      top: 2.sp,
-                                      bottom: 2.sp,
-                                      right: 3.sp),
-                                  child: Text(
-                                    List<String>.from(
-                                        post['Likes'] ?? [])
-                                        .length
-                                        .toString(),
-                                    style: GoogleFonts.varela(
-                                        fontSize: 15.sp,
-                                        fontWeight: FontWeight.w600),
+                                  padding: EdgeInsets.only(left: 4.sp),
+                                  child: SizedBox(
+                                    height: 7.5.h,
+                                    width: 16.w,
+                                    child: Card(
+                                      shadowColor: Colors.black,
+                                      elevation: 10,
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(360),
+                                          side: BorderSide(
+                                              color: Colors.amber.shade800,
+                                              width: 2)),
+                                      child: SavedPostsButton(
+                                        postid: post.id,
+                                        saves: List<String>.from(
+                                            post['saves'] ?? []),
+                                      ),
+                                    ),
                                   ),
                                 ),
-
                               ],
-                            ),
-                            Padding(
-                              padding:  EdgeInsets.only(left: 2.sp),
-                              child: SizedBox(
-                                height: 7.5.h,
-                                width: 16.w,
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  elevation: 10,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                      BorderRadius.circular(360),
-                                      side: BorderSide(
-                                          color: Colors.amber.shade800,
-                                          width: 2)),
-                                  child: IconButton(
-                                      onPressed: () {
-                                        showModalBottomSheet(
-                                            shape:
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                BorderRadius
-                                                    .circular(
-                                                    20)),
-                                            showDragHandle: true,
-                                            context: context,
-                                            builder: (context) {
-                                              return SizedBox(
-                                                height: 70.h,
-                                                child: Column(
-                                                  mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                                  children: [
-                                                    Expanded(
-                                                      child:
-                                                      StreamBuilder(
-                                                          stream: FirebaseFirestore
-                                                              .instance
-                                                              .collection(
-                                                              'UserPosts')
-                                                              .doc(post
-                                                              .id)
-                                                              .collection(
-                                                              'Comments')
-                                                              .orderBy(
-                                                              'TimeStamp',
-                                                              descending:
-                                                              true)
-                                                              .snapshots(),
-                                                          builder:
-                                                              (context,
-                                                              snapshot) {
-                                                            if (snapshot
-                                                                .hasData) {
-                                                              return ListView.builder(
-                                                                  itemCount: snapshot.data!.docs.length,
-                                                                  itemBuilder: (context, i) {
-                                                                    final cmnt = snapshot.data!.docs[i];
-                                                                    return Column(
-                                                                      children: [
-                                                                        Padding(
-                                                                          padding: EdgeInsets.all(8.sp),
-                                                                          child: Container(
-                                                                            color: Colors.grey,
-                                                                            child: Column(
-                                                                              children: [
-                                                                                Text(
-                                                                                  cmnt['Comment'],
-                                                                                  style: GoogleFonts.varela(fontSize: 20.sp, color: Colors.white, fontWeight: FontWeight.w400),
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: EdgeInsets.all(3.sp),
-                                                                                  child: Row(
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        cmnt['CommentedBy'],
-                                                                                        style: GoogleFonts.varela(color: Colors.white),
-                                                                                      ),
-                                                                                      const Text(' . '),
-                                                                                      // Text(cmnt['TimeStamp'].toString().split('.')[0]),
-                                                                                    ],
-                                                                                  ),
-                                                                                ),
+                            )),
+                        Positioned(
+                            left: 40.w,
+                            top: 6.h,
+                            child: Container(
+                              height: 20.h,
+                              width: 40.w,
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.network(
+                                    post["img"].toString(),
+                                    fit: BoxFit.cover,
+                                  )),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10)),
+                            )),
+                        Positioned(
+                          left: 80.w,
+                          child: Card(
+                            child: IconButton(
+                                icon:  Icon(Icons.delete,color: Colors.brown.shade800,),
+                                onPressed: () async {
+                                  showDialog(context: context, builder: (context){
+                                    return AlertDialog(
+                                      title: Text('Do you want to delete this post',style: GoogleFonts.varela(),),
+                                      actions: [
+                                        ElevatedButton(onPressed: ()async{
+                                          final commentDocs = await FirebaseFirestore
+                                              .instance
+                                              .collection('Users')
+                                              .doc(currentuser.uid)
+                                              .collection('MyPosts')
+                                              .doc(post.id)
+                                              .collection('Comments')
+                                              .get();
+                                          for (var doc in commentDocs.docs) {
+                                            await FirebaseFirestore.instance
+                                                .collection('Users')
+                                                .doc(currentuser.uid)
+                                                .collection('MyPosts')
+                                                .doc(post.id)
+                                                .collection('Comments')
+                                                .doc(doc.id)
+                                                .delete();
+                                          }
+                                          await FirebaseFirestore.instance
+                                              .collection('Users')
+                                              .doc(currentuser.uid)
+                                              .collection('MyPosts')
+                                              .doc(post.id)
+                                              .delete()
+                                              .then((value) => print('deleted'));
+                                          final mainCommentDocs = await FirebaseFirestore
+                                              .instance
+                                              .collection('UserPosts')
+                                              .doc(post.id)
+                                              .collection('Comments')
+                                              .get();
+                                          for (var doc in mainCommentDocs.docs) {
+                                            await FirebaseFirestore.instance
+                                                .collection('UserPosts')
+                                                .doc(post.id)
+                                                .collection('Comments')
+                                                .doc(doc.id)
+                                                .delete();
+                                          }
+                                          await FirebaseFirestore.instance
+                                              .collection('UserPosts')
+                                              .doc(post.id)
+                                              .delete()
+                                              .then((value) => print('deleted'));
+                                          Navigator.pop(context);
+                                        }, child: Text('Delete')),
+                                        ElevatedButton(onPressed: (){
+                                          Navigator.pop(context);
+                                        }, child: Text('Cancel')),
 
-                                                                              ],
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        const SizedBox(
-                                                                          height: 10,
-                                                                        )
-                                                                      ],
-                                                                    );
-                                                                  });
-                                                            } else if (snapshot
-                                                                .hasError) {
-                                                              return Center(
-                                                                child:
-                                                                Text('${snapshot.error}'),
-                                                              );
-                                                            }
-                                                            return const Center(
-                                                              child:
-                                                              CircularProgressIndicator(),
-                                                            );
-                                                          }),
-                                                    ),
-                                                    Hero(
-                                                      tag:100,
-                                                      child: ElevatedButton(
-                                                          onPressed: () {
-                                                            Navigator.push(
-                                                                context,
-                                                                MaterialPageRoute(
-                                                                  builder: (context) => writeAndReadComments(
-                                                                    postid: post.id,
-                                                                  ),)).then((value) {
-                                                              Navigator.pop(context);
-                                                            });
-                                                          },
-                                                          child: const Text(
-                                                              'Do Comment')),
-                                                    )
-                                                  ],
-                                                ),
-                                              );
-                                            });
-                                      },
-                                      icon: const Icon(Icons.comment)),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding:  EdgeInsets.only(left: 4.sp),
-                              child: SizedBox(
-                                height: 7.5.h,
-                                width: 16.w,
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  elevation: 10,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                      BorderRadius.circular(360),
-                                      side:  BorderSide(
-                                          color: Colors.amber.shade800,
-                                          width: 2)),
-                                  child: SavedPostsButton(
-                                    postid: post.id,
-                                    saves: List<String>.from(
-                                        post['saves'] ?? []),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        )),
-                        Positioned(left:40.w,top:6.h,child: Container(height:20.h,width:40.w,child: ClipRRect(borderRadius:BorderRadius.circular(10),child: Image.network(post["img"].toString(),fit: BoxFit.cover,)),decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),))
+                                      ],
+                                    );
+                                  });
+                                }),
+                          ),
+                        ),
                       ]),
                     );
                   });

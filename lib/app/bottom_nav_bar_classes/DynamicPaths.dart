@@ -350,7 +350,7 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(10.sp)),
-                                      color: Colors.grey,
+                                      color: Theme.of(context).colorScheme.tertiaryContainer,
                                       child: Padding(
                                         padding: EdgeInsets.all(2.sp),
                                         child: InkWell(
@@ -400,21 +400,21 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                           ),
                                                         ),
                                                         SizedBox(
-                                                          height: 5.h,
-                                                          width: 25.w,
+                                                          height: 10.h,
+                                                          width: 20.w,
                                                           child: Card(
                                                             shape:
                                                                 RoundedRectangleBorder(
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
-                                                                          15.sp),
+                                                                          360),
                                                             ),
                                                             child: ClipRRect(
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .circular(
-                                                                            15.sp),
+                                                                            360),
                                                                 child: InkWell(
                                                                   onTap: () {
                                                                     value2.imgShownet(
@@ -467,7 +467,7 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                     ),
                                                   ),
                                                   SizedBox(
-                                                    height: 58.h,
+                                                    height: 48.h,
                                                     child: ListView.builder(
                                                         itemCount:
                                                             post['careerPoints']
@@ -479,8 +479,8 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                                 Container(
                                                                   height: (6).h,
                                                                   width: 60.w,
-                                                                  decoration: BoxDecoration(color: Colors
-                                                                      .black54,borderRadius: BorderRadius.circular(20.sp)),
+                                                                  decoration: BoxDecoration(color:  Theme.of(context).colorScheme.primary
+                                                                      ,borderRadius: BorderRadius.circular(20.sp)),
                                                                   child: Center(
                                                                       child:
                                                                           Padding(
@@ -494,8 +494,7 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                                       style: GoogleFonts.varela(
                                                                           fontSize: 15
                                                                               .sp,
-                                                                          color: Colors
-                                                                              .white,
+                                                                          color: Theme.of(context).colorScheme.background,
                                                                           fontWeight:
                                                                               FontWeight.bold),
                                                                     ),
@@ -504,7 +503,7 @@ class _dynamicPathsState extends State<dynamicPaths> {
                                                                 i!=post["careerPoints"].length-1?Icon(
                                                                   Icons
                                                                       .arrow_downward_outlined,
-                                                                  size: 25.sp,
+                                                                  size: 25.sp,color: Theme.of(context).colorScheme.primaryContainer,
                                                                 ):Container()
                                                               ]);
                                                         }),

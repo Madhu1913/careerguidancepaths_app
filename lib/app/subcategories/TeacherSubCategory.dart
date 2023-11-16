@@ -56,7 +56,7 @@ class _teacherSubCategoryState extends State<teacherSubCategory>
       tag: 004,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           title: Text(
             'Teacher',
             style: GoogleFonts.varela(
@@ -74,7 +74,7 @@ class _teacherSubCategoryState extends State<teacherSubCategory>
               itemCount: widget.tecSub.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.7,
+                childAspectRatio: 0.68,
                 mainAxisSpacing: 10,
                 //crossAxisSpacing: 10,
               ),
@@ -87,13 +87,13 @@ class _teacherSubCategoryState extends State<teacherSubCategory>
                             builder: (context) => teacherStaticPaths(i: i)));
                   },
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 5.sp),
+                    padding: EdgeInsets.symmetric(horizontal: 5.sp,vertical: 3.sp),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(5.sp),
                       child: Container(
                         // height: 40.h,
                         // width: 45.w,
-                        color: Colors.amber,
+                        color: Color(0xffF4A259),
                         child: Center(
                           child: Column(
                             children: [

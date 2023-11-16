@@ -84,6 +84,16 @@ class _HomePageState extends State<HomePage> {
     'https://img.freepik.com/free-vector/astronaut-suit-illustration_114360-8538.jpg',
     'https://img.freepik.com/free-vector/female-lawyer-concept-illustration_114360-16427.jpg'
   ];
+  late List classess=[
+    doctorSubCategories(docSub: _docsub),
+    engineerSubCategories(engSub: _engSub),
+    policeSubCategories(polSub: _polSub),
+    teacherSubCategory(tecSub: _tecSub),
+    softwareEngineerSubCategories(sofEngSub: _sofEngSub),
+    pilot(),
+    astrounaut(),
+    lawyer(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -123,21 +133,22 @@ class _HomePageState extends State<HomePage> {
       const librarian()
     ];
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         toolbarHeight: 8.h,
-        backgroundColor: Colors.red,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.sp)),
         title: Text(
           'Career Catalyst',
-          style: GoogleFonts.varela(fontSize: 24.sp, color: Colors.white),
+          style: GoogleFonts.varela(fontSize: 22.sp, color: Theme.of(context).colorScheme.background),
         ),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
               icon: Icon(
                 Icons.menu,
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.background,
                 size: 26.sp,
               ),
               onPressed: () {
@@ -156,6 +167,7 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(
                 Icons.search,
                 size: 4.h,
+                color: Theme.of(context).colorScheme.background,
               ))
         ],
       ),
@@ -174,15 +186,19 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.all(3.sp),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.red,
+                          color: Theme.of(context).colorScheme.primary,
                           borderRadius: BorderRadius.circular(40.sp)),
                       child: Padding(
                         padding: EdgeInsets.all(3.sp),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(38.sp),
-                          child: Image.network(
-                            li[index],
-                            fit: BoxFit.cover,
+                        child: GestureDetector(onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>classess[index]));
+                        },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(38.sp),
+                            child: Image.network(
+                              li[index],
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -205,7 +221,12 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 2.h,
               child: AnimatedSmoothIndicator(
-                effect: const ExpandingDotsEffect(),
+                effect: ExpandingDotsEffect(
+                  // dotColor: Colors.blac,
+                  dotHeight: 10,
+                  dotWidth:10,
+                  activeDotColor: Theme.of(context).colorScheme.primary
+                ),
                 activeIndex: activeIndex,
                 count: li.length,
                 onDotClicked: (val) {
@@ -216,11 +237,10 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 2.0.h,
             ),
-            Container(
-              height: 1.0.h,
-              width: 100.w,
-              color: Colors.amber,
-            ),
+            // Container(
+            //   height: 0.5.h,
+            //   width: 100.w,
+            // color:Theme.of(context).colorScheme.background),
             SizedBox(
               height: 2.0.h,
             ),
@@ -245,15 +265,16 @@ class _HomePageState extends State<HomePage> {
                     child: Lottie.asset('assets/doubtAnimation.json')),
               ],
             ),
-            ElevatedButton(onPressed: () {}, child: const Text('Click Here')),
+            ElevatedButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>dynamicPaths()));
+            }, child:  Text('Click Here',style:GoogleFonts.varela(color: Theme.of(context).colorScheme.background) ,)),
             SizedBox(
               height: 2.5.h,
             ),
-            Container(
-              height: 1.0.h,
-              width: 100.w,
-              color: Colors.amber,
-            ),
+            // Container(
+            //     height: 0.5.h,
+            //     width: 100.w,
+            //     color:Theme.of(context).colorScheme.background),
             SizedBox(
               height: 1.25.h,
             ),
@@ -291,18 +312,21 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 1.25.h,
             ),
-            Container(
-              height: 1.0.h,
-              width: 100.w,
-              color: Colors.amber,
-            ),
+            // Container(
+            //     height: 0.5.h,
+            //     width: 100.w,
+            //     color:Theme.of(context).colorScheme.background),
             SizedBox(
               height: 1.25.h,
             ),
-            Text(
-              'Average Salaries',
-              style:
-                  GoogleFonts.varela(fontSize: 18, fontWeight: FontWeight.bold),
+            Row(mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'Average Salaries',
+                  style:
+                      GoogleFonts.varela(fontSize: 18.sp, fontWeight: FontWeight.bold,color: Theme.of(context).colorScheme.background),
+                ),
+              ],
             ),
             Padding(
               padding: EdgeInsets.all(3.sp),
@@ -313,8 +337,8 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 30.h,
-                          width: 32.5.w,
+                          height: 26.h,
+                          width: 33.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
@@ -326,13 +350,16 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             Card(
-                                color: Colors.purple,
-                                child: Text(
-                                  'Doctor',
-                                  style: GoogleFonts.varela(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 30),
+                                color: Theme.of(context).colorScheme.tertiary,
+                                child: Padding(
+                                  padding:  EdgeInsets.all(3.sp),
+                                  child: Text(
+                                    'Doctor',
+                                    style: GoogleFonts.varela(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 20.sp),
+                                  ),
                                 )),
                             SizedBox(
                               height: 2.5.h,
@@ -405,8 +432,8 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 30.h,
-                          width: 30.w,
+                          height: 26.h,
+                          width: 33.5.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
@@ -418,13 +445,16 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             Card(
-                                color: Colors.purple,
-                                child: Text(
-                                  'Engineering',
-                                  style: GoogleFonts.varela(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 30),
+                                color: Theme.of(context).colorScheme.tertiary,
+                                child: Padding(
+                                  padding:  EdgeInsets.all(3.sp),
+                                  child: Text(
+                                    'Engineering',
+                                    style: GoogleFonts.varela(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 20.sp),
+                                  ),
                                 )),
                             SizedBox(
                               height: 2.5.h,
@@ -497,8 +527,8 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 30.h,
-                          width: 32.5.w,
+                          height: 26.h,
+                          width: 35.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
@@ -510,13 +540,16 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             Card(
-                                color: Colors.purple,
-                                child: Text(
-                                  'Police',
-                                  style: GoogleFonts.varela(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 30),
+                                color: Theme.of(context).colorScheme.tertiary,
+                                child: Padding(
+                                  padding:  EdgeInsets.all(3.sp),
+                                  child: Text(
+                                    'Police',
+                                    style: GoogleFonts.varela(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 20.sp),
+                                  ),
                                 )),
                             SizedBox(
                               height: 2.5.h,
@@ -589,8 +622,8 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 30.h,
-                          width: 32.5.w,
+                          height: 26.h,
+                          width: 34.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
@@ -602,13 +635,16 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             Card(
-                                color: Colors.purple,
-                                child: Text(
-                                  'Teacher',
-                                  style: GoogleFonts.varela(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 30),
+                                color: Theme.of(context).colorScheme.tertiary,
+                                child: Padding(
+                                  padding: EdgeInsets.all(3.sp),
+                                  child: Text(
+                                    'Teacher',
+                                    style: GoogleFonts.varela(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 20.sp),
+                                  ),
                                 )),
                             SizedBox(
                               height: 2.5.h,
@@ -681,9 +717,9 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 30.h,
-                          width: 32.5.w,
-                          decoration: const BoxDecoration(
+                          height: 26.h,
+                          width: 35.w,
+                          decoration:  BoxDecoration(borderRadius: BorderRadius.circular(10),
                               color: Colors.cyan,
                               image: DecorationImage(
                                   image: NetworkImage(
@@ -694,13 +730,16 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             Card(
-                                color: Colors.purple,
-                                child: Text(
-                                  'Astronaut',
-                                  style: GoogleFonts.varela(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 30),
+                                color: Theme.of(context).colorScheme.tertiary,
+                                child: Padding(
+                                  padding:  EdgeInsets.all(3.sp),
+                                  child: Text(
+                                    'Astronaut',
+                                    style: GoogleFonts.varela(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 20.sp),
+                                  ),
                                 )),
                             SizedBox(
                               height: 2.5.h,
@@ -769,59 +808,67 @@ class _HomePageState extends State<HomePage> {
                 )
               ], options: CarouselOptions(height: 31.25.h, autoPlay: false)),
             ),
-            ElevatedButton(onPressed: () {}, child: const Text('View All')),
+            ElevatedButton(onPressed: () {}, child: Text('View All',style: GoogleFonts.varela(color: Theme.of(context).colorScheme.background),)),
             SizedBox(
               height: 1.25.h,
             ),
-            Container(
-              height: 1.0.h,
-              width: 100.w,
-              color: Colors.amber,
-            ),
+            // Container(
+            //     height: 0.5.h,
+            //     width: 100.w,
+            //     color:Theme.of(context).colorScheme.background),
             SizedBox(
               height: 1.25.h,
             ),
             Padding(
               padding: EdgeInsets.all(4.sp),
-              child: ClipRRect(
-                borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    bottomRight: Radius.circular(60)),
-                child: Container(
-                  height: 36.25.h,
-                  width: 90.w,
-                  color: Colors.greenAccent,
-                  child: Column(
-                    children: [
-                      Text(
-                        'Career Success Stories',
-                        style: GoogleFonts.varela(
-                            fontWeight: FontWeight.bold, fontSize: 24),
-                      ),
-                      SizedBox(
-                        height: 2.5.h,
-                      ),
-                      Container(
-                        height: 22.5.h,
-                        width: 80.w,
-                        decoration: BoxDecoration(
-                            color: Colors.redAccent,
-                            image: const DecorationImage(
-                                image: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gtIglmRGkI3sgPTkjTZ00j4bDFOCXSwefg&usqp=CAU'),
-                                fit: BoxFit.fill),
-                            borderRadius: BorderRadius.circular(30)),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Check Out Some Stories',
-                          style: GoogleFonts.varela(),
+              child: Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(60),
+                  bottomRight: Radius.circular(60)),
+              ),
+                elevation: 15,
+                shadowColor: Theme.of(context).colorScheme.background,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(60)),
+                  child: Container(
+                    height: 36.25.h,
+                    width: 90.w,
+                    // color: Theme.of(context).colorScheme.surfaceVariant,
+                    child: Column(
+                      children: [
+                        Text(
+                          'Career Success Stories',
+                          style: GoogleFonts.varela(
+                              fontWeight: FontWeight.bold, fontSize: 24),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.black),
-                      )
-                    ],
+                        SizedBox(
+                          height: 2.5.h,
+                        ),
+                        Container(
+                          height: 22.5.h,
+                          width: 80.w,
+                          decoration: BoxDecoration(
+                              color: Colors.redAccent,
+                              image: const DecorationImage(
+                                  image: NetworkImage(
+                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gtIglmRGkI3sgPTkjTZ00j4bDFOCXSwefg&usqp=CAU'),
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(30)),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Check Out Some Stories',
+                            style: GoogleFonts.varela(
+                              color: Theme.of(context).colorScheme.background
+                            ),
+                          ),
+
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -829,24 +876,24 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 1.25.h,
             ),
-            Container(
-              height: 1.0.h,
-              width: 100.w,
-              color: Colors.amber,
-            ),
+            // Container(
+            //   height: 1.0.h,
+            //   width: 100.w,
+            //   color: Colors.amber,
+            // ),
             SizedBox(
               height: 1.25.h,
             ),
             Padding(
               padding: EdgeInsets.all(3.sp),
               child: Container(
-                height: 75.h,
+                height: 71.h,
                 width: 95.w,
-                decoration: const BoxDecoration(
-                    color: Colors.orangeAccent,
+                decoration:  BoxDecoration(
+                    color: Theme.of(context).colorScheme.tertiaryContainer,
                     borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(80),
-                        bottomLeft: Radius.circular(80))),
+                        topRight: Radius.circular(100),
+                        bottomLeft: Radius.circular(100))),
                 child: Column(
                   children: [
                     Text(
@@ -863,62 +910,76 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration: const BoxDecoration(
+                          decoration:  BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(24),
                               ),
-                              color: Colors.brown),
-                          child: Stack(
-                            children: [
-                              Positioned(left:2.w,top:1.h,
-                                  child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/premium-vector/modern-outline-illustration-doctor_203633-11756.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
+                              // color: Theme.of(context).colorScheme.errorContainer
+                          ),
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.push(context,MaterialPageRoute(builder: (context)=>doctorSubCategories(docSub: _docsub)));
+                              
+                            },
+                            child: Stack(
+                              children: [
+                                Positioned(left:2.w,top:1.h,
+                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/premium-vector/modern-outline-illustration-doctor_203633-11756.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
 
-                              Positioned(
-                                  left: 24.w,
-                                  top: 23.h,
-                                  child: Container(
-                                    height: 6.h,
-                                    width: 12.w,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.circle),
-                                    child: Center(child: Text('#1',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
-                                  ))
-                            ],
+                                Positioned(
+                                    left: 24.w,
+                                    top: 23.h,
+                                    child: Container(
+                                      height: 6.h,
+                                      width: 12.w,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle),
+                                      child: Center(child: Text('#1',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
+                                    ))
+                              ],
+                            ),
                           ),
                         ),
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration: const BoxDecoration(
+                          decoration:  BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(24),
                               ),
-                              color: Colors.brown),
-                          child: Stack(
-                            children: [
-                              Positioned(left:2.w,top:1.h,
-                                  child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/professor-concept-illustration_114360-4304.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
+                              // color: Theme.of(context).colorScheme.errorContainer
+                          ),
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.push(context,MaterialPageRoute(builder: (context)=>teacherSubCategory(tecSub: _tecSub)));
+                              
+                            },
+                            child: Stack(
+                              children: [
+                                Positioned(left:2.w,top:1.h,
+                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/professor-concept-illustration_114360-4304.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
 
-                              Positioned(
-                                  left: 5.w,
-                                  top: 23.h,
-                                  child: Container(
-                                    height: 6.h,
-                                    width: 12.w,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.circle),
-                                    child: Center(child: Text('#2',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
+                                Positioned(
+                                    left: 5.w,
+                                    top: 23.h,
+                                    child: Container(
+                                      height: 6.h,
+                                      width: 12.w,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle),
+                                      child: Center(child: Text('#2',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
 
-                                  ))
-                            ],
+                                    ))
+                              ],
+                            ),
                           ),
                         )
                       ],
                     ),
                     SizedBox(
-                      height: 4.5.h,
+                      height: 1.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -926,56 +987,69 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration: const BoxDecoration(
+                          decoration:  BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(24),
                               ),
-                              color: Colors.brown),
-                          child: Stack(
-                            children: [
-                              Positioned(left:2.w,top:2.h,
-                                  child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/software-integration-concept-illustration_114360-7277.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=sph',fit:BoxFit.cover)),)),
-                              Positioned(
-                                  left: 24.w,
-                                  top: 1.h,
-                                  child: Container(
-                                    height: 6.h,
-                                    width: 12.w,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.circle),
-                                    child: Center(child: Text('#3',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
+                              // color: Theme.of(context).colorScheme.errorContainer
+                          ),
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.push(context,MaterialPageRoute(builder: (context)=>softwareEngineerSubCategories(sofEngSub: _sofEngSub)));
+                              
+                            },
+                            child: Stack(
+                              children: [
+                                Positioned(left:2.w,top:2.h,
+                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/software-integration-concept-illustration_114360-7277.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=sph',fit:BoxFit.cover)),)),
+                                Positioned(
+                                    left: 24.w,
+                                    top: 1.h,
+                                    child: Container(
+                                      height: 6.h,
+                                      width: 12.w,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle),
+                                      child: Center(child: Text('#3',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
 
-                                  ))
-                            ],
+                                    ))
+                              ],
+                            ),
                           ),
                         ),
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration: const BoxDecoration(
+                          decoration:  BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(24),
                               ),
-                              color: Colors.brown),
-                          child: Stack(
-                            children: [
-                              Positioned(left:2.w,top:2.h,
-                                  child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/premium-vector/police-officer-couple-uniform-standing-together-police-characters-public-safety-officers_573689-237.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
+                              // color: Theme.of(context).colorScheme.errorContainer
+                          ),
+                          child: GestureDetector(
+                            onTap:(){
+                              Navigator.push(context,MaterialPageRoute(builder: (context)=>policeSubCategories(polSub: _polSub)));
+                            },
+                            child: Stack(
+                              children: [
+                                Positioned(left:2.w,top:2.h,
+                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/premium-vector/police-officer-couple-uniform-standing-together-police-characters-public-safety-officers_573689-237.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
 
-                              Positioned(
-                                  left: 5.w,
-                                  top: 1.h,
-                                  child: Container(
-                                    height: 6.h,
-                                    width: 12.w,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.circle),
-                                    child: Center(child: Text('#4',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
+                                Positioned(
+                                    left: 5.w,
+                                    top: 1.h,
+                                    child: Container(
+                                      height: 6.h,
+                                      width: 12.w,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle),
+                                      child: Center(child: Text('#4',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
 
-                                  ))
-                            ],
+                                    ))
+                              ],
+                            ),
                           ),
                         )
                       ],
@@ -1035,14 +1109,14 @@ class _HomePageState extends State<HomePage> {
                   height: 8.h,
                   width: 98.w,
                   child: Card(
-                    color: Colors.green,
+                  color: Theme.of(context).colorScheme.error,
                     elevation: 20,
                     shadowColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: Center(
                         child: Text(
-                      'Go To MyWorkSpace',
+                      'Go To My WorkSpace',
                       style: GoogleFonts.varela(
                           fontWeight: FontWeight.bold, fontSize: 20),
                     )),

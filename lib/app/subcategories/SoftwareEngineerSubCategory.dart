@@ -53,7 +53,7 @@ class _softwareEngineerSubCategoriesState extends State<softwareEngineerSubCateg
       tag: 005,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           title: Text(
             'Software Engineer',
             style:GoogleFonts.varela(
@@ -69,7 +69,7 @@ class _softwareEngineerSubCategoriesState extends State<softwareEngineerSubCateg
               itemCount: widget.sofEngSub.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.7,
+                childAspectRatio: 0.68,
                 mainAxisSpacing: 10,
                 //crossAxisSpacing: 10,
               ),
@@ -79,13 +79,13 @@ class _softwareEngineerSubCategoriesState extends State<softwareEngineerSubCateg
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>softwareEngineerStaticPaths(i: i)));
                   },
                   child: Padding(
-                    padding:  EdgeInsets.symmetric(horizontal:5.sp),
+                    padding:  EdgeInsets.symmetric(horizontal:5.sp,vertical: 3.sp),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(5.sp),
                       child: Container(
                         // height: 40.h,
                         // width: 45.w,
-                        color: Colors.amber,
+                        color: Color(0xffF4A259),
                         child: Center(
                           child: Column(
                             children: [

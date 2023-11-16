@@ -121,7 +121,7 @@ class _categoriesState extends State<categories> {
         title: Text(
           'Categories',
           style: GoogleFonts.varela(
-              fontSize: 26.sp, fontWeight: FontWeight.bold, color: Colors.brown),
+              fontSize: 26.sp, fontWeight: FontWeight.bold, color: Colors.teal),
         ),
       ),
       body: Column(
@@ -147,8 +147,8 @@ class _categoriesState extends State<categories> {
                                   SizedBox(
                                     height: 34.h,
                                     width: 96.w,
-                                    child: Card(elevation: 10,shadowColor: Colors.white,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.sp),side: BorderSide(color: Colors.black,width: 2)),
-                                      color: Colors.brown.shade200,
+                                    child: Card(elevation: 10,shadowColor: Colors.white,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.sp),side: BorderSide(color: Theme.of(context).colorScheme.primary,width: 2)),
+                                      color: Theme.of(context).colorScheme.tertiaryContainer,
                                     ),
                                   ),
                                   Positioned(
@@ -158,7 +158,7 @@ class _categoriesState extends State<categories> {
                                   Positioned(
                                     left: 38.w,
                                       top: 3.h,
-                                      child: SizedBox(height: 28.h,width: 54.w,child: Card(shape:RoundedRectangleBorder(side: BorderSide(color: Colors.brown.shade800,width: 2)),
+                                      child: SizedBox(height: 28.h,width: 54.w,child: Card(shape:RoundedRectangleBorder(side: BorderSide(color: Theme.of(context).colorScheme.background,width: 2)),
                                         child: Padding(
                                           padding:  EdgeInsets.all(4.sp),
                                           child: Column(

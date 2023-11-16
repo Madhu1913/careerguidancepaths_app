@@ -54,7 +54,7 @@ class _teacherStaticPathsState extends State<teacherStaticPaths>
     super.initState();
     readJson();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     _offsetAnimation = Tween<Offset>(
@@ -62,7 +62,7 @@ class _teacherStaticPathsState extends State<teacherStaticPaths>
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller!,
-      curve: Curves.elasticOut,
+      curve: Curves.linear,
     ));
   }
 
@@ -88,19 +88,19 @@ class _teacherStaticPathsState extends State<teacherStaticPaths>
               ),
             ),
             Positioned(
-                left: 16.w,
-                top: 17.h,
+                left: 13.w,
+                top: 19.h,
                 child: Text(
                   _nameImg[widget.i]['name'],
                   style: GoogleFonts.varela(
                       fontWeight: FontWeight.bold, fontSize: 24),
                 )),
-            Positioned(left: 11.w,top:21.h,child: Container(color: Colors.yellow,height: 0.4.h,width: 80.w,)),
+           // Positioned(left: 11.w,top:21.h,child: Container(color: Colors.yellow,height: 0.4.h,width: 80.w,)),
             Positioned(
-              top: 23.h,
-              left: 13.w,
+              top: 25.h,
+              left: 16.w,
               child: SizedBox(
-                height: 44.h,
+                height: 40.h,
                 width: 65.w,
                 // alignment: Alignment(0,1),
                 child: ListView.builder(
@@ -134,23 +134,29 @@ class _teacherStaticPathsState extends State<teacherStaticPaths>
               ),
             ),
             Positioned(
-              top: 23.h,
+              top: 25.h,
               left: 6.w,
               child: SlideTransition(
                 position: _offsetAnimation!,
                 child: SizedBox(
-                  height: 45.h,
+                  height: 43.h,
                   width: 90.w,
-                  child: Card(
+                  child: Card(shape: RoundedRectangleBorder(side: BorderSide(color: Colors.red,width: 4)),
                     child: Column(
                       children: [
-                        Row(mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text('DESCRIPTION',style: GoogleFonts.varela(fontSize: 24,fontWeight: FontWeight.bold),),
-                          ],
+                        Padding(
+                          padding:  EdgeInsets.all(8.sp),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('DESCRIPTION',style: GoogleFonts.varela(fontSize: 24,fontWeight: FontWeight.bold),),
+                            ],
+                          ),
                         ),
                         SizedBox(height: 1.h,),
-                        Text('${_desc[widget.i]["description"]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 14.sp),textAlign: TextAlign.justify,)
+                        Padding(
+                          padding:  EdgeInsets.all(8.sp),
+                          child: Text('${_desc[widget.i]["description"]}',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 13.sp),textAlign: TextAlign.justify,),
+                        )
                       ],
                     ),
                   ),
@@ -161,7 +167,7 @@ class _teacherStaticPathsState extends State<teacherStaticPaths>
               top: 68.h,
               left: 30.w,
               child:
-                  Card(color: Colors.red,
+                  Card(color: Color(0xff63b4d1),
                     child: Center(
                       child: IconButton(
                           onPressed: () {
@@ -174,7 +180,7 @@ class _teacherStaticPathsState extends State<teacherStaticPaths>
                 top: 68.h,
                 left: 60.w,
                 child:
-                Card(color: Colors.red,
+                Card(color: Color(0xff63b4d1),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -197,7 +203,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle
 
     Paint paint_fill_0 = Paint()
-      ..color = const Color.fromARGB(255, 235, 23, 23)
+      ..color = Color(0xff3c493f)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -240,7 +246,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paint_fill_1 = Paint()
-      ..color = const Color.fromARGB(255, 235, 23, 23)
+      ..color =Color(0xff3c493f)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -283,7 +289,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy
 
     Paint paint_fill_2 = Paint()
-      ..color = const Color.fromARGB(255, 235, 23, 23)
+      ..color = Color(0xff3c493f)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -326,7 +332,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy Copy
 
     Paint paint_fill_3 = Paint()
-      ..color = const Color.fromARGB(255, 235, 23, 23)
+      ..color = Color(0xff3c493f)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -369,7 +375,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy Copy Copy
 
     Paint paint_fill_4 = Paint()
-      ..color = const Color.fromARGB(255, 235, 23, 23)
+      ..color = Color(0xff3c493f)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

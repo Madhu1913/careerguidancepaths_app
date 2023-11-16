@@ -47,61 +47,67 @@ class _AppdataState extends State<Appdata> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: ConvexAppBar(
-        height: 6.h,
-          onTap: (idx) {
-            setState(() {
-              index = idx;
-            });
-            },
-        style:TabStyle.textIn,
-        backgroundColor: Colors.red,
-          initialActiveIndex: 0,
-          items: [
-            TabItem(icon: Icons.home_filled,title: 'Home'),
-            TabItem(icon: Icons.category_outlined,title: 'Categories'),
-            TabItem(icon: Icons.border_clear_outlined,title: 'Paths'),
-            TabItem(icon: Icons.person,title: 'Profile'),
+    return WillPopScope(
+      onWillPop: ()async{
+        return false;
+      },
+      child: Scaffold(
+        bottomNavigationBar: ConvexAppBar(
+          height: 6.h,
+            onTap: (idx) {
+              setState(() {
+                index = idx;
+              });
+              },
+          style:TabStyle.textIn,
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          activeColor: Theme.of(context).colorScheme.background,
+            initialActiveIndex: 0,
+            items: [
+              TabItem(icon: Icons.home_filled,title: 'Home',),
+              TabItem(icon: Icons.category_outlined,title: 'Categories'),
+              TabItem(icon: Icons.border_clear_outlined,title: 'Paths'),
+              TabItem(icon: Icons.person,title: 'Profile'),
+            ],
+            // animationCurve: Curves.fastOutSlowIn,
+            // animationDuration: const Duration(milliseconds: 400),
+            // backgroundColor: Colors.white,
+            // color: Colors.red,
+            // buttonBackgroundColor: Colors.teal,
+            // items: const [
+            //   CurvedNavigationBarItem(
+            //     child: Icon(
+            //       Icons.home,
+            //       color: Colors.white,
+            //     ),
+            //   ),
+            //   CurvedNavigationBarItem(
+            //       child: Icon(
+            //     Icons.category,
+            //     color: Colors.white,
+            //   )),
+            //   CurvedNavigationBarItem(
+            //       child: Icon(
+            //     Icons.book_online_rounded,
+            //     color: Colors.white,
+            //   )),
+            //   CurvedNavigationBarItem(
+            //       child: Icon(
+            //     Icons.person,
+            //     color: Colors.white,
+            //   )),
+            ),
+        body: IndexedStack(
+          index: index,
+          children: [
+            const HomePage(),
+            const categories(),
+            const dynamicPaths(),
+            AccountPage(
+              img: img,
+            ),
           ],
-          // animationCurve: Curves.fastOutSlowIn,
-          // animationDuration: const Duration(milliseconds: 400),
-          // backgroundColor: Colors.white,
-          // color: Colors.red,
-          // buttonBackgroundColor: Colors.teal,
-          // items: const [
-          //   CurvedNavigationBarItem(
-          //     child: Icon(
-          //       Icons.home,
-          //       color: Colors.white,
-          //     ),
-          //   ),
-          //   CurvedNavigationBarItem(
-          //       child: Icon(
-          //     Icons.category,
-          //     color: Colors.white,
-          //   )),
-          //   CurvedNavigationBarItem(
-          //       child: Icon(
-          //     Icons.book_online_rounded,
-          //     color: Colors.white,
-          //   )),
-          //   CurvedNavigationBarItem(
-          //       child: Icon(
-          //     Icons.person,
-          //     color: Colors.white,
-          //   )),
-          ),
-      body: IndexedStack(
-        index: index,
-        children: [
-          const HomePage(),
-          const categories(),
-          const dynamicPaths(),
-          AccountPage(
-            img: img,
-          ),
-        ],
+        ),
       ),
     );
   }
