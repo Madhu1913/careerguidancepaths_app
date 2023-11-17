@@ -1,3 +1,4 @@
+import 'package:careerguidancepaths_app/app/Extra/TermsAndConditions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -97,50 +98,66 @@ class _SignUpState extends State<SignUp> {
             padding:  EdgeInsets.all(5.sp),
             child: Column(
               children: [
-                SizedBox(
-                  height: 75.sp,
-                ),
-                Text(
-                  'Sign Up',
-                  style: GoogleFonts.varela(
-                      fontSize: 25.sp, fontWeight: FontWeight.bold),
-                ),
+                SizedBox(height: 6.h,),
+                Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24.sp)),
+                    height: 18.h,
+                    width: 38.w,
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(24.sp),
+                        child: const Image(
+                          image: AssetImage('assets/careercatalysticon.jpg'),
+                          fit: BoxFit.fill,
+                        ))),
+                Center(
+                    child: Text(
+                      'Career Catalyst',
+                      style: GoogleFonts.varela(
+                          fontSize: 24.sp, fontWeight: FontWeight.w400),
+                    )),
                 SizedBox(
                   height: 10.sp,
                 ),
-                TextFormField(
-                  controller: name,
-                  validator: (val) => val!.isEmpty ? 'Enter your name' : null,
-                  decoration: InputDecoration(
-                    labelText: 'User Name',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.sp)),
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 12.sp),
+                  child: TextFormField(
+                    controller: name,
+                    validator: (val) => val!.isEmpty ? 'Enter your name' : null,
+                    decoration: InputDecoration(
+                      labelText: 'Name',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.sp)),
+                    ),
                   ),
                 ),
                  SizedBox(
                   height: 5.sp,
                 ),
-                TextFormField(
-                  //keyboardType: TextInputType.phone,
-                  controller: occupation,
-                  validator: (val) => val!.isEmpty ? 'Enter your Occupation' : null,
-                  decoration: InputDecoration(
-                    labelText: 'Enter occupation',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.sp)),
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 12.sp),
+                  child: TextFormField(
+                    //keyboardType: TextInputType.phone,
+                    controller: occupation,
+                    validator: (val) => val!.isEmpty ? 'Enter your Occupation' : null,
+                    decoration: InputDecoration(
+                      labelText: 'Enter occupation',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.sp)),
+                    ),
                   ),
                 ),
                  SizedBox(
                   height: 5.sp,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       child:  Text(
                         'Age :',
                         style: GoogleFonts.varela(
-                            fontWeight: FontWeight.w500, fontSize: 25.sp),
+                            fontWeight: FontWeight.w500, fontSize: 18.sp),
                       ),
                     ),
                     SizedBox(
@@ -161,121 +178,98 @@ class _SignUpState extends State<SignUp> {
                  SizedBox(
                   height: 5.sp,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      child: Text(
-                        'Gender :',
-                        style: GoogleFonts.varela(
-                            fontWeight: FontWeight.w500, fontSize: 25.sp),
-                      ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal:12.sp),
+                  child: TextFormField(
+                    controller: mail,
+                    validator: (val) => val!.isEmpty ? 'Enter your mail' : null,
+                    decoration: InputDecoration(
+                      labelText: 'Email',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.sp)),
                     ),
-                    SizedBox(
-                      // width: 180,
-                      child: DropdownButton(
-                        onChanged: dropdowncallback,
-                        value: _dropdownvalue,
-                        items: [
-                          DropdownMenuItem(
-                            value: 'Male',
-                            child: Text(
-                              'Male',
-                              style: GoogleFonts.varela(
-                                  fontWeight: FontWeight.w300, fontSize: 25.sp),
-                            ),
-                          ),
-                          DropdownMenuItem(
-                            value: 'Female',
-                            child: Text(
-                              'Female',
-                              style: GoogleFonts.varela(
-                                  fontWeight: FontWeight.w300, fontSize: 25.sp),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-               SizedBox(
-                  height: 5.sp,
-                ),
-                TextFormField(
-                  controller: mail,
-                  validator: (val) => val!.isEmpty ? 'Enter your mail' : null,
-                  decoration: InputDecoration(
-                    labelText: 'Email',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.sp)),
                   ),
                 ),
                 SizedBox(
                   height: 5.sp,
                 ),
-                TextFormField(
-                  controller: pass,
-                  obscureText: isSeen1,
-                  validator: (val) =>
-                      val!.isEmpty ? 'Enter a Strong Password' : null,
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    suffixIcon: InkWell(
-                        onTap: () {
-                          setState(() {
-                            isSeen1 = !isSeen1;
-                            if (isSeen1 == true) {
-                              icn1 = Icons.visibility;
-                            } else {
-                              icn1 = Icons.visibility_off;
-                            }
-                          });
-                        },
-                        child: Icon(icn1)),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.sp)),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.sp),
+                  child: TextFormField(
+                    controller: pass,
+                    obscureText: isSeen1,
+                    validator: (val) =>
+                        val!.isEmpty ? 'Enter a Strong Password' : null,
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      suffixIcon: InkWell(
+                          onTap: () {
+                            setState(() {
+                              isSeen1 = !isSeen1;
+                              if (isSeen1 == true) {
+                                icn1 = Icons.visibility;
+                              } else {
+                                icn1 = Icons.visibility_off;
+                              }
+                            });
+                          },
+                          child: Icon(icn1)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.sp)),
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 5.sp,
                 ),
-                TextFormField(
-                  controller: cnfpass,
-                  obscureText: isSeen2,
-                  validator: (val) =>
-                      val!.isEmpty ? 'Enter password again' : null,
-                  decoration: InputDecoration(
-                    labelText: 'Confirm Password',
-                    suffixIcon: InkWell(
-                        onTap: () {
-                          setState(() {
-                            isSeen2 = !isSeen2;
-                            if (isSeen2 == true) {
-                              icn2 = Icons.visibility;
-                            } else {
-                              icn2 = Icons.visibility_off;
-                            }
-                          });
-                        },
-                        child: Icon(icn2)),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.sp)),
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 12.sp),
+                  child: TextFormField(
+                    controller: cnfpass,
+                    obscureText: isSeen2,
+                    validator: (val) =>
+                        val!.isEmpty ? 'Enter password again' : null,
+                    decoration: InputDecoration(
+                      labelText: 'Confirm Password',
+                      suffixIcon: InkWell(
+                          onTap: () {
+                            setState(() {
+                              isSeen2 = !isSeen2;
+                              if (isSeen2 == true) {
+                                icn2 = Icons.visibility;
+                              } else {
+                                icn2 = Icons.visibility_off;
+                              }
+                            });
+                          },
+                          child: Icon(icn2)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.sp)),
+                    ),
                   ),
                 ),
-                CheckboxMenuButton(
-                    value: isEnabled,
-                    onChanged: (val) {
-                      setState(() {
-                        isEnabled = val;
-                      });
-                    },
-                    child:Text(
-                      'I agree to Terms & Conditions',
-                      style: GoogleFonts.varela(fontWeight: FontWeight.w700),
-                    )),
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 8.sp),
+                  child: CheckboxMenuButton(
+                      value: isEnabled,
+                      onChanged: (val) {
+                        setState(() {
+                          isEnabled = val;
+                        });
+                      },
+                      child:GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Terms()));
+                        },
+                        child: Text(
+                          'I agree to Terms & Conditions...',
+                          style: GoogleFonts.varela(fontWeight: FontWeight.w700),
+                        ),
+                      )),
+                ),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor:Colors.red),
+                        backgroundColor:Theme.of(context).colorScheme.primaryContainer),
                     onPressed: (){
                       if(key.currentState!.validate() && isEnabled==true){
                         signup();
@@ -299,14 +293,14 @@ class _SignUpState extends State<SignUp> {
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
                   SizedBox(
-                      width: 15.sp,
+                      width: 5.sp,
                     ),
                     InkWell(
                         onTap: widget.onTap,
                         child: Text(
                           'Login',
                           style: GoogleFonts.varela(
-                              color: Colors.blue,
+                              color: Theme.of(context).colorScheme.primary,
                               fontWeight: FontWeight.bold,
                               fontSize: 13.sp),
                         )),

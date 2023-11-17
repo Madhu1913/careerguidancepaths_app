@@ -24,9 +24,9 @@ class _savedPostsPageState extends State<savedPostsPage> {
           style: GoogleFonts.varela(
               fontSize: 22.sp,
               fontWeight: FontWeight.bold,
-              color: Colors.black54),
+              color: Colors.white),
         ),
-        backgroundColor: Colors.orangeAccent.shade100,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
       ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
@@ -62,7 +62,7 @@ class _savedPostsPageState extends State<savedPostsPage> {
                         child: Container(
                           // height: 40.h,
                           // width: 45.w,
-                          color: Colors.redAccent,
+                          color: Theme.of(context).colorScheme.primary,
                           child: Center(
                             child: Column(
                               children: [

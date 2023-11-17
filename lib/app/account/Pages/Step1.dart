@@ -80,11 +80,12 @@ class _Step1State extends State<Step1> {
             ),
             title: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const Text('Select the default image',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16),),
                 Container(height: 80,width: 100,
                     decoration: BoxDecoration(
                   image: DecorationImage(image: NetworkImage(value.defimg,),fit: BoxFit.cover),
                 )),
+                const Text('Select the default image',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16),),
+
               ],
             ))
       ]),

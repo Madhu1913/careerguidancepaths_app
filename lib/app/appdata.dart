@@ -3,13 +3,10 @@ import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/DynamicPaths.
 import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/homepage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
-import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'account/accountPage.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 class Appdata extends StatefulWidget {
   const Appdata({
@@ -63,11 +60,11 @@ class _AppdataState extends State<Appdata> {
           backgroundColor: Theme.of(context).colorScheme.primary,
           activeColor: Theme.of(context).colorScheme.background,
             initialActiveIndex: 0,
-            items: [
+            items: const [
               TabItem(icon: Icons.home_filled,title: 'Home',),
-              TabItem(icon: Icons.category_outlined,title: 'Categories'),
+              TabItem(icon: Icons.dashboard,title: 'Categories'),
               TabItem(icon: Icons.border_clear_outlined,title: 'Paths'),
-              TabItem(icon: Icons.person,title: 'Profile'),
+              TabItem(icon: Icons.person_2,title: 'Profile'),
             ],
             // animationCurve: Curves.fastOutSlowIn,
             // animationDuration: const Duration(milliseconds: 400),

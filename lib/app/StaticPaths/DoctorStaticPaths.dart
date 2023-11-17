@@ -86,7 +86,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
     super.initState();
     readJson();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     _offsetAnimation = Tween<Offset>(
@@ -162,7 +162,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                 child: Text(
                   _nameImg[widget.i]['name'],
                   style: GoogleFonts.varela(
-                      fontWeight: FontWeight.bold, fontSize: 24),
+                      fontWeight: FontWeight.bold, fontSize: 18.sp),
                 )),
             Positioned(
               top: 19.h,
@@ -182,7 +182,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                             height: 7.5.h,
                             // width: 100
                             child: Card(
-                              color: Color(0xff81B29A),
+                              color: const Color(0xff81B29A),
                               child: Center(
                                   child: Text(
                                 '${myList[i]['point']}',
@@ -209,7 +209,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                   child: SizedBox(
                     height: 58.h,
                     width: 90.w,
-                    child: Card(shape: RoundedRectangleBorder(side: BorderSide(color:Color(0xff81B29A),width: 4 )),
+                    child: Card(shape: const RoundedRectangleBorder(side: BorderSide(color:Color(0xff81B29A),width: 4 )),
                       child: Column(
                         children: [
                           Padding(
@@ -220,7 +220,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                                 Text(
                                   'DESCRIPTION',
                                   style: GoogleFonts.varela(
-                                      fontSize: 24, fontWeight: FontWeight.bold),
+                                      fontSize:16.sp, fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
@@ -246,7 +246,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                 top: 78.h,
                 left: 30.w,
                 child: Card(
-                  color: Color(0xffEE6C4D),
+                  color: const Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -263,7 +263,7 @@ class _doctorStaticPathsState extends State<doctorStaticPaths>
                 top: 78.h,
                 left: 60.w,
                 child: Card(
-                  color: Color(0xffEE6C4D),
+                  color: const Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -291,7 +291,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paintFill0 = Paint()
-      ..color = Color(0xff3D405B)
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -334,7 +334,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy
 
     Paint paintStroke0 = Paint()
-      ..color = Color(0xff3D405B)
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -345,7 +345,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy
 
     Paint paintFill1 = Paint()
-      ..color = Color(0xff3D405B)
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -388,7 +388,7 @@ class RPSCustomPainter extends CustomPainter {
     // Circle Copy Copy
 
     Paint paintStroke1 = Paint()
-      ..color = Color(0xff3D405B)
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

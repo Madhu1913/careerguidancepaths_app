@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
             title: Center(
                 child: Text(
               msg,
-              style:  GoogleFonts.varela(
+              style: GoogleFonts.varela(
                   fontWeight: FontWeight.bold,
                   fontSize: 13.sp,
                   color: Colors.white),
@@ -69,55 +69,73 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Form(
           key: key,
           child: Padding(
-            padding:  EdgeInsets.all(5.sp),
+            padding: EdgeInsets.all(5.sp),
             child: Column(
               children: [
-              SizedBox(
-                  height: 195.sp,
+                SizedBox(
+                  height: 15.h,
                 ),
+                Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24.sp)),
+                    height: 20.h,
+                    width: 42.w,
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(24.sp),
+                        child: const Image(
+                          image: AssetImage('assets/careercatalysticon.jpg'),
+                          fit: BoxFit.fill,
+                        ))),
                 Center(
                     child: Text(
-                  'Login',
-                  style: GoogleFonts.varela(fontSize: 35.sp, fontWeight: FontWeight.bold),
+                  'Career Catalyst',
+                  style: GoogleFonts.varela(
+                      fontSize: 30.sp, fontWeight: FontWeight.w400),
                 )),
-                 SizedBox(
+                SizedBox(
                   height: 25.sp,
                 ),
-                TextFormField(
-                  controller: _user,
-                  validator: (val) => val!.isEmpty ? 'Enter Email' : null,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15.sp)),
-                      prefixIcon: const Icon(Icons.mail),
-                      labelText: 'Email',
-                      hintText: 'Email'),
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 8.sp),
+                  child: TextFormField(
+                    controller: _user,
+                    validator: (val) => val!.isEmpty ? 'Enter Email' : null,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.sp)),
+                        prefixIcon: const Icon(Icons.mail),
+                        labelText: 'Email',
+                        hintText: 'Email'),
+                  ),
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 15.sp,
                 ),
-                TextFormField(
-                  controller: _pass,
-                  validator: (val) => val!.isEmpty ? 'Enter Password' : null,
-                  obscureText: isSeen,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15.sp)),
-                      labelText: "Password",
-                      hintText: 'Password',
-                      prefixIcon: const Icon(Icons.password),
-                      suffixIcon: InkWell(
-                          onTap: () {
-                            isSeen = !isSeen;
-                            setState(() {
-                              if (isSeen == true) {
-                                icn = Icons.visibility;
-                              } else {
-                                icn = Icons.visibility_off;
-                              }
-                            });
-                          },
-                          child: Icon(icn))),
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 8.0.sp),
+                  child: TextFormField(
+                    controller: _pass,
+                    validator: (val) => val!.isEmpty ? 'Enter Password' : null,
+                    obscureText: isSeen,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.sp)),
+                        labelText: "Password",
+                        hintText: 'Password',
+                        prefixIcon: const Icon(Icons.password),
+                        suffixIcon: InkWell(
+                            onTap: () {
+                              isSeen = !isSeen;
+                              setState(() {
+                                if (isSeen == true) {
+                                  icn = Icons.visibility;
+                                } else {
+                                  icn = Icons.visibility_off;
+                                }
+                              });
+                            },
+                            child: Icon(icn))),
+                  ),
                 ),
                 SizedBox(
                   height: 5.sp,
@@ -130,27 +148,28 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ForgotPasswordPage()));
+                                builder: (context) =>
+                                    const ForgotPasswordPage()));
                       },
-                      child:  Padding(
+                      child: Padding(
                         padding: EdgeInsets.only(bottom: 4.sp),
                         child: Text(
                           'Forgot Password? ',
                           style: GoogleFonts.varela(
                               fontWeight: FontWeight.w600,
-                              color: Colors.red,
+                              color:Theme.of(context).colorScheme.secondary,
                               fontSize: 11.sp),
                         ),
                       ),
                     ),
                   ],
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 5.sp,
                 ),
                 ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red),
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Theme.of(context).colorScheme.primaryContainer),
                     onPressed: Login,
                     child: Text(
                       'Login',
@@ -166,15 +185,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text('Not a Registered user?'),
-                     SizedBox(
+                    SizedBox(
                       width: 5.sp,
                     ),
                     InkWell(
                         onTap: widget.onTap,
-                        child:  Text(
+                        child: Text(
                           'Register',
                           style: GoogleFonts.varela(
-                              color: Colors.blue,
+                              color: Theme.of(context).colorScheme.primary,
                               fontWeight: FontWeight.bold,
                               fontSize: 13.sp),
                         )),

@@ -260,7 +260,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
                             height: 7.5.h,
                             // width: 100
                             child: Card(
-                              color: Color(0xffF7B267),
+                              color: const Color(0xff81B29A),
                               child: Center(
                                   child: Text(
                                     '${myList[i]['point']}',
@@ -272,7 +272,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
                             ),
                           ),
                           i != myList.length - 1
-                              ? Icon(Icons.arrow_downward_outlined)
+                              ? const Icon(Icons.arrow_downward_outlined)
                               : Container(),
                         ],
                       );
@@ -287,7 +287,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
                   child: SizedBox(
                     height: 52.h,
                     width: 79.w,
-                    child: Card(shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xffF7B267),width: 4)),
+                    child: Card(shape: const RoundedRectangleBorder(side: BorderSide(color:Color(0xff81B29A),width: 4 )),
                       child: Column(
                         children: [
                           Padding(
@@ -313,7 +313,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
                 top: 74.h,
                 left: 25.w,
                 child:
-                Card(color: Color(0xffFb6f92),
+                Card(color: const Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -326,7 +326,7 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
                 top: 74.h,
                 left: 45.w,
                 child:
-                Card(color: Color(0xffFb6f92),
+                Card(color: const Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -345,91 +345,113 @@ class _policeStaticPathsState extends State<policeStaticPaths> with SingleTicker
 class RPSCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    // Circle
+    // Circle Copy
 
-    Paint paint_fill_0 = Paint()
-      ..color = const Color(0xff0F4C5C)
+    Paint paintFill0 = Paint()
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
     Path path_0 = Path();
-    path_0.moveTo(size.width * 0.5746750, size.height * -0.0017000);
+    path_0.moveTo(size.width * -0.0001570, size.height * 1.0012643);
     path_0.cubicTo(
-        size.width * 0.7075250,
-        size.height * -0.0017000,
-        size.width * 0.9819750,
-        size.height * 0.2351000,
-        size.width * 0.9899750,
-        size.height * 0.5057500);
+        size.width * 0.0015886,
+        size.height * 0.8797853,
+        size.width * 0.0033250,
+        size.height * 0.8375875,
+        size.width * 0.0020500,
+        size.height * 0.6855625);
     path_0.cubicTo(
-        size.width * 0.9899750,
-        size.height * 0.5805500,
-        size.width * 1.0503000,
-        size.height * -0.0010750,
-        size.width * 0.8178250,
-        size.height * -0.0010750);
+        size.width * 0.0548000,
+        size.height * 0.6390500,
+        size.width * -0.0294500,
+        size.height * 0.9380625,
+        size.width * 0.2650750,
+        size.height * 0.9374625);
     path_0.cubicTo(
-        size.width * 0.6849750,
-        size.height * -0.0010750,
-        size.width * 0.4497000,
-        size.height * 0.0455750,
-        size.width * -0.0049750,
-        size.height * 0.1893625);
+        size.width * 0.5053500,
+        size.height * 0.9465125,
+        size.width * 0.7255250,
+        size.height * 0.9323000,
+        size.width * 1.0016649,
+        size.height * 1.0007179);
     path_0.cubicTo(
-        size.width * -0.0049750,
-        size.height * 0.1145500,
-        size.width * 0.3421750,
-        size.height * -0.0017000,
-        size.width * 0.5746750,
-        size.height * -0.0017000);
+        size.width * 0.7134374,
+        size.height * 1.0036903,
+        size.width * 0.2943472,
+        size.height * 1.0006581,
+        size.width * -0.0001570,
+        size.height * 1.0012643);
     path_0.close();
 
-    canvas.drawPath(path_0, paint_fill_0);
+    canvas.drawPath(path_0, paintFill0);
 
     // Circle Copy
 
-    Paint paint_fill_1 = Paint()
-      ..color = const Color(0xff0F4C5C)
+    Paint paintStroke0 = Paint()
+      ..color = const Color(0xff3D405B)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.00
+      ..strokeCap = StrokeCap.butt
+      ..strokeJoin = StrokeJoin.miter;
+
+    canvas.drawPath(path_0, paintStroke0);
+
+    // Circle Copy Copy
+
+    Paint paintFill1 = Paint()
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
     Path path_1 = Path();
-    path_1.moveTo(size.width * 0.4147750, size.height * 1.0001875);
+    path_1.moveTo(size.width * 0.9988750, size.height * -0.0012750);
     path_1.cubicTo(
-        size.width * 0.2819500,
-        size.height * 0.9999125,
-        size.width * 0.0426250,
-        size.height * 0.9252250,
-        size.width * 0.0037500,
-        size.height * 0.4928375);
-    path_1.cubicTo(
-        size.width * 0.0003750,
-        size.height * 0.4161750,
-        size.width * -0.0608250,
-        size.height * 0.9985750,
-        size.width * 0.1716500,
-        size.height * 0.9990625);
-    path_1.cubicTo(
-        size.width * 0.3325000,
-        size.height * 0.9993375,
-        size.width * 0.6218000,
-        size.height * 0.9205625,
-        size.width * 0.9960500,
-        size.height * 0.8107000);
-    path_1.cubicTo(
+        size.width * 0.9971750,
+        size.height * 0.1201875,
         size.width * 0.9954250,
-        size.height * 0.8853750,
-        size.width * 0.6473000,
-        size.height * 1.0006875,
-        size.width * 0.4147750,
-        size.height * 1.0001875);
+        size.height * 0.1623875,
+        size.width * 0.9967500,
+        size.height * 0.3144125);
+    path_1.cubicTo(
+        size.width * 0.9413500,
+        size.height * 0.3529125,
+        size.width * 1.0281750,
+        size.height * 0.0619125,
+        size.width * 0.7336500,
+        size.height * 0.0625250);
+    path_1.cubicTo(
+        size.width * 0.4934000,
+        size.height * 0.0534875,
+        size.width * 0.2732000,
+        size.height * 0.0677125,
+        size.width * -0.0029500,
+        size.height * -0.0007000);
+    path_1.cubicTo(
+        size.width * 0.2852750,
+        size.height * -0.0036875,
+        size.width * 0.7043750,
+        size.height * -0.0006625,
+        size.width * 0.9988750,
+        size.height * -0.0012750);
     path_1.close();
 
-    canvas.drawPath(path_1, paint_fill_1);
+    canvas.drawPath(path_1, paintFill1);
+
+    // Circle Copy Copy
+
+    Paint paintStroke1 = Paint()
+      ..color = const Color(0xff3D405B)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.00
+      ..strokeCap = StrokeCap.butt
+      ..strokeJoin = StrokeJoin.miter;
+
+    canvas.drawPath(path_1, paintStroke1);
   }
 
   @override
@@ -437,3 +459,4 @@ class RPSCustomPainter extends CustomPainter {
     return true;
   }
 }
+

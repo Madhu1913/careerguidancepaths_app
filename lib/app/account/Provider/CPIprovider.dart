@@ -58,13 +58,16 @@ class cpiProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  List imgs = [
-    'https://img.freepik.com/premium-vector/doctor-character-background-design_730620-7986.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais',
-    'https://img.freepik.com/free-vector/man-construction-site-with-icons_1212-660.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais',
-    'https://img.freepik.com/premium-vector/illustration-four-policemen-white-background_1308-1206.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais',
-    'https://img.freepik.com/free-vector/flat-lawyers-day-background_23-2149216503.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais',
-    'https://img.freepik.com/premium-vector/pilot-standing-front-plane_51635-8303.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais'
-  ];
+   List imgs = [
+     'https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg',
+     'https://img.freepik.com/free-vector/building-safety-concept-illustration_114360-7300.jpg',
+     'https://img.freepik.com/free-vector/police-officers-concept-illustration_114360-13667.jpg',
+     'https://img.freepik.com/free-vector/teacher-concept-illustration_114360-1638.jpg',
+     'https://img.freepik.com/free-vector/hand-coding-concept-illustration_114360-8113.jpg?size=626&ext=jpg&uid=R125384538&ga=GA1.1.179435846.1697645450',
+     'https://img.freepik.com/free-vector/air-support-concept-illustration_114360-518.jpg',
+     'https://img.freepik.com/free-vector/astronaut-suit-illustration_114360-8538.jpg',
+     'https://img.freepik.com/free-vector/female-lawyer-concept-illustration_114360-16427.jpg'
+   ];
   String? selimg;
   void selectImg(val) {
     selimg = val;
@@ -83,7 +86,7 @@ class cpiProvider extends ChangeNotifier {
   }
 
   String defimg =
-      'https://img.freepik.com/premium-vector/businessman-with-briefcase-cartoon-concept_24640-7643.jpg?size=626&ext=jpg&uid=R121111794&ga=GA1.1.818006338.1696755883&semt=ais';
+      'https://img.freepik.com/free-vector/lying-arrow-concept-illustration_114360-8531.jpg';
   int haveimg = 0;
   int selector = 0;
 }

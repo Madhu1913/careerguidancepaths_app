@@ -1,6 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
-import 'dart:ui';
 import 'package:careerguidancepaths_app/app/account/AddpathPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/EditPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/MyWorkSpace.dart';
@@ -18,7 +16,7 @@ import 'package:sizer/sizer.dart';
 
 class AccountPage extends StatefulWidget {
   bool img;
-  AccountPage({super.key,required this.img});
+  AccountPage({super.key, required this.img});
 
   @override
   State<AccountPage> createState() => _AccountPageState();
@@ -48,7 +46,7 @@ class _AccountPageState extends State<AccountPage> {
     final snapshot=await uploadTask!.whenComplete(() {});
     final urlDownload= await snapshot.ref.getDownloadURL();
 
-    print('DownloadLink:${urlDownload}');
+    print('DownloadLink:$urlDownload');
     profilePic=urlDownload;
   }
 
@@ -93,7 +91,7 @@ class _AccountPageState extends State<AccountPage> {
                     Positioned(
                         left: 20.w,
                         top: 5.sp,
-                        child: Text('CAREER CATALYST',style: GoogleFonts.varela(fontWeight: FontWeight.bold,color: Theme.of(context).colorScheme.background,fontSize: 26),)),
+                        child: Text('CAREER CATALYST',style: GoogleFonts.varela(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 26),)),
                     Positioned(
                         left: 5.25.w,
                         top: 6.28.h,
@@ -106,8 +104,8 @@ class _AccountPageState extends State<AccountPage> {
                           // child: Image.network(''),
                         )),
                     Positioned(
-                        left: 7.1.w,
-                        top: 7.h,
+                        left: 6.5.w,
+                        top: 6.75.h,
                         child: CircleAvatar(
                           radius: 8.9.h,
                           child:  AspectRatio(
@@ -161,7 +159,9 @@ class _AccountPageState extends State<AccountPage> {
                     Positioned(
                         left: 16.25.h,
                         top: 19.h,
-                        child: Card(shape: RoundedRectangleBorder(
+                        child: Card(
+                          color: Colors.white,
+                            shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(360)),
                             child: IconButton(
                               onPressed: () async {
@@ -169,7 +169,7 @@ class _AccountPageState extends State<AccountPage> {
                                 setState(() {
                                   widget.img=true;
                                 });
-                              },icon: const Icon(Icons.image,color: Colors.red,),))),
+                              },icon:  Icon(Icons.image,color:  Theme.of(context).colorScheme.secondary,),))),
                     Positioned(
                         left: 32.5.w,
                         top: 32.h,
@@ -179,21 +179,21 @@ class _AccountPageState extends State<AccountPage> {
                           child: Card(
                             // color: Colors.red,
                             shadowColor: Colors.red,
-                            elevation: 15.sp,
+                            // elevation: 15.sp,
                             color: Colors.white,
                             shape: RoundedRectangleBorder(
-                                side:  BorderSide(color: Color(0xff72efdd), width: 10),
+                                side:  BorderSide(color: Theme.of(context).colorScheme.secondary, width: 10),
                                 borderRadius: BorderRadius.circular(25.sp)),
                             child: Column(
                               children: [
                                 SizedBox(height: 15.sp,),
                                 Text('DETAILS', style: GoogleFonts.varela(fontSize: 20.sp,
-                                    color: Colors.red,
+                                    color:  Theme.of(context).colorScheme.tertiary,
                                     fontWeight: FontWeight.w700),),
                                 const SizedBox(height: 5,),
                                 Container(height: 2,
                                   width: 60.w,
-                                  color: Colors.red,),
+                                  color:  Theme.of(context).colorScheme.secondary),
                                 Padding(
                                   padding: EdgeInsets.all(7.sp),
                                   child: Row(
@@ -205,7 +205,7 @@ class _AccountPageState extends State<AccountPage> {
                                           SizedBox(height: 6.23.h,
                                               child: SingleChildScrollView(
                                                 scrollDirection: Axis.horizontal,
-                                                child: Card(color: Colors.red,
+                                                child: Card(color: Theme.of(context).colorScheme.tertiary,
                                                     child: Center(child: Row(
                                                       mainAxisAlignment: MainAxisAlignment
                                                           .start,
@@ -228,7 +228,7 @@ class _AccountPageState extends State<AccountPage> {
                                           SizedBox(height: 6.23.h,
                                               child: SingleChildScrollView(
                                                 scrollDirection: Axis.horizontal,
-                                                child: Card(color: Colors.red,
+                                                child: Card(color:  Theme.of(context).colorScheme.tertiary,
                                                     child: Center(child: Row(
                                                       mainAxisAlignment: MainAxisAlignment
                                                           .start,
@@ -251,7 +251,7 @@ class _AccountPageState extends State<AccountPage> {
                                           SizedBox(height: 6.23.h,
                                               child: SingleChildScrollView(
                                                 scrollDirection: Axis.horizontal,
-                                                child: Card(color: Colors.red,
+                                                child: Card(color:  Theme.of(context).colorScheme.tertiary,
                                                     child: Center(child: Row(
                                                       mainAxisAlignment: MainAxisAlignment
                                                           .start,
@@ -274,11 +274,11 @@ class _AccountPageState extends State<AccountPage> {
                                           Padding(
                                             padding: EdgeInsets.only(left: 9.h),
                                             child: ElevatedButton(
-                                                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                                                style: ElevatedButton.styleFrom(backgroundColor:  Theme.of(context).colorScheme.tertiary,),
                                                 onPressed: () {
                                               Navigator.push(context, MaterialPageRoute(builder: (context)=> editPage(name: '${userdata['userName']}', age: '${userdata['age']}', occupation: '${userdata['occupation']}',)));
                                             },
-                                                child: Text('EDIT',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 20),)),
+                                                child: Text('EDIT',style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white),)),
                                           )
                                         ],
                                       ),
@@ -293,15 +293,15 @@ class _AccountPageState extends State<AccountPage> {
                     Positioned(
                       left: 5.w,
                       top: 71.h,
-                      child: Column(
+                      child: Row(
                         children: [
                           Row(
                             children: [
                               Card(
-                                color:  Theme.of(context).colorScheme.primary,
+                                color:  Theme.of(context).colorScheme.secondary,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(360)),
-                                child: IconButton(
+                                child: IconButton(tooltip: 'Add Path',
                                   onPressed: () {
                                     Navigator.push(context,
                                         MaterialPageRoute(builder: (context) =>  const addPathPage()));
@@ -323,7 +323,7 @@ class _AccountPageState extends State<AccountPage> {
                                 child: SizedBox(
                                     height: 6.23.h,
                                     width: 30.w,
-                                    child: Card(color:  Theme.of(context).colorScheme.primary,
+                                    child: Card(color:  Theme.of(context).colorScheme.secondary,
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(25.sp)),
                                       child: Center(child: Text('MyPaths',
@@ -336,7 +336,6 @@ class _AccountPageState extends State<AccountPage> {
                           ),
                           Row(
                             children: [
-
                               GestureDetector(
                                 onTap: () {
                                   Navigator.push(
@@ -349,7 +348,7 @@ class _AccountPageState extends State<AccountPage> {
                                     height: 6.23.h,
                                     width: 25.w,
                                     child: Card(
-                                      color: Theme.of(context).colorScheme.primary,
+                                      color: Theme.of(context).colorScheme.secondary,
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(25.sp)),
                                       child: Center(child: Text('Saved',
@@ -362,10 +361,10 @@ class _AccountPageState extends State<AccountPage> {
                                 width: 5.w,
                               ),
                               Card(
-                                color:  Theme.of(context).colorScheme.primary,
+                                color:  Theme.of(context).colorScheme.secondary,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(360)),
-                                child: IconButton(
+                                child: IconButton(tooltip: 'WorkSpace',
                                     onPressed: () async {
                                       final data = await FirebaseFirestore.instance
                                           .collection('Users')
@@ -433,8 +432,8 @@ class RPSCustomPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Circle
 
-    Paint paint_fill_1 = Paint()
-      ..color = const Color(0xff72efdd)
+    Paint paintFill1 = Paint()
+      ..color = const Color(0xbd03ce32)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -472,18 +471,18 @@ class RPSCustomPainter extends CustomPainter {
         size.height * 0.0010000);
     path_1.close();
 
-    canvas.drawPath(path_1, paint_fill_1);
+    canvas.drawPath(path_1, paintFill1);
 
     // Circle
 
-    Paint paint_stroke_1 = Paint()
-      ..color = const Color(0xff72efdd)
+    Paint paintStroke1 = Paint()
+      ..color = const Color(0xbd03ce32)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
-    canvas.drawPath(path_1, paint_stroke_1);
+    canvas.drawPath(path_1, paintStroke1);
 
     // Circle Copy
     //

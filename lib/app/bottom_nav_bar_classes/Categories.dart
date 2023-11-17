@@ -117,11 +117,12 @@ class _categoriesState extends State<categories> {
     ];
     return Scaffold(
       appBar: AppBar(elevation: 0,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         title: Text(
           'Categories',
           style: GoogleFonts.varela(
-              fontSize: 26.sp, fontWeight: FontWeight.bold, color: Colors.teal),
+              fontSize: 26.sp, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.primary),
         ),
       ),
       body: Column(
@@ -148,24 +149,28 @@ class _categoriesState extends State<categories> {
                                     height: 34.h,
                                     width: 96.w,
                                     child: Card(elevation: 10,shadowColor: Colors.white,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.sp),side: BorderSide(color: Theme.of(context).colorScheme.primary,width: 2)),
-                                      color: Theme.of(context).colorScheme.tertiaryContainer,
+                                      color: Theme.of(context).colorScheme.secondaryContainer,
                                     ),
                                   ),
                                   Positioned(
                                       top:9.h,left:6.w,
                                       child: ClipRRect(borderRadius: BorderRadius.circular(20.sp),
-                                          child: Container(height: 15.h,width: 30.w,child: Image.network(_categories[i]['url'],fit: BoxFit.fill,),))),
+                                          child: SizedBox(height: 15.h,width: 30.w,
+                                            child: FadeInImage.assetNetwork(placeholder: 'assets/giphy.gif', image: _categories[i]['url'],fit: BoxFit.fill,),))),
                                   Positioned(
                                     left: 38.w,
                                       top: 3.h,
-                                      child: SizedBox(height: 28.h,width: 54.w,child: Card(shape:RoundedRectangleBorder(side: BorderSide(color: Theme.of(context).colorScheme.background,width: 2)),
+                                      child: SizedBox(height: 29.h,width: 54.w,child: Card(shape:RoundedRectangleBorder(side: BorderSide(color: Theme.of(context).colorScheme.background,width: 2)),
                                         child: Padding(
                                           padding:  EdgeInsets.all(4.sp),
                                           child: Column(
                                             children: [
                                               Text(_categories[i]['name'],style: GoogleFonts.varela(fontWeight: FontWeight.bold,fontSize: 16.sp),),
-                                              SizedBox(height: 0.5.h,),
-                                              Text(_categories[i]['desc'],style: GoogleFonts.varela(fontSize: 10.5.sp),)
+                                              SizedBox(height: 0.2.h,),
+                                              Padding(
+                                                padding:  EdgeInsets.all(3.sp),
+                                                child: Text(_categories[i]['desc'],style: GoogleFonts.varela(fontSize: 10.5.sp),),
+                                              )
                                             ],
                                           ),
                                         ),

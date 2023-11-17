@@ -142,7 +142,7 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
                           height: 7.5.h,
                           // width: 100
                           child: Card(
-                            color: Color(0xff34623f),
+                            color: const Color(0xff81B29A),
                             child: Center(
                                 child: Text(
                                   '${myList[i]['point']}',
@@ -154,7 +154,7 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
                           ),
                         ),
                         i != myList.length - 1
-                            ? Icon(Icons.arrow_downward_outlined)
+                            ? const Icon(Icons.arrow_downward_outlined)
                             : Container(),
                       ],
                     );
@@ -169,7 +169,7 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
                 child: SizedBox(
                   height: 58.h,
                   width: 90.w,
-                  child: Card(shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff34623f),width: 4)),
+                  child: Card(shape: const RoundedRectangleBorder(side: BorderSide(color:Color(0xff81B29A),width: 4 )),
                     child: Column(
                       children: [
                         Padding(
@@ -195,7 +195,7 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
               top: 78.h,
               left: 30.w,
               child:
-              Card(color: Colors.red,
+              Card(color: const Color(0xffEE6C4D),
                 child: Center(
                   child: IconButton(
                       onPressed: () {
@@ -208,7 +208,7 @@ late List data=[_frontEnd,_backEnd,_devOps,_fullStack,_android,_uiUx,_cyberSecur
               top: 78.h,
               left: 60.w,
               child:
-              Card(color: Colors.red,
+              Card(color: const Color(0xffEE6C4D),
                 child: Center(
                   child: IconButton(
                       onPressed: () {
@@ -231,8 +231,8 @@ class RPSCustomPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Circle Copy
 
-    Paint paint_fill_0 = Paint()
-      ..color = const Color(0xffffcf00)
+    Paint paintFill0 = Paint()
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -270,23 +270,23 @@ class RPSCustomPainter extends CustomPainter {
         size.height * 1.0012643);
     path_0.close();
 
-    canvas.drawPath(path_0, paint_fill_0);
+    canvas.drawPath(path_0, paintFill0);
 
     // Circle Copy
 
-    Paint paint_stroke_0 = Paint()
-      ..color = const Color(0xffffcf00)
+    Paint paintStroke0 = Paint()
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
-    canvas.drawPath(path_0, paint_stroke_0);
+    canvas.drawPath(path_0, paintStroke0);
 
     // Circle Copy Copy
 
-    Paint paint_fill_1 = Paint()
-      ..color = const Color(0xffffcf00)
+    Paint paintFill1 = Paint()
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
@@ -324,18 +324,18 @@ class RPSCustomPainter extends CustomPainter {
         size.height * -0.0012750);
     path_1.close();
 
-    canvas.drawPath(path_1, paint_fill_1);
+    canvas.drawPath(path_1, paintFill1);
 
     // Circle Copy Copy
 
-    Paint paint_stroke_1 = Paint()
-      ..color = const Color(0xffffcf00)
+    Paint paintStroke1 = Paint()
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
-    canvas.drawPath(path_1, paint_stroke_1);
+    canvas.drawPath(path_1, paintStroke1);
   }
 
   @override

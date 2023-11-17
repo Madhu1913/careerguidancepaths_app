@@ -1,8 +1,8 @@
-import 'package:careerguidancepaths_app/Extra/Theme/theme.dart';
-import 'package:careerguidancepaths_app/Extra/splashscreen.dart';
+
+import 'package:careerguidancepaths_app/app/Extra/Theme/theme.dart';
+import 'package:careerguidancepaths_app/app/Extra/splashscreen.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/sharedPreferenceProvider.dart';
-import 'package:careerguidancepaths_app/auth/auth_Page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

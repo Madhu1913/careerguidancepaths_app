@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
 
@@ -32,12 +33,15 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Forgot Password?'),
+      ),
       body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25.0),
-            child: Text('Enter your Email for a Password Reset Link',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
+          SizedBox(height: 20.h,),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text('Enter your Email for a Password Reset Link',style: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w600),),
           ),
 
           Padding(

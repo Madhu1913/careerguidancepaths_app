@@ -1,7 +1,7 @@
 import 'dart:convert';
+import 'package:careerguidancepaths_app/app/Extra/SuccessStories.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/MyWorkSpace.dart';
 import 'package:careerguidancepaths_app/app/bottom_nav_bar_classes/DynamicPaths.dart';
-import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -11,6 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../Extra/AverageSalariesPage.dart';
 import '../subcategories/AirHostress.dart';
 import '../subcategories/Archeologist.dart';
 import '../subcategories/Astrounaut.dart';
@@ -33,7 +34,6 @@ import '../subcategories/SoftwareEngineerSubCategory.dart';
 import '../subcategories/SportsCoach.dart';
 import '../subcategories/TeacherSubCategory.dart';
 import 'Drawer.dart';
-import 'package:lottie/lottie.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
       _engSub = data["subEng"];
       _polSub = data["subPol"];
       _tecSub = data["subTec"];
-      _sofEngSub = data["subSofEng"];
+      _sofEngSub = data["subSoft"];
       _govEmpSub = data["subGovEmp"];
     });
   }
@@ -90,9 +90,9 @@ class _HomePageState extends State<HomePage> {
     policeSubCategories(polSub: _polSub),
     teacherSubCategory(tecSub: _tecSub),
     softwareEngineerSubCategories(sofEngSub: _sofEngSub),
-    pilot(),
-    astrounaut(),
-    lawyer(),
+    const pilot(),
+    const astrounaut(),
+    const lawyer(),
   ];
 
   @override
@@ -141,14 +141,14 @@ class _HomePageState extends State<HomePage> {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.sp)),
         title: Text(
           'Career Catalyst',
-          style: GoogleFonts.varela(fontSize: 22.sp, color: Theme.of(context).colorScheme.background),
+          style: GoogleFonts.varela(fontSize: 22.sp, color: Colors.white),
         ),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
               icon: Icon(
                 Icons.menu,
-                color: Theme.of(context).colorScheme.background,
+                color: Colors.white,
                 size: 26.sp,
               ),
               onPressed: () {
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(
                 Icons.search,
                 size: 4.h,
-                color: Theme.of(context).colorScheme.background,
+                color: Colors.white,
               ))
         ],
       ),
@@ -195,10 +195,11 @@ class _HomePageState extends State<HomePage> {
                         },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(38.sp),
-                            child: Image.network(
-                              li[index],
-                              fit: BoxFit.cover,
-                            ),
+                            child: FadeInImage.assetNetwork(
+                              placeholder: 'assets/giphy.gif',
+                              image:  li[index],
+                                fit: BoxFit.cover,
+                            )
                           ),
                         ),
                       ),
@@ -245,28 +246,26 @@ class _HomePageState extends State<HomePage> {
               height: 2.0.h,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  "  If you don't have an any idea",
+                  "   If you don't have an any idea",
                   style: GoogleFonts.varela(
-                      fontSize: 19, fontWeight: FontWeight.bold),
+                      fontSize: 15.sp, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            SizedBox(
-              height: 2.5.h,
-            ),
+
             Row(
               children: [
-                Container(
+                SizedBox(
                     height: 22.5.h,
                     width: 100.w,
                     child: Lottie.asset('assets/doubtAnimation.json')),
               ],
             ),
             ElevatedButton(onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>dynamicPaths()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const dynamicPaths()));
             }, child:  Text('Click Here',style:GoogleFonts.varela(color: Theme.of(context).colorScheme.background) ,)),
             SizedBox(
               height: 2.5.h,
@@ -275,9 +274,9 @@ class _HomePageState extends State<HomePage> {
             //     height: 0.5.h,
             //     width: 100.w,
             //     color:Theme.of(context).colorScheme.background),
-            SizedBox(
-              height: 1.25.h,
-            ),
+            // SizedBox(
+            //   height: 1.25.h,
+            // ),
             Row(
               children: [
                 Padding(
@@ -290,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(24.sp)),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(24.sp),
-                        child: Image.asset('assets/careercatalystimage.jpg')),
+                        child: Image.asset('assets/careercatalysticon.jpg')),
                   ),
                 ),
                 Column(
@@ -298,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       'Career Catalyst',
                       style: GoogleFonts.varela(
-                          fontSize: 18.sp, fontWeight: FontWeight.bold),
+                          fontSize: 16.sp, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       'Begin your Career with greatest\n support from this Platform',
@@ -322,9 +321,9 @@ class _HomePageState extends State<HomePage> {
             Row(mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  'Average Salaries',
+                  '  Average Salaries',
                   style:
-                      GoogleFonts.varela(fontSize: 18.sp, fontWeight: FontWeight.bold,color: Theme.of(context).colorScheme.background),
+                      GoogleFonts.varela(fontSize: 16.sp, fontWeight: FontWeight.bold,color: Theme.of(context).colorScheme.background),
                 ),
               ],
             ),
@@ -337,20 +336,20 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 26.h,
+                          height: 20.h,
                           width: 33.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
                                   image: NetworkImage(
-                                    'https://img.freepik.com/free-vector/banknote-concept-illustration_114360-5640.jpg',
+                                    'https://img.freepik.com/free-photo/3d-render-realistic-medical-stethoscope-color-background_460848-10589.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',
                                   ),
                                   fit: BoxFit.fill)),
                         ),
                         Column(
                           children: [
                             Card(
-                                color: Theme.of(context).colorScheme.tertiary,
+                                color: Theme.of(context).colorScheme.secondary,
                                 child: Padding(
                                   padding:  EdgeInsets.all(3.sp),
                                   child: Text(
@@ -358,7 +357,7 @@ class _HomePageState extends State<HomePage> {
                                     style: GoogleFonts.varela(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
-                                        fontSize: 20.sp),
+                                        fontSize: 16.sp),
                                   ),
                                 )),
                             SizedBox(
@@ -370,11 +369,11 @@ class _HomePageState extends State<HomePage> {
                                   'INDIA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ₹7.50 Lakhs',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -384,11 +383,11 @@ class _HomePageState extends State<HomePage> {
                                   'USA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : \$209.044',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -398,11 +397,11 @@ class _HomePageState extends State<HomePage> {
                                   'Germany',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : €209.044',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -412,11 +411,11 @@ class _HomePageState extends State<HomePage> {
                                   'China',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ¥688,987',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -432,28 +431,28 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 26.h,
+                          height: 20.h,
                           width: 33.5.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
                                   image: NetworkImage(
-                                    'https://img.freepik.com/free-vector/refund-concept-illustration_114360-6803.jpg',
+                                    'https://img.freepik.com/premium-vector/coding-web-design-vector-line-icon_116137-2957.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',
                                   ),
                                   fit: BoxFit.fill)),
                         ),
                         Column(
                           children: [
                             Card(
-                                color: Theme.of(context).colorScheme.tertiary,
+                                color: Theme.of(context).colorScheme.secondary,
                                 child: Padding(
                                   padding:  EdgeInsets.all(3.sp),
                                   child: Text(
-                                    'Engineering',
+                                    'Engineer',
                                     style: GoogleFonts.varela(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
-                                        fontSize: 20.sp),
+                                        fontSize: 18.sp),
                                   ),
                                 )),
                             SizedBox(
@@ -465,11 +464,11 @@ class _HomePageState extends State<HomePage> {
                                   'INDIA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ₹8 Lakhs',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -479,11 +478,11 @@ class _HomePageState extends State<HomePage> {
                                   'USA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : \$91,700',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -493,11 +492,11 @@ class _HomePageState extends State<HomePage> {
                                   'Germany',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : €77,000',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -507,11 +506,11 @@ class _HomePageState extends State<HomePage> {
                                   'China',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ¥24,800',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -527,20 +526,20 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 26.h,
+                          height: 20.h,
                           width: 35.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
                                   image: NetworkImage(
-                                    'https://img.freepik.com/free-vector/money-income-concept-illustration_114360-7159.jpg?w=740&t=st=1700037666~exp=1700038266~hmac=065ea1e8ef34f63e1d9f5721eff2688ebe7db0034e69c0e191e84a84dd8b8036',
+                                    'https://img.freepik.com/free-psd/world-cup-text-frame-top-view_187299-11374.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',
                                   ),
                                   fit: BoxFit.fill)),
                         ),
                         Column(
                           children: [
                             Card(
-                                color: Theme.of(context).colorScheme.tertiary,
+                                color: Theme.of(context).colorScheme.secondary,
                                 child: Padding(
                                   padding:  EdgeInsets.all(3.sp),
                                   child: Text(
@@ -548,7 +547,7 @@ class _HomePageState extends State<HomePage> {
                                     style: GoogleFonts.varela(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
-                                        fontSize: 20.sp),
+                                        fontSize: 18.sp),
                                   ),
                                 )),
                             SizedBox(
@@ -560,11 +559,11 @@ class _HomePageState extends State<HomePage> {
                                   'INDIA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ₹4 Lakhs',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -574,11 +573,11 @@ class _HomePageState extends State<HomePage> {
                                   'USA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : \$54,100',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -588,11 +587,11 @@ class _HomePageState extends State<HomePage> {
                                   'Germany',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : €60,376',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -602,11 +601,11 @@ class _HomePageState extends State<HomePage> {
                                   'China',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ¥189,554',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -622,20 +621,20 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 26.h,
+                          height: 20.h,
                           width: 34.w,
                           decoration: const BoxDecoration(
                               color: Colors.cyan,
                               image: DecorationImage(
                                   image: NetworkImage(
-                                    'https://img.freepik.com/free-vector/global-economy-money-business_24877-50954.jpg',
+                                    'https://img.freepik.com/free-vector/illustration-data-analysis-graph_53876-5894.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',
                                   ),
                                   fit: BoxFit.fill)),
                         ),
                         Column(
                           children: [
                             Card(
-                                color: Theme.of(context).colorScheme.tertiary,
+                                color: Theme.of(context).colorScheme.secondary,
                                 child: Padding(
                                   padding: EdgeInsets.all(3.sp),
                                   child: Text(
@@ -643,7 +642,7 @@ class _HomePageState extends State<HomePage> {
                                     style: GoogleFonts.varela(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
-                                        fontSize: 20.sp),
+                                        fontSize: 18.sp),
                                   ),
                                 )),
                             SizedBox(
@@ -655,11 +654,11 @@ class _HomePageState extends State<HomePage> {
                                   'INDIA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ₹3.4 Lakhs',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -669,11 +668,11 @@ class _HomePageState extends State<HomePage> {
                                   'USA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : \$61,420',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -683,11 +682,11 @@ class _HomePageState extends State<HomePage> {
                                   'Germany',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : €50,172',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -697,11 +696,11 @@ class _HomePageState extends State<HomePage> {
                                   'China',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ¥194,519',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -717,20 +716,20 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Container(
-                          height: 26.h,
+                          height: 20.h,
                           width: 35.w,
                           decoration:  BoxDecoration(borderRadius: BorderRadius.circular(10),
                               color: Colors.cyan,
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                   image: NetworkImage(
-                                    'https://img.freepik.com/free-vector/startup-managers-presenting-analyzing-sales-growth-chart-group-workers-with-heap-cash-rocket-bar-diagrams-with-arrow-heap-money_74855-14166.jpg',
+                                    'https://img.freepik.com/free-vector/spaceman-sitting-chair-astronaut-captain-fiction_74855-102.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',
                                   ),
                                   fit: BoxFit.fill)),
                         ),
                         Column(
                           children: [
                             Card(
-                                color: Theme.of(context).colorScheme.tertiary,
+                                color: Theme.of(context).colorScheme.secondary,
                                 child: Padding(
                                   padding:  EdgeInsets.all(3.sp),
                                   child: Text(
@@ -738,7 +737,7 @@ class _HomePageState extends State<HomePage> {
                                     style: GoogleFonts.varela(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
-                                        fontSize: 20.sp),
+                                        fontSize: 18.sp),
                                   ),
                                 )),
                             SizedBox(
@@ -750,11 +749,11 @@ class _HomePageState extends State<HomePage> {
                                   'INDIA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ₹9.7 Lakhs',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -764,11 +763,11 @@ class _HomePageState extends State<HomePage> {
                                   'USA',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : \$1,37,751',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -778,11 +777,11 @@ class _HomePageState extends State<HomePage> {
                                   'Germany',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : €49,287',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -792,11 +791,11 @@ class _HomePageState extends State<HomePage> {
                                   'China',
                                   style: GoogleFonts.varela(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 11.sp),
                                 ),
                                 Text(
                                   ' : ¥202,524',
-                                  style: GoogleFonts.varela(fontSize: 15),
+                                  style: GoogleFonts.varela(fontSize: 11.sp),
                                 )
                               ],
                             ),
@@ -806,9 +805,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 )
-              ], options: CarouselOptions(height: 31.25.h, autoPlay: false)),
+              ], options: CarouselOptions(height: 24.h, autoPlay: false)),
             ),
-            ElevatedButton(onPressed: () {}, child: Text('View All',style: GoogleFonts.varela(color: Theme.of(context).colorScheme.background),)),
+            ElevatedButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const AverageSalary()));
+            }, child: Text('View All',style: GoogleFonts.varela(color: Theme.of(context).colorScheme.background),)),
             SizedBox(
               height: 1.25.h,
             ),
@@ -822,29 +823,33 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.all(4.sp),
               child: Card(
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(
+                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(60),
                   bottomRight: Radius.circular(60)),
               ),
-                elevation: 15,
-                shadowColor: Theme.of(context).colorScheme.background,
+
+                //shadowColor: Theme.of(context).colorScheme.background,
                 child: ClipRRect(
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(60),
                       bottomRight: Radius.circular(60)),
-                  child: Container(
-                    height: 36.25.h,
+                  child: SizedBox(
+                    height: 34.h,
                     width: 90.w,
                     // color: Theme.of(context).colorScheme.surfaceVariant,
                     child: Column(
                       children: [
-                        Text(
-                          'Career Success Stories',
-                          style: GoogleFonts.varela(
-                              fontWeight: FontWeight.bold, fontSize: 24),
+                        Row(mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              '     Career Success Stories',
+                              style: GoogleFonts.varela(
+                                  fontWeight: FontWeight.bold, fontSize: 16.sp),
+                            ),
+                          ],
                         ),
                         SizedBox(
-                          height: 2.5.h,
+                          height: 0.5.h,
                         ),
                         Container(
                           height: 22.5.h,
@@ -858,7 +863,9 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(30)),
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Stories()));
+                          },
                           child: Text(
                             'Check Out Some Stories',
                             style: GoogleFonts.varela(
@@ -881,28 +888,32 @@ class _HomePageState extends State<HomePage> {
             //   width: 100.w,
             //   color: Colors.amber,
             // ),
-            SizedBox(
-              height: 1.25.h,
-            ),
+            // SizedBox(
+            //   height: 1.25.h,
+            // ),
             Padding(
               padding: EdgeInsets.all(3.sp),
               child: Container(
                 height: 71.h,
                 width: 95.w,
-                decoration:  BoxDecoration(
-                    color: Theme.of(context).colorScheme.tertiaryContainer,
+                decoration:  const BoxDecoration(
+                    // color: Theme.of(context).colorScheme.tertiaryContainer,
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(100),
                         bottomLeft: Radius.circular(100))),
                 child: Column(
                   children: [
-                    Text(
-                      'Trending Paths',
-                      style: GoogleFonts.varela(
-                          fontSize: 22.sp, fontWeight: FontWeight.bold),
+                    Row(mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          '   Trending Paths',
+                          style: GoogleFonts.varela(
+                              fontSize: 16.sp, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                     SizedBox(
-                      height: 2.5.h,
+                      height: 0.5.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -910,7 +921,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration:  BoxDecoration(
+                          decoration:  const BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(24),
                               ),
@@ -924,7 +935,10 @@ class _HomePageState extends State<HomePage> {
                             child: Stack(
                               children: [
                                 Positioned(left:2.w,top:1.h,
-                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/premium-vector/modern-outline-illustration-doctor_203633-11756.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
+                                    child: Card(
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.sp),side: BorderSide(color: Theme.of(context).colorScheme.secondary,width: 3)),
+
+                                        child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/premium-vector/modern-outline-illustration-doctor_203633-11756.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),))),
 
                                 Positioned(
                                     left: 24.w,
@@ -932,7 +946,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Container(
                                       height: 6.h,
                                       width: 12.w,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.white,
                                           shape: BoxShape.circle),
                                       child: Center(child: Text('#1',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
@@ -944,7 +958,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration:  BoxDecoration(
+                          decoration:  const BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(24),
                               ),
@@ -958,7 +972,10 @@ class _HomePageState extends State<HomePage> {
                             child: Stack(
                               children: [
                                 Positioned(left:2.w,top:1.h,
-                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/professor-concept-illustration_114360-4304.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
+                                    child: Card(
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.sp),side: BorderSide(color: Theme.of(context).colorScheme.secondary,width: 3)),
+
+                                        child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/teacher-concept-illustration_114360-2166.jpg',fit:BoxFit.cover)),))),
 
                                 Positioned(
                                     left: 5.w,
@@ -966,7 +983,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Container(
                                       height: 6.h,
                                       width: 12.w,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.white,
                                           shape: BoxShape.circle),
                                       child: Center(child: Text('#2',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
@@ -987,7 +1004,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration:  BoxDecoration(
+                          decoration:  const BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(24),
                               ),
@@ -1001,14 +1018,17 @@ class _HomePageState extends State<HomePage> {
                             child: Stack(
                               children: [
                                 Positioned(left:2.w,top:2.h,
-                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/software-integration-concept-illustration_114360-7277.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=sph',fit:BoxFit.cover)),)),
+                                    child: Card(
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.sp),side: BorderSide(color: Theme.of(context).colorScheme.secondary,width: 3)),
+
+                                        child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg',fit:BoxFit.cover)),))),
                                 Positioned(
                                     left: 24.w,
                                     top: 1.h,
                                     child: Container(
                                       height: 6.h,
                                       width: 12.w,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.white,
                                           shape: BoxShape.circle),
                                       child: Center(child: Text('#3',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
@@ -1021,7 +1041,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 30.h,
                           width: 40.w,
-                          decoration:  BoxDecoration(
+                          decoration:  const BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(24),
                               ),
@@ -1034,7 +1054,9 @@ class _HomePageState extends State<HomePage> {
                             child: Stack(
                               children: [
                                 Positioned(left:2.w,top:2.h,
-                                    child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/premium-vector/police-officer-couple-uniform-standing-together-police-characters-public-safety-officers_573689-237.jpg?size=626&ext=jpg&ga=GA1.1.818006338.1696755883&semt=ais',fit:BoxFit.cover)),)),
+                                    child: Card(
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.sp),side: BorderSide(color: Theme.of(context).colorScheme.secondary,width: 3)),
+                                        child: Container(height: 27.h,width: 36.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.sp)),child: ClipRRect(borderRadius:BorderRadius.circular(20.sp),child: Image.network('https://img.freepik.com/free-vector/policeman-policewoman-concept-illustration_114360-16940.jpg',fit:BoxFit.cover)),))),
 
                                 Positioned(
                                     left: 5.w,
@@ -1042,7 +1064,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Container(
                                       height: 6.h,
                                       width: 12.w,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.white,
                                           shape: BoxShape.circle),
                                       child: Center(child: Text('#4',style: GoogleFonts.varela(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Colors.orange.shade800),)),
@@ -1109,7 +1131,7 @@ class _HomePageState extends State<HomePage> {
                   height: 8.h,
                   width: 98.w,
                   child: Card(
-                  color: Theme.of(context).colorScheme.error,
+                  color: Theme.of(context).colorScheme.secondary,
                     elevation: 20,
                     shadowColor: Colors.blue,
                     shape: RoundedRectangleBorder(

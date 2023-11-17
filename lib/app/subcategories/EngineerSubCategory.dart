@@ -84,17 +84,15 @@ class _engineerSubCategoriesState extends State<engineerSubCategories> with Sing
                       child: Container(
                         // height: 40.h,
                         // width: 45.w,
-                        color: Color(0xffF4A259),
+                        color: Theme.of(context).colorScheme.tertiary,
                         child: Center(
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 22.h,
                                 child: Card(
-                                  child: Image.network(
-                                    widget.engSub[i]["url"],
-                                    fit: BoxFit.cover,
-                                  ),
+                                  child: FadeInImage.assetNetwork(placeholder: 'assets/giphy.gif', image: widget.engSub[i]["url"],
+                                    fit: BoxFit.cover,),
                                 ),
                               ),
                               SizedBox(

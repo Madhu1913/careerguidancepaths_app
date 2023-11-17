@@ -1,7 +1,6 @@
 import 'package:careerguidancepaths_app/app/account/AddpathPage.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/like.dart';
 import 'package:careerguidancepaths_app/app/account/Pages/savedPosts.dart';
-import 'package:careerguidancepaths_app/app/account/Provider/CPIprovider.dart';
 import 'package:careerguidancepaths_app/app/account/Provider/MyPathsProvider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -62,7 +61,7 @@ class _MyPathsPageState extends State<MyPathsPage> {
         title: Text(
           'My Paths',
           style: GoogleFonts.varela(
-              color: Colors.green,
+             color: Theme.of(context).colorScheme.background,
               fontWeight: FontWeight.bold,
               fontSize: 22.sp),
         ),
@@ -85,7 +84,7 @@ class _MyPathsPageState extends State<MyPathsPage> {
                           height: 30.h,
                           width: 96.w,
                           decoration: BoxDecoration(
-                              color: Colors.green.shade300,
+                              color: Theme.of(context).colorScheme.secondary,
                               borderRadius: BorderRadius.circular(8.sp)),
                         ),
                         Positioned(
@@ -96,7 +95,7 @@ class _MyPathsPageState extends State<MyPathsPage> {
                               style: GoogleFonts.varela(
                                   fontSize: 20.sp,
                                   fontWeight: FontWeight.w600,
-                                  color: Colors.brown.shade800),
+                                  color: Theme.of(context).colorScheme.background),
                             )),
                         Positioned(
                             left: 10.w,
@@ -309,20 +308,20 @@ class _MyPathsPageState extends State<MyPathsPage> {
                             child: Container(
                               height: 20.h,
                               width: 40.w,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10)),
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: Image.network(
                                     post["img"].toString(),
                                     fit: BoxFit.cover,
                                   )),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10)),
                             )),
                         Positioned(
                           left: 80.w,
                           child: Card(
                             child: IconButton(
-                                icon:  Icon(Icons.delete,color: Colors.brown.shade800,),
+                                icon:  Icon(Icons.delete,color: Theme.of(context).colorScheme.background,),
                                 onPressed: () async {
                                   showDialog(context: context, builder: (context){
                                     return AlertDialog(
@@ -374,10 +373,10 @@ class _MyPathsPageState extends State<MyPathsPage> {
                                               .delete()
                                               .then((value) => print('deleted'));
                                           Navigator.pop(context);
-                                        }, child: Text('Delete')),
+                                        }, child: const Text('Delete')),
                                         ElevatedButton(onPressed: (){
                                           Navigator.pop(context);
-                                        }, child: Text('Cancel')),
+                                        }, child: const Text('Cancel')),
 
                                       ],
                                     );

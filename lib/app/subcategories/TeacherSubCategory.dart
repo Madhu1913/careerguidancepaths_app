@@ -93,17 +93,15 @@ class _teacherSubCategoryState extends State<teacherSubCategory>
                       child: Container(
                         // height: 40.h,
                         // width: 45.w,
-                        color: Color(0xffF4A259),
+                        color: Theme.of(context).colorScheme.tertiary,
                         child: Center(
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 22.h,
                                 child: Card(
-                                  child: Image.network(
-                                    widget.tecSub[i]["url"],
-                                    fit: BoxFit.cover,
-                                  ),
+                                  child:FadeInImage.assetNetwork(placeholder: 'assets/giphy.gif', image:   widget.tecSub[i]["url"],
+                                    fit: BoxFit.cover,),
                                 ),
                               ),
                               SizedBox(

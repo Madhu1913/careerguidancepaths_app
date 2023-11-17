@@ -32,7 +32,7 @@ class _editPageState extends State<editPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('EDIT DETAILS'),centerTitle: true,),
+      appBar: AppBar(title: const Text('EDIT DETAILS'),centerTitle: true,),
       body: Form(
         key: key,
         child: SingleChildScrollView(
@@ -44,7 +44,7 @@ class _editPageState extends State<editPage> {
                 child: TextFormField(
                   controller: name,
                   validator: (val)=>val!.isEmpty?'Enter the name':null,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Name'
                   ),
@@ -57,7 +57,7 @@ class _editPageState extends State<editPage> {
                   controller: age,
                   keyboardType: TextInputType.number,
                   validator: (val)=>val!.isEmpty?'Enter the Age':null,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Age'
                   ),
@@ -69,7 +69,7 @@ class _editPageState extends State<editPage> {
                 child: TextFormField(
                   controller: job,
                   validator: (val)=>val!.isEmpty?'Enter the job':null,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Job'
                   ),
@@ -88,7 +88,7 @@ class _editPageState extends State<editPage> {
                   age.clear();
                   Navigator.pop(context);
                 }
-              }, child: Text('Save'))
+              }, child: const Text('Save'))
             ],
           ),
         ),

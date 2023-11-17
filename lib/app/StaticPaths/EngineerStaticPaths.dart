@@ -253,19 +253,19 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
               ),
             ),
             Positioned(
-                left: 16.w,
-                top: 17.h,
+                left: 10.w,
+                top: 12.h,
                 child: Text(
                   _nameImg[widget.i]['name'],
                   style: GoogleFonts.varela(
-                      fontWeight: FontWeight.bold, fontSize: 24),
+                      fontWeight: FontWeight.bold, fontSize: 18.sp),
                 )),
 
             Positioned(
-              top: 23.h,
+              top: 18.h,
               left: 13.w,
               child: SizedBox(
-                height: 44.h,
+                height: 55.h,
                 width: 65.w,
                 // alignment: Alignment(0,1),
                 child: ListView.builder(
@@ -279,7 +279,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                             height: 7.5.h,
                             // width: 100
                             child: Card(
-                              color: Color(0xffb38d97),
+                              color: const Color(0xff81B29A),
                               child: Center(
                                   child: Text(
                                 '${myList[i]['point']}',
@@ -299,14 +299,14 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
               ),
             ),
             Positioned(
-              top: 23.h,
+              top: 18.h,
               left: 6.w,
               child: SlideTransition(
                   position: _offsetAnimation!,
                   child: SizedBox(
-                    height: 45.h,
+                    height: 56.h,
                     width: 90.w,
-                    child: Card(shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xffb38d97,),width: 4)),
+                    child: Card(shape: const RoundedRectangleBorder(side: BorderSide(color:Color(0xff81B29A),width: 4 )),
                       child: Column(
                         children: [
                           Padding(
@@ -317,7 +317,7 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                                 Text(
                                   'DESCRIPTION',
                                   style: GoogleFonts.varela(
-                                      fontSize: 24, fontWeight: FontWeight.bold),
+                                      fontSize: 16.sp, fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
@@ -340,10 +340,10 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                   )),
             ),
             Positioned(
-                top: 68.h,
+                top: 75.h,
                 left: 30.w,
                 child: Card(
-                  color: Color(0xff2d00f7),
+                  color: const Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -357,10 +357,10 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
                   ),
                 )),
             Positioned(
-                top: 68.h,
+                top: 75.h,
                 left: 60.w,
                 child: Card(
-                  color: Color(0xff2d00f7),
+                  color: const Color(0xffEE6C4D),
                   child: Center(
                     child: IconButton(
                         onPressed: () {
@@ -379,171 +379,116 @@ class _engineerStaticPathsState extends State<engineerStaticPaths>
     );
   }
 }
-
 class RPSCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    // Circle
+    // Circle Copy
 
     Paint paintFill0 = Paint()
-      ..color = const Color(0xff90a959)
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
     Path path_0 = Path();
-    path_0.moveTo(size.width * 0.9047250, size.height * 0.1621750);
+    path_0.moveTo(size.width * -0.0001570, size.height * 1.0012643);
     path_0.cubicTo(
-        size.width * 1.0612500,
-        size.height * 0.1638125,
-        size.width * 0.9507750,
-        size.height * -0.1604250,
-        size.width * 0.9475500,
-        size.height * 0.0992875);
+        size.width * 0.0015886,
+        size.height * 0.8797853,
+        size.width * 0.0033250,
+        size.height * 0.8375875,
+        size.width * 0.0020500,
+        size.height * 0.6855625);
     path_0.cubicTo(
-        size.width * 0.9457750,
-        size.height * 0.2435375,
-        size.width * 1.1217000,
-        size.height * 0.0937000,
-        size.width * 0.8478000,
-        size.height * 0.0908250);
+        size.width * 0.0548000,
+        size.height * 0.6390500,
+        size.width * -0.0294500,
+        size.height * 0.9380625,
+        size.width * 0.2650750,
+        size.height * 0.9374625);
     path_0.cubicTo(
-        size.width * 0.6912750,
-        size.height * 0.0891625,
-        size.width * 0.7018500,
-        size.height * 0.3914375,
-        size.width * 0.7049750,
-        size.height * 0.1389625);
+        size.width * 0.5053500,
+        size.height * 0.9465125,
+        size.width * 0.7255250,
+        size.height * 0.9323000,
+        size.width * 1.0016649,
+        size.height * 1.0007179);
     path_0.cubicTo(
-        size.width * 0.7067500,
-        size.height * -0.0053125,
-        size.width * 0.6308250,
-        size.height * 0.1592875,
-        size.width * 0.9047250,
-        size.height * 0.1621750);
+        size.width * 0.7134374,
+        size.height * 1.0036903,
+        size.width * 0.2943472,
+        size.height * 1.0006581,
+        size.width * -0.0001570,
+        size.height * 1.0012643);
     path_0.close();
 
     canvas.drawPath(path_0, paintFill0);
 
     // Circle Copy
 
+    Paint paintStroke0 = Paint()
+      ..color = const Color(0xff3D405B)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.00
+      ..strokeCap = StrokeCap.butt
+      ..strokeJoin = StrokeJoin.miter;
+
+    canvas.drawPath(path_0, paintStroke0);
+
+    // Circle Copy Copy
+
     Paint paintFill1 = Paint()
-      ..color =  const Color(0xff90a959)
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
     Path path_1 = Path();
-    path_1.moveTo(size.width * 0.0954500, size.height * 0.8350125);
+    path_1.moveTo(size.width * 0.9988750, size.height * -0.0012750);
     path_1.cubicTo(
-        size.width * -0.0610750,
-        size.height * 0.8337500,
-        size.width * 0.0525000,
-        size.height * 1.1577250,
-        size.width * 0.0532500,
-        size.height * 0.8980000);
+        size.width * 0.9971750,
+        size.height * 0.1201875,
+        size.width * 0.9954250,
+        size.height * 0.1623875,
+        size.width * 0.9967500,
+        size.height * 0.3144125);
     path_1.cubicTo(
-        size.width * 0.0536250,
-        size.height * 0.7537500,
-        size.width * -0.1208500,
-        size.height * 0.9040000,
-        size.width * 0.1530750,
-        size.height * 0.9062250);
+        size.width * 0.9413500,
+        size.height * 0.3529125,
+        size.width * 1.0281750,
+        size.height * 0.0619125,
+        size.width * 0.7336500,
+        size.height * 0.0625250);
     path_1.cubicTo(
-        size.width * 0.3096000,
-        size.height * 0.9075250,
-        size.width * 0.2961500,
-        size.height * 0.6052750,
-        size.width * 0.2954250,
-        size.height * 0.8577500);
+        size.width * 0.4934000,
+        size.height * 0.0534875,
+        size.width * 0.2732000,
+        size.height * 0.0677125,
+        size.width * -0.0029500,
+        size.height * -0.0007000);
     path_1.cubicTo(
-        size.width * 0.2950250,
-        size.height * 1.0020250,
-        size.width * 0.3693750,
-        size.height * 0.8372375,
-        size.width * 0.0954500,
-        size.height * 0.8350125);
+        size.width * 0.2852750,
+        size.height * -0.0036875,
+        size.width * 0.7043750,
+        size.height * -0.0006625,
+        size.width * 0.9988750,
+        size.height * -0.0012750);
     path_1.close();
 
     canvas.drawPath(path_1, paintFill1);
 
-    // Triangle Copy
+    // Circle Copy Copy
 
-    Paint paintFill2 = Paint()
-      ..color =  const Color(0xff90a959)
-      ..style = PaintingStyle.fill
-      ..strokeWidth = size.width * 0.00
-      ..strokeCap = StrokeCap.butt
-      ..strokeJoin = StrokeJoin.miter;
-
-    Path path_2 = Path();
-    path_2.moveTo(size.width * 0.8300000, size.height * 0.9972125);
-    path_2.lineTo(size.width * 1.0117000, size.height * 0.9123125);
-    path_2.lineTo(size.width * 0.7723000, size.height * 0.8762500);
-    path_2.lineTo(size.width * 0.8300000, size.height * 0.9972125);
-    path_2.close();
-
-    canvas.drawPath(path_2, paintFill2);
-
-    // Triangle Copy
-
-    Paint paintStroke2 = Paint()
-      ..color = const Color(0xff90a959)
+    Paint paintStroke1 = Paint()
+      ..color = const Color(0xff3D405B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
 
-    canvas.drawPath(path_2, paintStroke2);
-
-    // Triangle Copy Copy
-
-    Paint paintFill3 = Paint()
-      ..color =  const Color(0xff90a959)
-      ..style = PaintingStyle.fill
-      ..strokeWidth = size.width * 0.00
-      ..strokeCap = StrokeCap.butt
-      ..strokeJoin = StrokeJoin.miter;
-
-    Path path_3 = Path();
-    path_3.moveTo(size.width * 0.1971250, size.height * 0.0074375);
-    path_3.lineTo(size.width * -0.0219000, size.height * 0.0663250);
-    path_3.lineTo(size.width * 0.1911000, size.height * 0.1317375);
-    path_3.lineTo(size.width * 0.1971250, size.height * 0.0074375);
-    path_3.close();
-
-    canvas.drawPath(path_3, paintFill3);
-
-    // Triangle Copy Copy
-
-    Paint paintStroke3 = Paint()
-      ..color = const Color(0xff90a959)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = size.width * 0.00
-      ..strokeCap = StrokeCap.butt
-      ..strokeJoin = StrokeJoin.miter;
-
-    canvas.drawPath(path_3, paintStroke3);
-
-    // Triangle Copy Copy
-
-    Paint paintStroke4 = Paint()
-      ..color =  const Color(0xff90a959)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = size.width * 0.00
-      ..strokeCap = StrokeCap.butt
-      ..strokeJoin = StrokeJoin.miter;
-
-    Path path_4 = Path();
-    path_4.moveTo(size.width * 0.1250000, 0);
-    path_4.lineTo(0, size.height * 0.1075000);
-    path_4.lineTo(size.width * 0.2500000, size.height * 0.1075000);
-    path_4.lineTo(size.width * 0.1250000, 0);
-    path_4.close();
-
-    canvas.drawPath(path_4, paintStroke4);
+    canvas.drawPath(path_1, paintStroke1);
   }
 
   @override
